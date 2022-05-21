@@ -21,11 +21,11 @@ public class SumOfTwoNumbers {
                     break;
                 }
             }
-            if(isFound == true) {
+            if(isFound) {
                 break;
             }
         }
-        if (isFound == false) {
+        if (!isFound) {
             System.out.printf("%d combinations - neither equals %d\n", count, magicNum);
         }
     }
