@@ -9,7 +9,6 @@ public class PrimePairs {
         int firstEnd = firstStart + Integer.parseInt(scanner.nextLine());
         int secondEnd = secondStart + Integer.parseInt(scanner.nextLine());
         int primeCheckNumber, divisibleCount;
-        boolean isPrimeOne = true, isPrimeTwo = true;
 
         for (int i = firstStart; i <= firstEnd; i++) {
             primeCheckNumber = 2;
@@ -40,7 +39,6 @@ public class PrimePairs {
         }
     }
 }
-
 /*Напишете програма, която генерира и принтира на конзолата четирицифрени числа, в които първата и
 втората двойка цифри образуват двуцифрени прости числа (пример за такова число 1723). Крайната
 стойност до която трябва да се генерират двойките се определя от други 2 цифри, подадени като вход,
