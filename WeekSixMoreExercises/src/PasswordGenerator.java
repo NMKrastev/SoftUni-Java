@@ -4,6 +4,8 @@ public class PasswordGenerator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        //Only the first nine letters from the alphabet are going to be used
+        //but I decided to go with full alphabet in case is needed.
         char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 
         int numOne = Integer.parseInt(scanner.nextLine());
