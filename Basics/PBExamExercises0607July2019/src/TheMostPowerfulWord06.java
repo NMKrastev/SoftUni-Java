@@ -10,28 +10,26 @@ public class TheMostPowerfulWord06 {
 
         while (!word.equals("End of words")) {
 
-            int points = 0;
             char current;
-            char firstLetter;
-            int currentWord = 0;
-            String letter = "";
+            int pointsPerLetter = 0;
+            int totalPointsPerWord = 0;
+            String firstLetter = "";
 
             for (int i = 0; i < word.length(); i++) {
 
                 current = word.charAt(i);
-                firstLetter = word.charAt(0);
-                points = current;
-                letter = String.valueOf(firstLetter);
+                firstLetter = String.valueOf(word.charAt(0));
+                pointsPerLetter = current;
 
-                currentWord += points;
+                totalPointsPerWord += pointsPerLetter;
             }
-            if (letter.equals("a") || letter.equals("e") || letter.equals("i") || letter.equals("o") ||
-                    letter.equals("u") || letter.equals("y") || letter.equals("A") || letter.equals("E") ||
-                    letter.equals("I") || letter.equals("O") || letter.equals("U") || letter.equals("Y")) {
+            if (firstLetter.equals("a") || firstLetter.equals("e") || firstLetter.equals("i") || firstLetter.equals("o") ||
+                    firstLetter.equals("u") || firstLetter.equals("y") || firstLetter.equals("A") || firstLetter.equals("E") ||
+                    firstLetter.equals("I") || firstLetter.equals("O") || firstLetter.equals("U") || firstLetter.equals("Y")) {
 
-                currentWord *= word.length();
-                if (currentWord > maxPoints) {
-                    maxPoints = currentWord;
+                totalPointsPerWord *= word.length();
+                if (totalPointsPerWord > maxPoints) {
+                    maxPoints = totalPointsPerWord;
                     winWord = word;
                 }
             }
