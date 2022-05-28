@@ -24,11 +24,8 @@ public class BarcodeGenerator6 {
                             System.out.printf("%d%d%d%d ", i, j, k, l);
                         }
                     }
-
                 }
-
             }
-
         }
     }
 }
