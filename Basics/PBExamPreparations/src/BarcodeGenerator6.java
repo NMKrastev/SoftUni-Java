@@ -5,6 +5,8 @@ public class BarcodeGenerator6 {
         Scanner scanner = new Scanner(System.in);
         int firstNum = Integer.parseInt(scanner.nextLine());
         int secondNum = Integer.parseInt(scanner.nextLine());
+        String result = "";
+        result = "7";
 
         int firstStartDigit = (firstNum / 1000) % 10;
         int secondStartDigit = (firstNum / 100) % 10;
