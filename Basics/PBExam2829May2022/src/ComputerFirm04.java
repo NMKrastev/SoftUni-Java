@@ -23,7 +23,6 @@ public class ComputerFirm04 {
             }
 
             if (rating == 2) {
-                totalSells += 0;
                 totalRating += rating;
             } else if (rating == 3) {
                 totalSells += (sells * 0.50);

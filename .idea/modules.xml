@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Basics/FirstStepsInCoding/FirstStepsInCoding.iml" filepath="$PROJECT_DIR$/Basics/FirstStepsInCoding/FirstStepsInCoding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExam2829May2022/PBExam2829May2022.iml" filepath="$PROJECT_DIR$/Basics/PBExam2829May2022/PBExam2829May2022.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises0203May2019/PBExamExercises0203May2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises0203May2019/PBExamExercises0203May2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises0607April2019/PBExamExercises0607April2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises0607April2019/PBExamExercises0607April2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises0607July2019/PBExamExercises0607July2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises0607July2019/PBExamExercises0607July2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises0910March2019/PBExamExercises0910March2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises0910March2019/PBExamExercises0910March2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises1516June2019/PBExamExercises1516June2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises1516June2019/PBExamExercises1516June2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises1819July2020/PBExamExercises1819July2020.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises1819July2020/PBExamExercises1819July2020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises2021April2019/PBExamExercises2021April2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises2021April2019/PBExamExercises2021April2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises2829March2020/PBExamExercises2829March2020.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises2829March2020/PBExamExercises2829March2020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamPreparations/PBExamPreparations.iml" filepath="$PROJECT_DIR$/Basics/PBExamPreparations/PBExamPreparations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SoftUni-Java.iml" filepath="$PROJECT_DIR$/.idea/SoftUni-Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekFiveExercises/WeekFiveExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekFiveExercises/WeekFiveExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekFourExercises/WeekFourExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekFourExercises/WeekFourExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekFourLab/WeekFourLab.iml" filepath="$PROJECT_DIR$/Basics/WeekFourLab/WeekFourLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekOneExercises/WeekOneExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekOneExercises/WeekOneExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekSixExercises/WeekSixExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekSixExercises/WeekSixExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekSixLab/WeekSixLab.iml" filepath="$PROJECT_DIR$/Basics/WeekSixLab/WeekSixLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekSixMoreExercises/WeekSixMoreExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekSixMoreExercises/WeekSixMoreExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekThreeExercises/WeekThreeExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekThreeExercises/WeekThreeExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekThreeLab/WeekThreeLab.iml" filepath="$PROJECT_DIR$/Basics/WeekThreeLab/WeekThreeLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekTwoExercises/WeekTwoExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekTwoExercises/WeekTwoExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekTwoLab/WeekTwoLab.iml" filepath="$PROJECT_DIR$/Basics/WeekTwoLab/WeekTwoLab.iml" />
+    </modules>
+  </component>
+</project>
