@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Scanner;
 
 public class PF01SortNumbers {
@@ -19,6 +18,5 @@ public class PF01SortNumbers {
         System.out.printf("%.0f\n%.0f\n%.0f\n", num[2], num[1], num[0]);
     }
 }
-
-
-
+/*Read three real numbers and sort them in descending order. Print each number on a new line.
+*/
