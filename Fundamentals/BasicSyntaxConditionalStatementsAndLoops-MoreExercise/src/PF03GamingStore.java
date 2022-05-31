@@ -4,17 +4,16 @@ public class PF03GamingStore {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double budget = Double.parseDouble(scanner.nextLine());
-        double budgetFixed = budget;
+        double remainingBudget = budget;
         String input = scanner.nextLine();
         double totalPrice = 0, pricePerGame = 0;
         boolean outOfMoney = false;
 
         while (!input.equals("Game Time")) {
 
-            if (input.equals("OutFall 4") || input.equals("CS: OG") || input.equals("Zplinter Zell") ||
-                    input.equals("Honored 2") || input.equals("RoverWatch") || input.equals("RoverWatch Origins Edition")) {
                 switch (input) {
                     case "OutFall 4":
+                    case "RoverWatch Origins Edition":
                         pricePerGame = 39.99;
                         break;
                     case "CS: OG":
@@ -29,24 +28,20 @@ public class PF03GamingStore {
                     case "RoverWatch":
                         pricePerGame = 29.99;
                         break;
-                    case "RoverWatch Origins Edition":
-                        pricePerGame = 39.99;
-                        break;
+                    default:
+                        System.out.println("Not Found");
+                        input = scanner.nextLine();
+                        continue;
                 }
-            } else {
-                System.out.println("Not Found");
-                input = scanner.nextLine();
-                continue;
-            }
 
-            if (budget - pricePerGame == 0) {
-                budget -= pricePerGame;
+            if (remainingBudget - pricePerGame == 0) {
+                remainingBudget -= pricePerGame;
                 totalPrice += pricePerGame;
                 System.out.printf("Bought %s\n", input);
                 outOfMoney = true;
                 break;
-            } else if (budget > pricePerGame) {
-                budget -= pricePerGame;
+            } else if (remainingBudget > pricePerGame) {
+                remainingBudget -= pricePerGame;
                 totalPrice += pricePerGame;
                 System.out.printf("Bought %s\n", input);
             } else {
@@ -55,11 +50,11 @@ public class PF03GamingStore {
 
             input = scanner.nextLine();
         }
-        
+
         if (outOfMoney) {
             System.out.println("Out of money!");
         } else {
-            System.out.printf("Total spent: $%.2f. Remaining: $%.2f", totalPrice, budgetFixed - totalPrice);
+            System.out.printf("Total spent: $%.2f. Remaining: $%.2f", totalPrice, budget - totalPrice);
         }
     }
 }
