@@ -59,9 +59,11 @@ public class PF07VendingMachine {
                     }
                 }
             }
+
             if (isChange) {
                 break;
             }
+
             double moneyInserted = Double.parseDouble(input);
             if (moneyInserted == 0.1 || moneyInserted == 0.2 || moneyInserted == 0.5
                     || moneyInserted == 1 || moneyInserted == 2) {
@@ -71,9 +73,11 @@ public class PF07VendingMachine {
             }
             input = scanner.nextLine();
         }
+
         if(isChange) {
             System.out.printf("Change: %.2f\n", sumMoney);
         }
+
     }
 }
 /*Your task is to calculate the total price of a purchase from a vending machine. Until you receive "Start" you will
