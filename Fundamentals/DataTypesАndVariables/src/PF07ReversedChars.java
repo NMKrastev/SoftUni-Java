@@ -5,19 +5,10 @@ public class PF07ReversedChars {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = 0; i < 3; i++) {
-
-            String currentChar = scanner.nextLine();
-            sb.append(currentChar);
-            sb.append(" ");
-
-        }
-        sb.deleteCharAt(sb.length() - 1);
-        sb.reverse();
-
-        System.out.println(sb);
+        char firstChar = scanner.nextLine().charAt(0);
+        char secondChar = scanner.nextLine().charAt(0);
+        char thirdChar = scanner.nextLine().charAt(0);
+        System.out.printf("%c %c %c", thirdChar, secondChar, firstChar);
 
     }
 }
