@@ -3,20 +3,23 @@ import java.util.Scanner;
 public class PF12RefactorSpecialNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int kolkko = Integer.parseInt(scanner.nextLine());
-        int obshto = 0;
-        int takova = 0;
-        boolean toe = false;
-        for (int ch = 1; ch <= kolkko; ch++) {
-            takova = ch;
-            while (ch > 0) {
-                obshto += ch % 10;
-                ch = ch / 10;
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        for (int i = 1; i <= n; i++) {
+            int currentNUm = i;
+            int sum = 0;
+
+            while (currentNUm > 0) {
+                sum += (currentNUm % 10);
+                currentNUm = currentNUm / 10;
             }
-            toe = (obshto == 5) || (obshto == 7) || (obshto == 11);
-            System.out.printf("%d -> %b%n", takova, toe);
-            obshto = 0;
-            ch = takova;
+
+            if (sum == 5 || sum == 7 || sum == 11) {
+                System.out.printf("%d -> True\n", i);
+            } else {
+                System.out.printf("%d -> False\n", i);
+            }
         }
 
     }
