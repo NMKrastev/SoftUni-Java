@@ -4,10 +4,9 @@ public class PF08LowerOrUpper {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String letter = scanner.nextLine();
-        char checker = letter.charAt(0);
+        char letter = scanner.nextLine().charAt(0);
 
-        if (Character.isUpperCase(checker)) {
+        if (Character.isUpperCase(letter)) {
             System.out.printf("upper-case");
         } else {
             System.out.printf("lower-case");
