@@ -8,7 +8,8 @@ public class PF02FromLeftToTheRight {
 
         for (int i = 0; i < num; i++) {
             String input = scanner.nextLine();
-            String leftNumber = "", rightNumber = "";
+            StringBuilder sbLeft = new StringBuilder();
+            StringBuilder sbRight = new StringBuilder();
             int count = 0;
 
             for (int j = 0; j < input.length(); j++) {
@@ -18,15 +19,16 @@ public class PF02FromLeftToTheRight {
                     count++;
                 }
                 if (count == 0) {
-                    leftNumber += Character.toString(ch);
+                    sbLeft.append(ch);
                 } else if (count == 1) {
                     count++;
                 } else {
-                    rightNumber += Character.toString(ch);
+                    sbRight.append(ch);
                 }
             }
-            long leftNum = Long.parseLong(leftNumber);
-            long rightNum = Long.parseLong(rightNumber);
+
+            long leftNum = Long.parseLong(String.valueOf(sbLeft));
+            long rightNum = Long.parseLong(String.valueOf(sbRight));
             int sum = 0;
 
             if (leftNum >= rightNum) {
