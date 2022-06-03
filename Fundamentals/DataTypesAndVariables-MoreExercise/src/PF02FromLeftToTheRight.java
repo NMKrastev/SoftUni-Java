@@ -47,7 +47,7 @@ public class PF02FromLeftToTheRight {
             }
 
             System.out.println(Math.abs(sum));
-            
+
         }
     }
 }
