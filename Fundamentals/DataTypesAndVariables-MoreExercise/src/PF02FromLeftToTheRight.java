@@ -12,17 +12,17 @@ public class PF02FromLeftToTheRight {
             int count = 0;
 
             for (int j = 0; j < input.length(); j++) {
-                char holder = input.charAt(j);
-                String check = Character.toString(holder);
-                if (check.equals(" ")) {
+                char ch = input.charAt(j);
+                String character = Character.toString(ch);
+                if (character.equals(" ")) {
                     count++;
                 }
                 if (count == 0) {
-                    leftNumber += Character.toString(holder);
+                    leftNumber += Character.toString(ch);
                 } else if (count == 1) {
                     count++;
                 } else {
-                    rightNumber += Character.toString(holder);
+                    rightNumber += Character.toString(ch);
                 }
             }
             long leftNum = Long.parseLong(leftNumber);
