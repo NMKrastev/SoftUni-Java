@@ -7,6 +7,7 @@ public class PF02FromLeftToTheRight {
         int num = Integer.parseInt(scanner.nextLine());
 
         for (int i = 0; i < num; i++) {
+
             String input = scanner.nextLine();
             StringBuilder sbLeft = new StringBuilder();
             StringBuilder sbRight = new StringBuilder();
@@ -44,12 +45,14 @@ public class PF02FromLeftToTheRight {
                     rightNum /= 10;
                 }
             }
+
             System.out.println(Math.abs(sum));
+            
         }
     }
 }
 
-    //This solution is not recognized by Judge system but it works as the one above
+//This solution is not recognized by Judge system but it works as the one above
         /*for (int i = 0; i <= num; i++) {
             double leftNum = Double.parseDouble(scanner.next());
             double rightNum = Double.parseDouble(scanner.next());
