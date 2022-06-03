@@ -22,7 +22,7 @@ public class PF12Snowballs {
                 winQuality = snowballQuality;
             }
         }
-        
+
         System.out.printf("%d : %d = %d (%d)", winSnow, winTime, maxSnowballValue, winQuality);
     }
 }
