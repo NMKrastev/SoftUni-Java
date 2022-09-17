@@ -81,7 +81,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Application.A12_EvenNumber">
+  <component name="RunManager" selected="Application.A13_RefactorSumOfOddNumbers">
     <configuration name="A10_MultiplicationTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_MultiplicationTable" />
       <module name="01-BasicSyntaxConditionalStatementsAndLoops" />
@@ -103,8 +103,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A8_DivisibleBy3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A8_DivisibleBy3" />
+    <configuration name="A13_RefactorSumOfOddNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A13_RefactorSumOfOddNumbers" />
       <module name="01-BasicSyntaxConditionalStatementsAndLoops" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,19 +118,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A8_DivisibleBy3" />
       <item itemvalue="Application.A9_SumOfOddNumbers" />
       <item itemvalue="Application.A10_MultiplicationTable" />
       <item itemvalue="Application.A11_MultiplicationTable2" />
       <item itemvalue="Application.A12_EvenNumber" />
+      <item itemvalue="Application.A13_RefactorSumOfOddNumbers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A13_RefactorSumOfOddNumbers" />
         <item itemvalue="Application.A12_EvenNumber" />
         <item itemvalue="Application.A11_MultiplicationTable2" />
         <item itemvalue="Application.A10_MultiplicationTable" />
         <item itemvalue="Application.A9_SumOfOddNumbers" />
-        <item itemvalue="Application.A8_DivisibleBy3" />
       </list>
     </recent_temporary>
   </component>
