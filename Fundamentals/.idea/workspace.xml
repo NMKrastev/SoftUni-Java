@@ -81,14 +81,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Application.A7_TheatrePromotions">
-    <configuration name="A2_Passed" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A2_Passed" />
-      <module name="01-BasicSyntaxConditionalStatementsAndLoops" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A8_DivisibleBy3">
     <configuration name="A4_BackIn30Minutes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A4_BackIn30Minutes" />
       <module name="01-BasicSyntaxConditionalStatementsAndLoops" />
@@ -117,20 +110,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A8_DivisibleBy3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A8_DivisibleBy3" />
+      <module name="01-BasicSyntaxConditionalStatementsAndLoops" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A2_Passed" />
       <item itemvalue="Application.A4_BackIn30Minutes" />
       <item itemvalue="Application.A5_MonthPrinter" />
       <item itemvalue="Application.A6_ForeignLanguages" />
       <item itemvalue="Application.A7_TheatrePromotions" />
+      <item itemvalue="Application.A8_DivisibleBy3" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A8_DivisibleBy3" />
         <item itemvalue="Application.A7_TheatrePromotions" />
         <item itemvalue="Application.A6_ForeignLanguages" />
         <item itemvalue="Application.A5_MonthPrinter" />
         <item itemvalue="Application.A4_BackIn30Minutes" />
-        <item itemvalue="Application.A2_Passed" />
       </list>
     </recent_temporary>
   </component>
