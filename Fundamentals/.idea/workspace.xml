@@ -95,14 +95,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.A1_Ages">
-    <configuration name="A10_MultiplicationTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A10_MultiplicationTable" />
-      <module name="01-BasicSyntaxConditionalStatementsAndLoops" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A3_Vacation">
     <configuration name="A11_MultiplicationTable2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A11_MultiplicationTable2" />
       <module name="01-BasicSyntaxConditionalStatementsAndLoops" />
@@ -131,20 +124,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A3_Vacation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A3_Vacation" />
+      <module name="02-Exercise_BasicSyntaxConditionalStatementsAndLoops" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A10_MultiplicationTable" />
       <item itemvalue="Application.A11_MultiplicationTable2" />
       <item itemvalue="Application.A12_EvenNumber" />
       <item itemvalue="Application.A13_RefactorSumOfOddNumbers" />
       <item itemvalue="Application.A1_Ages" />
+      <item itemvalue="Application.A3_Vacation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A3_Vacation" />
         <item itemvalue="Application.A1_Ages" />
         <item itemvalue="Application.A13_RefactorSumOfOddNumbers" />
         <item itemvalue="Application.A12_EvenNumber" />
         <item itemvalue="Application.A11_MultiplicationTable2" />
-        <item itemvalue="Application.A10_MultiplicationTable" />
       </list>
     </recent_temporary>
   </component>
