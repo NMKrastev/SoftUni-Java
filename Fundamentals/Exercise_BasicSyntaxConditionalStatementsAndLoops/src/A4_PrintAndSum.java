@@ -16,3 +16,6 @@ public class A4_PrintAndSum {
         System.out.printf("Sum: %d", sum);
     }
 }
+/*Write a program to display numbers from given start to given end
+and their sum. All the numbers will be integers. On the first line,
+you will receive the start number, on the second the end number.*/
