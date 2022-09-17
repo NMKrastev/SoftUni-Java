@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BasicSyntaxConditionalStatementsAndLoops/01-BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/BasicSyntaxConditionalStatementsAndLoops/01-BasicSyntaxConditionalStatementsAndLoops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercise_BasicSyntaxConditionalStatementsAndLoops/02-Exercise_BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/Exercise_BasicSyntaxConditionalStatementsAndLoops/02-Exercise_BasicSyntaxConditionalStatementsAndLoops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals.iml" filepath="$PROJECT_DIR$/Fundamentals.iml" />
     </modules>
   </component>
 </project>
