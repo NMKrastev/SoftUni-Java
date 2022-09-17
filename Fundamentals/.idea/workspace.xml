@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="" />
+    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,14 +83,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Application.A8_DivisibleBy3">
-    <configuration name="A4_BackIn30Minutes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A4_BackIn30Minutes" />
-      <module name="01-BasicSyntaxConditionalStatementsAndLoops" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A9_SumOfOddNumbers">
     <configuration name="A5_MonthPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A5_MonthPrinter" />
       <module name="01-BasicSyntaxConditionalStatementsAndLoops" />
@@ -117,20 +112,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A9_SumOfOddNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A9_SumOfOddNumbers" />
+      <module name="01-BasicSyntaxConditionalStatementsAndLoops" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A4_BackIn30Minutes" />
       <item itemvalue="Application.A5_MonthPrinter" />
       <item itemvalue="Application.A6_ForeignLanguages" />
       <item itemvalue="Application.A7_TheatrePromotions" />
       <item itemvalue="Application.A8_DivisibleBy3" />
+      <item itemvalue="Application.A9_SumOfOddNumbers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A9_SumOfOddNumbers" />
         <item itemvalue="Application.A8_DivisibleBy3" />
         <item itemvalue="Application.A7_TheatrePromotions" />
         <item itemvalue="Application.A6_ForeignLanguages" />
         <item itemvalue="Application.A5_MonthPrinter" />
-        <item itemvalue="Application.A4_BackIn30Minutes" />
       </list>
     </recent_temporary>
   </component>
