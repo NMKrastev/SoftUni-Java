@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="" />
+    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,14 +95,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.A6_StrongNumber">
-    <configuration name="A1_Ages" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A1_Ages" />
-      <module name="02-Exercise_BasicSyntaxConditionalStatementsAndLoops" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A8_TriangleOfNumbers">
     <configuration name="A3_Vacation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A3_Vacation" />
       <module name="02-Exercise_BasicSyntaxConditionalStatementsAndLoops" />
@@ -129,20 +124,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A8_TriangleOfNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A8_TriangleOfNumbers" />
+      <module name="02-Exercise_BasicSyntaxConditionalStatementsAndLoops" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A1_Ages" />
       <item itemvalue="Application.A3_Vacation" />
       <item itemvalue="Application.A4_PrintAndSum" />
       <item itemvalue="Application.A5_Login" />
       <item itemvalue="Application.A6_StrongNumber" />
+      <item itemvalue="Application.A8_TriangleOfNumbers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A8_TriangleOfNumbers" />
         <item itemvalue="Application.A6_StrongNumber" />
         <item itemvalue="Application.A5_Login" />
         <item itemvalue="Application.A4_PrintAndSum" />
         <item itemvalue="Application.A3_Vacation" />
-        <item itemvalue="Application.A1_Ages" />
       </list>
     </recent_temporary>
   </component>
