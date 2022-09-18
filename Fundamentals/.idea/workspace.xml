@@ -95,14 +95,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.A8_TriangleOfNumbers">
-    <configuration name="A3_Vacation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A3_Vacation" />
-      <module name="02-Exercise_BasicSyntaxConditionalStatementsAndLoops" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A9_Orders">
     <configuration name="A4_PrintAndSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A4_PrintAndSum" />
       <module name="02-Exercise_BasicSyntaxConditionalStatementsAndLoops" />
@@ -131,20 +124,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A9_Orders" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A9_Orders" />
+      <module name="02-Exercise_BasicSyntaxConditionalStatementsAndLoops" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A3_Vacation" />
       <item itemvalue="Application.A4_PrintAndSum" />
       <item itemvalue="Application.A5_Login" />
       <item itemvalue="Application.A6_StrongNumber" />
       <item itemvalue="Application.A8_TriangleOfNumbers" />
+      <item itemvalue="Application.A9_Orders" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A9_Orders" />
         <item itemvalue="Application.A8_TriangleOfNumbers" />
         <item itemvalue="Application.A6_StrongNumber" />
         <item itemvalue="Application.A5_Login" />
         <item itemvalue="Application.A4_PrintAndSum" />
-        <item itemvalue="Application.A3_Vacation" />
       </list>
     </recent_temporary>
   </component>
@@ -169,5 +169,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercise_BasicSyntaxConditionalStatementsAndLoops/src/A8_TriangleOfNumbers.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
