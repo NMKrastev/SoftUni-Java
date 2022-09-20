@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops/A1_SortNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops/A1_SortNumbers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops/A2_EnglishNameOfTheLastDigit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops/A2_EnglishNameOfTheLastDigit.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +96,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.A2_EnglishNameOfTheLastDigit">
+  <component name="RunManager" selected="Application.A3_GamingStore">
     <configuration name="A10_PadawanEquipment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_PadawanEquipment" />
       <module name="02-Exercise_BasicSyntaxConditionalStatementsAndLoops" />
@@ -125,27 +125,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A9_Orders" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A9_Orders" />
-      <module name="02-Exercise_BasicSyntaxConditionalStatementsAndLoops" />
+    <configuration name="A3_GamingStore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A3_GamingStore" />
+      <module name="03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A9_Orders" />
       <item itemvalue="Application.A10_PadawanEquipment" />
       <item itemvalue="Application.A11_RageExpenses" />
       <item itemvalue="Application.A1_SortNumbers" />
       <item itemvalue="Application.A2_EnglishNameOfTheLastDigit" />
+      <item itemvalue="Application.A3_GamingStore" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A3_GamingStore" />
         <item itemvalue="Application.A2_EnglishNameOfTheLastDigit" />
         <item itemvalue="Application.A1_SortNumbers" />
         <item itemvalue="Application.A11_RageExpenses" />
         <item itemvalue="Application.A10_PadawanEquipment" />
-        <item itemvalue="Application.A9_Orders" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +183,11 @@
           <url>file://$PROJECT_DIR$/Exercise_BasicSyntaxConditionalStatementsAndLoops/src/A11_RageExpenses.java</url>
           <line>6</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MoreExercise_BasicSyntaxConditionalStatementsAndLoops/src/A3_GamingStore.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
