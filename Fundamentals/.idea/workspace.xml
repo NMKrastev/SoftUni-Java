@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="" />
+    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +95,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.A2_PoundsToDollars">
+  <component name="RunManager" selected="Application.A3_ExactSumOfRealNumbers">
     <configuration name="A1_ConvertMetersToKilometers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_ConvertMetersToKilometers" />
       <module name="04-DataTypesAndVariables" />
@@ -108,9 +110,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A3_GamingStore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A3_GamingStore" />
-      <module name="03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops" />
+    <configuration name="A3_ExactSumOfRealNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A3_ExactSumOfRealNumbers" />
+      <module name="04-DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,19 +132,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A3_GamingStore" />
       <item itemvalue="Application.A4_ReverseString" />
       <item itemvalue="Application.A5_Messages" />
       <item itemvalue="Application.A1_ConvertMetersToKilometers" />
       <item itemvalue="Application.A2_PoundsToDollars" />
+      <item itemvalue="Application.A3_ExactSumOfRealNumbers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A3_ExactSumOfRealNumbers" />
         <item itemvalue="Application.A2_PoundsToDollars" />
         <item itemvalue="Application.A1_ConvertMetersToKilometers" />
         <item itemvalue="Application.A5_Messages" />
         <item itemvalue="Application.A4_ReverseString" />
-        <item itemvalue="Application.A3_GamingStore" />
       </list>
     </recent_temporary>
   </component>
