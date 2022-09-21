@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="" />
+    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,9 +95,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.A9_CenturiesToMinutes">
-    <configuration name="A5_ConcatNames" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A5_ConcatNames" />
+  <component name="RunManager" selected="Application.A10_SpecialNumbers">
+    <configuration name="A10_SpecialNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A10_SpecialNumbers" />
       <module name="04-DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,19 +132,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A5_ConcatNames" />
       <item itemvalue="Application.A6_CharsToString" />
       <item itemvalue="Application.A7_ReversedChars" />
       <item itemvalue="Application.A8_LowerOrUpper" />
       <item itemvalue="Application.A9_CenturiesToMinutes" />
+      <item itemvalue="Application.A10_SpecialNumbers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A10_SpecialNumbers" />
         <item itemvalue="Application.A9_CenturiesToMinutes" />
         <item itemvalue="Application.A8_LowerOrUpper" />
         <item itemvalue="Application.A7_ReversedChars" />
         <item itemvalue="Application.A6_CharsToString" />
-        <item itemvalue="Application.A5_ConcatNames" />
       </list>
     </recent_temporary>
   </component>
@@ -190,6 +192,11 @@
           <url>file://$PROJECT_DIR$/MoreExercise_BasicSyntaxConditionalStatementsAndLoops/src/A5_Messages.java</url>
           <line>6</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DataTypesAndVariables/src/A10_SpecialNumbers.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
