@@ -95,7 +95,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.A10_SpecialNumbers">
+  <component name="RunManager" selected="Application.A11_RefactorVolumeOfPyramid">
     <configuration name="A10_SpecialNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_SpecialNumbers" />
       <module name="04-DataTypesAndVariables" />
@@ -103,8 +103,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A6_CharsToString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A6_CharsToString" />
+    <configuration name="A11_RefactorVolumeOfPyramid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A11_RefactorVolumeOfPyramid" />
       <module name="04-DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,19 +132,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A6_CharsToString" />
       <item itemvalue="Application.A7_ReversedChars" />
       <item itemvalue="Application.A8_LowerOrUpper" />
       <item itemvalue="Application.A9_CenturiesToMinutes" />
       <item itemvalue="Application.A10_SpecialNumbers" />
+      <item itemvalue="Application.A11_RefactorVolumeOfPyramid" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A11_RefactorVolumeOfPyramid" />
         <item itemvalue="Application.A10_SpecialNumbers" />
         <item itemvalue="Application.A9_CenturiesToMinutes" />
         <item itemvalue="Application.A8_LowerOrUpper" />
         <item itemvalue="Application.A7_ReversedChars" />
-        <item itemvalue="Application.A6_CharsToString" />
       </list>
     </recent_temporary>
   </component>
