@@ -93,14 +93,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.A7_ReversedChars">
-    <configuration name="A3_ExactSumOfRealNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A3_ExactSumOfRealNumbers" />
-      <module name="04-DataTypesAndVariables" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A8_LowerOrUpper">
     <configuration name="A4_TownInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A4_TownInfo" />
       <module name="04-DataTypesAndVariables" />
@@ -129,20 +122,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A8_LowerOrUpper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A8_LowerOrUpper" />
+      <module name="04-DataTypesAndVariables" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A3_ExactSumOfRealNumbers" />
       <item itemvalue="Application.A4_TownInfo" />
       <item itemvalue="Application.A5_ConcatNames" />
       <item itemvalue="Application.A6_CharsToString" />
       <item itemvalue="Application.A7_ReversedChars" />
+      <item itemvalue="Application.A8_LowerOrUpper" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A8_LowerOrUpper" />
         <item itemvalue="Application.A7_ReversedChars" />
         <item itemvalue="Application.A6_CharsToString" />
         <item itemvalue="Application.A5_ConcatNames" />
         <item itemvalue="Application.A4_TownInfo" />
-        <item itemvalue="Application.A3_ExactSumOfRealNumbers" />
       </list>
     </recent_temporary>
   </component>
