@@ -102,7 +102,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.A1_IntegerOperations">
+  <component name="RunManager" selected="Application.A2_SumDigits">
     <configuration name="A10_SpecialNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_SpecialNumbers" />
       <module name="04-DataTypesAndVariables" />
@@ -124,6 +124,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A2_SumDigits" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A2_SumDigits" />
+      <module name="05-Exercise_DataTypesАndVariables" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="A6_CharsToString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A6_CharsToString" />
       <module name="04-DataTypesAndVariables" />
@@ -131,27 +138,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A9_CenturiesToMinutes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A9_CenturiesToMinutes" />
-      <module name="04-DataTypesAndVariables" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.A9_CenturiesToMinutes" />
       <item itemvalue="Application.A10_SpecialNumbers" />
       <item itemvalue="Application.A11_RefactorVolumeOfPyramid" />
       <item itemvalue="Application.A6_CharsToString" />
       <item itemvalue="Application.A1_IntegerOperations" />
+      <item itemvalue="Application.A2_SumDigits" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A2_SumDigits" />
         <item itemvalue="Application.A1_IntegerOperations" />
         <item itemvalue="Application.A6_CharsToString" />
         <item itemvalue="Application.A11_RefactorVolumeOfPyramid" />
         <item itemvalue="Application.A10_SpecialNumbers" />
-        <item itemvalue="Application.A9_CenturiesToMinutes" />
       </list>
     </recent_temporary>
   </component>
