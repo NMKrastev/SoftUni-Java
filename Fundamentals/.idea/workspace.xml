@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Exercise_DataTypesАndVariables/05-Exercise_DataTypesАndVariables.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/04-DataTypesAndVariables/A11_RefactorVolumeOfPyramid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/04-DataTypesAndVariables/A11_RefactorVolumeOfPyramid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/04-DataTypesAndVariables/A6_CharsToString.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/04-DataTypesAndVariables/A6_CharsToString.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,8 +98,11 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.A11_RefactorVolumeOfPyramid">
+  <component name="RunManager" selected="Application.A1_IntegerOperations">
     <configuration name="A10_SpecialNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_SpecialNumbers" />
       <module name="04-DataTypesAndVariables" />
@@ -110,15 +117,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A7_ReversedChars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A7_ReversedChars" />
-      <module name="04-DataTypesAndVariables" />
+    <configuration name="A1_IntegerOperations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A1_IntegerOperations" />
+      <module name="05-Exercise_DataTypesАndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A8_LowerOrUpper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A8_LowerOrUpper" />
+    <configuration name="A6_CharsToString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A6_CharsToString" />
       <module name="04-DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,19 +139,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A7_ReversedChars" />
-      <item itemvalue="Application.A8_LowerOrUpper" />
       <item itemvalue="Application.A9_CenturiesToMinutes" />
       <item itemvalue="Application.A10_SpecialNumbers" />
       <item itemvalue="Application.A11_RefactorVolumeOfPyramid" />
+      <item itemvalue="Application.A6_CharsToString" />
+      <item itemvalue="Application.A1_IntegerOperations" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A1_IntegerOperations" />
+        <item itemvalue="Application.A6_CharsToString" />
         <item itemvalue="Application.A11_RefactorVolumeOfPyramid" />
         <item itemvalue="Application.A10_SpecialNumbers" />
         <item itemvalue="Application.A9_CenturiesToMinutes" />
-        <item itemvalue="Application.A8_LowerOrUpper" />
-        <item itemvalue="Application.A7_ReversedChars" />
       </list>
     </recent_temporary>
   </component>
@@ -192,11 +199,6 @@
           <url>file://$PROJECT_DIR$/MoreExercise_BasicSyntaxConditionalStatementsAndLoops/src/A5_Messages.java</url>
           <line>6</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/DataTypesAndVariables/src/A10_SpecialNumbers.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
