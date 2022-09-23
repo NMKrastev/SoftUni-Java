@@ -98,14 +98,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.A8_BeerKegs">
-    <configuration name="A4_SumOfChars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A4_SumOfChars" />
-      <module name="05-Exercise_DataTypesАndVariables" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A9_SpiceMustFlow">
     <configuration name="A5_PrintPartOfASCIITable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A5_PrintPartOfASCIITable" />
       <module name="05-Exercise_DataTypesАndVariables" />
@@ -134,20 +127,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A9_SpiceMustFlow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A9_SpiceMustFlow" />
+      <module name="05-Exercise_DataTypesАndVariables" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A4_SumOfChars" />
       <item itemvalue="Application.A5_PrintPartOfASCIITable" />
       <item itemvalue="Application.A6_TriplesOfLatinLetters" />
       <item itemvalue="Application.A7_WaterOverflow" />
       <item itemvalue="Application.A8_BeerKegs" />
+      <item itemvalue="Application.A9_SpiceMustFlow" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A9_SpiceMustFlow" />
         <item itemvalue="Application.A8_BeerKegs" />
         <item itemvalue="Application.A7_WaterOverflow" />
         <item itemvalue="Application.A6_TriplesOfLatinLetters" />
         <item itemvalue="Application.A5_PrintPartOfASCIITable" />
-        <item itemvalue="Application.A4_SumOfChars" />
       </list>
     </recent_temporary>
   </component>
