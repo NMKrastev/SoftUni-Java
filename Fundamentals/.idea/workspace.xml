@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="" />
+    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +98,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.A10_PokeMon">
+  <component name="RunManager" selected="Application.A11_Snowballs">
     <configuration name="A10_PokeMon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_PokeMon" />
       <module name="05-Exercise_DataTypesАndVariables" />
@@ -104,8 +106,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A6_TriplesOfLatinLetters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A6_TriplesOfLatinLetters" />
+    <configuration name="A11_Snowballs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A11_Snowballs" />
       <module name="05-Exercise_DataTypesАndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,19 +135,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A6_TriplesOfLatinLetters" />
       <item itemvalue="Application.A7_WaterOverflow" />
       <item itemvalue="Application.A8_BeerKegs" />
       <item itemvalue="Application.A9_SpiceMustFlow" />
       <item itemvalue="Application.A10_PokeMon" />
+      <item itemvalue="Application.A11_Snowballs" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A11_Snowballs" />
         <item itemvalue="Application.A10_PokeMon" />
         <item itemvalue="Application.A9_SpiceMustFlow" />
         <item itemvalue="Application.A8_BeerKegs" />
         <item itemvalue="Application.A7_WaterOverflow" />
-        <item itemvalue="Application.A6_TriplesOfLatinLetters" />
       </list>
     </recent_temporary>
   </component>
