@@ -98,14 +98,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.A7_WaterOverflow">
-    <configuration name="A2_SumDigits" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A2_SumDigits" />
-      <module name="05-Exercise_DataTypesАndVariables" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A8_BeerKegs">
     <configuration name="A4_SumOfChars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A4_SumOfChars" />
       <module name="05-Exercise_DataTypesАndVariables" />
@@ -134,20 +127,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A8_BeerKegs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A8_BeerKegs" />
+      <module name="05-Exercise_DataTypesАndVariables" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A2_SumDigits" />
       <item itemvalue="Application.A4_SumOfChars" />
       <item itemvalue="Application.A5_PrintPartOfASCIITable" />
       <item itemvalue="Application.A6_TriplesOfLatinLetters" />
       <item itemvalue="Application.A7_WaterOverflow" />
+      <item itemvalue="Application.A8_BeerKegs" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A8_BeerKegs" />
         <item itemvalue="Application.A7_WaterOverflow" />
         <item itemvalue="Application.A6_TriplesOfLatinLetters" />
         <item itemvalue="Application.A5_PrintPartOfASCIITable" />
         <item itemvalue="Application.A4_SumOfChars" />
-        <item itemvalue="Application.A2_SumDigits" />
       </list>
     </recent_temporary>
   </component>
@@ -195,11 +195,6 @@
           <url>file://$PROJECT_DIR$/MoreExercise_BasicSyntaxConditionalStatementsAndLoops/src/A5_Messages.java</url>
           <line>6</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Exercise_DataTypesАndVariables/src/A7_WaterOverflow.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
