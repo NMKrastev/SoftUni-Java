@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Exercise_DataTypesАndVariables/05-Exercise_DataTypesАndVariables.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/04-DataTypesAndVariables/A11_RefactorVolumeOfPyramid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/04-DataTypesAndVariables/A11_RefactorVolumeOfPyramid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/04-DataTypesAndVariables/A6_CharsToString.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/04-DataTypesAndVariables/A6_CharsToString.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
