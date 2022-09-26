@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="" />
+    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-MoreExercise_DataTypesAndVariables/06-More Exercise_DataTypesAndVariables.iml" beforeDir="false" afterPath="$PROJECT_DIR$/06-MoreExercise_DataTypesAndVariables/06-MoreExercise_DataTypesAndVariables.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,56 +99,56 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.A6_BalancedBrackets">
-    <configuration name="A2_FromLeftToTheRight" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A2_FromLeftToTheRight" />
-      <module name="06-More Exercise_DataTypesAndVariables" />
+  <component name="RunManager" selected="Application.A1_DayOfWeek">
+    <configuration name="A1_DayOfWeek" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A1_DayOfWeek" />
+      <module name="07-Arrays" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="A3_FloatingEquality" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A3_FloatingEquality" />
-      <module name="06-More Exercise_DataTypesAndVariables" />
+      <module name="06-MoreExercise_DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="A4_RefactoringPrimeChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A4_RefactoringPrimeChecker" />
-      <module name="06-More Exercise_DataTypesAndVariables" />
+      <module name="06-MoreExercise_DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="A5_DecryptingMessages" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A5_DecryptingMessages" />
-      <module name="06-More Exercise_DataTypesAndVariables" />
+      <module name="06-MoreExercise_DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="A6_BalancedBrackets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A6_BalancedBrackets" />
-      <module name="06-More Exercise_DataTypesAndVariables" />
+      <module name="06-MoreExercise_DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A2_FromLeftToTheRight" />
       <item itemvalue="Application.A3_FloatingEquality" />
       <item itemvalue="Application.A4_RefactoringPrimeChecker" />
       <item itemvalue="Application.A5_DecryptingMessages" />
       <item itemvalue="Application.A6_BalancedBrackets" />
+      <item itemvalue="Application.A1_DayOfWeek" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A1_DayOfWeek" />
         <item itemvalue="Application.A6_BalancedBrackets" />
         <item itemvalue="Application.A5_DecryptingMessages" />
         <item itemvalue="Application.A4_RefactoringPrimeChecker" />
         <item itemvalue="Application.A3_FloatingEquality" />
-        <item itemvalue="Application.A2_FromLeftToTheRight" />
       </list>
     </recent_temporary>
   </component>
@@ -175,22 +178,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Exercise_BasicSyntaxConditionalStatementsAndLoops/src/A8_TriangleOfNumbers.java</url>
+          <url>file://$PROJECT_DIR$/02-Exercise_BasicSyntaxConditionalStatementsAndLoops/src/A8_TriangleOfNumbers.java</url>
           <line>8</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Exercise_BasicSyntaxConditionalStatementsAndLoops/src/A11_RageExpenses.java</url>
+          <url>file://$PROJECT_DIR$/02-Exercise_BasicSyntaxConditionalStatementsAndLoops/src/A11_RageExpenses.java</url>
           <line>6</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/MoreExercise_BasicSyntaxConditionalStatementsAndLoops/src/A3_GamingStore.java</url>
+          <url>file://$PROJECT_DIR$/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops/src/A3_GamingStore.java</url>
           <line>6</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/MoreExercise_BasicSyntaxConditionalStatementsAndLoops/src/A5_Messages.java</url>
+          <url>file://$PROJECT_DIR$/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops/src/A5_Messages.java</url>
           <line>6</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>

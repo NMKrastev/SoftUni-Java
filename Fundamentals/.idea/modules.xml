@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BasicSyntaxConditionalStatementsAndLoops/01-BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/BasicSyntaxConditionalStatementsAndLoops/01-BasicSyntaxConditionalStatementsAndLoops.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Exercise_BasicSyntaxConditionalStatementsAndLoops/02-Exercise_BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/Exercise_BasicSyntaxConditionalStatementsAndLoops/02-Exercise_BasicSyntaxConditionalStatementsAndLoops.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MoreExercise_BasicSyntaxConditionalStatementsAndLoops/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/MoreExercise_BasicSyntaxConditionalStatementsAndLoops/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops.iml" />
-      <module fileurl="file://$PROJECT_DIR$/DataTypesAndVariables/04-DataTypesAndVariables.iml" filepath="$PROJECT_DIR$/DataTypesAndVariables/04-DataTypesAndVariables.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Exercise_DataTypesАndVariables/05-Exercise_DataTypesАndVariables.iml" filepath="$PROJECT_DIR$/Exercise_DataTypesАndVariables/05-Exercise_DataTypesАndVariables.iml" />
-      <module fileurl="file://$PROJECT_DIR$/More Exercise_DataTypesAndVariables/06-More Exercise_DataTypesAndVariables.iml" filepath="$PROJECT_DIR$/More Exercise_DataTypesAndVariables/06-More Exercise_DataTypesAndVariables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-BasicSyntaxConditionalStatementsAndLoops/01-BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/01-BasicSyntaxConditionalStatementsAndLoops/01-BasicSyntaxConditionalStatementsAndLoops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-Exercise_BasicSyntaxConditionalStatementsAndLoops/02-Exercise_BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/02-Exercise_BasicSyntaxConditionalStatementsAndLoops/02-Exercise_BasicSyntaxConditionalStatementsAndLoops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops/03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-DataTypesAndVariables/04-DataTypesAndVariables.iml" filepath="$PROJECT_DIR$/04-DataTypesAndVariables/04-DataTypesAndVariables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-Exercise_DataTypesАndVariables/05-Exercise_DataTypesАndVariables.iml" filepath="$PROJECT_DIR$/05-Exercise_DataTypesАndVariables/05-Exercise_DataTypesАndVariables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-MoreExercise_DataTypesAndVariables/06-MoreExercise_DataTypesAndVariables.iml" filepath="$PROJECT_DIR$/06-MoreExercise_DataTypesAndVariables/06-MoreExercise_DataTypesAndVariables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-Arrays/07-Arrays.iml" filepath="$PROJECT_DIR$/07-Arrays/07-Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/Fundamentals.iml" filepath="$PROJECT_DIR$/Fundamentals.iml" />
     </modules>
   </component>
