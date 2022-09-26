@@ -98,7 +98,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.A4_ReverseAnArrayOfStrings">
+  <component name="RunManager" selected="Application.A5_EvenAndOddSubtraction">
     <configuration name="A1_DayOfWeek" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_DayOfWeek" />
       <module name="07-Arrays" />
@@ -127,27 +127,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A6_BalancedBrackets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A6_BalancedBrackets" />
-      <module name="06-MoreExercise_DataTypesAndVariables" />
+    <configuration name="A5_EvenAndOddSubtraction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A5_EvenAndOddSubtraction" />
+      <module name="07-Arrays" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A6_BalancedBrackets" />
       <item itemvalue="Application.A1_DayOfWeek" />
       <item itemvalue="Application.A2_PrintNumbersInReverseOrder" />
       <item itemvalue="Application.A3_SumEvenNumbers" />
       <item itemvalue="Application.A4_ReverseAnArrayOfStrings" />
+      <item itemvalue="Application.A5_EvenAndOddSubtraction" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A5_EvenAndOddSubtraction" />
         <item itemvalue="Application.A4_ReverseAnArrayOfStrings" />
         <item itemvalue="Application.A3_SumEvenNumbers" />
         <item itemvalue="Application.A2_PrintNumbersInReverseOrder" />
         <item itemvalue="Application.A1_DayOfWeek" />
-        <item itemvalue="Application.A6_BalancedBrackets" />
       </list>
     </recent_temporary>
   </component>
@@ -200,11 +200,6 @@
           <url>file://$PROJECT_DIR$/07-Arrays/src/A3_SumEvenNumbers.java</url>
           <line>8</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/07-Arrays/src/A4_ReverseAnArrayOfStrings.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
