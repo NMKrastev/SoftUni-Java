@@ -96,56 +96,56 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.A11_Snowballs">
-    <configuration name="A10_PokeMon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A10_PokeMon" />
-      <module name="05-Exercise_DataTypesАndVariables" />
+  <component name="RunManager" selected="Application.A6_BalancedBrackets">
+    <configuration name="A2_FromLeftToTheRight" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A2_FromLeftToTheRight" />
+      <module name="06-More Exercise_DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A11_Snowballs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A11_Snowballs" />
-      <module name="05-Exercise_DataTypesАndVariables" />
+    <configuration name="A3_FloatingEquality" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A3_FloatingEquality" />
+      <module name="06-More Exercise_DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A7_WaterOverflow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A7_WaterOverflow" />
-      <module name="05-Exercise_DataTypesАndVariables" />
+    <configuration name="A4_RefactoringPrimeChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A4_RefactoringPrimeChecker" />
+      <module name="06-More Exercise_DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A8_BeerKegs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A8_BeerKegs" />
-      <module name="05-Exercise_DataTypesАndVariables" />
+    <configuration name="A5_DecryptingMessages" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A5_DecryptingMessages" />
+      <module name="06-More Exercise_DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A9_SpiceMustFlow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A9_SpiceMustFlow" />
-      <module name="05-Exercise_DataTypesАndVariables" />
+    <configuration name="A6_BalancedBrackets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A6_BalancedBrackets" />
+      <module name="06-More Exercise_DataTypesAndVariables" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A7_WaterOverflow" />
-      <item itemvalue="Application.A8_BeerKegs" />
-      <item itemvalue="Application.A9_SpiceMustFlow" />
-      <item itemvalue="Application.A10_PokeMon" />
-      <item itemvalue="Application.A11_Snowballs" />
+      <item itemvalue="Application.A2_FromLeftToTheRight" />
+      <item itemvalue="Application.A3_FloatingEquality" />
+      <item itemvalue="Application.A4_RefactoringPrimeChecker" />
+      <item itemvalue="Application.A5_DecryptingMessages" />
+      <item itemvalue="Application.A6_BalancedBrackets" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.A11_Snowballs" />
-        <item itemvalue="Application.A10_PokeMon" />
-        <item itemvalue="Application.A9_SpiceMustFlow" />
-        <item itemvalue="Application.A8_BeerKegs" />
-        <item itemvalue="Application.A7_WaterOverflow" />
+        <item itemvalue="Application.A6_BalancedBrackets" />
+        <item itemvalue="Application.A5_DecryptingMessages" />
+        <item itemvalue="Application.A4_RefactoringPrimeChecker" />
+        <item itemvalue="Application.A3_FloatingEquality" />
+        <item itemvalue="Application.A2_FromLeftToTheRight" />
       </list>
     </recent_temporary>
   </component>
