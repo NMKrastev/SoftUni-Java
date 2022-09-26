@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/07-Arrays/src/A6_EqualArrays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/07-Arrays/A6_EqualArrays.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/07-Arrays/A6_EqualArrays.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,14 +99,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.A6_EqualArrays">
-    <configuration name="A2_PrintNumbersInReverseOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A2_PrintNumbersInReverseOrder" />
-      <module name="07-Arrays" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A7_CondenseArrayToNumber">
     <configuration name="A3_SumEvenNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A3_SumEvenNumbers" />
       <module name="07-Arrays" />
@@ -135,20 +128,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A7_CondenseArrayToNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A7_CondenseArrayToNumber" />
+      <module name="07-Arrays" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A2_PrintNumbersInReverseOrder" />
       <item itemvalue="Application.A3_SumEvenNumbers" />
       <item itemvalue="Application.A4_ReverseAnArrayOfStrings" />
       <item itemvalue="Application.A5_EvenAndOddSubtraction" />
       <item itemvalue="Application.A6_EqualArrays" />
+      <item itemvalue="Application.A7_CondenseArrayToNumber" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A7_CondenseArrayToNumber" />
         <item itemvalue="Application.A6_EqualArrays" />
         <item itemvalue="Application.A5_EvenAndOddSubtraction" />
         <item itemvalue="Application.A4_ReverseAnArrayOfStrings" />
         <item itemvalue="Application.A3_SumEvenNumbers" />
-        <item itemvalue="Application.A2_PrintNumbersInReverseOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -206,6 +206,11 @@
           <url>file://$PROJECT_DIR$/07-Arrays/src/A6_EqualArrays.java</url>
           <line>14</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/07-Arrays/src/A7_CondenseArrayToNumber.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
