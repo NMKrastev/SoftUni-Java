@@ -1,6 +1,6 @@
 # **HTTP Basics**<br>
 
-## **In this lesson I used *Postman* in order to make GET, POST DELETE and PATCH requests**<br>
+## **In this lesson I used "Postman" in order to make GET, POST DELETE and PATCH requests**<br>
 
 1. Listing all trips should be easy using "GET" request.</br></br>
    - Use the following URL to make a "GET" request:</br>
