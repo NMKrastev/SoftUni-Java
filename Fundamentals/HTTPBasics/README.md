@@ -10,7 +10,7 @@
    [GETResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/GETResponse.json) </br></br>
 
 2. Let's make a "POST" request to add a new destination to our firebase database. </br></br>
-   - Use the following data: 
+   - Use the following data and change it as you see fit: 
    ```json
     {
 
@@ -31,8 +31,8 @@
 
 3. Now let us remove the newly created trip using "DELETE" request.</br></br>
    - Make the "DELETE" request at: https://trips-48955.firebaseio.com/trips/{postId}.json </br>
-   The postId can be found from the [POSTResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/POSTResponse.json) of the previous task.</br></br>
-   - Replace `{postId}` in https://trips-48955.firebaseio.com/trips/{postId}.json with the postId that you received in the previous step. </br>
+   The `postId` can be found from the [POSTResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/POSTResponse.json) of the previous task.</br></br>
+   - Replace `{postId}` in https://trips-48955.firebaseio.com/trips/{postId}.json with the `postId` that you received in the previous step. </br>
      In my case this is: 
    ```json
     {
@@ -47,7 +47,7 @@
    - The response should contain `null`, and the response status is `200 OK`</br></br>
    
 4. Edit a trip with a "PATCH" request </br></br>
-      - Change the `description` of the given json:</br>
+      - Change the `description`, `imagePath` and `name` of the given json as you see fit:</br>
       ```json
        {
 
