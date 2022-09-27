@@ -7,7 +7,7 @@
      https://trips-48955.firebaseio.com/trips.json </br></br>
 
    - You should receive the following answer with status `200 OK`: </br>
-   [GETResponse.json](https://github.com/) </br></br>
+   [GETResponse.json](https://github.com/NMKrastev/SoftUni-Java/edit/dev/Fundamentals/HTTPBasics/src/GETResponse.json) </br></br>
 
 2. Let's make a "POST" request to add a new destination to our firebase database. </br></br>
    - Use the following data: 
@@ -27,11 +27,11 @@
    https://trips-48955.firebaseio.com/trips.json </br></br>
 
    - You should receive the following answer with status `200 OK`: </br>
-     [POSTResponse.json](https://github.com/) </br></br>
+     [POSTResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/POSTResponse.json) </br></br>
 
 3. Now let us remove the newly created trip using "DELETE" request.</br></br>
    - Make the "DELETE" request at: https://trips-48955.firebaseio.com/trips/{postId}.json </br>
-   The postId can be found from the [POSTResponse.json](https://github.com/) of the previous task.</br></br>
+   The postId can be found from the [POSTResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/POSTResponse.json) of the previous task.</br></br>
    - Replace `{postId}` in https://trips-48955.firebaseio.com/trips/{postId}.json with the postId that you received in the previous step. </br>
      In my case this is: 
    ```json
@@ -43,7 +43,7 @@
    - Replaced URL should now look like this: https://trips-48955.firebaseio.com/-NCzOrV_4L4otZl13VOB.json </br></br>
    - Make the "DELETE" request in **Postman**.</br></br>
    - You should receive the following answer: </br>
-     [DELETEResponse.json](https://github.com/) </br></br>
+     [DELETEResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/DELETERespose.json) </br></br>
    - The response should contain `null`, and the response status is `200 OK`</br></br>
    
 4. Edit a trip with a "PATCH" request </br></br>
@@ -66,4 +66,4 @@
    https://trips-48955.firebaseio.com/trips/-MIJ0HydEYF0x6fljO55.json </br></br>
 
    - You should receive the following answer with status `200 OK`: </br>
-     [PATCHResponse.json](https://github.com/) </br></br>
+     [PATCHResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/PATCHResponse.json) </br></br>
