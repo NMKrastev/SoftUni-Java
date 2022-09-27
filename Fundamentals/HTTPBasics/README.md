@@ -1,4 +1,4 @@
-*<center>HTTP Basics</center>*</br>
+*HTTP Basics*</br>
 
 **In this lesson we will use Postman in order to do GET, POST and DELETE requests**</br>
 
