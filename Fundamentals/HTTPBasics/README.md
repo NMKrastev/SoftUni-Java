@@ -7,7 +7,7 @@
      https://trips-48955.firebaseio.com/trips.json </br></br>
 
    - You should receive the following answer with status `200 OK`: </br>
-   [GETResponse.json](https://github.com/NMKrastev/SoftUni-Java/edit/dev/Fundamentals/HTTPBasics/src/GETResponse.json) </br></br>
+   [GETResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/GETResponse.json) </br></br>
 
 2. Let's make a "POST" request to add a new destination to our firebase database. </br></br>
    - Use the following data: 
