@@ -1,6 +1,6 @@
 <h1 align="center">HTTP Basics</h1>
 
-<h3 align="center">In this lesson I used "Postman" in order to make GET, POST DELETE and PATCH requests*</h3>
+<h3 align="center">In this lesson I used "Postman" in order to make GET, POST DELETE and PATCH requests</h3>
 
 1. Listing all trips should be easy using "GET" request.</br></br>
    - Use the following URL to make a "GET" request:</br>
