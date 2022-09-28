@@ -22,10 +22,10 @@ public class A4_ArrayRotation {
             array[array.length - 1] = temp;
         }
 
-        for (int numers :
+        for (int numbers :
                 array) {
 
-            System.out.print(numers + " ");
+            System.out.print(numbers + " ");
         }
     }
 }
