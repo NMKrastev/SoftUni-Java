@@ -8,7 +8,7 @@
    - Use the following URL to make a "GET" request:</br>
      https://trips-48955.firebaseio.com/trips.json </br></br>
 
-   - You should receive the following answer with status `200 OK`: </br>
+   - You should receive the following response with status `200 OK`: </br>
    [GETResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/GETResponse.json) </br></br>
 
 2. Let's make a "POST" request to add a new destination to our firebase database. </br></br>
@@ -28,7 +28,7 @@
    - Make the "POST" request to the following address: </br>
    https://trips-48955.firebaseio.com/trips.json </br></br>
 
-   - You should receive the following answer with status `200 OK`: </br>
+   - You should receive the following response with status `200 OK`: </br>
      [POSTResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/POSTResponse.json) </br></br>
 
 3. Now let us remove the newly created trip using "DELETE" request.</br></br>
@@ -44,7 +44,7 @@
    
    - Replaced URL should now look like this: https://trips-48955.firebaseio.com/-NCzOrV_4L4otZl13VOB.json </br></br>
    - Make the "DELETE" request in **Postman**.</br></br>
-   - You should receive the following answer: </br>
+   - You should receive the following response: </br>
      [DELETEResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/DELETERespose.json) </br></br>
    - The response should contain `null`, and the response status is `200 OK`</br></br>
    
@@ -67,5 +67,5 @@
    - Make the "PATCH" request using the following URL: </br>
    https://trips-48955.firebaseio.com/trips/-MIJ0HydEYF0x6fljO55.json </br></br>
 
-   - You should receive the following answer with status `200 OK`: </br>
+   - You should receive the following response with status `200 OK`: </br>
      [PATCHResponse.json](https://github.com/NMKrastev/SoftUni-Java/blob/dev/Fundamentals/HTTPBasics/src/PATCHResponse.json) </br></br>
