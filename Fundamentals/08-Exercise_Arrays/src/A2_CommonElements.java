@@ -14,7 +14,9 @@ public class A2_CommonElements {
             for (int j = 0; j < arrayOne.length; j++) {
 
                 if(arrayTwo[i].equals(arrayOne[j])) {
+
                     System.out.print(arrayOne[j] + " ");
+
                 }
             }
         }
