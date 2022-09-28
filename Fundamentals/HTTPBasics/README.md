@@ -1,8 +1,10 @@
 <h1 align="center">HTTP Basics</h1>
 
-<h3 align="center">In this lesson I used "Postman" in order to make GET, POST DELETE and PATCH requests</h3>
+<h3 align="center">In this lesson I used "Postman" in order to make GET, POST, DELETE and PATCH requests</h3>
 
-1. Listing all trips should be easy using "GET" request.</br></br>
+<h4 align="center">You will have URL that upon a "GET" request retrieves list of trips.</h4>
+
+1. Listing all trips should be easy using the "GET" request.</br></br>
    - Use the following URL to make a "GET" request:</br>
      https://trips-48955.firebaseio.com/trips.json </br></br>
 
