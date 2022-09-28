@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/HTTPBasics/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/HTTPBasics/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -107,10 +108,10 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A7_CondenseArrayToNumber">
-    <configuration name="A3_SumEvenNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A3_SumEvenNumbers" />
-      <module name="07-Arrays" />
+  <component name="RunManager" selected="Application.A1_Train">
+    <configuration name="A1_Train" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A1_Train" />
+      <module name="08-Exercise_Arrays" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,19 +145,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A3_SumEvenNumbers" />
       <item itemvalue="Application.A4_ReverseAnArrayOfStrings" />
       <item itemvalue="Application.A5_EvenAndOddSubtraction" />
       <item itemvalue="Application.A6_EqualArrays" />
       <item itemvalue="Application.A7_CondenseArrayToNumber" />
+      <item itemvalue="Application.A1_Train" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A1_Train" />
         <item itemvalue="Application.A7_CondenseArrayToNumber" />
         <item itemvalue="Application.A6_EqualArrays" />
         <item itemvalue="Application.A5_EvenAndOddSubtraction" />
         <item itemvalue="Application.A4_ReverseAnArrayOfStrings" />
-        <item itemvalue="Application.A3_SumEvenNumbers" />
       </list>
     </recent_temporary>
   </component>
