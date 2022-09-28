@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/08-Exercise_Arrays/A2_CommonElements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/08-Exercise_Arrays/A2_CommonElements.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +32,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2EspduoXSKs8CU0aVHZ69JdFTgV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -107,7 +111,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A2_CommonElements">
+  <component name="RunManager" selected="Application.A3_ZigZagArrays">
     <configuration name="A1_Train" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_Train" />
       <module name="08-Exercise_Arrays" />
@@ -122,9 +126,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A5_EvenAndOddSubtraction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A5_EvenAndOddSubtraction" />
-      <module name="07-Arrays" />
+    <configuration name="A3_ZigZagArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A3_ZigZagArrays" />
+      <module name="08-Exercise_Arrays" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,19 +148,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A5_EvenAndOddSubtraction" />
       <item itemvalue="Application.A6_EqualArrays" />
       <item itemvalue="Application.A7_CondenseArrayToNumber" />
       <item itemvalue="Application.A1_Train" />
       <item itemvalue="Application.A2_CommonElements" />
+      <item itemvalue="Application.A3_ZigZagArrays" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A3_ZigZagArrays" />
         <item itemvalue="Application.A2_CommonElements" />
         <item itemvalue="Application.A1_Train" />
         <item itemvalue="Application.A7_CondenseArrayToNumber" />
         <item itemvalue="Application.A6_EqualArrays" />
-        <item itemvalue="Application.A5_EvenAndOddSubtraction" />
       </list>
     </recent_temporary>
   </component>
@@ -219,6 +223,11 @@
           <url>file://$PROJECT_DIR$/08-Exercise_Arrays/src/A2_CommonElements.java</url>
           <line>11</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/08-Exercise_Arrays/src/A3_ZigZagArrays.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
