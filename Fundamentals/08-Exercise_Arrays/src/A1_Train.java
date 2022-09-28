@@ -16,7 +16,7 @@ public class A1_Train {
 
         }
 
-        for (int cars:
+        for (int cars :
              carsArray) {
             System.out.print(cars + " ");
         }
