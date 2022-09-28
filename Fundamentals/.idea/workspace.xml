@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/08-Exercise_Arrays/A4_ArrayRotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/08-Exercise_Arrays/A4_ArrayRotation.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +34,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2EspduoXSKs8CU0aVHZ69JdFTgV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -110,7 +111,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A4_ArrayRotation">
+  <component name="RunManager" selected="Application.A5_TopIntegers">
     <configuration name="A1_Train" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_Train" />
       <module name="08-Exercise_Arrays" />
@@ -139,27 +140,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A7_CondenseArrayToNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A7_CondenseArrayToNumber" />
-      <module name="07-Arrays" />
+    <configuration name="A5_TopIntegers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A5_TopIntegers" />
+      <module name="08-Exercise_Arrays" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A7_CondenseArrayToNumber" />
       <item itemvalue="Application.A1_Train" />
       <item itemvalue="Application.A2_CommonElements" />
       <item itemvalue="Application.A3_ZigZagArrays" />
       <item itemvalue="Application.A4_ArrayRotation" />
+      <item itemvalue="Application.A5_TopIntegers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A5_TopIntegers" />
         <item itemvalue="Application.A4_ArrayRotation" />
         <item itemvalue="Application.A3_ZigZagArrays" />
         <item itemvalue="Application.A2_CommonElements" />
         <item itemvalue="Application.A1_Train" />
-        <item itemvalue="Application.A7_CondenseArrayToNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -229,9 +230,9 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/08-Exercise_Arrays/src/A4_ArrayRotation.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/08-Exercise_Arrays/src/A5_TopIntegers.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
