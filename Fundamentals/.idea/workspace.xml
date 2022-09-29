@@ -110,14 +110,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A7_MaxSequenceOfEqualElements">
-    <configuration name="A3_ZigZagArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A3_ZigZagArrays" />
-      <module name="08-Exercise_Arrays" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A8_MagicSum">
     <configuration name="A4_ArrayRotation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A4_ArrayRotation" />
       <module name="08-Exercise_Arrays" />
@@ -146,20 +139,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A8_MagicSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A8_MagicSum" />
+      <module name="08-Exercise_Arrays" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A3_ZigZagArrays" />
       <item itemvalue="Application.A4_ArrayRotation" />
       <item itemvalue="Application.A5_TopIntegers" />
       <item itemvalue="Application.A6_EqualSums" />
       <item itemvalue="Application.A7_MaxSequenceOfEqualElements" />
+      <item itemvalue="Application.A8_MagicSum" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A8_MagicSum" />
         <item itemvalue="Application.A7_MaxSequenceOfEqualElements" />
         <item itemvalue="Application.A6_EqualSums" />
         <item itemvalue="Application.A5_TopIntegers" />
         <item itemvalue="Application.A4_ArrayRotation" />
-        <item itemvalue="Application.A3_ZigZagArrays" />
       </list>
     </recent_temporary>
   </component>
@@ -237,6 +237,11 @@
           <url>file://$PROJECT_DIR$/08-Exercise_Arrays/src/A6_EqualSums.java</url>
           <line>7</line>
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/08-Exercise_Arrays/src/A8_MagicSum.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
