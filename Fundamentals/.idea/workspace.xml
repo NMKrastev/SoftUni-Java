@@ -110,14 +110,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A6_EqualSums">
-    <configuration name="A2_CommonElements" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A2_CommonElements" />
-      <module name="08-Exercise_Arrays" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A7_MaxSequenceOfEqualElements">
     <configuration name="A3_ZigZagArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A3_ZigZagArrays" />
       <module name="08-Exercise_Arrays" />
@@ -146,20 +139,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A7_MaxSequenceOfEqualElements" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A7_MaxSequenceOfEqualElements" />
+      <module name="08-Exercise_Arrays" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A2_CommonElements" />
       <item itemvalue="Application.A3_ZigZagArrays" />
       <item itemvalue="Application.A4_ArrayRotation" />
       <item itemvalue="Application.A5_TopIntegers" />
       <item itemvalue="Application.A6_EqualSums" />
+      <item itemvalue="Application.A7_MaxSequenceOfEqualElements" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A7_MaxSequenceOfEqualElements" />
         <item itemvalue="Application.A6_EqualSums" />
         <item itemvalue="Application.A5_TopIntegers" />
         <item itemvalue="Application.A4_ArrayRotation" />
         <item itemvalue="Application.A3_ZigZagArrays" />
-        <item itemvalue="Application.A2_CommonElements" />
       </list>
     </recent_temporary>
   </component>
