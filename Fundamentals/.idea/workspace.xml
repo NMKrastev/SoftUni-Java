@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/08-Exercise_Arrays/A9_ArrayModifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/08-Exercise_Arrays/A9_ArrayModifier.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,9 +111,9 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A9_ArrayModifier">
-    <configuration name="A5_TopIntegers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A5_TopIntegers" />
+  <component name="RunManager" selected="Application.A10_TreasureHunt">
+    <configuration name="A10_TreasureHunt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A10_TreasureHunt" />
       <module name="08-Exercise_Arrays" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,19 +148,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A5_TopIntegers" />
       <item itemvalue="Application.A6_EqualSums" />
       <item itemvalue="Application.A7_MaxSequenceOfEqualElements" />
       <item itemvalue="Application.A8_MagicSum" />
       <item itemvalue="Application.A9_ArrayModifier" />
+      <item itemvalue="Application.A10_TreasureHunt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A10_TreasureHunt" />
         <item itemvalue="Application.A9_ArrayModifier" />
         <item itemvalue="Application.A8_MagicSum" />
         <item itemvalue="Application.A7_MaxSequenceOfEqualElements" />
         <item itemvalue="Application.A6_EqualSums" />
-        <item itemvalue="Application.A5_TopIntegers" />
       </list>
     </recent_temporary>
   </component>
@@ -247,6 +248,11 @@
           <url>file://$PROJECT_DIR$/08-Exercise_Arrays/src/A9_ArrayModifier.java</url>
           <line>7</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/08-Exercise_Arrays/src/A10_TreasureHunt.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
