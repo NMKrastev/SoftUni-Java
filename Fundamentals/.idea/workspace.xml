@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/09-MoreExercise_Arrays/09-MoreExercise_Arrays.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +110,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A1_EncryptSortAndPrintArray">
+  <component name="RunManager" selected="Application.A2_PascalTriangle">
     <configuration name="A10_TreasureHunt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_TreasureHunt" />
       <module name="08-Exercise_Arrays" />
@@ -127,9 +125,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A7_MaxSequenceOfEqualElements" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A7_MaxSequenceOfEqualElements" />
-      <module name="08-Exercise_Arrays" />
+    <configuration name="A2_PascalTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A2_PascalTriangle" />
+      <module name="09-MoreExercise_Arrays" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -149,19 +147,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A7_MaxSequenceOfEqualElements" />
       <item itemvalue="Application.A8_MagicSum" />
       <item itemvalue="Application.A9_ArrayModifier" />
       <item itemvalue="Application.A10_TreasureHunt" />
       <item itemvalue="Application.A1_EncryptSortAndPrintArray" />
+      <item itemvalue="Application.A2_PascalTriangle" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A2_PascalTriangle" />
         <item itemvalue="Application.A1_EncryptSortAndPrintArray" />
         <item itemvalue="Application.A10_TreasureHunt" />
         <item itemvalue="Application.A9_ArrayModifier" />
         <item itemvalue="Application.A8_MagicSum" />
-        <item itemvalue="Application.A7_MaxSequenceOfEqualElements" />
       </list>
     </recent_temporary>
   </component>
@@ -257,8 +255,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/09-MoreExercise_Arrays/src/A1_EncryptSortAndPrintArray.java</url>
-          <line>12</line>
+          <line>13</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/09-MoreExercise_Arrays/src/A2_PascalTriangle.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
