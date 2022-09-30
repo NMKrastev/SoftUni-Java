@@ -110,7 +110,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A3_RecursiveFibonacci">
+  <component name="RunManager" selected="Application.A4_LongestIncreasingSubsequence">
     <configuration name="A10_TreasureHunt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_TreasureHunt" />
       <module name="08-Exercise_Arrays" />
@@ -139,27 +139,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A9_ArrayModifier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A9_ArrayModifier" />
-      <module name="08-Exercise_Arrays" />
+    <configuration name="A4_LongestIncreasingSubsequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A4_LongestIncreasingSubsequence" />
+      <module name="09-MoreExercise_Arrays" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A9_ArrayModifier" />
       <item itemvalue="Application.A10_TreasureHunt" />
       <item itemvalue="Application.A1_EncryptSortAndPrintArray" />
       <item itemvalue="Application.A2_PascalTriangle" />
       <item itemvalue="Application.A3_RecursiveFibonacci" />
+      <item itemvalue="Application.A4_LongestIncreasingSubsequence" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A4_LongestIncreasingSubsequence" />
         <item itemvalue="Application.A3_RecursiveFibonacci" />
         <item itemvalue="Application.A2_PascalTriangle" />
         <item itemvalue="Application.A1_EncryptSortAndPrintArray" />
         <item itemvalue="Application.A10_TreasureHunt" />
-        <item itemvalue="Application.A9_ArrayModifier" />
       </list>
     </recent_temporary>
   </component>
@@ -262,6 +262,11 @@
           <url>file://$PROJECT_DIR$/09-MoreExercise_Arrays/src/A2_PascalTriangle.java</url>
           <line>8</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/09-MoreExercise_Arrays/src/A4_LongestIncreasingSubsequence.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
