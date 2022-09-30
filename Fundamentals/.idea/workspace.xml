@@ -110,7 +110,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A2_PascalTriangle">
+  <component name="RunManager" selected="Application.A3_RecursiveFibonacci">
     <configuration name="A10_TreasureHunt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_TreasureHunt" />
       <module name="08-Exercise_Arrays" />
@@ -132,9 +132,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A8_MagicSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A8_MagicSum" />
-      <module name="08-Exercise_Arrays" />
+    <configuration name="A3_RecursiveFibonacci" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A3_RecursiveFibonacci" />
+      <module name="09-MoreExercise_Arrays" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,19 +147,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A8_MagicSum" />
       <item itemvalue="Application.A9_ArrayModifier" />
       <item itemvalue="Application.A10_TreasureHunt" />
       <item itemvalue="Application.A1_EncryptSortAndPrintArray" />
       <item itemvalue="Application.A2_PascalTriangle" />
+      <item itemvalue="Application.A3_RecursiveFibonacci" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A3_RecursiveFibonacci" />
         <item itemvalue="Application.A2_PascalTriangle" />
         <item itemvalue="Application.A1_EncryptSortAndPrintArray" />
         <item itemvalue="Application.A10_TreasureHunt" />
         <item itemvalue="Application.A9_ArrayModifier" />
-        <item itemvalue="Application.A8_MagicSum" />
       </list>
     </recent_temporary>
   </component>
