@@ -110,14 +110,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A5_KaminoFactory">
-    <configuration name="A2_PascalTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A2_PascalTriangle" />
-      <module name="09-MoreExercise_Arrays" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A6_LadyBugs">
     <configuration name="A3_RecursiveFibonacci" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A3_RecursiveFibonacci" />
       <module name="09-MoreExercise_Arrays" />
@@ -139,6 +132,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A6_LadyBugs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A6_LadyBugs" />
+      <module name="09-MoreExercise_Arrays" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="A9_ArrayModifier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A9_ArrayModifier" />
       <module name="08-Exercise_Arrays" />
@@ -147,19 +147,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A2_PascalTriangle" />
       <item itemvalue="Application.A3_RecursiveFibonacci" />
       <item itemvalue="Application.A4_LongestIncreasingSubsequence" />
       <item itemvalue="Application.A9_ArrayModifier" />
       <item itemvalue="Application.A5_KaminoFactory" />
+      <item itemvalue="Application.A6_LadyBugs" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A6_LadyBugs" />
         <item itemvalue="Application.A5_KaminoFactory" />
         <item itemvalue="Application.A9_ArrayModifier" />
         <item itemvalue="Application.A4_LongestIncreasingSubsequence" />
         <item itemvalue="Application.A3_RecursiveFibonacci" />
-        <item itemvalue="Application.A2_PascalTriangle" />
       </list>
     </recent_temporary>
   </component>
@@ -272,6 +272,11 @@
           <url>file://$PROJECT_DIR$/09-MoreExercise_Arrays/src/A5_KaminoFactory.java</url>
           <line>7</line>
           <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/09-MoreExercise_Arrays/src/A6_LadyBugs.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
