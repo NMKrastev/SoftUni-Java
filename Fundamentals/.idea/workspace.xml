@@ -103,28 +103,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A4_LongestIncreasingSubsequence">
-    <configuration name="A10_TreasureHunt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A10_TreasureHunt" />
-      <module name="08-Exercise_Arrays" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="A1_EncryptSortAndPrintArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A1_EncryptSortAndPrintArray" />
-      <module name="09-MoreExercise_Arrays" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A5_KaminoFactory">
     <configuration name="A2_PascalTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A2_PascalTriangle" />
       <module name="09-MoreExercise_Arrays" />
@@ -146,20 +132,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A5_KaminoFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A5_KaminoFactory" />
+      <module name="09-MoreExercise_Arrays" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="A9_ArrayModifier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A9_ArrayModifier" />
+      <module name="08-Exercise_Arrays" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A10_TreasureHunt" />
-      <item itemvalue="Application.A1_EncryptSortAndPrintArray" />
       <item itemvalue="Application.A2_PascalTriangle" />
       <item itemvalue="Application.A3_RecursiveFibonacci" />
       <item itemvalue="Application.A4_LongestIncreasingSubsequence" />
+      <item itemvalue="Application.A9_ArrayModifier" />
+      <item itemvalue="Application.A5_KaminoFactory" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A5_KaminoFactory" />
+        <item itemvalue="Application.A9_ArrayModifier" />
         <item itemvalue="Application.A4_LongestIncreasingSubsequence" />
         <item itemvalue="Application.A3_RecursiveFibonacci" />
         <item itemvalue="Application.A2_PascalTriangle" />
-        <item itemvalue="Application.A1_EncryptSortAndPrintArray" />
-        <item itemvalue="Application.A10_TreasureHunt" />
       </list>
     </recent_temporary>
   </component>
@@ -267,6 +267,11 @@
           <url>file://$PROJECT_DIR$/09-MoreExercise_Arrays/src/A4_LongestIncreasingSubsequence.java</url>
           <line>9</line>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/09-MoreExercise_Arrays/src/A5_KaminoFactory.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
