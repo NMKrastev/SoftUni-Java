@@ -133,7 +133,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A2_Grades">
+  <component name="RunManager" selected="Application.A3_PrintingTriangle">
     <configuration name="A1_SignOfInteger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_SignOfInteger" />
       <module name="PF10-Methods" />
@@ -143,6 +143,13 @@
     </configuration>
     <configuration name="A2_Grades" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A2_Grades" />
+      <module name="PF10-Methods" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="A3_PrintingTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A3_PrintingTriangle" />
       <module name="PF10-Methods" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,27 +169,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A9_ArrayModifier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A9_ArrayModifier" />
-      <module name="PF08-Exercise_Arrays" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.A1_SignOfInteger" />
       <item itemvalue="Application.A2_Grades" />
-      <item itemvalue="Application.A9_ArrayModifier" />
+      <item itemvalue="Application.A3_PrintingTriangle" />
       <item itemvalue="Application.A5_KaminoFactory" />
       <item itemvalue="Application.A6_LadyBugs" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A3_PrintingTriangle" />
         <item itemvalue="Application.A2_Grades" />
         <item itemvalue="Application.A1_SignOfInteger" />
         <item itemvalue="Application.A6_LadyBugs" />
         <item itemvalue="Application.A5_KaminoFactory" />
-        <item itemvalue="Application.A9_ArrayModifier" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +201,7 @@
       <workItem from="1664909566952" duration="828000" />
       <workItem from="1664949855349" duration="491000" />
       <workItem from="1664950358890" duration="2976000" />
-      <workItem from="1664953814937" duration="2213000" />
+      <workItem from="1664953814937" duration="2857000" />
     </task>
     <servers />
   </component>
@@ -311,6 +311,20 @@
           <url>file://$PROJECT_DIR$/PF09-MoreExercise_Arrays/src/A6_LadyBugs.java</url>
           <line>7</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF10-Methods/src/A3_PrintingTriangle.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF10-Methods/src/A3_PrintingTriangle.java</url>
+          <line>16</line>
+          <properties class="A3_PrintingTriangle" method="printLine">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
