@@ -137,14 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A8_FactorialDivision">
-    <configuration name="A4_PasswordValidator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A4_PasswordValidator" />
-      <module name="PF11-Exercise_Methods" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A9_PalindromeIntegers">
     <configuration name="A5_AddAndSubtract" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A5_AddAndSubtract" />
       <module name="PF11-Exercise_Methods" />
@@ -173,20 +166,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A9_PalindromeIntegers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A9_PalindromeIntegers" />
+      <module name="PF11-Exercise_Methods" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.A5_AddAndSubtract" />
       <item itemvalue="Application.A6_MiddleCharacters" />
       <item itemvalue="Application.A7_NxNMatrix" />
       <item itemvalue="Application.A8_FactorialDivision" />
-      <item itemvalue="Application.A4_PasswordValidator" />
+      <item itemvalue="Application.A9_PalindromeIntegers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A9_PalindromeIntegers" />
         <item itemvalue="Application.A8_FactorialDivision" />
         <item itemvalue="Application.A7_NxNMatrix" />
         <item itemvalue="Application.A6_MiddleCharacters" />
         <item itemvalue="Application.A5_AddAndSubtract" />
-        <item itemvalue="Application.A4_PasswordValidator" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +206,7 @@
       <workItem from="1664949855349" duration="491000" />
       <workItem from="1664950358890" duration="2976000" />
       <workItem from="1664953814937" duration="26575000" />
-      <workItem from="1664983803071" duration="4857000" />
+      <workItem from="1664983803071" duration="5614000" />
     </task>
     <servers />
   </component>
