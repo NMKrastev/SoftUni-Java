@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="" />
+    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PF01_SmallestOfThreeNumbers">
+  <component name="RunManager" selected="Application.A2_VowelsCount">
     <configuration name="A10_MultiplyEvensByOdds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_MultiplyEvensByOdds" />
       <module name="PF10-Methods" />
@@ -150,9 +152,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A8_MathPower" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A8_MathPower" />
-      <module name="PF10-Methods" />
+    <configuration name="A1_SmallestOfThreeNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A1_SmallestOfThreeNumbers" />
+      <module name="PF11-Exercise_Methods" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="A2_VowelsCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A2_VowelsCount" />
+      <module name="PF11-Exercise_Methods" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,27 +173,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PF01_SmallestOfThreeNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PF01_SmallestOfThreeNumbers" />
-      <module name="PF11-Exercise_Methods" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.A10_MultiplyEvensByOdds" />
       <item itemvalue="Application.A11_MathOperations" />
-      <item itemvalue="Application.A8_MathPower" />
+      <item itemvalue="Application.A1_SmallestOfThreeNumbers" />
+      <item itemvalue="Application.A2_VowelsCount" />
       <item itemvalue="Application.A9_GreaterOfTwoValues" />
-      <item itemvalue="Application.PF01_SmallestOfThreeNumbers" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PF01_SmallestOfThreeNumbers" />
+        <item itemvalue="Application.A2_VowelsCount" />
+        <item itemvalue="Application.A1_SmallestOfThreeNumbers" />
         <item itemvalue="Application.A11_MathOperations" />
         <item itemvalue="Application.A10_MultiplyEvensByOdds" />
         <item itemvalue="Application.A9_GreaterOfTwoValues" />
-        <item itemvalue="Application.A8_MathPower" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +205,7 @@
       <workItem from="1664909566952" duration="828000" />
       <workItem from="1664949855349" duration="491000" />
       <workItem from="1664950358890" duration="2976000" />
-      <workItem from="1664953814937" duration="12274000" />
+      <workItem from="1664953814937" duration="12967000" />
     </task>
     <servers />
   </component>
