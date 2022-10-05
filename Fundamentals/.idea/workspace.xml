@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,14 +135,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A5_AddAndSubtract">
-    <configuration name="A1_SmallestOfThreeNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A1_SmallestOfThreeNumbers" />
-      <module name="PF11-Exercise_Methods" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A6_MiddleCharacters">
     <configuration name="A2_VowelsCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A2_VowelsCount" />
       <module name="PF11-Exercise_Methods" />
@@ -173,20 +164,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A6_MiddleCharacters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A6_MiddleCharacters" />
+      <module name="PF11-Exercise_Methods" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.A5_AddAndSubtract" />
-      <item itemvalue="Application.A1_SmallestOfThreeNumbers" />
+      <item itemvalue="Application.A6_MiddleCharacters" />
       <item itemvalue="Application.A2_VowelsCount" />
       <item itemvalue="Application.A3_CharactersInRange" />
       <item itemvalue="Application.A4_PasswordValidator" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A6_MiddleCharacters" />
         <item itemvalue="Application.A5_AddAndSubtract" />
         <item itemvalue="Application.A4_PasswordValidator" />
         <item itemvalue="Application.A3_CharactersInRange" />
         <item itemvalue="Application.A2_VowelsCount" />
-        <item itemvalue="Application.A1_SmallestOfThreeNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +204,7 @@
       <workItem from="1664949855349" duration="491000" />
       <workItem from="1664950358890" duration="2976000" />
       <workItem from="1664953814937" duration="26575000" />
-      <workItem from="1664983803071" duration="1727000" />
+      <workItem from="1664983803071" duration="2197000" />
     </task>
     <servers />
   </component>
@@ -322,6 +320,11 @@
           <line>6</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A5_AddAndSubtract.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
           <line>12</line>
@@ -339,6 +342,24 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A5_AddAndSubtract.java</url>
+          <line>14</line>
+          <properties class="A5_AddAndSubtract" method="sumFirstTwoInts">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A5_AddAndSubtract.java</url>
+          <line>21</line>
+          <properties class="A5_AddAndSubtract" method="subtractSumAndIntThree">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
