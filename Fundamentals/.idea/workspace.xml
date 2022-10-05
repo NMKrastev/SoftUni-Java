@@ -137,7 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A2_VowelsCount">
+  <component name="RunManager" selected="Application.A3_CharactersInRange">
     <configuration name="A10_MultiplyEvensByOdds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_MultiplyEvensByOdds" />
       <module name="PF10-Methods" />
@@ -166,9 +166,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A9_GreaterOfTwoValues" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A9_GreaterOfTwoValues" />
-      <module name="PF10-Methods" />
+    <configuration name="A3_CharactersInRange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A3_CharactersInRange" />
+      <module name="PF11-Exercise_Methods" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,15 +178,15 @@
       <item itemvalue="Application.A11_MathOperations" />
       <item itemvalue="Application.A1_SmallestOfThreeNumbers" />
       <item itemvalue="Application.A2_VowelsCount" />
-      <item itemvalue="Application.A9_GreaterOfTwoValues" />
+      <item itemvalue="Application.A3_CharactersInRange" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A3_CharactersInRange" />
         <item itemvalue="Application.A2_VowelsCount" />
         <item itemvalue="Application.A1_SmallestOfThreeNumbers" />
         <item itemvalue="Application.A11_MathOperations" />
         <item itemvalue="Application.A10_MultiplyEvensByOdds" />
-        <item itemvalue="Application.A9_GreaterOfTwoValues" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +205,7 @@
       <workItem from="1664909566952" duration="828000" />
       <workItem from="1664949855349" duration="491000" />
       <workItem from="1664950358890" duration="2976000" />
-      <workItem from="1664953814937" duration="12967000" />
+      <workItem from="1664953814937" duration="14024000" />
     </task>
     <servers />
   </component>
