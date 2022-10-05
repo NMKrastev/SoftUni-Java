@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +138,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A10_TopNumber">
+  <component name="RunManager" selected="Application.A4_PasswordValidator">
     <configuration name="A10_TopNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_TopNumber" />
       <module name="PF11-Exercise_Methods" />
@@ -145,8 +146,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A6_MiddleCharacters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A6_MiddleCharacters" />
+    <configuration name="A4_PasswordValidator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A4_PasswordValidator" />
       <module name="PF11-Exercise_Methods" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -175,18 +176,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.A10_TopNumber" />
-      <item itemvalue="Application.A6_MiddleCharacters" />
       <item itemvalue="Application.A7_NxNMatrix" />
       <item itemvalue="Application.A8_FactorialDivision" />
       <item itemvalue="Application.A9_PalindromeIntegers" />
+      <item itemvalue="Application.A4_PasswordValidator" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A4_PasswordValidator" />
         <item itemvalue="Application.A10_TopNumber" />
         <item itemvalue="Application.A9_PalindromeIntegers" />
         <item itemvalue="Application.A8_FactorialDivision" />
         <item itemvalue="Application.A7_NxNMatrix" />
-        <item itemvalue="Application.A6_MiddleCharacters" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +207,7 @@
       <workItem from="1664949855349" duration="491000" />
       <workItem from="1664950358890" duration="2976000" />
       <workItem from="1664953814937" duration="26575000" />
-      <workItem from="1664983803071" duration="6659000" />
+      <workItem from="1664983803071" duration="10694000" />
     </task>
     <servers />
   </component>
@@ -347,9 +348,14 @@
           <line>8</line>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A10_TopNumber.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
-          <line>12</line>
+          <line>14</line>
           <properties class="A4_PasswordValidator" method="checkPasswordLength">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -358,7 +364,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
-          <line>29</line>
+          <line>25</line>
           <properties class="A4_PasswordValidator" method="checkForLettersAndDigitsOnly">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -400,6 +406,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A10_TopNumber.java</url>
+          <line>12</line>
+          <properties class="A10_TopNumber" method="printTopNumbers">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="75" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

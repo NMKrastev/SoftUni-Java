@@ -6,59 +6,48 @@ public class A4_PasswordValidator {
 
         String password = scanner.nextLine();
 
-        checkPasswordLength(password);
-
-    }
-
-    private static void checkPasswordLength(String password) {
-
-        boolean isPassLength = false;
-        String[] array = password.split("");
-
-        if (array.length >= 6 && array.length <= 10) {
-            isPassLength = true;
-        }
-
-        if (isPassLength) {
-            checkForLettersAndDigitsOnly(password, isPassLength);
-        } else {
+        if (!checkPasswordLength(password)) {
             System.out.println("Password must be between 6 and 10 characters");
-            checkForLettersAndDigitsOnly(password, isPassLength);
+        }
+        if (!checkForLettersAndDigitsOnly(password)) {
+            System.out.println("Password must consist only of letters and digits");
+        }
+        if (!checkIfContainsDigits(password)) {
+            System.out.println("Password must have at least 2 digits");
+        }
+        if (checkPasswordLength(password) && checkForLettersAndDigitsOnly(password) && checkIfContainsDigits(password)) {
+            System.out.println("Password is valid");
+        }
+    }
+
+    private static boolean checkPasswordLength(String password) {
+
+        String passwordLength = password;
+
+        if (passwordLength.length() >= 6 && passwordLength.length() <= 10) {
+            return true;
         }
 
+        return false;
     }
-    private static void checkForLettersAndDigitsOnly(String password, boolean isPassLength) {
 
-        boolean isLetterAndDigit = true;
+    private static boolean checkForLettersAndDigitsOnly(String password) {
+
         char[] array = password.toCharArray();
-        int count = 0;
 
         for (int i = 0; i < array.length; i++) {
 
             if (!Character.isLetterOrDigit(array[i])) {
-                count++;
 
-                if (count > 0) {
-                    isLetterAndDigit = false;
-                } else {
-                    break;
-                }
+                return false;
+
             }
         }
-
-        if (isPassLength && isLetterAndDigit) {
-            checkIfContainsDigits(password, isPassLength, isLetterAndDigit);
-        } else if (!isLetterAndDigit) {
-            System.out.println("Password must consist only of letters and digits");
-            checkIfContainsDigits(password, isPassLength, isLetterAndDigit);
-        } else {
-            checkIfContainsDigits(password, isPassLength, isLetterAndDigit);
-        }
+        return true;
     }
 
-    private static void checkIfContainsDigits(String password, boolean isPassLength, boolean isLetterAndDigit) {
+    private static boolean checkIfContainsDigits(String password) {
 
-        boolean isDigits = false;
         char[] array = password.toCharArray();
         int count = 0;
 
@@ -68,17 +57,11 @@ public class A4_PasswordValidator {
                 count++;
 
                 if (count >= 2) {
-                    isDigits = true;
-                    break;
+                    return true;
                 }
             }
         }
-
-        if (isPassLength && isLetterAndDigit && isDigits) {
-            System.out.println("Password is valid");
-        } else {
-            System.out.println("Password must have at least 2 digits");
-        }
+        return false;
     }
 }
 /*Write a program that checks if a given password is valid. Password rules are:
