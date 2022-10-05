@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PF10-Methods/PF10-Methods.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +133,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A1_SignOfInteger">
+  <component name="RunManager" selected="Application.A2_Grades">
     <configuration name="A1_SignOfInteger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_SignOfInteger" />
       <module name="PF10-Methods" />
@@ -144,9 +141,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A4_LongestIncreasingSubsequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A4_LongestIncreasingSubsequence" />
-      <module name="PF09-MoreExercise_Arrays" />
+    <configuration name="A2_Grades" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A2_Grades" />
+      <module name="PF10-Methods" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,18 +171,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.A1_SignOfInteger" />
-      <item itemvalue="Application.A4_LongestIncreasingSubsequence" />
+      <item itemvalue="Application.A2_Grades" />
       <item itemvalue="Application.A9_ArrayModifier" />
       <item itemvalue="Application.A5_KaminoFactory" />
       <item itemvalue="Application.A6_LadyBugs" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A2_Grades" />
         <item itemvalue="Application.A1_SignOfInteger" />
         <item itemvalue="Application.A6_LadyBugs" />
         <item itemvalue="Application.A5_KaminoFactory" />
         <item itemvalue="Application.A9_ArrayModifier" />
-        <item itemvalue="Application.A4_LongestIncreasingSubsequence" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +201,7 @@
       <workItem from="1664909566952" duration="828000" />
       <workItem from="1664949855349" duration="491000" />
       <workItem from="1664950358890" duration="2976000" />
-      <workItem from="1664953814937" duration="1601000" />
+      <workItem from="1664953814937" duration="2213000" />
     </task>
     <servers />
   </component>
