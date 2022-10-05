@@ -137,14 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A8_MathPower">
-    <configuration name="A4_Calculations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A4_Calculations" />
-      <module name="PF10-Methods" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A9_GreaterOfTwoValues">
     <configuration name="A5_Orders" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A5_Orders" />
       <module name="PF10-Methods" />
@@ -173,20 +166,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A9_GreaterOfTwoValues" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A9_GreaterOfTwoValues" />
+      <module name="PF10-Methods" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A4_Calculations" />
       <item itemvalue="Application.A5_Orders" />
       <item itemvalue="Application.A6_CalculateRectangleArea" />
       <item itemvalue="Application.A7_RepeatString" />
       <item itemvalue="Application.A8_MathPower" />
+      <item itemvalue="Application.A9_GreaterOfTwoValues" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A9_GreaterOfTwoValues" />
         <item itemvalue="Application.A8_MathPower" />
         <item itemvalue="Application.A7_RepeatString" />
         <item itemvalue="Application.A6_CalculateRectangleArea" />
         <item itemvalue="Application.A5_Orders" />
-        <item itemvalue="Application.A4_Calculations" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +205,7 @@
       <workItem from="1664909566952" duration="828000" />
       <workItem from="1664949855349" duration="491000" />
       <workItem from="1664950358890" duration="2976000" />
-      <workItem from="1664953814937" duration="7468000" />
+      <workItem from="1664953814937" duration="8254000" />
     </task>
     <servers />
   </component>
