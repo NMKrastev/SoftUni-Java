@@ -137,7 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A4_TribonacciSequence">
+  <component name="RunManager" selected="Application.A5_MultiplicationSign">
     <configuration name="A1_DataTypes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_DataTypes" />
       <module name="PF12-MoreExercise_Methods" />
@@ -159,15 +159,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A4_PasswordValidator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A4_PasswordValidator" />
-      <module name="PF11-Exercise_Methods" />
+    <configuration name="A4_TribonacciSequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A4_TribonacciSequence" />
+      <module name="PF12-MoreExercise_Methods" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A4_TribonacciSequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A4_TribonacciSequence" />
+    <configuration name="A5_MultiplicationSign" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A5_MultiplicationSign" />
       <module name="PF12-MoreExercise_Methods" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -178,15 +178,15 @@
       <item itemvalue="Application.A2_CenterPoint" />
       <item itemvalue="Application.A3_LongerLine" />
       <item itemvalue="Application.A4_TribonacciSequence" />
-      <item itemvalue="Application.A4_PasswordValidator" />
+      <item itemvalue="Application.A5_MultiplicationSign" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A5_MultiplicationSign" />
         <item itemvalue="Application.A4_TribonacciSequence" />
         <item itemvalue="Application.A3_LongerLine" />
         <item itemvalue="Application.A2_CenterPoint" />
         <item itemvalue="Application.A1_DataTypes" />
-        <item itemvalue="Application.A4_PasswordValidator" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +206,7 @@
       <workItem from="1664949855349" duration="491000" />
       <workItem from="1664950358890" duration="2976000" />
       <workItem from="1664953814937" duration="26575000" />
-      <workItem from="1664983803071" duration="15180000" />
+      <workItem from="1664983803071" duration="17365000" />
     </task>
     <servers />
   </component>
@@ -352,6 +352,11 @@
           <line>6</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF12-MoreExercise_Methods/src/A5_MultiplicationSign.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
           <line>22</line>
@@ -423,6 +428,24 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF12-MoreExercise_Methods/src/A4_TribonacciSequence.java</url>
+          <line>12</line>
+          <properties class="A4_TribonacciSequence" method="getTribonacci">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF12-MoreExercise_Methods/src/A5_MultiplicationSign.java</url>
+          <line>14</line>
+          <properties class="A5_MultiplicationSign" method="getPositiveNegative">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
