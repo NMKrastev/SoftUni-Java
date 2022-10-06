@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PF12-MoreExercise_Methods/A5_MultiplicationSign.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PF12-MoreExercise_Methods/A5_MultiplicationSign.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +206,7 @@
       <workItem from="1664949855349" duration="491000" />
       <workItem from="1664950358890" duration="2976000" />
       <workItem from="1664953814937" duration="26575000" />
-      <workItem from="1664983803071" duration="35139000" />
+      <workItem from="1664983803071" duration="36005000" />
     </task>
     <servers />
   </component>
