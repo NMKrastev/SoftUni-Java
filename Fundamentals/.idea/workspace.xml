@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PF13-List/PF13-List.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,10 +139,10 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A6_ArrayManipulator">
-    <configuration name="A2_CenterPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A2_CenterPoint" />
-      <module name="PF12-MoreExercise_Methods" />
+  <component name="RunManager" selected="Application.A1_SumAdjacentEqualNumbers">
+    <configuration name="A1_SumAdjacentEqualNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A1_SumAdjacentEqualNumbers" />
+      <module name="PF13-List" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,7 +176,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A2_CenterPoint" />
+      <item itemvalue="Application.A1_SumAdjacentEqualNumbers" />
       <item itemvalue="Application.A3_LongerLine" />
       <item itemvalue="Application.A4_TribonacciSequence" />
       <item itemvalue="Application.A5_MultiplicationSign" />
@@ -182,11 +184,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A1_SumAdjacentEqualNumbers" />
         <item itemvalue="Application.A6_ArrayManipulator" />
         <item itemvalue="Application.A5_MultiplicationSign" />
         <item itemvalue="Application.A4_TribonacciSequence" />
         <item itemvalue="Application.A3_LongerLine" />
-        <item itemvalue="Application.A2_CenterPoint" />
       </list>
     </recent_temporary>
   </component>
@@ -207,6 +209,7 @@
       <workItem from="1664950358890" duration="2976000" />
       <workItem from="1664953814937" duration="26575000" />
       <workItem from="1664983803071" duration="36005000" />
+      <workItem from="1665158483298" duration="9208000" />
     </task>
     <servers />
   </component>
