@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PF13-List/PF13-List.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A1_SumAdjacentEqualNumbers">
+  <component name="RunManager" selected="Application.A2_GaussTrick">
     <configuration name="A1_SumAdjacentEqualNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_SumAdjacentEqualNumbers" />
       <module name="PF13-List" />
@@ -147,9 +145,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A3_LongerLine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A3_LongerLine" />
-      <module name="PF12-MoreExercise_Methods" />
+    <configuration name="A2_GaussTrick" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A2_GaussTrick" />
+      <module name="PF13-List" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,18 +175,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.A1_SumAdjacentEqualNumbers" />
-      <item itemvalue="Application.A3_LongerLine" />
+      <item itemvalue="Application.A2_GaussTrick" />
       <item itemvalue="Application.A4_TribonacciSequence" />
       <item itemvalue="Application.A5_MultiplicationSign" />
       <item itemvalue="Application.A6_ArrayManipulator" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A2_GaussTrick" />
         <item itemvalue="Application.A1_SumAdjacentEqualNumbers" />
         <item itemvalue="Application.A6_ArrayManipulator" />
         <item itemvalue="Application.A5_MultiplicationSign" />
         <item itemvalue="Application.A4_TribonacciSequence" />
-        <item itemvalue="Application.A3_LongerLine" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +207,7 @@
       <workItem from="1664950358890" duration="2976000" />
       <workItem from="1664953814937" duration="26575000" />
       <workItem from="1664983803071" duration="36005000" />
-      <workItem from="1665158483298" duration="9208000" />
+      <workItem from="1665158483298" duration="11133000" />
     </task>
     <servers />
   </component>
@@ -364,6 +362,16 @@
           <url>file://$PROJECT_DIR$/PF12-MoreExercise_Methods/src/A6_ArrayManipulator.java</url>
           <line>7</line>
           <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF13-List/src/A1_SumAdjacentEqualNumbers.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF13-List/src/A2_GaussTrick.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
@@ -544,6 +552,33 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF13-List/src/A1_SumAdjacentEqualNumbers.java</url>
+          <line>28</line>
+          <properties class="A1_SumAdjacentEqualNumbers" method="sumAdjacentEqualNumbers">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF13-List/src/A1_SumAdjacentEqualNumbers.java</url>
+          <line>19</line>
+          <properties class="A1_SumAdjacentEqualNumbers" method="joinElementsByDelimiter">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF13-List/src/A2_GaussTrick.java</url>
+          <line>17</line>
+          <properties class="A2_GaussTrick" method="sumNumbers">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="95" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
