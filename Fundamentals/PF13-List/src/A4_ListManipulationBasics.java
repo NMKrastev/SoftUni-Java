@@ -66,14 +66,12 @@ public class A4_ListManipulationBasics {
     private static List<Integer> removeNumberAtIndex(List<Integer> numsList, int index) {
 
         numsList.remove(numsList.get(index));
-
         return numsList;
     }
 
     private static List<Integer> insertNumberAtGivenIndex(List<Integer> numsList, int number, int index) {
 
         numsList.add(index, number);
-
         return numsList;
     }
 }
