@@ -137,14 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A5_ListManipulationAdvanced">
-    <configuration name="A1_SumAdjacentEqualNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A1_SumAdjacentEqualNumbers" />
-      <module name="PF13-List" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A6_ListOfProducts">
     <configuration name="A2_GaussTrick" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A2_GaussTrick" />
       <module name="PF13-List" />
@@ -173,20 +166,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A6_ListOfProducts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A6_ListOfProducts" />
+      <module name="PF13-List" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.A4_ListManipulationBasics" />
       <item itemvalue="Application.A5_ListManipulationAdvanced" />
-      <item itemvalue="Application.A1_SumAdjacentEqualNumbers" />
+      <item itemvalue="Application.A6_ListOfProducts" />
       <item itemvalue="Application.A2_GaussTrick" />
       <item itemvalue="Application.A3_MergingLists" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A6_ListOfProducts" />
         <item itemvalue="Application.A5_ListManipulationAdvanced" />
         <item itemvalue="Application.A4_ListManipulationBasics" />
         <item itemvalue="Application.A3_MergingLists" />
         <item itemvalue="Application.A2_GaussTrick" />
-        <item itemvalue="Application.A1_SumAdjacentEqualNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +208,7 @@
       <workItem from="1664953814937" duration="26575000" />
       <workItem from="1664983803071" duration="36005000" />
       <workItem from="1665158483298" duration="15253000" />
-      <workItem from="1665382965358" duration="8341000" />
+      <workItem from="1665382965358" duration="9242000" />
     </task>
     <servers />
   </component>
