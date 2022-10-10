@@ -137,14 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A6_ListOfProducts">
-    <configuration name="A2_GaussTrick" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A2_GaussTrick" />
-      <module name="PF13-List" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A7_RemoveNegativesAndReverse">
     <configuration name="A3_MergingLists" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A3_MergingLists" />
       <module name="PF13-List" />
@@ -173,20 +166,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A7_RemoveNegativesAndReverse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A7_RemoveNegativesAndReverse" />
+      <module name="PF13-List" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.A4_ListManipulationBasics" />
       <item itemvalue="Application.A5_ListManipulationAdvanced" />
       <item itemvalue="Application.A6_ListOfProducts" />
-      <item itemvalue="Application.A2_GaussTrick" />
+      <item itemvalue="Application.A7_RemoveNegativesAndReverse" />
       <item itemvalue="Application.A3_MergingLists" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A7_RemoveNegativesAndReverse" />
         <item itemvalue="Application.A6_ListOfProducts" />
         <item itemvalue="Application.A5_ListManipulationAdvanced" />
         <item itemvalue="Application.A4_ListManipulationBasics" />
         <item itemvalue="Application.A3_MergingLists" />
-        <item itemvalue="Application.A2_GaussTrick" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +208,7 @@
       <workItem from="1664953814937" duration="26575000" />
       <workItem from="1664983803071" duration="36005000" />
       <workItem from="1665158483298" duration="15253000" />
-      <workItem from="1665382965358" duration="9242000" />
+      <workItem from="1665382965358" duration="9983000" />
     </task>
     <servers />
   </component>
