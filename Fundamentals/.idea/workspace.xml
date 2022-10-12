@@ -137,14 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A8_AnonymousThreat">
-    <configuration name="A4_ListOperations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A4_ListOperations" />
-      <module name="PF14-Exercise_List" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A9_PokemonDontGo">
     <configuration name="A5_BombNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A5_BombNumbers" />
       <module name="PF14-Exercise_List" />
@@ -173,20 +166,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A9_PokemonDontGo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A9_PokemonDontGo" />
+      <module name="PF14-Exercise_List" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.A5_BombNumbers" />
       <item itemvalue="Application.A6_CardsGame" />
       <item itemvalue="Application.A7_AppendArrays" />
       <item itemvalue="Application.A8_AnonymousThreat" />
-      <item itemvalue="Application.A4_ListOperations" />
+      <item itemvalue="Application.A9_PokemonDontGo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A9_PokemonDontGo" />
         <item itemvalue="Application.A8_AnonymousThreat" />
         <item itemvalue="Application.A7_AppendArrays" />
         <item itemvalue="Application.A6_CardsGame" />
         <item itemvalue="Application.A5_BombNumbers" />
-        <item itemvalue="Application.A4_ListOperations" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +209,7 @@
       <workItem from="1664983803071" duration="36005000" />
       <workItem from="1665158483298" duration="15253000" />
       <workItem from="1665382965358" duration="28854000" />
-      <workItem from="1665556291727" duration="17354000" />
+      <workItem from="1665556291727" duration="26196000" />
     </task>
     <servers />
   </component>
@@ -424,6 +424,11 @@
           <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A8_AnonymousThreat.java</url>
           <line>11</line>
           <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A9_PokemonDontGo.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="149" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
@@ -928,6 +933,33 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A9_PokemonDontGo.java</url>
+          <line>16</line>
+          <properties class="A9_PokemonDontGo" method="catchingPokemons">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A9_PokemonDontGo.java</url>
+          <line>41</line>
+          <properties class="A9_PokemonDontGo" method="increaseAndDecreaseElements">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A9_PokemonDontGo.java</url>
+          <line>53</line>
+          <properties class="A9_PokemonDontGo" method="removeIndex">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="148" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
