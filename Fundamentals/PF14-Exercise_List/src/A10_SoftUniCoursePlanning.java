@@ -11,18 +11,18 @@ public class A10_SoftUniCoursePlanning {
 
         distribution(scanner, lessonsList);
         printLessons(lessonsList);
-
     }
 
     private static void printLessons(List<String> lessonsList) {
+
         for (String lesson : lessonsList) {
             System.out.println(lessonsList.indexOf(lesson) + 1 + "." + lesson);
         }
     }
 
     private static void distribution(Scanner scanner, List<String> lessonsList) {
-        String input;
 
+        String input;
         while (!(input = scanner.nextLine()).equals("course start")) {
             String[] command = input.split(":");
             String lesson;
@@ -54,7 +54,7 @@ public class A10_SoftUniCoursePlanning {
         }
     }
 
-    private static void addExerciseLessons(List<String> lessonsList, String exercise, String lesson) {
+    private static List<String> addExerciseLessons(List<String> lessonsList, String exercise, String lesson) {
 
         if (lessonsList.contains(lesson) && !lessonsList.contains(lesson + "-Exercise")) {
             lessonsList.add(lessonsList.indexOf(lesson) + 1, lesson + "-" + exercise);
@@ -63,6 +63,7 @@ public class A10_SoftUniCoursePlanning {
             lessonsList.add(lesson);
             lessonsList.add(lesson + "-" + exercise);
         }
+        return lessonsList;
     }
 
     private static List<String> swapLessons(List<String> lessonsList, String lesson, String lessonTwo) {
