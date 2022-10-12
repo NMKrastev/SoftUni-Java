@@ -209,7 +209,7 @@
       <workItem from="1664983803071" duration="36005000" />
       <workItem from="1665158483298" duration="15253000" />
       <workItem from="1665382965358" duration="28854000" />
-      <workItem from="1665556291727" duration="32026000" />
+      <workItem from="1665556291727" duration="32725000" />
     </task>
     <servers />
   </component>
@@ -968,16 +968,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A10_SoftUniCoursePlanning.java</url>
-          <line>22</line>
-          <properties class="A10_SoftUniCoursePlanning" method="distribution">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="150" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A10_SoftUniCoursePlanning.java</url>
-          <line>68</line>
+          <line>69</line>
           <properties class="A10_SoftUniCoursePlanning" method="swapLessons">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -986,7 +977,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A10_SoftUniCoursePlanning.java</url>
-          <line>95</line>
+          <line>96</line>
           <properties class="A10_SoftUniCoursePlanning" method="insertLessonAtIndex">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -995,7 +986,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A10_SoftUniCoursePlanning.java</url>
-          <line>103</line>
+          <line>104</line>
           <properties class="A10_SoftUniCoursePlanning" method="removeLesson">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -1004,7 +995,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A10_SoftUniCoursePlanning.java</url>
-          <line>111</line>
+          <line>112</line>
           <properties class="A10_SoftUniCoursePlanning" method="addLesson">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -1022,7 +1013,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A10_SoftUniCoursePlanning.java</url>
-          <line>16</line>
+          <line>15</line>
           <properties class="A10_SoftUniCoursePlanning" method="printLessons">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
