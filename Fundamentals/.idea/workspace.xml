@@ -137,14 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A7_AppendArrays">
-    <configuration name="A3_HouseParty" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A3_HouseParty" />
-      <module name="PF14-Exercise_List" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A8_AnonymousThreat">
     <configuration name="A4_ListOperations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A4_ListOperations" />
       <module name="PF14-Exercise_List" />
@@ -173,20 +166,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A8_AnonymousThreat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A8_AnonymousThreat" />
+      <module name="PF14-Exercise_List" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.A5_BombNumbers" />
       <item itemvalue="Application.A6_CardsGame" />
       <item itemvalue="Application.A7_AppendArrays" />
-      <item itemvalue="Application.A3_HouseParty" />
+      <item itemvalue="Application.A8_AnonymousThreat" />
       <item itemvalue="Application.A4_ListOperations" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A8_AnonymousThreat" />
         <item itemvalue="Application.A7_AppendArrays" />
         <item itemvalue="Application.A6_CardsGame" />
         <item itemvalue="Application.A5_BombNumbers" />
         <item itemvalue="Application.A4_ListOperations" />
-        <item itemvalue="Application.A3_HouseParty" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +209,7 @@
       <workItem from="1664983803071" duration="36005000" />
       <workItem from="1665158483298" duration="15253000" />
       <workItem from="1665382965358" duration="28854000" />
-      <workItem from="1665556291727" duration="10900000" />
+      <workItem from="1665556291727" duration="17354000" />
     </task>
     <servers />
   </component>
@@ -414,6 +414,16 @@
           <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A7_AppendArrays.java</url>
           <line>10</line>
           <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A8_AnonymousThreat.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A8_AnonymousThreat.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="143" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
@@ -882,6 +892,42 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A8_AnonymousThreat.java</url>
+          <line>62</line>
+          <properties class="A8_AnonymousThreat" method="mergeElements">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A8_AnonymousThreat.java</url>
+          <line>24</line>
+          <properties class="A8_AnonymousThreat" method="distribution">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A8_AnonymousThreat.java</url>
+          <line>18</line>
+          <properties class="A8_AnonymousThreat" method="printArray">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF14-Exercise_List/src/A8_AnonymousThreat.java</url>
+          <line>46</line>
+          <properties class="A8_AnonymousThreat" method="divideElements">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="144" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
