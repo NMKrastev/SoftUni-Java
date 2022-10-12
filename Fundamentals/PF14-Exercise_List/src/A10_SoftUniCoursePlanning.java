@@ -20,12 +20,7 @@ public class A10_SoftUniCoursePlanning {
         }
     }
 
-<<<<<<< HEAD
-    private static List<String> distribution(Scanner scanner, List<String> lessonsList) {
-        String input;
-=======
     private static void distribution(Scanner scanner, List<String> lessonsList) {
->>>>>>> main
 
         String input;
         while (!(input = scanner.nextLine()).equals("course start")) {
@@ -57,7 +52,6 @@ public class A10_SoftUniCoursePlanning {
                     addExerciseLessons(lessonsList, exercise, lesson);
             }
         }
-        return lessonsList;
     }
 
     private static List<String> addExerciseLessons(List<String> lessonsList, String exercise, String lesson) {
