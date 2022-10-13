@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/PF14-Exercise_List/src/A10_SoftUniCoursePlanning.java" beforeDir="false" afterPath="$PROJECT_DIR$/PF14-Exercise_List/src/A10_SoftUniCoursePlanning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A1_Messaging">
+  <component name="RunManager" selected="Application.A2_CarRace">
     <configuration name="A10_SoftUniCoursePlanning" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_SoftUniCoursePlanning" />
       <module name="PF14-Exercise_List" />
@@ -152,9 +152,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A7_AppendArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A7_AppendArrays" />
-      <module name="PF14-Exercise_List" />
+    <configuration name="A2_CarRace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A2_CarRace" />
+      <module name="PF15-MoreExercise_List" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,18 +175,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.A1_Messaging" />
+      <item itemvalue="Application.A2_CarRace" />
       <item itemvalue="Application.A10_SoftUniCoursePlanning" />
-      <item itemvalue="Application.A7_AppendArrays" />
       <item itemvalue="Application.A8_AnonymousThreat" />
       <item itemvalue="Application.A9_PokemonDontGo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A2_CarRace" />
         <item itemvalue="Application.A1_Messaging" />
         <item itemvalue="Application.A10_SoftUniCoursePlanning" />
         <item itemvalue="Application.A9_PokemonDontGo" />
         <item itemvalue="Application.A8_AnonymousThreat" />
-        <item itemvalue="Application.A7_AppendArrays" />
       </list>
     </recent_temporary>
   </component>
