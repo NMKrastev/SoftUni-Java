@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PF15-MoreExercise_List/src/A3_TakeSkipRope.java" beforeDir="false" afterPath="$PROJECT_DIR$/PF15-MoreExercise_List/src/A3_TakeSkipRope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PF15-MoreExercise_List/A3_TakeSkipRope.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PF15-MoreExercise_List/A3_TakeSkipRope.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +138,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A3_TakeSkipRope">
+  <component name="RunManager" selected="Application.A4_MixedUpLists">
     <configuration name="A10_SoftUniCoursePlanning" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_SoftUniCoursePlanning" />
       <module name="PF14-Exercise_List" />
@@ -167,9 +167,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A9_PokemonDontGo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A9_PokemonDontGo" />
-      <module name="PF14-Exercise_List" />
+    <configuration name="A4_MixedUpLists" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A4_MixedUpLists" />
+      <module name="PF15-MoreExercise_List" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,16 +178,16 @@
       <item itemvalue="Application.A1_Messaging" />
       <item itemvalue="Application.A2_CarRace" />
       <item itemvalue="Application.A3_TakeSkipRope" />
+      <item itemvalue="Application.A4_MixedUpLists" />
       <item itemvalue="Application.A10_SoftUniCoursePlanning" />
-      <item itemvalue="Application.A9_PokemonDontGo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A4_MixedUpLists" />
         <item itemvalue="Application.A3_TakeSkipRope" />
         <item itemvalue="Application.A2_CarRace" />
         <item itemvalue="Application.A1_Messaging" />
         <item itemvalue="Application.A10_SoftUniCoursePlanning" />
-        <item itemvalue="Application.A9_PokemonDontGo" />
       </list>
     </recent_temporary>
   </component>
@@ -1034,6 +1034,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF15-MoreExercise_List/src/A4_MixedUpLists.java</url>
+          <line>30</line>
+          <properties class="A4_MixedUpLists" method="getInBetweenElements">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="173" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
