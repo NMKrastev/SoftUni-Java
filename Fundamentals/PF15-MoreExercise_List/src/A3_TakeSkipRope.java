@@ -26,19 +26,20 @@ public class A3_TakeSkipRope {
         int startIndex = 0;
         int endIndex = 0;
         int length = 0;
-        int takeCount = 0;
-        int skipCount = 0;
 
         while (i < takeList.size()) {
             startIndex = length;
             endIndex = length + takeList.get(i);
+
             while (startIndex < endIndex && startIndex <= nonNumsList.size() - 1) {
                 message.append(nonNumsList.get(startIndex));
                 startIndex++;
             }
+
             length = startIndex + skipList.get(i);
             i++;
         }
+
         return message.toString();
     }
 
