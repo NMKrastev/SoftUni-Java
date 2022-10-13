@@ -137,7 +137,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A10_SoftUniCoursePlanning">
+  <component name="RunManager" selected="Application.A1_Messaging">
     <configuration name="A10_SoftUniCoursePlanning" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A10_SoftUniCoursePlanning" />
       <module name="PF14-Exercise_List" />
@@ -145,9 +145,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A6_CardsGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A6_CardsGame" />
-      <module name="PF14-Exercise_List" />
+    <configuration name="A1_Messaging" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A1_Messaging" />
+      <module name="PF15-MoreExercise_List" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,19 +174,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.A1_Messaging" />
       <item itemvalue="Application.A10_SoftUniCoursePlanning" />
-      <item itemvalue="Application.A6_CardsGame" />
       <item itemvalue="Application.A7_AppendArrays" />
       <item itemvalue="Application.A8_AnonymousThreat" />
       <item itemvalue="Application.A9_PokemonDontGo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A1_Messaging" />
         <item itemvalue="Application.A10_SoftUniCoursePlanning" />
         <item itemvalue="Application.A9_PokemonDontGo" />
         <item itemvalue="Application.A8_AnonymousThreat" />
         <item itemvalue="Application.A7_AppendArrays" />
-        <item itemvalue="Application.A6_CardsGame" />
       </list>
     </recent_temporary>
   </component>
