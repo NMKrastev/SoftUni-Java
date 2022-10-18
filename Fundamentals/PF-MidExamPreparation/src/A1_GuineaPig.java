@@ -8,8 +8,6 @@ public class A1_GuineaPig {
         double hay = Double.parseDouble(scanner.nextLine()) * 1000.0;
         double cover = Double.parseDouble(scanner.nextLine()) * 1000.0;
         double guineaWeight = Double.parseDouble(scanner.nextLine()) * 1000.0;
-        int secondDayCount = 1;
-        int thirdDayCount = 1;
 
         for (int i = 1; i <= 30; i++) {
 
@@ -19,19 +17,16 @@ public class A1_GuineaPig {
                 hay -= neededHay;
                 double neededCover = guineaWeight / 3;
                 cover -= neededCover;
-                secondDayCount = 0;
-                thirdDayCount = 0;
 
             } else if (i % 2 == 0) {
                 double neededHay = food * 0.05;
                 hay -= neededHay;
-                secondDayCount = 0;
             } else if (i % 3 == 0) {
                 double neededCover = guineaWeight / 3;
                 cover -= neededCover;
-                thirdDayCount = 0;
             }
         }
+
         if (food > 0 && hay > 0 && cover > 0) {
             System.out.printf("Everything is fine! Puppy is happy! Food: %.2f, Hay: %.2f, Cover: %.2f.",
                     food / 1000, hay / 1000, cover / 1000);
