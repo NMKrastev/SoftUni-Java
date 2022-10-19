@@ -138,16 +138,9 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A2_MuOnline">
+  <component name="RunManager" selected="Application.A3_HeartDelivery">
     <configuration name="A1_BonusScoringSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_BonusScoringSystem" />
-      <module name="PF-MidExamPreparation" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="A1_SoftUniReception" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A1_SoftUniReception" />
       <module name="PF-MidExamPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,6 +160,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A3_HeartDelivery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A3_HeartDelivery" />
+      <module name="PF-MidExamPreparation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="A3_Numbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A3_Numbers" />
       <module name="PF-MidExamPreparation" />
@@ -177,17 +177,17 @@
     <list>
       <item itemvalue="Application.A1_BonusScoringSystem" />
       <item itemvalue="Application.A2_MuOnline" />
-      <item itemvalue="Application.A1_SoftUniReception" />
+      <item itemvalue="Application.A3_HeartDelivery" />
       <item itemvalue="Application.A2_ShoppingList" />
       <item itemvalue="Application.A3_Numbers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A3_HeartDelivery" />
         <item itemvalue="Application.A2_MuOnline" />
         <item itemvalue="Application.A1_BonusScoringSystem" />
         <item itemvalue="Application.A2_ShoppingList" />
         <item itemvalue="Application.A3_Numbers" />
-        <item itemvalue="Application.A1_SoftUniReception" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +215,7 @@
       <workItem from="1666073006484" duration="3322000" />
       <workItem from="1666078227416" duration="8979000" />
       <workItem from="1666161462050" duration="6356000" />
-      <workItem from="1666183330265" duration="4870000" />
+      <workItem from="1666183330265" duration="12081000" />
     </task>
     <servers />
   </component>
@@ -490,6 +490,11 @@
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_MuOnline.java</url>
           <line>13</line>
           <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_HeartDelivery.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
@@ -1255,6 +1260,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_HeartDelivery.java</url>
+          <line>50</line>
+          <properties class="A3_HeartDelivery" method="checkForValentinesHouses">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="212" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
