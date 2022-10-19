@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/PF-MidExamPreparation/src/A2_ShoppingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/PF-MidExamPreparation/src/A2_ShoppingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,16 +138,16 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A2_ShoppingList">
-    <configuration name="A1_SoftUniReception" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A1_SoftUniReception" />
+  <component name="RunManager" selected="Application.A1_BonusScoringSystem">
+    <configuration name="A1_BonusScoringSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A1_BonusScoringSystem" />
       <module name="PF-MidExamPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A2_ArrayModifier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A2_ArrayModifier" />
+    <configuration name="A1_SoftUniReception" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A1_SoftUniReception" />
       <module name="PF-MidExamPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -175,19 +175,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.A1_BonusScoringSystem" />
       <item itemvalue="Application.A1_SoftUniReception" />
       <item itemvalue="Application.A2_ShoppingList" />
       <item itemvalue="Application.A3_Numbers" />
-      <item itemvalue="Application.A2_ArrayModifier" />
       <item itemvalue="Application.A3_Inventory" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A1_BonusScoringSystem" />
         <item itemvalue="Application.A2_ShoppingList" />
         <item itemvalue="Application.A3_Numbers" />
         <item itemvalue="Application.A1_SoftUniReception" />
         <item itemvalue="Application.A3_Inventory" />
-        <item itemvalue="Application.A2_ArrayModifier" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +214,8 @@
       <workItem from="1665687931947" duration="57000" />
       <workItem from="1666073006484" duration="3322000" />
       <workItem from="1666078227416" duration="8979000" />
-      <workItem from="1666161462050" duration="6077000" />
+      <workItem from="1666161462050" duration="6356000" />
+      <workItem from="1666183330265" duration="2095000" />
     </task>
     <servers />
   </component>
@@ -479,6 +480,11 @@
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_ShoppingList.java</url>
           <line>10</line>
           <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A1_BonusScoringSystem.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="202" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
@@ -1253,6 +1259,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Fundamentals$A1_BonusScoringSystem.ic" NAME="A1_BonusScoringSystem Coverage Results" MODIFIED="1666184887725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Fundamentals$A5_DrumSet.ic" NAME="A5_DrumSet Coverage Results" MODIFIED="1665663455030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
