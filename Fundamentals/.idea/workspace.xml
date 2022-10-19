@@ -138,23 +138,23 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A3_Numbers">
-    <configuration name="A1_GuineaPig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A1_GuineaPig" />
-      <module name="PF-MidExamPreparation" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A2_ShoppingList">
     <configuration name="A1_SoftUniReception" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_SoftUniReception" />
-      <module name="PF15-MoreExercise_List" />
+      <module name="PF-MidExamPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="A2_ArrayModifier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A2_ArrayModifier" />
+      <module name="PF-MidExamPreparation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="A2_ShoppingList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A2_ShoppingList" />
       <module name="PF-MidExamPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,25 +169,25 @@
     </configuration>
     <configuration name="A3_Numbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A3_Numbers" />
-      <module name="PF15-MoreExercise_List" />
+      <module name="PF-MidExamPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.A1_SoftUniReception" />
+      <item itemvalue="Application.A2_ShoppingList" />
       <item itemvalue="Application.A3_Numbers" />
       <item itemvalue="Application.A2_ArrayModifier" />
       <item itemvalue="Application.A3_Inventory" />
-      <item itemvalue="Application.A1_GuineaPig" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A2_ShoppingList" />
         <item itemvalue="Application.A3_Numbers" />
         <item itemvalue="Application.A1_SoftUniReception" />
         <item itemvalue="Application.A3_Inventory" />
         <item itemvalue="Application.A2_ArrayModifier" />
-        <item itemvalue="Application.A1_GuineaPig" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +214,7 @@
       <workItem from="1665687931947" duration="57000" />
       <workItem from="1666073006484" duration="3322000" />
       <workItem from="1666078227416" duration="8979000" />
-      <workItem from="1666161462050" duration="3048000" />
+      <workItem from="1666161462050" duration="5353000" />
     </task>
     <servers />
   </component>
@@ -466,14 +466,19 @@
           <option name="timeStamp" value="184" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PF15-MoreExercise_List/src/A1_SoftUniReception.java</url>
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A1_SoftUniReception.java</url>
           <line>13</line>
           <option name="timeStamp" value="190" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PF15-MoreExercise_List/src/A3_Numbers.java</url>
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_Numbers.java</url>
           <line>7</line>
           <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_ShoppingList.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
@@ -1160,7 +1165,7 @@
           <option name="timeStamp" value="189" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/PF15-MoreExercise_List/src/A3_Numbers.java</url>
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_Numbers.java</url>
           <line>38</line>
           <properties class="A3_Numbers" method="findBiggerNumsThanAverage">
             <option name="EMULATED" value="true" />
@@ -1169,7 +1174,7 @@
           <option name="timeStamp" value="191" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/PF15-MoreExercise_List/src/A3_Numbers.java</url>
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_Numbers.java</url>
           <line>49</line>
           <properties class="A3_Numbers" method="findAverageNum">
             <option name="EMULATED" value="true" />
@@ -1178,13 +1183,67 @@
           <option name="timeStamp" value="192" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/PF15-MoreExercise_List/src/A3_Numbers.java</url>
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_Numbers.java</url>
           <line>32</line>
           <properties class="A3_Numbers" method="sortInDescendingOrder">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_ShoppingList.java</url>
+          <line>17</line>
+          <properties class="A2_ShoppingList" method="printGroceryList">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="196" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_ShoppingList.java</url>
+          <line>21</line>
+          <properties class="A2_ShoppingList" method="distribution">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_ShoppingList.java</url>
+          <line>45</line>
+          <properties class="A2_ShoppingList" method="addItemAtTheStart">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_ShoppingList.java</url>
+          <line>53</line>
+          <properties class="A2_ShoppingList" method="removeItemFromList">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_ShoppingList.java</url>
+          <line>61</line>
+          <properties class="A2_ShoppingList" method="correctOldWithNewItem">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_ShoppingList.java</url>
+          <line>69</line>
+          <properties class="A2_ShoppingList" method="rearrangeItem">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="201" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
