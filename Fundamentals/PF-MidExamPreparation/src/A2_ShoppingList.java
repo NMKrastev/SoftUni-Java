@@ -26,17 +26,17 @@ public class A2_ShoppingList {
         while (!(command = scanner.nextLine()).equals("Go Shopping!")) {
 
             if (command.contains("Urgent")) {
-                String item = command.split(" ")[1];
+                String item = command.split("\\s+")[1];
                 groceryList = addItemAtTheStart(groceryList, item);
             } else if (command.contains("Unnecessary")) {
-                String item = command.split(" ")[1];
+                String item = command.split("\\s+")[1];
                 groceryList = removeItemFromList(groceryList, item);
             } else if (command.contains("Correct")) {
-                String oldItem = command.split(" ")[1];
-                String newItem = command.split(" ")[2];
+                String oldItem = command.split("\\s+")[1];
+                String newItem = command.split("\\s+")[2];
                 groceryList = correctOldWithNewItem(groceryList, oldItem, newItem);
             } else if (command.contains("Rearrange")) {
-                String item = command.split(" ")[1];
+                String item = command.split("\\s+")[1];
                 groceryList = rearrangeItem(groceryList, item);
             }
         }
@@ -62,7 +62,7 @@ public class A2_ShoppingList {
     private static List<String> correctOldWithNewItem(List<String> groceryList, String oldItem, String newItem) {
 
         if (groceryList.contains(oldItem)) {
-            groceryList.set(groceryList.lastIndexOf(oldItem), newItem);
+            groceryList.set(groceryList.indexOf(oldItem), newItem);
         }
         return groceryList;
     }
