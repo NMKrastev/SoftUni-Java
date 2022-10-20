@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PF-MidExamPreparation/A1_ComputerStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PF-MidExamPreparation/A1_ComputerStore.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,14 +138,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A2_TheLift">
-    <configuration name="A1_BonusScoringSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A1_BonusScoringSystem" />
-      <module name="PF-MidExamPreparation" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.A3_MemoryGame">
     <configuration name="A1_ComputerStore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_ComputerStore" />
       <module name="PF-MidExamPreparation" />
@@ -175,8 +167,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A3_MemoryGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A3_MemoryGame" />
+      <module name="PF-MidExamPreparation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.A1_BonusScoringSystem" />
+      <item itemvalue="Application.A3_MemoryGame" />
       <item itemvalue="Application.A1_ComputerStore" />
       <item itemvalue="Application.A2_MuOnline" />
       <item itemvalue="Application.A2_TheLift" />
@@ -184,11 +183,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A3_MemoryGame" />
         <item itemvalue="Application.A2_TheLift" />
         <item itemvalue="Application.A1_ComputerStore" />
         <item itemvalue="Application.A3_HeartDelivery" />
         <item itemvalue="Application.A2_MuOnline" />
-        <item itemvalue="Application.A1_BonusScoringSystem" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +216,7 @@
       <workItem from="1666078227416" duration="8979000" />
       <workItem from="1666161462050" duration="6356000" />
       <workItem from="1666183330265" duration="22756000" />
-      <workItem from="1666255857727" duration="2310000" />
+      <workItem from="1666255857727" duration="5060000" />
     </task>
     <servers />
   </component>
@@ -512,6 +511,11 @@
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_TheLift.java</url>
           <line>8</line>
           <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_MemoryGame.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="222" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
@@ -1289,12 +1293,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_TheLift.java</url>
-          <line>32</line>
+          <line>33</line>
           <properties class="A2_TheLift">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_MemoryGame.java</url>
+          <line>51</line>
+          <properties class="A3_MemoryGame" method="isValidIndex">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="223" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
