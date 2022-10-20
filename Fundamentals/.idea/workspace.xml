@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="" />
+    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +138,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A3_MemoryGame">
+  <component name="RunManager" selected="Application.A1_TheImitationGame">
     <configuration name="A1_ComputerStore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_ComputerStore" />
       <module name="PF-MidExamPreparation" />
@@ -144,8 +146,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A2_MuOnline" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A2_MuOnline" />
+    <configuration name="A1_TheImitationGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A1_TheImitationGame" />
       <module name="PF-MidExamPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,19 +175,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.A1_TheImitationGame" />
       <item itemvalue="Application.A3_MemoryGame" />
       <item itemvalue="Application.A1_ComputerStore" />
-      <item itemvalue="Application.A2_MuOnline" />
       <item itemvalue="Application.A2_TheLift" />
       <item itemvalue="Application.A3_HeartDelivery" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A1_TheImitationGame" />
         <item itemvalue="Application.A3_MemoryGame" />
         <item itemvalue="Application.A2_TheLift" />
         <item itemvalue="Application.A1_ComputerStore" />
         <item itemvalue="Application.A3_HeartDelivery" />
-        <item itemvalue="Application.A2_MuOnline" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +216,8 @@
       <workItem from="1666078227416" duration="8979000" />
       <workItem from="1666161462050" duration="6356000" />
       <workItem from="1666183330265" duration="22756000" />
-      <workItem from="1666255857727" duration="5737000" />
+      <workItem from="1666255857727" duration="6394000" />
+      <workItem from="1666283515155" duration="3931000" />
     </task>
     <servers />
   </component>
@@ -1306,6 +1309,51 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="223" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A1_TheImitationGame.java</url>
+          <line>41</line>
+          <properties class="A1_TheImitationGame" method="moveElements">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A1_TheImitationGame.java</url>
+          <line>49</line>
+          <properties class="A1_TheImitationGame" method="insertValueBeforeIndex">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A1_TheImitationGame.java</url>
+          <line>57</line>
+          <properties class="A1_TheImitationGame" method="changeAllOccurrencesOfSubstring">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A1_TheImitationGame.java</url>
+          <line>20</line>
+          <properties class="A1_TheImitationGame" method="distribution">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="227" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A1_TheImitationGame.java</url>
+          <line>16</line>
+          <properties class="A1_TheImitationGame" method="printDecodedMessage">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="229" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
