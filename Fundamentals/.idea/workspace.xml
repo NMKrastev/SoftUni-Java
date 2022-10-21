@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PF-MidExamPreparation/A3_MovingTarget.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PF-MidExamPreparation/A3_MovingTarget.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +139,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A3_MovingTarget">
+  <component name="RunManager" selected="Application.Demo">
     <configuration name="A1_CounterStrike" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_CounterStrike" />
       <module name="PF-MidExamPreparation" />
@@ -160,15 +161,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A3_MemoryGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A3_MemoryGame" />
+    <configuration name="A3_MovingTarget" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A3_MovingTarget" />
       <module name="PF-MidExamPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="A3_MovingTarget" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="A3_MovingTarget" />
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Demo" />
       <module name="PF-MidExamPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -178,16 +179,16 @@
       <item itemvalue="Application.A1_CounterStrike" />
       <item itemvalue="Application.A2_ShootForTheWin" />
       <item itemvalue="Application.A3_MovingTarget" />
+      <item itemvalue="Application.Demo" />
       <item itemvalue="Application.A1_TheImitationGame" />
-      <item itemvalue="Application.A3_MemoryGame" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Demo" />
         <item itemvalue="Application.A3_MovingTarget" />
         <item itemvalue="Application.A2_ShootForTheWin" />
         <item itemvalue="Application.A1_CounterStrike" />
         <item itemvalue="Application.A1_TheImitationGame" />
-        <item itemvalue="Application.A3_MemoryGame" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +219,7 @@
       <workItem from="1666183330265" duration="22756000" />
       <workItem from="1666255857727" duration="6394000" />
       <workItem from="1666283515155" duration="5315000" />
-      <workItem from="1666357054270" duration="5678000" />
+      <workItem from="1666357054270" duration="8266000" />
     </task>
     <servers />
   </component>
@@ -528,11 +529,6 @@
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A2_ShootForTheWin.java</url>
           <line>7</line>
           <option name="timeStamp" value="232" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_MovingTarget.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="242" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF11-Exercise_Methods/src/A4_PasswordValidator.java</url>
@@ -1391,7 +1387,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_MovingTarget.java</url>
-          <line>57</line>
+          <line>60</line>
           <properties class="A3_MovingTarget" method="strikeTargets">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -1400,7 +1396,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_MovingTarget.java</url>
-          <line>63</line>
+          <line>66</line>
           <properties class="A3_MovingTarget" method="printInvalidPlacement">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -1409,7 +1405,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_MovingTarget.java</url>
-          <line>67</line>
+          <line>71</line>
           <properties class="A3_MovingTarget" method="addValueToTargets">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -1418,7 +1414,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_MovingTarget.java</url>
-          <line>73</line>
+          <line>77</line>
           <properties class="A3_MovingTarget" method="shootTarget">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -1427,7 +1423,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_MovingTarget.java</url>
-          <line>82</line>
+          <line>86</line>
           <properties class="A3_MovingTarget" method="isValidIndex">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -1436,7 +1432,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_MovingTarget.java</url>
-          <line>86</line>
+          <line>91</line>
           <properties class="A3_MovingTarget" method="isValidIndex">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -1445,7 +1441,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_MovingTarget.java</url>
-          <line>20</line>
+          <line>22</line>
           <properties class="A3_MovingTarget" method="distribution">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -1454,7 +1450,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/PF-MidExamPreparation/src/A3_MovingTarget.java</url>
-          <line>53</line>
+          <line>55</line>
           <properties class="A3_MovingTarget" method="printMissedStrike">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
