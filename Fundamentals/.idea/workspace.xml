@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PF-MidExamPreparation/A3_MovingTarget.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PF-MidExamPreparation/A3_MovingTarget.class" afterDir="false" />
-    </list>
+    <list default="true" id="2dcba42a-00bb-419a-bf6b-9a0a8f5e5e67" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,7 +216,7 @@
       <workItem from="1666183330265" duration="22756000" />
       <workItem from="1666255857727" duration="6394000" />
       <workItem from="1666283515155" duration="5315000" />
-      <workItem from="1666357054270" duration="8266000" />
+      <workItem from="1666357054270" duration="8400000" />
     </task>
     <servers />
   </component>
