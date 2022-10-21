@@ -3,12 +3,21 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-**/.idea/
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+Fundamental/.idea/**/workspace.xml
+Fundamental/.idea/**/tasks.xml
+Fundamental/.idea/**/usage.statistics.xml
+Fundamental/.idea/**/dictionaries
+Fundamental/.idea/**/shelf
+Basics/.idea/**/workspace.xml
+Basics/.idea/**/tasks.xml
+Basics/.idea/**/usage.statistics.xml
+Basics/.idea/**/dictionaries
+Basics/.idea/**/shelf
 
 # AWS User-specific
 .idea/**/aws.xml
