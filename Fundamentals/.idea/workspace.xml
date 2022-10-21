@@ -136,7 +136,7 @@
       <recent name="C:\Users\n.krastev\Documents\GitHub\SoftUni-Java\Fundamentals\HTTPBasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Demo">
+  <component name="RunManager" selected="Application.A3_MovingTarget">
     <configuration name="A1_CounterStrike" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A1_CounterStrike" />
       <module name="PF-MidExamPreparation" />
@@ -181,8 +181,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Demo" />
         <item itemvalue="Application.A3_MovingTarget" />
+        <item itemvalue="Application.Demo" />
         <item itemvalue="Application.A2_ShootForTheWin" />
         <item itemvalue="Application.A1_CounterStrike" />
         <item itemvalue="Application.A1_TheImitationGame" />
