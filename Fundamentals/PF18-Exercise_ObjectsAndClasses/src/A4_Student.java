@@ -10,13 +10,15 @@ public class A4_Student {
         this.grade = grade;
     }
 
-    public String getFirstName() {
+    //Can be used on a later stage for comparing or sorting by first name if needed
+    /*public String getFirstName() {
         return firstName;
-    }
+    }*/
 
-    public String getLastName() {
+    //Can be used on a later stage for comparing or sorting by last name if needed
+    /*public String getLastName() {
         return lastName;
-    }
+    }*/
 
     public double getGrade() {
         return grade;
