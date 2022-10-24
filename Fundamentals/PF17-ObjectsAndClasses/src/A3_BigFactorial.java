@@ -20,3 +20,4 @@ public class A3_BigFactorial {
         }
     }
 }
+/*You will receive N - the number in the range [0 - 1000]. Calculate the Factorial of N and print the result*/
