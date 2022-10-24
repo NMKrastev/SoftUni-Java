@@ -10,7 +10,6 @@ public class A2_Article {
         this.author = author;
     }
 
-
     @Override
     public String toString() {
         return String.format("%s - %s: %s",this.title,this.content,this.author);
