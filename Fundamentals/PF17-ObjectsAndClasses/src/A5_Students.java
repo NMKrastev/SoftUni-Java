@@ -16,12 +16,7 @@ public class A5_Students {
             int age = Integer.parseInt(command.split(" ")[2]);
             String hometown = command.split(" ")[3];
 
-            A5_Student student = new A5_Student();
-
-            student.setFirstName(firstName);
-            student.setLastName(lastName);
-            student.setAge(age);
-            student.setHometown(hometown);
+            A5_Student student = new A5_Student(firstName, lastName, age, hometown);
 
             studentInfo.add(student);
         }

@@ -5,19 +5,10 @@ public class A5_Student {
     private int age;
     private String hometown;
 
-    public void setFirstName(String firstName) {
+    public A5_Student(String firstName, String lastName, int age, String hometown) {
         this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public void setAge(int age) {
         this.age = age;
-    }
-
-    public void setHometown(String hometown) {
         this.hometown = hometown;
     }
 
