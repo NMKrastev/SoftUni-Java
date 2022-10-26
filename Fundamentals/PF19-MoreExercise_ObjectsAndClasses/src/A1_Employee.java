@@ -7,25 +7,13 @@ public class A1_Employee {
     private String email;
     private int age;
 
-    public A1_Employee() {
+    public A1_Employee(String name, double salary, String position, String department) {
+        this.name = name;
+        this.salary = salary;
+        this.position = position;
+        this.department = department;
         this.email = "n/a";
         this.age = -1;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
     }
 
     public void setEmail(String email) {

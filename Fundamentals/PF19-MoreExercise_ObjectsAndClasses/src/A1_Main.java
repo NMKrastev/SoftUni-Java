@@ -13,12 +13,10 @@ public class A1_Main {
             List<String> employeeInfoList = Arrays.stream(scanner.nextLine().split("\\s+"))
                     .collect(Collectors.toList());
 
-            A1_Employee employee = new A1_Employee();
-
-            employee.setName(String.valueOf(employeeInfoList.get(0)));
-            employee.setSalary(Double.parseDouble(employeeInfoList.get(1)));
-            employee.setPosition(String.valueOf(employeeInfoList.get(2)));
-            employee.setDepartment(String.valueOf(employeeInfoList.get(3)));
+            A1_Employee employee = new A1_Employee(String.valueOf(employeeInfoList.get(0)),
+            Double.parseDouble(employeeInfoList.get(1)),
+            String.valueOf(employeeInfoList.get(2)),
+            String.valueOf(employeeInfoList.get(3)));
 
             if (employeeInfoList.size() == 5) {
                 if (employeeInfoList.get(4).contains("@")) {
