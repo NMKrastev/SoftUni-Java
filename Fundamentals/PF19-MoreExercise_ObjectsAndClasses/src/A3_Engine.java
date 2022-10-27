@@ -1,11 +1,11 @@
-public class Engine {
+public class A3_Engine {
 
     private String model;
     private String power;
     private String displacement;
     private String efficiency;
 
-    public Engine(String model, String power) {
+    public A3_Engine(String model, String power) {
         this.model = model;
         this.power = power;
         this.displacement = "n/a";

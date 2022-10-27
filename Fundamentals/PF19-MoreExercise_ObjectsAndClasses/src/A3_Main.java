@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class A3_Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        List<Engine> engineList = new ArrayList<>();
-        List<Car> carList = new ArrayList<>();
+        List<A3_Engine> engineList = new ArrayList<>();
+        List<A3_Car> carList = new ArrayList<>();
 
         int numOfEngines = Integer.parseInt(scanner.nextLine());
 
@@ -15,7 +15,7 @@ public class Main {
 
             String[] engineInfo = scanner.nextLine().split("\\s+");
 
-            Engine engine = new Engine(engineInfo[0], engineInfo[1]);
+            A3_Engine engine = new A3_Engine(engineInfo[0], engineInfo[1]);
             if (engineInfo.length == 3) {
                 if (Character.isDigit(engineInfo[2].charAt(0))) {
                     engine.setDisplacement(engineInfo[2]);
@@ -35,7 +35,7 @@ public class Main {
 
             String[] carInfo = scanner.nextLine().split("\\s+");
 
-            Car car = new Car(carInfo[0], carInfo[1]);
+            A3_Car car = new A3_Car(carInfo[0], carInfo[1]);
             if (carInfo.length == 3) {
                 if (Character.isDigit(carInfo[2].charAt(0))) {
                     car.setWeight(carInfo[2]);
@@ -49,9 +49,9 @@ public class Main {
             carList.add(car);
         }
 
-        for (Car cars : carList) {
+        for (A3_Car cars : carList) {
 
-            for (Engine engines : engineList) {
+            for (A3_Engine engines : engineList) {
                 if (cars.getEngine().equals(engines.getModel())) {
                     System.out.printf("%s:\n  %s:\n    Power: %s\n    Displacement: %s\n    Efficiency: %s\n  Weight: %s\n  Color: %s\n",
                             cars.getModel(), engines.getModel(), engines.getPower(), engines.getDisplacement(), engines.getEfficiency(),

@@ -1,11 +1,11 @@
-public class Car {
+public class A3_Car {
 
     private String model;
     private String engine;
     private String weight;
     private String color;
 
-    public Car(String model, String engine) {
+    public A3_Car(String model, String engine) {
         this.model = model;
         this.engine = engine;
         this.weight = "n/a";
