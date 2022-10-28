@@ -12,10 +12,12 @@ public class A4_Main {
             String[] input = scanner.nextLine().split("-".trim());
 
             if (isTeamExist(teamsList, input[1])) {
+
                 System.out.printf("Team %s was already created!\n", input[1]);
-            } else if (!isTeamExist(teamsList, input[1]) && isCreatorSame(teamsList, input[0])) {
+            } else if (!isTeamExist(teamsList, input[1]) && isCreatorOrMemberExist(teamsList, input[0])) {
+
                 System.out.printf("%s cannot create another team!\n", input[0]);
-            } else if (!isTeamExist(teamsList, input[1]) && !isCreatorSame(teamsList, input[0])) {
+            } else if (!isTeamExist(teamsList, input[1]) && !isCreatorOrMemberExist(teamsList, input[0])) {
                 A4_Team team = new A4_Team();
                 team.setCreator(input[0]);
                 team.setTeam(input[1]);
@@ -30,21 +32,19 @@ public class A4_Main {
 
             String[] command = input.split("->".trim());
 
-            for (A4_Team team : teamsList) {
-                if (!isTeamExist(teamsList, command[1])) {
-                    System.out.printf("Team %s does not exist!\n", command[1]);
-                    break;
-                } else if (isTeamExist(teamsList, command[1]) && ((isMemberExist(teamsList, command[0])) || isCreatorSame(teamsList, command[0]))) {
-                    System.out.printf("Member %s cannot join team %s!\n", command[0], command[1]);
-                    break;
-                } else if (isTeamExist(teamsList, command[1]) && !isMemberExist(teamsList, command[0])) {
-                    for (A4_Team teams : teamsList) {
-                        if (teams.getTeam().contains(command[1])) {
-                            teams.addMember(command[0]);
-                            break;
-                        }
+            if (!isTeamExist(teamsList, command[1])) {
+
+                System.out.printf("Team %s does not exist!\n", command[1]);
+            } else if (isTeamExist(teamsList, command[1]) && isCreatorOrMemberExist(teamsList, command[0])) {
+
+                System.out.printf("Member %s cannot join team %s!\n", command[0], command[1]);
+            } else if (isTeamExist(teamsList, command[1]) && !isCreatorOrMemberExist(teamsList, command[0])) {
+
+                for (A4_Team teams : teamsList) {
+                    if (teams.getTeam().contains(command[1])) {
+                        teams.addMember(command[0]);
+                        break;
                     }
-                    break;
                 }
             }
         }
@@ -74,20 +74,10 @@ public class A4_Main {
         }
     }
 
-    private static boolean isMemberExist(List<A4_Team> teamsList, String member) {
-
-        for (A4_Team members : teamsList) {
-            if (members.getMembers().contains(member)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private static boolean isCreatorSame(List<A4_Team> teamsList, String teamCreator) {
+    private static boolean isCreatorOrMemberExist(List<A4_Team> teamsList, String person) {
 
         for (A4_Team creator : teamsList) {
-            if (creator.getCreator().contains(teamCreator)) {
+            if (creator.getCreator().contains(person) || creator.getMembers().contains(person)) {
                 return true;
             }
         }
