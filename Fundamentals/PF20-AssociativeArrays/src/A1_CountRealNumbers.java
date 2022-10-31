@@ -18,6 +18,11 @@ public class A1_CountRealNumbers {
             } else {
                 countNumbersMap.put(currentNum, 1);
             }
+
+            //Does the same thing as the code above.
+            /*countNumbersMap.putIfAbsent(currentNum, 0);
+            int currentValue = countNumbersMap.get(currentNum);
+            countNumbersMap.put(currentNum, currentValue + 1);*/
         }
 
         for (Map.Entry<Double, Integer> entry : countNumbersMap.entrySet()) {
