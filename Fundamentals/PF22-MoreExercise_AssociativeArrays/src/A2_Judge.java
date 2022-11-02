@@ -23,7 +23,7 @@ public class A2_Judge {
         printContestStandings(dataMap);
 
         Map<String, Integer> standings = new LinkedHashMap<>();
-        standings = sortIndividualStandings(dataMap, standings);
+        standings = addIndividualStandings(dataMap, standings);
 
         printIndividualStandings(dataMap, standings);
     }
@@ -46,7 +46,7 @@ public class A2_Judge {
         });
     }
 
-    private static Map<String, Integer> sortIndividualStandings(Map<String, LinkedHashMap<String, Integer>> dataMap, Map<String, Integer> standings) {
+    private static Map<String, Integer> addIndividualStandings(Map<String, LinkedHashMap<String, Integer>> dataMap, Map<String, Integer> standings) {
 
         for (Map.Entry<String, LinkedHashMap<String, Integer>> contestEntry : dataMap.entrySet()) {
             for (Map.Entry<String, Integer> valuesEntry : contestEntry.getValue().entrySet()) {
