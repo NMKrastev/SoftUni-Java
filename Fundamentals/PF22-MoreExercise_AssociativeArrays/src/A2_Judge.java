@@ -25,10 +25,10 @@ public class A2_Judge {
         Map<String, Integer> standings = new LinkedHashMap<>();
         standings = addIndividualStandings(dataMap, standings);
 
-        printIndividualStandings(dataMap, standings);
+        printIndividualStandings(standings);
     }
 
-    private static void printIndividualStandings(Map<String, LinkedHashMap<String, Integer>> dataMap, Map<String, Integer> standings) {
+    private static void printIndividualStandings(Map<String, Integer> standings) {
 
         AtomicInteger num = new AtomicInteger();
 
@@ -41,9 +41,7 @@ public class A2_Judge {
                 sort = e2.getKey().compareTo(e1.getKey());
             }
             return sort;
-        }).forEach(element -> {
-            System.out.printf("%d. %s -> %d\n", num.getAndIncrement(), element.getKey(), element.getValue());
-        });
+        }).forEach(element -> System.out.printf("%d. %s -> %d\n", num.getAndIncrement(), element.getKey(), element.getValue()));
     }
 
     private static Map<String, Integer> addIndividualStandings(Map<String, LinkedHashMap<String, Integer>> dataMap, Map<String, Integer> standings) {
@@ -60,18 +58,16 @@ public class A2_Judge {
     private static void printContestStandings(Map<String, LinkedHashMap<String, Integer>> dataMap) {
 
         AtomicInteger num = new AtomicInteger();
-        dataMap.entrySet().stream().forEach(e -> {
+        dataMap.forEach((key, value) -> {
             num.set(1);
-            System.out.printf("%s: %d participants\n", e.getKey(), e.getValue().size());
-            e.getValue().entrySet().stream().sorted((i2, i1) -> {
+            System.out.printf("%s: %d participants\n", key, value.size());
+            value.entrySet().stream().sorted((i2, i1) -> {
                 int sort = Integer.compare(i1.getValue(), i2.getValue());
                 if (sort == 0) {
                     sort = i2.getKey().compareTo(i1.getKey());
                 }
                 return sort;
-            }).forEach(element -> {
-                System.out.printf("%d. %s <::> %d\n", num.getAndIncrement(), element.getKey(), element.getValue());
-            });
+            }).forEach(element -> System.out.printf("%d. %s <::> %d\n", num.getAndIncrement(), element.getKey(), element.getValue()));
         });
     }
 }
