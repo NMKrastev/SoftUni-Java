@@ -7,18 +7,18 @@ public class A1_ExtractPersonInformation {
         Scanner scanner = new Scanner(System.in);
         Pattern patternName = Pattern.compile("@(.+?)\\|", Pattern.DOTALL);
         Pattern patternAge = Pattern.compile("#(.+?)\\*", Pattern.DOTALL);
-        int index = 0;
+        Matcher matcherName;
+        Matcher matcherAge;
         int num = Integer.parseInt(scanner.nextLine());
 
         for (int i = 0; i < num; i++) {
             String line = scanner.nextLine();
-            Matcher matcherName = patternName.matcher(line);
-            Matcher matcherAge = patternAge.matcher(line);
+            matcherName = patternName.matcher(line);
+            matcherAge = patternAge.matcher(line);
 
             if (matcherName.find() && matcherAge.find()) {
                 System.out.printf("%s is %s years old.\n", matcherName.group(1), matcherAge.group(1));
             }
-            index++;
         }
     }
 }
