@@ -9,27 +9,24 @@ public class A8_LettersChangeNumbers {
         double totalSum = 0;
         String[] inputArray = scanner.nextLine().split("\\s+");
 
-        for (int i = 0; i < inputArray.length; i++) {
+        for (String lineChunk : inputArray) {
             double currentSum = 0;
             int letterNum = 0;
-            String firstLetter = inputArray[i].substring(0, 1);
-            double number = Double.parseDouble(inputArray[i].substring(1, inputArray[i].length() - 1));
-            String lastLetter = inputArray[i].substring(inputArray[i].length() - 1);
+            String firstLetter = lineChunk.substring(0, 1);
+            double number = Double.parseDouble(lineChunk.substring(1, lineChunk.length() - 1));
+            String lastLetter = lineChunk.substring(lineChunk.length() - 1);
 
+            letterNum = checkLetter(firstLetter, lettersArray);
             if (isUpperCase(firstLetter)) {
-                letterNum = checkLetter(firstLetter, lettersArray);
                 currentSum = number / letterNum;
-
             } else {
-                letterNum = checkLetter(firstLetter, lettersArray);
                 currentSum = number * letterNum;
             }
 
+            letterNum = checkLetter(lastLetter, lettersArray);
             if (isUpperCase(lastLetter)) {
-                letterNum = checkLetter(lastLetter, lettersArray);
                 currentSum -= letterNum;
             } else {
-                letterNum = checkLetter(lastLetter, lettersArray);
                 currentSum += letterNum;
             }
             totalSum += currentSum;
@@ -40,11 +37,7 @@ public class A8_LettersChangeNumbers {
     private static boolean isUpperCase(String letter) {
 
         char currentLetter = letter.charAt(0);
-
-        if (Character.isUpperCase(currentLetter)) {
-            return true;
-        }
-        return false;
+        return Character.isUpperCase(currentLetter);
     }
 
     private static int checkLetter(String letter, String[] letterArray) {
