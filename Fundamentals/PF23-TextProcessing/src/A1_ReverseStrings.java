@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class A1_ReverseStrings {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String line;
+
+        while (!(line = scanner.nextLine()).equals("end")) {
+
+           String reversed = reverseString(line);
+
+            System.out.printf("%s = %s\n", line, reversed);
+        }
+    }
+
+    private static String reverseString(String line) {
+
+        String reversed = "";
+        for (int i = line.length() - 1; i >= 0; i--) {
+            reversed += line.charAt(i);
+        }
+
+        return reversed;
+    }
+}
+/*You will be given a series of strings until you receive an "end" command.
+Write a program that reverses strings and prints each pair on a separate line in the format "{word} = {reversed word}".*/
