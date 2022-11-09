@@ -8,20 +8,19 @@ public class A4_TextFilter {
         String text = scanner.nextLine();
 
         for (String banWord : wordsToRemove) {
-            String asterisks = "";
-            asterisks = getAsterisks(banWord, asterisks);
+            String asterisks = getAsterisks(banWord);
             text = text.replace(banWord, asterisks);
         }
 
         System.out.println(text);
     }
 
-    private static String getAsterisks(String banWord, String asterisks) {
-
+    private static String getAsterisks(String banWord) {
+        StringBuilder sb = new StringBuilder();
         for (int j = 0; j < banWord.length(); j++) {
-            asterisks += "*";
+            sb.append("*");
         }
-        return asterisks;
+        return sb.toString();
     }
 }
 /*Write a program that takes a text and a string of banned words. All words included in the ban list should be replaced
