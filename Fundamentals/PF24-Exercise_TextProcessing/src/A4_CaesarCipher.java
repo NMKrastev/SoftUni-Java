@@ -12,16 +12,16 @@ public class A4_CaesarCipher {
 
     private static String getEncryption(String text) {
 
-        String result = "";
+        StringBuilder result = new StringBuilder();
         char symbol;
 
         for (int i = 0; i < text.length(); i++) {
             symbol = text.charAt(i);
             symbol += 3;
 
-            result += symbol;
+            result.append(symbol);
         }
-        return result;
+        return result.toString();
     }
 }
 /*Write a program that returns an encrypted version of the same text. Encrypt the text by shifting each character with
