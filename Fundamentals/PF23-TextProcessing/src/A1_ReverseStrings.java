@@ -7,21 +7,11 @@ public class A1_ReverseStrings {
         String line;
 
         while (!(line = scanner.nextLine()).equals("end")) {
+            StringBuilder sb = new StringBuilder();
+            sb.append(line);
 
-           String reversed = reverseString(line);
-
-            System.out.printf("%s = %s\n", line, reversed);
+            System.out.printf("%s = %s\n", line, sb.reverse().toString());
         }
-    }
-
-    private static String reverseString(String line) {
-
-        String reversed = "";
-        for (int i = line.length() - 1; i >= 0; i--) {
-            reversed += line.charAt(i);
-        }
-
-        return reversed;
     }
 }
 /*You will be given a series of strings until you receive an "end" command.
