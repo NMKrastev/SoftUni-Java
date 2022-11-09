@@ -5,21 +5,21 @@ public class A5_DigitsLettersAndOther {
         Scanner scanner = new Scanner(System.in);
 
         char[] text = scanner.nextLine().toCharArray();
-        String digits = "";
-        String letters = "";
-        String others = "";
+        StringBuilder digits = new StringBuilder();
+        StringBuilder letters = new StringBuilder();
+        StringBuilder others = new StringBuilder();
 
         for (int i = 0; i < text.length; i++) {
 
             if (Character.isDigit(text[i])) {
-                digits += text[i];
+                digits.append(text[i]);
             } else if (Character.isLetter(text[i])) {
-                letters += text[i];
+                letters.append(text[i]);
             } else {
-                others += text[i];
+                others.append(text[i]);
             }
         }
-        System.out.printf("%s\n%s\n%s\n", digits, letters, others);
+        System.out.printf("%s\n%s\n%s\n", digits.toString(), letters.toString(), others.toString());
     }
 }
 /*Write a program that receives a single string and on the first line prints all the digits, on the second –
