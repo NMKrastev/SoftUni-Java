@@ -6,27 +6,19 @@ public class A3_SoftUniBarIncome {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Pattern patternName = Pattern.compile("(?<=\\%)([A-Z][a-z]+)(?=\\%)");
-        Pattern patternProduct = Pattern.compile("(?<=\\<)([\\w]+)(?=\\>)");
-        Pattern patternCount = Pattern.compile("(?<=\\|)([\\d]+)(?=\\|)");
-        Pattern patternPrice = Pattern.compile("[0-9]*[.]?[0-9]+\\$");
+        Pattern pattern = Pattern.compile("^%(?<name>[A-Z][a-z]*)%[^|$%.]*<(?<product>\\w+)>[^|$%.]*\\|(?<count>[0-9]+)\\|[^|$%.]*?(?<price>[0-9]+\\.*[0-9]*)\\$$");
         double totalSum = 0;
         String input;
 
         while (!(input = scanner.nextLine()).equals("end of shift")) {
 
-            Matcher matcherName = patternName.matcher(input);
-            Matcher matcherProduct = patternProduct.matcher(input);
-            Matcher matcherCount = patternCount.matcher(input);
-            Matcher matcherPrice = patternPrice.matcher(input);
+            Matcher matcher = pattern.matcher(input);
 
-            if (matcherName.find() && matcherProduct.find() && matcherCount.find() && matcherPrice.find()) {
-                String name = matcherName.group();
-                String product = matcherProduct.group();
-                int count = Integer.parseInt(matcherCount.group());
-                double price = Double.parseDouble(matcherPrice.group().split("\\$")[0]);
+            if (matcher.find()) {
+                int count = Integer.parseInt(matcher.group("count"));
+                double price = Double.parseDouble(matcher.group("price").split("\\$")[0]);
 
-                System.out.printf("%s: %s - %.2f\n", matcherName.group(), matcherProduct.group(), count * price);
+                System.out.printf("%s: %s - %.2f\n", matcher.group("name"), matcher.group("product"), count * price);
                 totalSum += count * price;
             }
         }
