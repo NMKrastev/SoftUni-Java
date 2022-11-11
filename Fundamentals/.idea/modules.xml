@@ -30,6 +30,7 @@
       <module fileurl="file://$PROJECT_DIR$/PF24-Exercise_TextProcessing/PF24-Exercise_TextProcessing.iml" filepath="$PROJECT_DIR$/PF24-Exercise_TextProcessing/PF24-Exercise_TextProcessing.iml" />
       <module fileurl="file://$PROJECT_DIR$/PF25-MoreExercise_TextProcessing/PF25-MoreExercise_TextProcessing.iml" filepath="$PROJECT_DIR$/PF25-MoreExercise_TextProcessing/PF25-MoreExercise_TextProcessing.iml" />
       <module fileurl="file://$PROJECT_DIR$/PF26-RegularExpressions/PF26-RegularExpressions.iml" filepath="$PROJECT_DIR$/PF26-RegularExpressions/PF26-RegularExpressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PF27-Exercise_RegularExpressions/PF27-Exercise_RegularExpressions.iml" filepath="$PROJECT_DIR$/PF27-Exercise_RegularExpressions/PF27-Exercise_RegularExpressions.iml" />
     </modules>
   </component>
 </project>
