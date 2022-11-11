@@ -29,6 +29,7 @@
       <module fileurl="file://$PROJECT_DIR$/PF23-TextProcessing/PF23-TextProcessing.iml" filepath="$PROJECT_DIR$/PF23-TextProcessing/PF23-TextProcessing.iml" />
       <module fileurl="file://$PROJECT_DIR$/PF24-Exercise_TextProcessing/PF24-Exercise_TextProcessing.iml" filepath="$PROJECT_DIR$/PF24-Exercise_TextProcessing/PF24-Exercise_TextProcessing.iml" />
       <module fileurl="file://$PROJECT_DIR$/PF25-MoreExercise_TextProcessing/PF25-MoreExercise_TextProcessing.iml" filepath="$PROJECT_DIR$/PF25-MoreExercise_TextProcessing/PF25-MoreExercise_TextProcessing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PF26-RegularExpressions/PF26-RegularExpressions.iml" filepath="$PROJECT_DIR$/PF26-RegularExpressions/PF26-RegularExpressions.iml" />
     </modules>
   </component>
 </project>
