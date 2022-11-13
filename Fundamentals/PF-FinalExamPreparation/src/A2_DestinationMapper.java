@@ -9,7 +9,7 @@ public class A2_DestinationMapper {
         Scanner scanner = new Scanner(System.in);
 
         String input = scanner.next();
-        Pattern pattern = Pattern.compile("([=/])(?<destination>[A-Z][A-Za-z]{2,})\\1");
+        Pattern pattern = Pattern.compile("([=/])(?<destination>[A-Z][A-z]{2,})\\1");
 
         List<String> destinationsList = new ArrayList<>();
         int travelPoints = 0;
@@ -20,9 +20,8 @@ public class A2_DestinationMapper {
             String currentDestination = matcher.group("destination");
             destinationsList.add(currentDestination);
         }
-        String destinations = String.join(", ", destinationsList);
 
-        System.out.println("Destinations: " + destinations);
+        System.out.println("Destinations: " + String.join(", ", destinationsList));
         System.out.println("Travel Points: " + travelPoints);
     }
 }
