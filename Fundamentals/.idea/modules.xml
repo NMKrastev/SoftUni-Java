@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Fundamentals.iml" filepath="$PROJECT_DIR$/.idea/Fundamentals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PF-FinalExamPreparation/PF-FinalExamPreparation.iml" filepath="$PROJECT_DIR$/PF-FinalExamPreparation/PF-FinalExamPreparation.iml" />
       <module fileurl="file://$PROJECT_DIR$/PF-MidExamPreparation/PF-MidExamPreparation.iml" filepath="$PROJECT_DIR$/PF-MidExamPreparation/PF-MidExamPreparation.iml" />
       <module fileurl="file://$PROJECT_DIR$/PF01-BasicSyntaxConditionalStatementsAndLoops/PF01-BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/PF01-BasicSyntaxConditionalStatementsAndLoops/PF01-BasicSyntaxConditionalStatementsAndLoops.iml" />
       <module fileurl="file://$PROJECT_DIR$/PF02-Exercise_BasicSyntaxConditionalStatementsAndLoops/PF02-Exercise_BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/PF02-Exercise_BasicSyntaxConditionalStatementsAndLoops/PF02-Exercise_BasicSyntaxConditionalStatementsAndLoops.iml" />
