@@ -8,7 +8,7 @@ public class A2_DestinationMapper {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String input = scanner.next();
+        String input = scanner.nextLine();
         Pattern pattern = Pattern.compile("([=/])(?<destination>[A-Z][a-zA-Z]{2,})\\1");
 
         List<String> destinationsList = new ArrayList<>();
