@@ -86,7 +86,7 @@ public class A3_ThePianist {
         return false;
     }
 
-    private static Map<String, Map<String, String>> addPiecesToMap(Scanner scanner, Map<String, Map<String, String>> pianoPiecesMap, int n) {
+    private static void addPiecesToMap(Scanner scanner, Map<String, Map<String, String>> pianoPiecesMap, int n) {
 
         for (int i = 0; i < n; i++) {
             String input = scanner.nextLine();
@@ -97,8 +97,6 @@ public class A3_ThePianist {
             pianoPiecesMap.putIfAbsent(piece, new LinkedHashMap<>());
             pianoPiecesMap.get(piece).put(composer, key);
         }
-
-        return pianoPiecesMap;
     }
 }
 /*On the first line of the standard input, you will receive an integer n – the number of pieces you will initially have.
