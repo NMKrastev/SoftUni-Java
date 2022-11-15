@@ -97,6 +97,7 @@ public class A3_ThePianist {
             pianoPiecesMap.putIfAbsent(piece, new LinkedHashMap<>());
             pianoPiecesMap.get(piece).put(composer, key);
         }
+
         return pianoPiecesMap;
     }
 }
