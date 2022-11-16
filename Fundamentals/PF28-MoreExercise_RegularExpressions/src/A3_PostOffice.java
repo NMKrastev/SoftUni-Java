@@ -20,10 +20,10 @@ public class A3_PostOffice {
             String partOne = lettersMatcher.group("letters");
             for (int i = 0; i < partOne.length(); i++) {
                 int currentLetter = partOne.charAt(i);
-                Matcher asciiCodeAndLengthMather = asciiCodeAndLengthPattern.matcher(input.get(1));
-                while (asciiCodeAndLengthMather.find()) {
-                    if (Integer.parseInt(asciiCodeAndLengthMather.group("asciiCode")) == currentLetter) {
-                        int length = Integer.parseInt(asciiCodeAndLengthMather.group("length")) + 1;
+                Matcher asciiCodeAndLengthMatcher = asciiCodeAndLengthPattern.matcher(input.get(1));
+                while (asciiCodeAndLengthMatcher.find()) {
+                    if (Integer.parseInt(asciiCodeAndLengthMatcher.group("asciiCode")) == currentLetter) {
+                        int length = Integer.parseInt(asciiCodeAndLengthMatcher.group("length")) + 1;
                         String[] words = input.get(2).split("\\s+");
                         Arrays.stream(words).filter(s ->
                                         s.length() == length && s.charAt(0) == (char) (currentLetter))
