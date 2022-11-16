@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 public class A4_SantasSecretHelper {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Pattern pattern = Pattern.compile("@(?<name>[A-Za-z]+)([^-@!:>]+)?![G]!");
+        Pattern pattern = Pattern.compile("@(?<name>[A-Za-z]+)([^-@!:>]+)?!G!");
 
         int key = Integer.parseInt(scanner.nextLine());
         String input;
