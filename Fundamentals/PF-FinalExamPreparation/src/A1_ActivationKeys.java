@@ -82,5 +82,4 @@ Input
 •	After the first line, until the "Generate" command is given, you will be receiving strings.
 Output
 •	After the "Generate" command is received, print:
-o	"Your activation key is: {activation key}"
-*/
+o	"Your activation key is: {activation key}"*/
