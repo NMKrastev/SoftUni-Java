@@ -1,3 +1,5 @@
+USE `softuni`;
+
 CREATE TABLE `students` (
 	`id` INT AUTO_INCREMENT PRIMARY Key,
 	`first_name` VARCHAR(50),
