@@ -17,8 +17,9 @@ public class A1_Hogwarts {
                 int index = Integer.parseInt(command.split("\\s+")[1]);
                 if (isValidIndex(index, spell)) {
                     String letter = command.split("\\s+")[2];
-                    spell.delete(index, index + 1);
-                    spell.insert(index, letter);
+                    spell.replace(index, index + 1, letter);
+                    //spell.delete(index, index + 1);
+                    //spell.insert(index, letter);
                     System.out.println("Done!");
                 } else {
                     System.out.println("The spell was too weak.");
