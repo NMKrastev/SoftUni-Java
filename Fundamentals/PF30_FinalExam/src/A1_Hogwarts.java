@@ -28,10 +28,10 @@ public class A1_Hogwarts {
                 String substring = command.split("\\s+")[1];
                 if (spell.toString().contains(substring)) {
                     String replacement = command.split("\\s+")[2];
-                    int index = spell.lastIndexOf(substring);
+                    int index = spell.indexOf(substring);
                     while (index != -1) {
                         spell.replace(index, index + substring.length(), replacement);
-                        index = spell.lastIndexOf(substring);
+                        index = spell.indexOf(substring);
                     }
                     System.out.println(spell);
                 }
