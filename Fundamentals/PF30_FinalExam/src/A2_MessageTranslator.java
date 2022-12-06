@@ -23,7 +23,7 @@ public class A2_MessageTranslator {
     private static void printMessage(Matcher matcher) {
         String currentCommand = matcher.group("command");
         String currentMessage = matcher.group("message");
-        System.out.print(currentCommand + ":");
+        System.out.printf("%s:", currentCommand);
         for (int j = 0; j < currentMessage.length(); j++) {
             System.out.print(" " + (int) currentMessage.charAt(j));
         }
