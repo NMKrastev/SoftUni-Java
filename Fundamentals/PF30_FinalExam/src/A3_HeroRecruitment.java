@@ -33,7 +33,7 @@ public class A3_HeroRecruitment {
 
     private static void printResults(Map<String, List<String>> heroesMap) {
         System.out.println("Heroes:");
-        heroesMap.forEach((hero, spells) -> System.out.println("== " + hero + ": " + String.join(", ", spells)));
+        heroesMap.forEach((hero, spells) -> System.out.println(String.format("== %s: ", hero) + String.join(", ", spells)));
     }
 
     private static Map<String, List<String>> unlearnSpell(Map<String, List<String>> heroesMap, String command, String heroName) {
