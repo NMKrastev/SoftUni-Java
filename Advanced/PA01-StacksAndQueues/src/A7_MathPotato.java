@@ -11,6 +11,7 @@ public class A7_MathPotato {
         Arrays.stream(input.split("\\s+")).forEach(name -> namesQueue.offer(name));
         int turns = Integer.parseInt(scanner.nextLine());
         int cycle = 1;
+
         while (namesQueue.size() > 1) {
             for (int i = 1; i < turns; i++) {
                 namesQueue.offer(namesQueue.poll());
@@ -21,21 +22,23 @@ public class A7_MathPotato {
             } else {
                 System.out.println("Removed " + namesQueue.poll());
             }
-            cycle++;
 
+            cycle++;
         }
+
         System.out.println("Last is " + namesQueue.poll());
     }
 
-    static boolean isPrime(int cycle) {
+    public static boolean isPrime(int cycle){
 
-        if (cycle <= 1) {
+        if (cycle == 1) {
             return false;
         }
 
         for (int i = 2; i < cycle; i++) {
-            if (cycle % i == 0)
+            if (cycle % i == 0){
                 return false;
+            }
         }
 
         return true;
