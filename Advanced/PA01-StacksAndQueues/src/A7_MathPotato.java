@@ -1,5 +1,5 @@
-import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class A7_MathPotato {
@@ -7,7 +7,7 @@ public class A7_MathPotato {
         Scanner scanner = new Scanner(System.in);
 
         String input = scanner.nextLine();
-        ArrayDeque<String> namesQueue = new ArrayDeque<>();
+        PriorityQueue<String> namesQueue = new PriorityQueue<>();
         Arrays.stream(input.split("\\s+")).forEach(name -> namesQueue.offer(name));
         int turns = Integer.parseInt(scanner.nextLine());
         int cycle = 1;
@@ -17,25 +17,25 @@ public class A7_MathPotato {
                 namesQueue.offer(namesQueue.poll());
             }
 
-            cycle++;
-
             if (isPrime(cycle)) {
                 System.out.println("Prime " + namesQueue.peek());
             } else {
                 System.out.println("Removed " + namesQueue.poll());
             }
+
+            cycle++;
         }
 
         System.out.println("Last is " + namesQueue.poll());
     }
 
-    private static boolean isPrime(int cycle){
+    private static boolean isPrime(int cycle) {
 
         if (cycle == 1) {
             return false;
         }
 
-        for (int i = 2; i <= cycle / 2; i++) {
+        for (int i = 2; i < cycle; i++) {
             if (cycle % i == 0) {
                 return false;
             }
@@ -44,7 +44,7 @@ public class A7_MathPotato {
         return true;
     }
 }
-/*Rework the previous problem so that a child is removed only on a composite (not prime) cycle (cycles start from 1).
+/*Rework the previous problem by using a PriorityQueue so that a child is removed only on a composite (not prime) cycle (cycles start from 1).
 If a cycle is prime, print the child's name.
 As before, print the name of the child that is left last.
 */
