@@ -9,6 +9,7 @@ public class A2_SimpleCalculator {
         String[] input = scanner.nextLine().split("\\s+");
         ArrayDeque<String> stack = new ArrayDeque<>();
         Collections.addAll(stack, input);
+        //Arrays.stream(input.split("\\s+")).forEach(n -> stack.push(n));
 
         while (stack.size() > 1) {
             int firstNum = Integer.parseInt(stack.pop());
