@@ -24,3 +24,6 @@ public class A3_DecimalToBinaryConverter {
         }
     }
 }
+/*Create a simple program that can convert a decimal number to its binary representation. Implement an elegant solution using a Stack.
+Print the binary representation back at the terminal.
+*/
