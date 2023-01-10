@@ -17,26 +17,26 @@ public class A7_MathPotato {
                 namesQueue.offer(namesQueue.poll());
             }
 
+            cycle++;
+
             if (isPrime(cycle)) {
                 System.out.println("Prime " + namesQueue.peek());
             } else {
                 System.out.println("Removed " + namesQueue.poll());
             }
-
-            cycle++;
         }
 
         System.out.println("Last is " + namesQueue.poll());
     }
 
-    public static boolean isPrime(int cycle){
+    private static boolean isPrime(int cycle){
 
         if (cycle == 1) {
             return false;
         }
 
-        for (int i = 2; i < cycle; i++) {
-            if (cycle % i == 0){
+        for (int i = 2; i <= cycle / 2; i++) {
+            if (cycle % i == 0) {
                 return false;
             }
         }
