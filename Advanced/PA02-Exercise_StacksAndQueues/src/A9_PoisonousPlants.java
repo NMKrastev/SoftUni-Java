@@ -7,12 +7,8 @@ public class A9_PoisonousPlants {
         Scanner scanner = new Scanner(System.in);
 
         int numOfPlants = Integer.parseInt(scanner.nextLine());
-        String[] input = scanner.nextLine().split("\\s+");
-        int[] pesticides = new int[numOfPlants];
-
-        for (int i = 0; i < numOfPlants; i++) {
-            pesticides[i] = Integer.parseInt(input[i]);
-        }
+        int[] pesticides = Arrays.stream(scanner.nextLine().split("\\s+"))
+                .mapToInt(Integer::parseInt).toArray();
 
         ArrayDeque<Integer> indexes = new ArrayDeque<>();
         indexes.push(0);
