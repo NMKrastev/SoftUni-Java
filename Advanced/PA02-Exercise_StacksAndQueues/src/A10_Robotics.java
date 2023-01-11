@@ -70,6 +70,7 @@ public class A10_Robotics {
     }
 
     private static String getTime(int startTimeInSeconds) {
+
         int hours = (startTimeInSeconds / 3600) % 24;
         int minutes = startTimeInSeconds % 3600 / 60;
         int seconds = startTimeInSeconds % 60;
@@ -77,6 +78,7 @@ public class A10_Robotics {
     }
 
     private static int getTimeInSeconds(String startTime) {
+
         int hours = Integer.parseInt(startTime.split(":")[0]);
         int minutes = Integer.parseInt(startTime.split(":")[1]);
         int seconds = Integer.parseInt(startTime.split(":")[2]);
