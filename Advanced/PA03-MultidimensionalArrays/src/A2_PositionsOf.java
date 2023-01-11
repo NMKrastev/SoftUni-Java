@@ -16,18 +16,27 @@ public class A2_PositionsOf {
         }
 
         int searchNum = scanner.nextInt();
-        boolean isFound = false;
+        //boolean isFound = false;
+        //Use of SB and more specific .isEmpty() method
+        //is not applicable for Judge system because it uses Java 13
+        StringBuilder output = new StringBuilder();
         for (int row = 0; row < array.length; row++) {
             for (int col = 0; col < array[row].length; col++) {
                 if (array[row][col] == searchNum) {
-                    System.out.printf("%d %d\n", row, col);
-                    isFound = true;
+                    /*System.out.printf("%d %d\n", row, col);
+                    isFound = true;*/
+                    output
+                            .append(row)
+                            .append(" ")
+                            .append(col)
+                            .append(System.lineSeparator());
                 }
             }
         }
-        if (!isFound) {
+        /*if (!isFound) {
             System.out.println("not found");
-        }
+        }*/
+        System.out.println(output.isEmpty() ? "not found" : output);
     }
 }
 /*Write a program that reads a matrix of integers from the console, then a number, and prints all the
