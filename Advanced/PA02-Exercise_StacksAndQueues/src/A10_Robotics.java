@@ -51,19 +51,19 @@ public class A10_Robotics {
         while (!productsQueue.isEmpty()) {
             startingTime++;
             String currentProduct = productsQueue.poll();
-            boolean areAllRobotsBusy = false;
+            boolean isRobotBusy = false;
             decreaseWorkTime(busyRobots);
 
             for (Map.Entry<Robot, Integer> entry : busyRobots.entrySet()) {
                 if (entry.getValue() == 0) {
                     entry.setValue(entry.getKey().getProcessingPeriod());
                     System.out.printf("%s - %s [%s]\n", entry.getKey().getRobot(), currentProduct, getTime(startingTime));
-                    areAllRobotsBusy = true;
+                    isRobotBusy = true;
                     break;
                 }
             }
 
-            if (!areAllRobotsBusy) {
+            if (!isRobotBusy) {
                 productsQueue.offer(currentProduct);
             }
         }
