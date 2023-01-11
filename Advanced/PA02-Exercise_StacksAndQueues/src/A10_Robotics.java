@@ -28,12 +28,12 @@ public class A10_Robotics {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String robots = scanner.nextLine();
+        String input = scanner.nextLine();
         String time = scanner.nextLine();
 
         Map<Robot, Integer> busyRobots = new LinkedHashMap();
         Pattern pattern = Pattern.compile("(?<robotName>[a-zA-Z0-9]+)-(?<processingTime>[\\d]+)");
-        Matcher matcher = pattern.matcher(robots);
+        Matcher matcher = pattern.matcher(input);
         while (matcher.find()) {
             String robotName = matcher.group("robotName");
             int processingTime = Integer.parseInt(matcher.group("processingTime"));
@@ -42,9 +42,9 @@ public class A10_Robotics {
         }
 
         ArrayDeque<String> productsQueue = new ArrayDeque<>();
-        String input;
-        while (!(input = scanner.nextLine()).equals("End")) {
-            productsQueue.offer(input);
+        String product;
+        while (!(product = scanner.nextLine()).equals("End")) {
+            productsQueue.offer(product);
         }
 
         int startingTime = getTimeInSeconds(time);
