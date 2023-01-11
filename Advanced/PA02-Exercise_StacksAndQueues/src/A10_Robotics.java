@@ -13,7 +13,6 @@ public class A10_Robotics {
         public Robot(String robot, int processingPeriod) {
             this.robot = robot;
             this.processingPeriod = processingPeriod;
-
         }
 
         public String getRobot() {
