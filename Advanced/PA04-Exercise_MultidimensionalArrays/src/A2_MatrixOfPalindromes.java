@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.util.Scanner;
 
 public class A2_MatrixOfPalindromes {
@@ -7,19 +6,18 @@ public class A2_MatrixOfPalindromes {
 
         int rows = scanner.nextInt();
         int cols = scanner.nextInt();
-        int[][] matrix = new int[rows][cols];
-        StringBuilder output = getPalindromesMatrix(matrix);
+        StringBuilder output = getPalindromesMatrix(rows, cols);
 
         System.out.println(output);
     }
 
-    private static StringBuilder getPalindromesMatrix(int[][] matrix) {
+    private static StringBuilder getPalindromesMatrix(int rows, int cols) {
 
         StringBuilder output = new StringBuilder();
-        for (int row = 0; row < matrix.length; row++) {
+        for (int row = 0; row < rows; row++) {
             char endSymbols = (char) (97 + row);
             char middleSymbol = (char) (97 + row);
-            for (int col = 0; col < matrix[row].length; col++) {
+            for (int col = 0; col < cols; col++) {
                 output.append(endSymbols);
                 output.append(middleSymbol);
                 output.append(endSymbols);
