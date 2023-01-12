@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/PA01-StacksAndQueues/PA01-StacksAndQueues.iml" filepath="$PROJECT_DIR$/PA01-StacksAndQueues/PA01-StacksAndQueues.iml" />
       <module fileurl="file://$PROJECT_DIR$/PA02-Exercise_StacksAndQueues/PA02-Exercise_StacksAndQueues.iml" filepath="$PROJECT_DIR$/PA02-Exercise_StacksAndQueues/PA02-Exercise_StacksAndQueues.iml" />
       <module fileurl="file://$PROJECT_DIR$/PA03-MultidimensionalArrays/PA03-MultidimensionalArrays.iml" filepath="$PROJECT_DIR$/PA03-MultidimensionalArrays/PA03-MultidimensionalArrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PA04-Exercise_MultidimensionalArrays/PA04-Exercise_MultidimensionalArrays.iml" filepath="$PROJECT_DIR$/PA04-Exercise_MultidimensionalArrays/PA04-Exercise_MultidimensionalArrays.iml" />
     </modules>
   </component>
 </project>
