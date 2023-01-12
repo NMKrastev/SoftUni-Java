@@ -34,11 +34,7 @@ public class A5_BalancedParentheses {
                 }
             }
 
-            if (characterStack.isEmpty()) {
-                System.out.println("YES");
-            } else {
-                System.out.println("NO");
-            }
+            System.out.println(characterStack.isEmpty() ? "YES" : "NO");
         }
     }
 }
