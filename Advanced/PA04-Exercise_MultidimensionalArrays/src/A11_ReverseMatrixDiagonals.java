@@ -11,9 +11,9 @@ public class A11_ReverseMatrixDiagonals {
 
         for (int col = cols - 1; col >= 0; col--) {
             int currentRow = rows;
-            for (int printCol = col; printCol <= cols - 1 && currentRow > 0; printCol++) {
+            for (int currentCol = col; currentCol <= cols - 1 && currentRow > 0; currentCol++) {
 
-                System.out.print(matrix[currentRow - 1][printCol] + " ");
+                System.out.print(matrix[currentRow - 1][currentCol] + " ");
                 currentRow--;
             }
 
