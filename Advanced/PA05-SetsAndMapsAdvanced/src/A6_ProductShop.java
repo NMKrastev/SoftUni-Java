@@ -5,9 +5,7 @@ public class A6_ProductShop {
         Scanner scanner = new Scanner(System.in);
 
         Map<String, Map<String, Double>> storeInfoMap = new TreeMap<>();
-
         String input;
-
         while (!(input = scanner.nextLine()).equals("Revision")) {
 
             String store = input.split(",\\s+")[0];
@@ -18,9 +16,9 @@ public class A6_ProductShop {
             storeInfoMap.get(store).putIfAbsent(product, price);
         }
 
-        for (Map.Entry<String, Map<String, Double>> productsInfo : storeInfoMap.entrySet()) {
-            System.out.printf("%s->\n", productsInfo.getKey());
-            productsInfo.getValue().forEach((product, price) ->
+        for (Map.Entry<String, Map<String, Double>> storesInfo : storeInfoMap.entrySet()) {
+            System.out.printf("%s->\n", storesInfo.getKey());
+            storesInfo.getValue().forEach((product, price) ->
                     System.out.printf("Product: %s, Price: %.1f\n", product, price));
         }
     }
