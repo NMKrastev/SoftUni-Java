@@ -25,11 +25,10 @@ public class A7_CitiesByContinentAndCountry {
             }
         }*/
 
-        atlasMap.entrySet().stream().forEach(continent -> {
-            System.out.printf("%s:\n", continent.getKey());
-            continent.getValue().entrySet().stream().forEach(country -> {
-                System.out.printf(" %s -> %s\n", country.getKey(), String.join(", ", country.getValue()));
-            });
+        atlasMap.forEach((continent, countries) -> {
+            System.out.printf("%s:\n", continent);
+            countries.forEach((country, city) ->
+                    System.out.printf(" %s -> %s\n", country, String.join(", ", city)));
         });
     }
 }
