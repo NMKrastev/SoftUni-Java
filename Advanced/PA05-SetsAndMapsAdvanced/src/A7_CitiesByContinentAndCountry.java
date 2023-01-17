@@ -18,15 +18,19 @@ public class A7_CitiesByContinentAndCountry {
             atlasMap.get(continent).get(country).add(city);
         }
 
-        for (Map.Entry<String, Map<String, List<String>>> continents : atlasMap.entrySet()) {
+        /*for (Map.Entry<String, Map<String, List<String>>> continents : atlasMap.entrySet()) {
             System.out.printf("%s:\n", continents.getKey());
             for (Map.Entry<String, List<String>> country : continents.getValue().entrySet()) {
                 System.out.printf("%s -> %s\n", country.getKey(), String.join(", ", country.getValue()));
             }
+        }*/
 
-        }
-
-
+        atlasMap.entrySet().stream().forEach(continent -> {
+            System.out.printf("%s:\n", continent.getKey());
+            continent.getValue().entrySet().stream().forEach(country -> {
+                System.out.printf(" %s -> %s\n", country.getKey(), String.join(", ", country.getValue()));
+            });
+        });
     }
 }
 /*Write a program to read continents, countries, and their cities put them on a nested map,
