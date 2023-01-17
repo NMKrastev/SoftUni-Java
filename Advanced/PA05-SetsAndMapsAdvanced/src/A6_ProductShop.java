@@ -16,11 +16,17 @@ public class A6_ProductShop {
             storeInfoMap.get(store).putIfAbsent(product, price);
         }
 
-        for (Map.Entry<String, Map<String, Double>> storesInfo : storeInfoMap.entrySet()) {
+        /*for (Map.Entry<String, Map<String, Double>> storesInfo : storeInfoMap.entrySet()) {
             System.out.printf("%s->\n", storesInfo.getKey());
             storesInfo.getValue().forEach((product, price) ->
                     System.out.printf("Product: %s, Price: %.1f\n", product, price));
-        }
+        }*/
+
+        storeInfoMap.forEach((store, productInfo) -> {
+            System.out.printf("%s->\n", store);
+            productInfo.forEach((product, price) ->
+                    System.out.printf("Product: %s, Price: %.1f\n", product, price));
+        });
     }
 }
 /*Write a program that prints information about food shops in Sofia and the products they store. Until the "Revision"
