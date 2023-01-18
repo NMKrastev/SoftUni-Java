@@ -11,11 +11,11 @@ public class A5_WriteEveryThirdLine {
         int lineCounter = 1;
         String line = reader.readLine();
         while (line != null)  {
-            line = reader.readLine();
-            lineCounter++;
             if (lineCounter % 3 == 0) {
                 printWriter.println(line);
             }
+            line = reader.readLine();
+            lineCounter++;
         }
 
         reader.close();
