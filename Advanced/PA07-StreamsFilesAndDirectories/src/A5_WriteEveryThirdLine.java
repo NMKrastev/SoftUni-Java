@@ -6,20 +6,21 @@ public class A5_WriteEveryThirdLine {
 
         FileInputStream fileInputStream = new FileInputStream("PA07-StreamsFilesAndDirectories/resources/input.txt");
         BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
-        PrintWriter printWriter = new PrintWriter(new FileOutputStream("PA07-StreamsFilesAndDirectories/resources/05.WriteEveryThirdLineOutput.txt"));
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("PA07-StreamsFilesAndDirectories/resources/05.WriteEveryThirdLineOutput.txt")));
 
         int lineCounter = 1;
         String line = reader.readLine();
         while (line != null)  {
             if (lineCounter % 3 == 0) {
-                printWriter.println(line);
+                writer.write(line);
+                writer.newLine();
             }
             line = reader.readLine();
             lineCounter++;
         }
 
         reader.close();
-        printWriter.close();
+        writer.close();
     }
 }
 /*Read the file provided, named "input.txt" and write to another file all lines whose number is divisible by 3.
