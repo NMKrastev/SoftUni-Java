@@ -10,8 +10,7 @@ public class A4_ExtractIntegers {
 
         FileInputStream fileInputStream = new FileInputStream("PA07-StreamsFilesAndDirectories/resources/input.txt");
         Scanner scanner = new Scanner(fileInputStream);
-        FileOutputStream fileOutputStream = new FileOutputStream("PA07-StreamsFilesAndDirectories/resources/04.ExtractIntegersOutput.txt");
-        PrintWriter printWriter = new PrintWriter(fileOutputStream);
+        PrintWriter printWriter = new PrintWriter(new FileOutputStream("PA07-StreamsFilesAndDirectories/resources/04.ExtractIntegersOutput.txt"));
 
         while (scanner.hasNext()) {
             if (scanner.hasNextInt()) {
@@ -21,7 +20,6 @@ public class A4_ExtractIntegers {
             }
         }
         printWriter.close();
-        fileOutputStream.close();
         fileInputStream.close();
     }
 }
