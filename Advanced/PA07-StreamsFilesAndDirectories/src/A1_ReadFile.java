@@ -5,7 +5,7 @@ public class A1_ReadFile {
 
     public static void main(String[] args) {
 
-        String path = "C:\\Users\\n.krastev\\Documents\\GitHub\\SoftUni-Java\\Advanced\\PA07-StreamsFilesAndDirectories\\04. Java-Advanced-Files-and-Streams-Lab-Resources\\input.txt";
+        String path = "PA07-StreamsFilesAndDirectories/resources/input.txt";
 
         try {
             FileInputStream fileInputStream = new FileInputStream(path);
