@@ -11,19 +11,16 @@ public class A10_LogsAggregator {
         String input;
         for (int i = 0; i < num; i++) {
             input = scanner.nextLine();
-            String ip = input.split("\\s+")[0];
-            String user = input.split("\\s+")[1];
-            int duration = Integer.parseInt(input.split("\\s+")[2]);
 
-            userIPInfoMap.putIfAbsent(user, new TreeSet<>());
-            userIPInfoMap.get(user).add(ip);
-            userDurationInfoMap.putIfAbsent(user, 0);
-            userDurationInfoMap.put(user, userDurationInfoMap.get(user) + duration);
+            userIPInfoMap.putIfAbsent(input.split("\\s+")[1], new TreeSet<>());
+            userIPInfoMap.get(input.split("\\s+")[1]).add(input.split("\\s+")[0]);
+            userDurationInfoMap.putIfAbsent(input.split("\\s+")[1], 0);
+            userDurationInfoMap.put(input.split("\\s+")[1], userDurationInfoMap.get(input.split("\\s+")[1]) + Integer.parseInt(input.split("\\s+")[2]));
         }
 
-        userDurationInfoMap.forEach((user, duration) -> {
-            System.out.printf("%s: %d [%s]\n", user, duration,
-                    String.join(", ", userIPInfoMap.get(user)));
+        userDurationInfoMap.forEach((currentUser, totalDuration) -> {
+            System.out.printf("%s: %d [%s]\n", currentUser, totalDuration,
+                    String.join(", ", userIPInfoMap.get(currentUser)));
         });
     }
 }
