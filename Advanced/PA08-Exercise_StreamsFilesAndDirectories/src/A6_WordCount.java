@@ -12,19 +12,21 @@ public class A6_WordCount {
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader readerOne = new BufferedReader(new FileReader("PA08-Exercise_StreamsFilesAndDirectories/resources/words.txt"));
-        BufferedReader readerTwo = new BufferedReader(new FileReader("PA08-Exercise_StreamsFilesAndDirectories/resources/text.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("PA08-Exercise_StreamsFilesAndDirectories/resources/words.txt"));
         PrintWriter print = new PrintWriter("PA08-Exercise_StreamsFilesAndDirectories/resources/results.txt");
-
         Map<String, Integer> occurrencesMap = new LinkedHashMap<>();
-        String[] words = readerOne.readLine().split("\\s+");
+        String[] words = reader.readLine().split("\\s+");
+
         for (String word : words) {
             occurrencesMap.putIfAbsent(word, 0);
         }
+        reader.close();
 
-        String lineToCheck = readerTwo.readLine();
+        reader = new BufferedReader(new FileReader("PA08-Exercise_StreamsFilesAndDirectories/resources/text.txt"));
+        String lineToCheck = reader.readLine();
         Pattern pattern = Pattern.compile("\\w+");
         Matcher matcher = pattern.matcher(lineToCheck);
+
         while (matcher.find()) {
             String word = matcher.group(0);
             if (occurrencesMap.containsKey(word)) {
@@ -41,8 +43,7 @@ public class A6_WordCount {
             print.println(toPrint);
         }
 
-        readerOne.close();
-        readerTwo.close();
+        reader.close();
         print.close();
     }
 }
