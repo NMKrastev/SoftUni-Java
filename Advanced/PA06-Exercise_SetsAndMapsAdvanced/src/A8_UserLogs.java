@@ -12,9 +12,8 @@ public class A8_UserLogs {
             String user = input.split("\\s+|=")[5].trim();
 
             attacksInfoMap.putIfAbsent(user, new LinkedHashMap<>());
-            Map<String, Integer> ipCountMap = attacksInfoMap.get(user);
-            ipCountMap.putIfAbsent(ip, 0);
-            ipCountMap.put(ip, ipCountMap.get(ip) + 1);
+            attacksInfoMap.get(user).putIfAbsent(ip, 0);
+            attacksInfoMap.get(user).put(ip, attacksInfoMap.get(user).get(ip) + 1);
 
         }
 
