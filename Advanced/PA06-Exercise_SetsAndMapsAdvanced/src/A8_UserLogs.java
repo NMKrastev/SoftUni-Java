@@ -14,7 +14,6 @@ public class A8_UserLogs {
             attacksInfoMap.putIfAbsent(user, new LinkedHashMap<>());
             attacksInfoMap.get(user).putIfAbsent(ip, 0);
             attacksInfoMap.get(user).put(ip, attacksInfoMap.get(user).get(ip) + 1);
-
         }
 
         attacksInfoMap.forEach((user, ips) -> {
