@@ -6,7 +6,7 @@ public class A8_UserLogs {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Pattern pattern = Pattern.compile("IP=(?<ip>[^\\s]+)\\s+message=(?<message>[^\\s]+)\\s+user=(?<user>[^\\s]+)");
+        Pattern pattern = Pattern.compile("IP=(?<ip>[^\\s]+)\\s+[^\\s]+\\s+user=(?<user>[\\w\\d]+)");
 
         Map<String, Map<String, Integer>> attacksInfoMap = new TreeMap<>();
         String input;
