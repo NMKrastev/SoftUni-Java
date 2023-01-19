@@ -12,7 +12,7 @@ public class A6_FixEmails {
         while(!(input = scanner.nextLine()).equals("stop")) {
             String name = input;
             String email = scanner.nextLine();
-            if (!email.toLowerCase().contains(".uk") && !email.toLowerCase().contains(".us") && !email.toLowerCase().contains(".com")) {
+            if (!email.toLowerCase().endsWith(".uk") && !email.toLowerCase().endsWith(".us") && !email.toLowerCase().endsWith(".com")) {
                 personInfoMap.put(name, email);
             }
         }
