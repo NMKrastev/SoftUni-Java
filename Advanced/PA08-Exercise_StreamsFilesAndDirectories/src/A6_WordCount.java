@@ -38,10 +38,7 @@ public class A6_WordCount {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
                         (oldValue, newValue) -> oldValue, LinkedHashMap::new));
 
-        for (Map.Entry<String, Integer> entry : occurrencesMap.entrySet()) {
-            String toPrint = String.format("%s - %d", entry.getKey(), entry.getValue());
-            print.println(toPrint);
-        }
+        occurrencesMap.forEach((word, count) -> print.println(String.format("%s - %d", word, count)));
 
         reader.close();
         print.close();
