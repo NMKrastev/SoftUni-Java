@@ -8,8 +8,8 @@ public class A8_UserLogs {
         Map<String, Map<String, Integer>> attacksInfoMap = new TreeMap<>();
         String input;
         while (!(input = scanner.nextLine()).equals("end")) {
-            String ip = input.split("=|\\s+")[1].trim();
-            String user = input.split("\\s+|=")[5].trim();
+            String ip = input.split("\\s+")[0].split("=")[1];
+            String user = input.split("\\s+")[2].split("=")[1];
 
             attacksInfoMap.putIfAbsent(user, new LinkedHashMap<>());
             attacksInfoMap.get(user).putIfAbsent(ip, 0);
