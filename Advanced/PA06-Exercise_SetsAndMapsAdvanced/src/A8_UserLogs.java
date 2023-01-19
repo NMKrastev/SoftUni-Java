@@ -1,19 +1,26 @@
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class A8_UserLogs {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Pattern pattern = Pattern.compile("IP=(?<ip>[^\\s]+)\\s+message=(?<message>[^\\s]+)\\s+user=(?<user>[^\\s]+)");
 
         Map<String, Map<String, Integer>> attacksInfoMap = new TreeMap<>();
         String input;
         while (!(input = scanner.nextLine()).equals("end")) {
-            String ip = input.split("\\s+")[0].split("=")[1];
-            String user = input.split("\\s+")[2].split("=")[1];
+            Matcher matcher = pattern.matcher(input);
 
-            attacksInfoMap.putIfAbsent(user, new LinkedHashMap<>());
-            attacksInfoMap.get(user).putIfAbsent(ip, 0);
-            attacksInfoMap.get(user).put(ip, attacksInfoMap.get(user).get(ip) + 1);
+            if (matcher.find()) {
+                String ip = matcher.group("ip");
+                String user = matcher.group("user");
+
+                attacksInfoMap.putIfAbsent(user, new LinkedHashMap<>());
+                attacksInfoMap.get(user).putIfAbsent(ip, 0);
+                attacksInfoMap.get(user).put(ip, attacksInfoMap.get(user).get(ip) + 1);
+            }
         }
 
         attacksInfoMap.forEach((user, ips) -> {
