@@ -1,7 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.function.Function;
-import java.util.stream.IntStream;
 
 public class A2_SumNumbers {
 
