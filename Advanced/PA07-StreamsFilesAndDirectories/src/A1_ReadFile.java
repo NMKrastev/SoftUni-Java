@@ -3,14 +3,13 @@ import java.io.IOException;
 
 public class A1_ReadFile {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         String path = "PA07-StreamsFilesAndDirectories/resources/input.txt";
+        FileInputStream fileInputStream = new FileInputStream(path);
 
         try {
-            FileInputStream fileInputStream = new FileInputStream(path);
             int bytes = fileInputStream.read();
-
             while (bytes != -1) {
 
                 System.out.print(Integer.toBinaryString(bytes) + " ");
@@ -18,6 +17,8 @@ public class A1_ReadFile {
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally {
+            fileInputStream.close();
         }
 
     }
