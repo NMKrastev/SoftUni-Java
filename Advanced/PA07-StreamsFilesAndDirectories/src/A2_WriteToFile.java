@@ -20,6 +20,9 @@ public class A2_WriteToFile {
             }
             bytes = fileInputStream.read();
         }
+
+        fileInputStream.close();
+        fileOutputStream.close();
     }
 }
 /*Read the file named "input.txt" that is provided for this exercise and write all its content to a file
