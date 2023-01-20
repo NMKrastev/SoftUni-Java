@@ -1,6 +1,5 @@
 import java.util.List;
 import java.util.Scanner;
-import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -21,8 +20,6 @@ public class A5_FilterByAge {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        BiPredicate<Integer, Integer> areEqual = Integer::equals;
 
         int num = Integer.parseInt(scanner.nextLine());
 
@@ -46,9 +43,7 @@ public class A5_FilterByAge {
 
 
         people.stream().filter(ageFilter)
-                        .forEach(printer);
-
-        System.out.println();
+                .forEach(printer);
     }
 
     private static Consumer<Person> getPrinter(String format) {
