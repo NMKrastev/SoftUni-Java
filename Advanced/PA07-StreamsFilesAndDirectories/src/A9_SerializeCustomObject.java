@@ -25,7 +25,6 @@ public class A9_SerializeCustomObject {
     } catch (IOException e) {
         e.printStackTrace();
         }
-
     }
 }
 /*Create a class called "Cube". It should have properties for color, width, height, and depth.
