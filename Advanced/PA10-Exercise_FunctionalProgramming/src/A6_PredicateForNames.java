@@ -13,6 +13,9 @@ public class A6_PredicateForNames {
         int length = Integer.parseInt(scanner.nextLine());
         List<String> names = Arrays.stream(scanner.nextLine().split("\\s+")).collect(Collectors.toList());
 
+        //Predicate<String> predicate = name -> name.length() <= length;
+        //names.stream().filter(predicate).forEach(System.out::println);
+
         Predicate<String> predicate = name -> name.length() > length;
 
         names.removeIf(predicate);
