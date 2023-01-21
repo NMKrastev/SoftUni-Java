@@ -12,15 +12,15 @@ public class A10_PredicateParty {
 
         Set<String> filters = new HashSet<>();
 
-        String command;
-        while (!(command = scanner.nextLine()).equals("Party!")) {
-            filters.add(command);
+        String input;
+        while (!(input = scanner.nextLine()).equals("Party!")) {
+            filters.add(input);
         }
 
         filters.forEach(filter -> {
-            String commandType = filter.split("\\s+")[0];
+            String command = filter.split("\\s+")[0];
             Predicate<String> filterToApply = getPredicate(filter);
-            switch (commandType) {
+            switch (command) {
                 case "Remove":
                     guests.removeIf(filterToApply);
                     break;
