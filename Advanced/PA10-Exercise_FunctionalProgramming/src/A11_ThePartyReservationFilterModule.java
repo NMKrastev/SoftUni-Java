@@ -27,8 +27,8 @@ public class A11_ThePartyReservationFilterModule {
         }
 
         filters.forEach(filter -> {
-            Predicate<String> filterToApple = getPredicate(filter);
-            guests.removeIf(filterToApple);
+            Predicate<String> filterToApply = getPredicate(filter);
+            guests.removeIf(filterToApply);
         });
 
         guests.forEach(name -> System.out.print(name + " "));
