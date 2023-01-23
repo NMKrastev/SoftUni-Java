@@ -17,3 +17,6 @@ public class CarMain {
         }
     }
 }
+/*Read cars objects, add them to the collection of your choice, and print each one on the console using the
+carInfo() method. The input consists of a single integer N, the number of lines representing car objects.
+On each line you will read car info in the following format "{brand} {model} {horsePower}" separated by single space.*/
