@@ -1,4 +1,4 @@
-public class Car {
+public class Car01 {
 
     private String brand;
     private String model;

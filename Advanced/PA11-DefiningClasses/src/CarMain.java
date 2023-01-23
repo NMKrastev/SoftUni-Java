@@ -7,7 +7,7 @@ public class CarMain {
 
         int num = Integer.parseInt(scanner.nextLine());
         String input;
-        Car car = new Car();
+        Car01 car = new Car01();
         for (int i = 0; i < num; i++) {
             input = scanner.nextLine();
             String brand = input.split("\\s+")[0];
