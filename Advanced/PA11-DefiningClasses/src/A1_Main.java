@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class CarMain01 {
+public class A1_Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         int num = Integer.parseInt(scanner.nextLine());
         String input;
-        Car01 car = new Car01();
+        A1_Car car = new A1_Car();
         for (int i = 0; i < num; i++) {
             input = scanner.nextLine();
             String brand = input.split("\\s+")[0];

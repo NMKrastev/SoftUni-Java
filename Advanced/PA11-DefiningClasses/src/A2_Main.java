@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CarMain02 {
+public class A2_Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -9,9 +9,9 @@ public class CarMain02 {
         for (int i = 0; i < num; i++) {
             String[] data = scanner.nextLine().split("\\s+");
 
-            Car02 car = data.length == 1
-                    ? new Car02(data[0])
-                    : new Car02(data[0], data[1], Integer.parseInt(data[2]));
+            A2_Car car = data.length == 1
+                    ? new A2_Car(data[0])
+                    : new A2_Car(data[0], data[1], Integer.parseInt(data[2]));
 
             car.carInfo();
         }

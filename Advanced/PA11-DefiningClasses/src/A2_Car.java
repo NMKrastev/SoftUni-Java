@@ -1,16 +1,16 @@
-public class Car02 {
+public class A2_Car {
 
     private String brand;
     private String model;
     private int horsePower;
 
-    public Car02(String brand) {
+    public A2_Car(String brand) {
         this.brand = brand;
         this.model = "unknown";
         this.horsePower = -1;
     }
 
-    public Car02(String brand, String model, int horsePower) {
+    public A2_Car(String brand, String model, int horsePower) {
         this(brand);
         this.model = model;
         this.horsePower = horsePower;

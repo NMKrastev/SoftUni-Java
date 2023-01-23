@@ -2,22 +2,21 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.function.BiFunction;
-import java.util.function.Function;
 
-public class Main {
+public class A3_Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Map<Integer, BankAccount> bankAccountsMap = new LinkedHashMap<>();
+        Map<Integer, A3_BankAccount> bankAccountsMap = new LinkedHashMap<>();
 
-        BiFunction<BankAccount, String, String> depositFunction = (b, s) -> {
+        BiFunction<A3_BankAccount, String, String> depositFunction = (b, s) -> {
             int amount = Integer.parseInt(s);
             b.deposit(amount);
             return String.format("Deposited %d to ID%d", amount, b.getId());
         };
 
-        BiFunction<BankAccount, String, String> getInterestFunction = (b, s) -> {
+        BiFunction<A3_BankAccount, String, String> getInterestFunction = (b, s) -> {
             int years = Integer.parseInt(s);
             double interest = b.getInterest(years);
             return String.format("%.2f", interest);
@@ -29,7 +28,7 @@ public class Main {
             String[] operation = input.split("\\s+");
 
             if (operation[0].equals("Create")) {
-                BankAccount bankAccount = new BankAccount();
+                A3_BankAccount bankAccount = new A3_BankAccount();
                 bankAccountsMap.put(bankAccount.getId(), bankAccount);
                 System.out.printf("Account ID%d created\n", bankAccount.getId());
             } else if (operation[0].equals("Deposit")) {
@@ -37,7 +36,7 @@ public class Main {
                 System.out.println(output);
             } else if (operation[0].equals("SetInterest")) {
                 double interestRate = Double.parseDouble(operation[1]);
-                BankAccount.setInterestRate(interestRate);
+                A3_BankAccount.setInterestRate(interestRate);
             } else if (operation[0].equals("GetInterest")) {
                 String output = executeOnBankAccount(operation, bankAccountsMap, getInterestFunction);
                 System.out.println(output);
@@ -45,10 +44,10 @@ public class Main {
         }
     }
 
-    private static String executeOnBankAccount(String[] operation, Map<Integer, BankAccount> bankAccountsMap,
-                                               BiFunction<BankAccount, String, String> function) {
+    private static String executeOnBankAccount(String[] operation, Map<Integer, A3_BankAccount> bankAccountsMap,
+                                               BiFunction<A3_BankAccount, String, String> function) {
 
-        BankAccount bankAccount = bankAccountsMap.get(Integer.parseInt(operation[1]));
+        A3_BankAccount bankAccount = bankAccountsMap.get(Integer.parseInt(operation[1]));
         if (bankAccount == null) {
             return "Account does not exist";
         }
