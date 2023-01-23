@@ -4,9 +4,15 @@ public class Car {
     private String model;
     private int horsePower;
 
-    public Car(String brand, String model, int horsePower) {
+    public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    public void setModel(String model) {
         this.model = model;
+    }
+
+    public void setHorsePower(int horsePower) {
         this.horsePower = horsePower;
     }
 
