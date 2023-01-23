@@ -30,6 +30,6 @@ public class Car {
 
     void carInfo() {
 
-        System.out.printf("The car is: %s %s - %d HP.\n", this.brand, this.model, this.horsePower);
+        System.out.printf("The car is: %s %s - %d HP.\n", getBrand(), getModel(), getHorsePower());
     }
 }
