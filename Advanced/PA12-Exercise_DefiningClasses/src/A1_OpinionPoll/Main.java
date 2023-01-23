@@ -6,23 +6,23 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.function.Predicate;
 
-public class A1PA12_Main {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         int num = Integer.parseInt(scanner.nextLine());
-        List<A1PA12_Person> personsList = new ArrayList<>();
-        A1PA12_Person person;
+        List<Person> personsList = new ArrayList<>();
+        Person person;
         while (num-- > 0) {
             String[] data = scanner.nextLine().split("\\s+");
 
-            person = new A1PA12_Person(data[0], Integer.parseInt(data[1]));
+            person = new Person(data[0], Integer.parseInt(data[1]));
             personsList.add(person);
         }
 
-        Predicate<A1PA12_Person> findAge = age -> age.getAge() > 30;
+        Predicate<Person> findAge = age -> age.getAge() > 30;
         personsList.stream().filter(findAge)
-                .sorted(Comparator.comparing(A1PA12_Person::getName))
+                .sorted(Comparator.comparing(Person::getName))
                 .forEach(p ->
                         System.out.printf("%s - %d\n", p.getName(), p.getAge()));
     }

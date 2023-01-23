@@ -1,11 +1,11 @@
 package A1_OpinionPoll;
 
-public class A1PA12_Person {
+public class Person {
 
     private String name;
     private int age;
 
-    public A1PA12_Person(String name, int age) {
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
