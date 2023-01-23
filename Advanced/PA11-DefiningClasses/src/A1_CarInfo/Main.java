@@ -1,13 +1,15 @@
+package A1_CarInfo;
+
 import java.util.Scanner;
 
-public class A1PA11_Main {
+public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         int num = Integer.parseInt(scanner.nextLine());
         String input;
-        A1PA11_Car car = new A1PA11_Car();
+        Car car = new Car();
         for (int i = 0; i < num; i++) {
             input = scanner.nextLine();
             String brand = input.split("\\s+")[0];

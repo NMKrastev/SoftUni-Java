@@ -1,11 +1,13 @@
-public class A3PA11_BankAccount {
+package A3_BankAccount;
+
+public class BankAccount {
 
     private int id;
     private static int accountsCount = 1;
     private double balance;
     private static double interestRate = 0.02;
 
-    public A3PA11_BankAccount() {
+    public BankAccount() {
         this.id = accountsCount;
         accountsCount++;
     }
@@ -15,7 +17,7 @@ public class A3PA11_BankAccount {
     }
 
     public static void setInterestRate(double interestRate) {
-        A3PA11_BankAccount.interestRate = interestRate;
+        BankAccount.interestRate = interestRate;
     }
 
     public double getInterest(int years) {

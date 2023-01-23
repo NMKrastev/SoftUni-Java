@@ -1,18 +1,20 @@
-public class A2PA11_Car {
+package A1_CarInfo;
+
+public class Car {
 
     private String brand;
     private String model;
     private int horsePower;
 
-    public A2PA11_Car(String brand) {
+    public void setBrand(String brand) {
         this.brand = brand;
-        this.model = "unknown";
-        this.horsePower = -1;
     }
 
-    public A2PA11_Car(String brand, String model, int horsePower) {
-        this(brand);
+    public void setModel(String model) {
         this.model = model;
+    }
+
+    public void setHorsePower(int horsePower) {
         this.horsePower = horsePower;
     }
 
@@ -29,6 +31,7 @@ public class A2PA11_Car {
     }
 
     void carInfo() {
-        System.out.printf("The car is: %s %s - %d HP.\n", getBrand()/*brand*/, getModel()/*model*/, getHorsePower()/*horsePower*/);
+
+        System.out.printf("The car is: %s %s - %d HP.\n", getBrand(), getModel(), getHorsePower());
     }
 }

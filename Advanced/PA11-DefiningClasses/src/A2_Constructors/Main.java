@@ -1,6 +1,8 @@
+package A2_Constructors;
+
 import java.util.Scanner;
 
-public class A2PA11_Main {
+public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -9,9 +11,9 @@ public class A2PA11_Main {
         for (int i = 0; i < num; i++) {
             String[] data = scanner.nextLine().split("\\s+");
 
-            A2PA11_Car car = data.length == 1
-                    ? new A2PA11_Car(data[0])
-                    : new A2PA11_Car(data[0], data[1], Integer.parseInt(data[2]));
+            Car car = data.length == 1
+                    ? new Car(data[0])
+                    : new Car(data[0], data[1], Integer.parseInt(data[2]));
 
             car.carInfo();
         }

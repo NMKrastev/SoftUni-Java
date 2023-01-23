@@ -1,3 +1,5 @@
+package A1_OpinionPoll;
+
 public class A1PA12_Person {
 
     private String name;
