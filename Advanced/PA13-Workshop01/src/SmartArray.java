@@ -1,3 +1,5 @@
+import java.util.function.Consumer;
+
 public class SmartArray {
 
     private int[] data;
@@ -57,6 +59,12 @@ public class SmartArray {
             }
         }
         return false;
+    }
+
+    public void forEach(Consumer<Integer> consumer) {
+        for (int i = 0; i < size; i++) {
+            consumer.accept(data[i]);
+        }
     }
 
     public int size() {

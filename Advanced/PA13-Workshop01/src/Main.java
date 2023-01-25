@@ -44,6 +44,9 @@ public class Main {
         /*Using add() method with element on curtain index of SmartArray class*/
         smartArray.add(2, 3); // ads element(number) 3 to index 2
         printArray(smartArray); // returns [1, 2, 3, 4, 5]
+
+        /*Using forEach() method of SmartArray class*/
+        smartArray.forEach(System.out::print); // returns [1, 2, 3, 4, 5]
     }
 
     private static void printArray(SmartArray smartArray) {
