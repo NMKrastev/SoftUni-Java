@@ -28,6 +28,12 @@ public class SmartArray {
         return newData;
     }
 
+    public int get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index " + index + " out of bounds for size " + size);
+        }
+        return data[index];
+    }
 }
 /*In this workshop, we will create our own custom data structures – a custom list (SmartArray) and a custom stack.
 The SmartArray will have similar functionality to Java ArrayList that you've used before.

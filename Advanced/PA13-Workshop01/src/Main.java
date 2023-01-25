@@ -26,5 +26,11 @@ public class Main {
         long endTimeArray = System.currentTimeMillis();
         System.out.println(endTimeArray - startTimeArray);
 
+        /*Using get() method of SmartArray class*/
+        //
+
+        System.out.println(smartArray.get(1000000 - 1)); //returns 1000000
+        System.out.println(smartArray.get(1000000)); //returns IndexOutOfBoundsException
+
     }
 }
