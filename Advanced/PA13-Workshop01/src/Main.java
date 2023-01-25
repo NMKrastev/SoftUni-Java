@@ -31,20 +31,25 @@ public class Main {
 
         /*Using size() method of SmartArray class*/
         System.out.println(smartArray.size()); //returns 5
-        for (int i = 0; i < smartArray.size(); i++) {
-            System.out.print(smartArray.get(i)); // returns [1, 2, 3, 4, 5]
-        }
-        System.out.println();
+        printArray(smartArray);  // returns [1, 2, 3, 4, 5]
 
         /*Using remove() method of SmartArray class*/
         System.out.println(smartArray.remove(2)); // returns 3
-        for (int i = 0; i < smartArray.size(); i++) {
-            System.out.print(smartArray.get(i)); // returns [1, 2, 4, 5]
-        }
-        System.out.println();
+        printArray(smartArray);  // returns [1, 2, 4, 5]
 
         /*Using contains() method of SmartArray class*/
         System.out.println(smartArray.contains(2)); //returns true
         System.out.println(smartArray.contains(7)); //returns false
+
+        /*Using add() method with element on curtain index of SmartArray class*/
+        smartArray.add(2, 3); // ads element(number) 3 to index 2
+        printArray(smartArray); // returns [1, 2, 3, 4, 5]
+    }
+
+    private static void printArray(SmartArray smartArray) {
+        for (int i = 0; i < smartArray.size(); i++) {
+            System.out.print(smartArray.get(i));
+        }
+        System.out.println();
     }
 }

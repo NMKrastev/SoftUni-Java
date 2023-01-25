@@ -15,6 +15,13 @@ public class SmartArray {
         data[size++] = element;
     }
 
+    public void add(int index, int element) {
+        int lastElement = data[size - 1];
+        if (size - 1 - index >= 0) System.arraycopy(data, index, data, index + 1, size - 1 - index);
+        data[index] = element;
+        add(lastElement);
+    }
+
     private int[] grow() {
         //Optimizes the time for method add()
         int newLength = data.length * 2;
