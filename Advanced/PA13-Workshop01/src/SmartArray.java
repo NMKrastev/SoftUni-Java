@@ -29,14 +29,28 @@ public class SmartArray {
     }
 
     public int get(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index " + index + " out of bounds for size " + size);
-        }
+        isIndexInBounds(index);
         return data[index];
     }
 
+    public int remove(int index) {
+        int removedElement = get(index);
+        //Optimizes the time needed for removing an element from the array
+        if (size - 1 - index >= 0) System.arraycopy(data, index + 1, data, index, size - 1 - index);
+        data[size - 1] = 0;
+        size--;
+        return removedElement;
+    }
+
+
     public int size() {
         return size;
+    }
+
+    private void isIndexInBounds(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index " + index + " out of bounds for size " + size);
+        }
     }
 }
 /*In this workshop, we will create our own custom data structures – a custom list (SmartArray) and a custom stack.
