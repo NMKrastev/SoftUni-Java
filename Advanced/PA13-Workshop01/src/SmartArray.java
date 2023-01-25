@@ -34,6 +34,10 @@ public class SmartArray {
         }
         return data[index];
     }
+
+    public int size() {
+        return size;
+    }
 }
 /*In this workshop, we will create our own custom data structures – a custom list (SmartArray) and a custom stack.
 The SmartArray will have similar functionality to Java ArrayList that you've used before.

@@ -27,10 +27,11 @@ public class Main {
         System.out.println(endTimeArray - startTimeArray);
 
         /*Using get() method of SmartArray class*/
-        //
-
         System.out.println(smartArray.get(1000000 - 1)); //returns 1000000
         System.out.println(smartArray.get(1000000)); //returns IndexOutOfBoundsException
+        //If you want to use the code below make sure to comment the line above!
 
+        /*Using size() method of SmartArray class*/
+        System.out.println(smartArray.size()); //returns 1000000
     }
 }
