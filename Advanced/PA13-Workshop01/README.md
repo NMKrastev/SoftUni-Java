@@ -18,7 +18,9 @@ It will have the following functionality:</br>
      * ```void add(int firstIndex, int secondIndex)``` - Adds element at the specific index, the element at this index gets shifted to the right alongside any following elements, increasing the size</br>
      * ```void forEach(Consumer<Integer> consumer)``` - Goes through each one of the elements in the list</br>
 </br>
+     
 2. Custom Stack - ***To be developed...***</br>
+
    * The custom stack will also have similar functionality to the Java ArrayDeque and again, 
    we will make it work only with integers. Later on, we will learn how to implement it in a way that will 
    allow us to work with any type. It will have the following functionality:</br>
