@@ -27,7 +27,7 @@ public class Main {
         /*Using get() method of SmartArray class*/
         System.out.println(smartArray.get(5 - 1)); //returns 5
         //System.out.println(smartArray.get(5)); //returns IndexOutOfBoundsException
-        //If you want to use the code below make sure to comment the line above!
+        /**If you want to use the code below make sure to comment the line above!*/
 
         /*Using size() method of SmartArray class*/
         System.out.println(smartArray.size()); //returns 5
@@ -42,5 +42,9 @@ public class Main {
             System.out.print(smartArray.get(i)); // returns [1, 2, 4, 5]
         }
         System.out.println();
+
+        /*Using contains() method of SmartArray class*/
+        System.out.println(smartArray.contains(2)); //returns true
+        System.out.println(smartArray.contains(7)); //returns false
     }
 }

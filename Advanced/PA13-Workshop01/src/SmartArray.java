@@ -42,6 +42,15 @@ public class SmartArray {
         return removedElement;
     }
 
+    public boolean contains(int element) {
+        for (int i = 0; i < size; i++) {
+            int next = data[i];
+            if (next == element) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public int size() {
         return size;
