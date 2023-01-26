@@ -18,9 +18,10 @@ It will have the following functionality:</br>
      * ```void add(int firstIndex, int secondIndex)``` - Adds element at the specific index, the element at this index gets shifted to the right alongside any following elements, increasing the size</br>
      * ```void forEach(Consumer<Integer> consumer)``` - Goes through each one of the elements in the list</br>
    * Additional functionality:
+     * ```int[] grow()``` - Each time the size reaches the length it grows twice the size.
      * ```int size()``` - Returns the size of the list
      * ```void isIndexInBounds(int index)``` - Returns IndexOutOfBoundsException if the index is not in the list boundaries
-     * ```void shrink()``` - Shrinks the list to double the size of it each time it size equals the length divided by 4
+     * ```int[] shrink()``` - Shrinks the list to double the size of it each time it size equals the length divided by 4
 </br>
      
 2. Custom Stack - ***To be developed...***</br>
