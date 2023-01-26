@@ -17,6 +17,9 @@ It will have the following functionality:</br>
      * ```boolean contains(int element)``` - Checks if the list contains the given element returns (True or False)</br>
      * ```void add(int firstIndex, int secondIndex)``` - Adds element at the specific index, the element at this index gets shifted to the right alongside any following elements, increasing the size</br>
      * ```void forEach(Consumer<Integer> consumer)``` - Goes through each one of the elements in the list</br>
+   * Additional functionality:
+     * ```int size()``` - Returns the size of the list
+     * ```void isIndexInBounds(int index)``` - Returns IndexOutOfBoundsException if the index is not in the list boundaries
 </br>
      
 2. Custom Stack - ***To be developed...***</br>
