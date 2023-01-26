@@ -19,11 +19,14 @@ public class SmartArray {
 
     public void add(int index, int element) {
         int lastElement = data[size - 1];
-        if (size - 1 - index >= 0) System.arraycopy(data, index, data, index + 1, size - 1 - index);
+        if (size - 1 - index >= 0) {
+            System.arraycopy(data, index, data, index + 1, size - 1 - index);
+        }
         data[index] = element;
         add(lastElement);
     }
 
+    //Each time the size reaches its limit grow() method add twice the size of the array
     private int[] grow() {
         //Optimizes the time for method add()
         int newLength = data.length * 2;
@@ -37,6 +40,18 @@ public class SmartArray {
         return newData;
     }
 
+    /*Using inner method Shrink() of SmartArray class*/
+    //When the size of the array is 9 and an element is removed
+    //the size will go down to 8.
+    //Also, it can be noticed that each time the size reaches array(data) length divided by 2
+    //it will shrink and thus optimizing the array.
+    private int[] shrink() {
+        int newLength = data.length / 2;
+        int[] newData = new int[newLength];
+        System.arraycopy(data, 0, newData, 0, size);
+        return newData;
+    }
+
     public int get(int index) {
         isIndexInBounds(index);
         return data[index];
@@ -45,9 +60,18 @@ public class SmartArray {
     public int remove(int index) {
         int removedElement = get(index);
         //Optimizes the time needed for removing an element from the array
-        if (size - 1 - index >= 0) System.arraycopy(data, index + 1, data, index, size - 1 - index);
+        if (size - 1 - index >= 0) {
+            System.arraycopy(data, index + 1, data, index, size - 1 - index);
+        }
         data[size - 1] = 0;
         size--;
+
+        //Checks if the size is equal to 1/4 of the array(data) length
+        //Then it calls the shrink() method which shrinks the length by 2
+        //thus optimizing the array and preventing constant grow and shrink in a loop
+        if (size == data.length / 4) {
+            data = shrink();
+        }
         return removedElement;
     }
 

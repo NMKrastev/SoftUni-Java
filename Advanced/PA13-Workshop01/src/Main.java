@@ -47,6 +47,7 @@ public class Main {
 
         /*Using forEach() method of SmartArray class*/
         smartArray.forEach(System.out::print); // returns [1, 2, 3, 4, 5]
+
     }
 
     private static void printArray(SmartArray smartArray) {
