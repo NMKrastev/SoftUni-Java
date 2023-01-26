@@ -24,13 +24,22 @@ public class CustomStack {
 
     //Removes the top element of the stack
     public int pop() {
-        if (top == null) {
-            throw new IllegalStateException("Stack is empty");
-        }
+        getStackState();
         int value = top.element;
         top = top.previous;
         size--;
         return value;
     }
 
+    //Returns the top element of the stack without removing it
+    public int peek() {
+        getStackState();
+        return top.element;
+    }
+
+    private void getStackState() {
+        if (top == null) {
+            throw new IllegalStateException("Stack is empty");
+        }
+    }
 }

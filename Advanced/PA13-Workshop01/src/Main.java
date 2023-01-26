@@ -27,7 +27,10 @@ public class Main {
         customStack.push(5);
 
         /*Using pop() method of CustomStack class*/
-        System.out.println(customStack.pop()); //pops number 5 of the stack and returns it
+        System.out.println(customStack.pop()); // Pops number 5 of the stack and returns it
+
+        /*Using peek() method of CustomStack class*/
+        System.out.println(customStack.peek()); // Returns 4
         /**
          * CustomStack End
          */
