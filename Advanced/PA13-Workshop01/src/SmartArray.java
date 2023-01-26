@@ -41,9 +41,7 @@ public class SmartArray {
     }
 
     /*Using inner method Shrink() of SmartArray class*/
-    //When the size of the array is 9 and an element is removed
-    //the size will go down to 8.
-    //Also, it can be noticed that each time the size reaches array(data) length divided by 2
+    //Each time the size reaches array(data) length divided by 4
     //it will shrink and thus optimizing the array.
     private int[] shrink() {
         int newLength = data.length / 2;
