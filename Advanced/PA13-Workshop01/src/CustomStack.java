@@ -49,6 +49,10 @@ public class CustomStack {
         }
     }
 
+    // Returns stack size
+    public int size() {
+        return size;
+    }
     private void getStackState() {
         if (top == null) {
             throw new IllegalStateException("Stack is empty");

@@ -24,7 +24,7 @@ public class Main {
         customStack.push(2);
         customStack.push(3);
         customStack.push(4);
-        customStack.push(5);
+        customStack.push(5); // Creates stack [5, 4, 3, 2, 1]
 
         /*Using pop() method of CustomStack class*/
         System.out.println(customStack.pop()); // Pops number 5 of the stack and returns it
@@ -34,6 +34,10 @@ public class Main {
 
         /*Using forEach() method of CustomStack class*/
         customStack.forEach(System.out::print); // Returns all elements of the stack [4, 3, 2, 1]
+        System.out.println();
+
+        /*Using size() method of CustomStack class*/
+        System.out.println(customStack.size()); // Returns 4
         /**
          * CustomStack End
          */
