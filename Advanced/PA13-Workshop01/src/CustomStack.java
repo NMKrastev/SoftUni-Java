@@ -14,10 +14,23 @@ public class CustomStack {
     private Node top;
     private int size;
 
+    //Adds element to the top of the stack
     public void push(int element) {
         Node newNode = new Node(element);
         newNode.previous = top;
         top = newNode;
         size++;
     }
+
+    //Removes the top element of the stack
+    public int pop() {
+        if (top == null) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        int value = top.element;
+        top = top.previous;
+        size--;
+        return value;
+    }
+
 }

@@ -26,6 +26,8 @@ public class Main {
         customStack.push(4);
         customStack.push(5);
 
+        /*Using pop() method of CustomStack class*/
+        System.out.println(customStack.pop()); //pops number 5 of the stack and returns it
         /**
          * CustomStack End
          */
