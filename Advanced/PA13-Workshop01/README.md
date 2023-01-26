@@ -20,6 +20,7 @@ It will have the following functionality:</br>
    * Additional functionality:
      * ```int size()``` - Returns the size of the list
      * ```void isIndexInBounds(int index)``` - Returns IndexOutOfBoundsException if the index is not in the list boundaries
+     * ```void shrink()``` - Shrinks the list to double the size of it each time it size equals the length divided by 4
 </br>
      
 2. Custom Stack - ***To be developed...***</br>
