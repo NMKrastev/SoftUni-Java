@@ -31,6 +31,9 @@ public class Main {
 
         /*Using peek() method of CustomStack class*/
         System.out.println(customStack.peek()); // Returns 4
+
+        /*Using forEach() method of CustomStack class*/
+        customStack.forEach(System.out::print); // Returns all elements of the stack [4, 3, 2, 1]
         /**
          * CustomStack End
          */

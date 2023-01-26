@@ -1,3 +1,6 @@
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
+
 public class CustomStack {
 
     //Using Top-Down approach to track the elements in the Stack
@@ -35,6 +38,15 @@ public class CustomStack {
     public int peek() {
         getStackState();
         return top.element;
+    }
+
+    // Implementing a forEach that returns the whole stack
+    public void forEach(Consumer<Integer> consumer) {
+        Node current = top;
+        while (current != null) {
+            consumer.accept(current.element);
+            current = current.previous;
+        }
     }
 
     private void getStackState() {
