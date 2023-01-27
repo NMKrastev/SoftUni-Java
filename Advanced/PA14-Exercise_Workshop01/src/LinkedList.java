@@ -18,6 +18,7 @@ public class LinkedList {
     }
 
     private Node head;
+    private Node tail;
     private int size;
 
     //Create node; Make newNode the head; Increase the size of the list;
@@ -26,6 +27,8 @@ public class LinkedList {
         //Checks if list is empty and if not makes the new node head of the list
         if (!isEmpty()) {
             newNode.next = head;
+        } else {
+            tail = newNode;
         }
         head = newNode;
         size++;
@@ -38,11 +41,8 @@ public class LinkedList {
             return;
         }
         Node newNode = new Node(element);
-        Node currentNode = head;
-        while (currentNode.next != null) {
-            currentNode = currentNode.next;
-        }
-        currentNode.next = newNode;
+        tail.next = newNode;
+        tail = newNode;
         size++;
     }
 
@@ -54,6 +54,10 @@ public class LinkedList {
         int firstElement = head.element;
         head = head.next;
         size--;
+        if (isEmpty()) {
+            head = null;
+            tail = null;
+        }
         return firstElement;
     }
 
@@ -68,6 +72,7 @@ public class LinkedList {
         }
         int lastElement = currentNode.next.element;
         currentNode.next = null;
+        tail = currentNode;
         size--;
         return lastElement;
     }
