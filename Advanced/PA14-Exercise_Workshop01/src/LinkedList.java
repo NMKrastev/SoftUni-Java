@@ -1,3 +1,4 @@
+import java.util.function.Consumer;
 
 public class LinkedList {
 
@@ -82,6 +83,14 @@ public class LinkedList {
             counter++;
         }
         return currentNode.element;
+    }
+
+    public void forEach(Consumer<Integer> consumer) {
+        Node currentNode = head;
+        while (currentNode != null) {
+            consumer.accept(currentNode.element);
+            currentNode = currentNode.next;
+        }
     }
 
     //Checks if the list is empty

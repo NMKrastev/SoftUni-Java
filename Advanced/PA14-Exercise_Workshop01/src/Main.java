@@ -24,6 +24,8 @@ public class Main {
         /*Using removeLast() method*/
         System.out.println(linkedList.removeLast()); // Returns 4
 
+        /*Using forEach() method*/
+        linkedList.forEach(System.out::print); //Returns [2, 3]
     }
 }
 /*In this workshop, we are going to create another custom data structure, which has similar functionalities as the
