@@ -85,12 +85,26 @@ public class LinkedList {
         return currentNode.element;
     }
 
+    //Iterates over the elements of the list
     public void forEach(Consumer<Integer> consumer) {
         Node currentNode = head;
         while (currentNode != null) {
             consumer.accept(currentNode.element);
             currentNode = currentNode.next;
         }
+    }
+
+    //Creates arrays of ints and returns it
+    public int[] toArray() {
+        int[] array = new int[size];
+        int counter = 0;
+        Node currentNode = head;
+        while (currentNode != null) {
+            array[counter] = currentNode.element;
+            counter++;
+            currentNode = currentNode.next;
+        }
+        return array;
     }
 
     //Checks if the list is empty
