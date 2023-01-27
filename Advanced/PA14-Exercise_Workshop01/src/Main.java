@@ -18,6 +18,10 @@ public class Main {
          * If you want to use the code below make sure to comment the line above!
          */
 
+        /*Using addLast() method*/
+        linkedList.addLast(4); // Ads number 4 to the back of the list
+
+
     }
 }
 /*In this workshop, we are going to create another custom data structure, which has similar functionalities as the

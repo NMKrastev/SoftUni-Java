@@ -30,6 +30,21 @@ public class LinkedList {
         size++;
     }
 
+    //Adds an element to back of the list
+    public void addLast(int element) {
+        if (isEmpty()) {
+            addFirst(element);
+            return;
+        }
+        Node newNode = new Node(element);
+        Node currentNode = head;
+        while (currentNode.next != null) {
+            currentNode = currentNode.next;
+        }
+        currentNode.next = newNode;
+        size++;
+    }
+
     //Removes first(Head) element of the list
     public int removeFirst() {
         if (isEmpty()) {
