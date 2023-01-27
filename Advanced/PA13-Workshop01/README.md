@@ -24,7 +24,7 @@ It will have the following functionality:</br>
      * ```int[] shrink()``` - Shrinks the list to double its size each time the size equals the length divided by 4</br>
 </br>
      
-2. Custom Stack - ***To be developed...***</br>
+2. Custom Stack</br>
 
    * The custom stack will also have similar functionality to the Java ArrayDeque and again, 
    we will make it work only with integers. Later on, we will learn how to implement it in a way that will 
