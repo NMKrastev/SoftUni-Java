@@ -21,7 +21,7 @@ It will have the following functionality:</br>
      * ```int[] grow()``` - Each time the size reaches the length it grows twice the size.</br>
      * ```int size()``` - Returns the size of the list</br>
      * ```void isIndexInBounds(int index)``` - Returns IndexOutOfBoundsException if the index is not in the list boundaries</br>
-     * ```int[] shrink()``` - Shrinks the list to double the size of it each time it size equals the length divided by 4</br>
+     * ```int[] shrink()``` - Shrinks the list to double its size each time the size equals the length divided by 4</br>
 </br>
      
 2. Custom Stack - ***To be developed...***</br>
