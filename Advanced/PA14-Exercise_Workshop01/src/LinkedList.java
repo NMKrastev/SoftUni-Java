@@ -41,9 +41,28 @@ public class LinkedList {
         return firstElement;
     }
 
+    //Gets element on the searched index
+    public int get(int index) {
+        checkIndex(index);
+        int getElement = 0;
+        int counter = 0;
+        Node currentNode = head;
+        while (counter < index) {
+            currentNode = currentNode.next;
+            counter++;
+        }
+        return currentNode.element;
+    }
+
     //Checks if the list is empty
     private boolean isEmpty() {
         return this.size == 0;
     }
 
+    //Checks if the index is in bounds
+    private void checkIndex(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("No such index in the list!");
+        }
+    }
 }

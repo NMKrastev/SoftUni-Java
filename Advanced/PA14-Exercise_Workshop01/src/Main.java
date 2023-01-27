@@ -11,6 +11,13 @@ public class Main {
         /*Using removeFirst() method*/
         System.out.println(linkedList.removeFirst()); // Returns 1
 
+        /*Using get() method*/
+        System.out.println(linkedList.get(0)); // Returns 2
+        //System.out.println(linkedList.get(3)); // Returns IndexOutOfBoundsException
+        /**
+         * If you want to use the code below make sure to comment the line above!
+         */
+
     }
 }
 /*In this workshop, we are going to create another custom data structure, which has similar functionalities as the
