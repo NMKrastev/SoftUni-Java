@@ -30,6 +30,17 @@ public class LinkedList {
         size++;
     }
 
+    //Removes first(Head) element of the list
+    public int removeFirst() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Cannot remove elements from an empty list!");
+        }
+        int firstElement = head.element;
+        head = head.next;
+        size--;
+        return firstElement;
+    }
+
     //Checks if the list is empty
     private boolean isEmpty() {
         return this.size == 0;

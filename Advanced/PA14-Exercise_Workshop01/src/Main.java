@@ -1,11 +1,15 @@
 public class Main {
     public static void main(String[] args) {
 
-        /*Using addFirst() method*/
         LinkedList linkedList = new LinkedList();
+
+        /*Using addFirst() method*/
         linkedList.addFirst(3); // Ads number 3 to the head of the list
         linkedList.addFirst(2); // Ads number 2 to the head of the list
         linkedList.addFirst(1); // Ads number 1 to the head of the list
+
+        /*Using removeFirst() method*/
+        System.out.println(linkedList.removeFirst()); // Returns 1
 
     }
 }
