@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 
 public class LinkedList {
@@ -6,6 +8,7 @@ public class LinkedList {
 
         private int element;
         private Node next;
+        private Node prev;
 
         private Node(int element) {
             this.element = element;
@@ -27,6 +30,7 @@ public class LinkedList {
         //Checks if list is empty and if not makes the new node head of the list
         if (!isEmpty()) {
             newNode.next = head;
+            head.prev = newNode;
         } else {
             tail = newNode;
         }
@@ -41,6 +45,7 @@ public class LinkedList {
             return;
         }
         Node newNode = new Node(element);
+        newNode.prev = tail;
         tail.next = newNode;
         tail = newNode;
         size++;
@@ -54,6 +59,9 @@ public class LinkedList {
         int firstElement = head.element;
         head = head.next;
         size--;
+        if (size > 1) {
+            head.prev = null;
+        }
         if (isEmpty()) {
             head = null;
             tail = null;
@@ -66,13 +74,9 @@ public class LinkedList {
         if (size < 2) {
             return removeFirst();
         }
-        Node currentNode = head;
-        while (currentNode.next.next != null) {
-            currentNode = currentNode.next;
-        }
-        int lastElement = currentNode.next.element;
-        currentNode.next = null;
-        tail = currentNode;
+        int lastElement = tail.element;
+        tail = tail.prev;
+        tail.next = null;
         size--;
         return lastElement;
     }
@@ -80,13 +84,24 @@ public class LinkedList {
     //Gets element on the searched index
     public int get(int index) {
         checkIndex(index);
-        int getElement = 0;
         int counter = 0;
-        Node currentNode = head;
-        while (counter < index) {
-            currentNode = currentNode.next;
-            counter++;
+        Node currentNode;
+        if (index > size / 2) {
+            currentNode = tail;
+            int lastIndex = size - 1;
+            int countOfIterations = lastIndex - index;
+             while (countOfIterations < size) {
+                 currentNode = currentNode.prev;
+                 countOfIterations++;
+             }
+        } else {
+            currentNode = head;
+            while (counter < index) {
+                currentNode = currentNode.next;
+                counter++;
+            }
         }
+
         return currentNode.element;
     }
 
@@ -101,15 +116,9 @@ public class LinkedList {
 
     //Creates arrays of ints and returns it
     public int[] toArray() {
-        int[] array = new int[size];
-        int counter = 0;
-        Node currentNode = head;
-        while (currentNode != null) {
-            array[counter] = currentNode.element;
-            counter++;
-            currentNode = currentNode.next;
-        }
-        return array;
+        List<Integer> array = new ArrayList<>();
+        forEach(array::add);
+        return array.stream().mapToInt(e -> e).toArray();
     }
 
     //Checks if the list is empty
