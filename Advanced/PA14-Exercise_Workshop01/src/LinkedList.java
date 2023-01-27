@@ -56,6 +56,21 @@ public class LinkedList {
         return firstElement;
     }
 
+    //Removes last(Tail) element of the list
+    public int removeLast() {
+        if (size < 2) {
+            return removeFirst();
+        }
+        Node currentNode = head;
+        while (currentNode.next.next != null) {
+            currentNode = currentNode.next;
+        }
+        int lastElement = currentNode.next.element;
+        currentNode.next = null;
+        size--;
+        return lastElement;
+    }
+
     //Gets element on the searched index
     public int get(int index) {
         checkIndex(index);

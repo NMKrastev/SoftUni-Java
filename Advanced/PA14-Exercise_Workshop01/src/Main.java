@@ -21,6 +21,8 @@ public class Main {
         /*Using addLast() method*/
         linkedList.addLast(4); // Ads number 4 to the back of the list
 
+        /*Using removeLast() method*/
+        System.out.println(linkedList.removeLast()); // Returns 4
 
     }
 }
