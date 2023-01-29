@@ -1,24 +1,24 @@
 import java.util.function.Consumer;
 
-public class SmartArray {
+public class SmartArray<T> {
 
-    private int[] data;
+    private Object[] data;
     private int size;
 
     public SmartArray() {
-        this.data = new int[8];
+        this.data = new Object[8];
         this.size = 0;
     }
 
-    public void add(int element) {
+    public void add(T element) {
         if (size == data.length) {
             data = grow();
         }
         data[size++] = element;
     }
 
-    public void add(int index, int element) {
-        int lastElement = data[size - 1];
+    public void add(int index, T element) {
+        T lastElement = get(size - 1);
         if (size - 1 - index >= 0) {
             System.arraycopy(data, index, data, index + 1, size - 1 - index);
         }
@@ -27,11 +27,11 @@ public class SmartArray {
     }
 
     //Each time the size reaches its limit grow() method add twice the size of the array
-    private int[] grow() {
+    private Object[] grow() {
         //Optimizes the time for method add()
         int newLength = data.length * 2;
 
-        int[] newData = new int[newLength];
+        Object[] newData = new Object[newLength];
 
         //Also optimizes the time needed for adding element to the array
         //Instead of a for loop it uses System.arraycopy
@@ -43,20 +43,21 @@ public class SmartArray {
     /*Using inner method Shrink() of SmartArray class*/
     //Each time the size reaches array(data) length divided by 4
     //it will shrink and thus optimizing the array.
-    private int[] shrink() {
+    private Object[] shrink() {
         int newLength = data.length / 2;
-        int[] newData = new int[newLength];
+        Object[] newData = new Object[newLength];
         System.arraycopy(data, 0, newData, 0, size);
         return newData;
     }
 
-    public int get(int index) {
+    @SuppressWarnings("Unckecked")
+    public T get(int index) {
         isIndexInBounds(index);
-        return data[index];
+        return (T) data[index];
     }
 
-    public int remove(int index) {
-        int removedElement = get(index);
+    public T remove(int index) {
+        T removedElement = get(index);
         //Optimizes the time needed for removing an element from the array
         if (size - 1 - index >= 0) {
             System.arraycopy(data, index + 1, data, index, size - 1 - index);
@@ -73,19 +74,19 @@ public class SmartArray {
         return removedElement;
     }
 
-    public boolean contains(int element) {
+    public boolean contains(T element) {
         for (int i = 0; i < size; i++) {
-            int next = data[i];
-            if (next == element) {
+            T next = get(i);
+            if (next.equals(element)) {
                 return true;
             }
         }
         return false;
     }
 
-    public void forEach(Consumer<Integer> consumer) {
+    public void forEach(Consumer<T> consumer) {
         for (int i = 0; i < size; i++) {
-            consumer.accept(data[i]);
+            consumer.accept(get(i));
         }
     }
 

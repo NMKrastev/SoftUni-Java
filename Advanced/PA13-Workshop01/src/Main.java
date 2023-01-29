@@ -19,7 +19,7 @@ public class Main {
         System.out.println(endTimeList - startTimeList);
 
         //Doing for loop with 1000000 iterations takes between 6-10 milliseconds
-        SmartArray smartArray = new SmartArray();
+        SmartArray<Integer> smartArray = new SmartArray<>();
         long startTimeArray = System.currentTimeMillis();
         for (int i = 1; i <= 5 ; i++) {
             smartArray.add(i);
@@ -52,6 +52,12 @@ public class Main {
 
         /*Using forEach() method of SmartArray class*/
         smartArray.forEach(System.out::print); // returns [1, 2, 3, 4, 5]
+
+
+        /*UPDATE: SmartArray is now capable of working with Generics*/
+        SmartArray<String> stringsArray = new SmartArray<>();
+        stringsArray.add("Peter");
+        //stringsArray.add(5); //Warns that this is not a string but integer;
         /**
          * SmartArray End
          */
