@@ -1,4 +1,4 @@
-# Workshop custom data structures
+# Workshop custom data structures</br>
 
 ## Overview </br>
 
@@ -34,4 +34,7 @@ It will have the following functionality:</br>
      *	```int peek()``` – Returns the last element in the stack without removing it</br>
      *	```void forEach(Consumer<Integer> consumer)``` – Goes through each of the elements in the stack</br>
    * Additional functionality:
-     * ```int size()``` - Returns size of the stack
+     * ```int size()``` - Returns size of the stack</br>
+</br>
+     
+3. UPDATE: Both data structures can now operate with Generics data types.
