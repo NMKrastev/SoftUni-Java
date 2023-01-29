@@ -1,14 +1,14 @@
 import java.util.function.Consumer;
 
-public class CustomStack {
+public class CustomStack<T> {
 
     //Using Top-Down approach to track the elements in the Stack
-    private static class Node {
+    private class Node {
 
-        private int element;
+        private T element;
         private Node previous;
 
-        private Node (int element) {
+        private Node (T element) {
             this.element = element;
         }
     }
@@ -17,7 +17,7 @@ public class CustomStack {
     private int size;
 
     //Adds element to the top of the stack
-    public void push(int element) {
+    public void push(T element) {
         Node newNode = new Node(element);
         newNode.previous = top;
         top = newNode;
@@ -25,22 +25,22 @@ public class CustomStack {
     }
 
     //Removes the top element of the stack
-    public int pop() {
+    public T pop() {
         getStackState();
-        int value = top.element;
+        T value = top.element;
         top = top.previous;
         size--;
         return value;
     }
 
     //Returns the top element of the stack without removing it
-    public int peek() {
+    public T peek() {
         getStackState();
         return top.element;
     }
 
     // Implementing a forEach that returns the whole stack
-    public void forEach(Consumer<Integer> consumer) {
+    public void forEach(Consumer<T> consumer) {
         Node current = top;
         while (current != null) {
             consumer.accept(current.element);

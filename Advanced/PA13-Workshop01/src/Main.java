@@ -29,7 +29,7 @@ public class Main {
 
         /*Using get() method of SmartArray class*/
         System.out.println(smartArray.get(5 - 1)); // returns 5
-        System.out.println(smartArray.get(5)); // returns IndexOutOfBoundsException
+        //System.out.println(smartArray.get(5)); // returns IndexOutOfBoundsException
         /**
          * If you want to use the code below make sure to comment the line above!
          */
@@ -68,7 +68,7 @@ public class Main {
          */
         /*Using push() method of CustomStack class*/
         //Pushes five elements in the stack
-        CustomStack customStack = new CustomStack();
+        CustomStack<Integer> customStack = new CustomStack<>();
         customStack.push(1);
         customStack.push(2);
         customStack.push(3);
@@ -87,13 +87,19 @@ public class Main {
 
         /*Using size() method of CustomStack class*/
         System.out.println(customStack.size()); // Returns 4
+
+        /*UPDATE: CustomStack is now capable of working with Generics*/
+        CustomStack<String> stringsStack = new CustomStack<>();
+        stringsStack.push("Peter");
+        stringsStack.push("Alex");
+        System.out.println(stringsStack.pop()); // Returns Alex
         /**
          * CustomStack End
          */
 
     }
 
-    private static void printArray(SmartArray smartArray) {
+    private static void printArray(SmartArray<Integer> smartArray) {
         for (int i = 0; i < smartArray.size(); i++) {
             System.out.print(smartArray.get(i));
         }
