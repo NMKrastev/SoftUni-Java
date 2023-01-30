@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        LinkedList linkedList = new LinkedList();
+        LinkedList<Integer> linkedList = new LinkedList<>();
 
         /*Using addFirst() method*/
         linkedList.addFirst(3); // Ads number 3 to the head of the list
@@ -28,7 +28,11 @@ public class Main {
         linkedList.forEach(System.out::print); //Returns [2, 3]
 
         /*Using toArray() method*/
-        int[] array = linkedList.toArray(); // Returns int array - [2, 3]
+        Integer[] array = linkedList.toArray(); // Returns int array - [2, 3]
+        LinkedList<String> stringLinkedList = new LinkedList<>();
+        stringLinkedList.addFirst("Peter");
+        stringLinkedList.addFirst("Alex");
+        String[] strings = stringLinkedList.toArray();
     }
 }
 /*In this workshop, we are going to create another custom data structure, which has similar functionalities as the
