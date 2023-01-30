@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/PA13-Workshop01/PA13-Workshop01.iml" filepath="$PROJECT_DIR$/PA13-Workshop01/PA13-Workshop01.iml" />
       <module fileurl="file://$PROJECT_DIR$/PA14-Exercise_Workshop01/PA14-Exercise_Workshop01.iml" filepath="$PROJECT_DIR$/PA14-Exercise_Workshop01/PA14-Exercise_Workshop01.iml" />
       <module fileurl="file://$PROJECT_DIR$/PA15-Generics/PA15-Generics.iml" filepath="$PROJECT_DIR$/PA15-Generics/PA15-Generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PA16-Exercise_Generics/PA16-Exercise_Generics.iml" filepath="$PROJECT_DIR$/PA16-Exercise_Generics/PA16-Exercise_Generics.iml" />
     </modules>
   </component>
 </project>
