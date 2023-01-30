@@ -20,7 +20,6 @@ public class Main {
 
         list.swapPlace(indexOne, indexTwo);
         System.out.println(list);
-
     }
 }
 /*Use the description of the previous problem but now, test your list of generic boxes with Integers.*/
