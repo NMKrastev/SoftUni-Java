@@ -29,26 +29,19 @@ public class Main {
         System.out.println(thirdTuple);
     }
 }
-/*There is something really annoying in the C# - language. It is called a Tuple. It is a class that contains two objects.
-The first one is item1, and the second one is item2. It is kind of like a Map.Entry except - it simply has items that
-are neither key nor value. The annoyance comes from the fact that you have no idea what these objects hold.
-The class name is telling you nothing, the methods which it has – too. So let's say we could try to implement it in Java,
-just for practicing generics.
-Create a class Tuple, which is holding two objects. As we said, the first one will be an item1, and the second one -
-an item2. The tricky part here is to make the class hold generics. This means that when you create a new object of class -
-Tuple, there should be a way to explicitly specify both the items type separately.
+/*Now you are aware of a Class, which is probably a bad practice to use. Anyway, it is a nice example of using generics.
+Our next task is to create another Tuple. This time, our task is harder.
+Create a Class Threeuple. Its name tells us that it will no longer hold just a pair of objects.
+The task is simple, our Threeuple should hold three objects. Make it have getters and setters.
+You can even extend the previous class.
 Input
 The input consists of three lines:
-•	The first one is holding a person's name and an address. They are separated by space. Your task is to collect them
-in the tuple and print them on the console. Format:
-"{first name} {last name} {address}"
-•	The second line holds a person's name and the amount of beer he can drink. Format:
-"{name} {liters of beer}"
-•	The last line will hold an Integer and a Double. Format:
-"{Integer} {Double}"
+•	The first one holds a name, an address, and a town. Format of the input:
+"{first name} {last name} {address} {town}"
+•	The second line holds a name, beer liters, and a Boolean variable - drunk or not. Format:
+"{name} {liters of beer} {drunk or not}"
+•	The last line will hold a name, a bank balance (double), and a bank name. Format:
+"{name} {account balance} {bank name}"
 Output
-•	Print the tuples items in format: "{item1} -> {item2}"
-Constraints
-Use the good practices we have learned. Create the class and make it have getters and setters for its class variables.
-The input will be valid, no need to check it explicitly!
+•	Print the Threeuples objects in format: "{firstElement} -> {secondElement} -> {thirdElement}"
 */
