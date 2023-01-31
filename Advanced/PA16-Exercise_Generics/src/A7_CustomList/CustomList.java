@@ -43,6 +43,6 @@ public class CustomList<T extends Comparable <T>> {
     public String toString() {
         StringBuilder output = new StringBuilder();
         list.forEach(e -> output.append(e.toString()).append(System.lineSeparator()));
-        return output.toString();
+        return output.toString().trim();
     }
 }
