@@ -28,7 +28,7 @@ public class Main {
         Person mainPerson = personsList.get(searchedIndex - 1);
 
         for (Person person : personsList) {
-            if (person.compareTo(mainPerson) == 0) {
+            if (person.equals(mainPerson)) {
                 matchPeopleCount++;
             } else {
                 differentPeopleCount++;

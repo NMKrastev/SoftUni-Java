@@ -1,5 +1,7 @@
 package A5_ComparingObjects;
 
+import java.util.Objects;
+
 public class Person implements Comparable<Person> {
 
     private String name;
@@ -34,6 +36,14 @@ public class Person implements Comparable<Person> {
 
     private void setTown(String town) {
         this.town = town;
+    }
+
+    @Override
+    public boolean equals(Object otherPerson) {
+        if (this == otherPerson) return true;
+        if (otherPerson == null || getClass() != otherPerson.getClass()) return false;
+        Person person = (Person) otherPerson;
+        return age == person.age && Objects.equals(name, person.name) && Objects.equals(town, person.town);
     }
 
     @Override
