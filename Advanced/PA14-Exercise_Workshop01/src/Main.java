@@ -8,7 +8,7 @@ public class Main {
         linkedList.addFirst(2); // Ads number 2 to the head of the list
         linkedList.addFirst(1); // Ads number 1 to the head of the list
 
-        /*Using removeFirst() method*//*
+        /*Using removeFirst() method*/
         System.out.println(linkedList.removeFirst()); // Returns 1
 
         /*Using get() method*/
