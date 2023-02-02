@@ -91,9 +91,9 @@ public class LinkedList<T> {
             currentNode = tail;
             int lastIndex = size - 1;
             int countOfIterations = lastIndex - index;
-            while (countOfIterations < size) {
+            while (countOfIterations > 0) {
                 currentNode = currentNode.prev;
-                countOfIterations++;
+                countOfIterations--;
             }
         } else {
             currentNode = head;
