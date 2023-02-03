@@ -1,4 +1,6 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -116,14 +118,18 @@ public class LinkedList<T> {
 
     //Creates arrays of ints and returns it
     public T[] toArray() {
+        List<T> tempArray = new ArrayList<>();
+        forEach(tempArray::add);
+        Object[] objectsArray = tempArray.toArray();
+        T[] array = (T[]) Array.newInstance(objectsArray[0].getClass(), objectsArray.length);
+        System.arraycopy(objectsArray, 0, array, 0, objectsArray.length);
+        return array;
+    }
+
+    public int size() {
         List<T> array = new ArrayList<>();
         forEach(array::add);
-        Class<?> arrayType = array.getClass();
-        Class<?> type = arrayType.getComponentType();
-        if (type.equals(int.class)) {
-            // TODO: 30.1.2023 г.
-        }
-        return null;
+        return array.size();
     }
 
     //Checks if the list is empty

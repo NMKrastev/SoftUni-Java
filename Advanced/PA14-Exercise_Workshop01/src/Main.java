@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -25,14 +27,20 @@ public class Main {
         System.out.println(linkedList.removeLast()); // Returns 4
 
         /*Using forEach() method*/
-        linkedList.forEach(System.out::print); //Returns [2, 3]
+        linkedList.forEach(System.out::print); // Returns [2, 3]
+        System.out.println();
 
         /*Using toArray() method*/
-        Integer[] array = linkedList.toArray(); // Returns int array - [2, 3]
+        Integer[] array = linkedList.toArray(); // Creates int array - [2, 3]
+        Arrays.stream(array).forEach(e -> System.out.print(e + " ")); // Returns 2, 3
+        System.out.println();
+
         LinkedList<String> stringLinkedList = new LinkedList<>();
         stringLinkedList.addFirst("Peter");
         stringLinkedList.addFirst("Alex");
-        String[] strings = stringLinkedList.toArray();
+        stringLinkedList.addFirst("George");
+        String[] strings = stringLinkedList.toArray(); // Creates String array [Peter, Alex, George]
+        System.out.println(String.join(", ", strings)); //Returns Peter, Alex, George
     }
 }
 /*In this workshop, we are going to create another custom data structure, which has similar functionalities as the
