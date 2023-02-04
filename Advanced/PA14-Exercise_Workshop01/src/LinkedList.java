@@ -127,9 +127,7 @@ public class LinkedList<T> {
     }
 
     public int size() {
-        List<T> array = new ArrayList<>();
-        forEach(array::add);
-        return array.size();
+        return size;
     }
 
     //Checks if the list is empty
