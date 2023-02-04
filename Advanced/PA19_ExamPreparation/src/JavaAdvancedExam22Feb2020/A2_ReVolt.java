@@ -2,7 +2,7 @@ package JavaAdvancedExam22Feb2020;
 
 import java.util.Scanner;
 
-public class ReVolt {
+public class A2_ReVolt {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
