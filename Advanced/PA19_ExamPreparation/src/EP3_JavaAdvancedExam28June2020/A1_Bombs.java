@@ -3,7 +3,7 @@ package EP3_JavaAdvancedExam28June2020;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Bombs {
+public class A1_Bombs {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

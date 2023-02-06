@@ -2,7 +2,7 @@ package EP3_JavaAdvancedExam28June2020;
 
 import java.util.Scanner;
 
-public class Snake {
+public class A2_Snake {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
