@@ -1,4 +1,4 @@
-package JavaAdvancedRetakeExam17Dec2019.A3_Christmas;
+package EP1_JavaAdvancedRetakeExam17Dec2019.A3_Christmas;
 
 public class Main {
     public static void main(String[] args) {

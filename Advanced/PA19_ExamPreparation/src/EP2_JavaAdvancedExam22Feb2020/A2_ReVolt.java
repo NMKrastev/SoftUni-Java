@@ -1,4 +1,4 @@
-package JavaAdvancedExam22Feb2020;
+package EP2_JavaAdvancedExam22Feb2020;
 
 import java.util.Scanner;
 

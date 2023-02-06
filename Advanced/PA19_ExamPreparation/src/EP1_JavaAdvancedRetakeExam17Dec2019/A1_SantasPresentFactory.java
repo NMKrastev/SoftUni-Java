@@ -1,4 +1,4 @@
-package JavaAdvancedRetakeExam17Dec2019;
+package EP1_JavaAdvancedRetakeExam17Dec2019;
 
 import java.util.*;
 import java.util.stream.Collectors;

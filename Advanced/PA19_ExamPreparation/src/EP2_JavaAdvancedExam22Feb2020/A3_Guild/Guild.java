@@ -1,4 +1,4 @@
-package JavaAdvancedExam22Feb2020.A3_Guild;
+package EP2_JavaAdvancedExam22Feb2020.A3_Guild;
 
 import java.util.ArrayList;
 import java.util.List;
