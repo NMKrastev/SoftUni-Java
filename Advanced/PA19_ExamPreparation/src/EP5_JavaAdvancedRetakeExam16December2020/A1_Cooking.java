@@ -3,7 +3,7 @@ package EP5_JavaAdvancedRetakeExam16December2020;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Cooking {
+public class A1_Cooking {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
