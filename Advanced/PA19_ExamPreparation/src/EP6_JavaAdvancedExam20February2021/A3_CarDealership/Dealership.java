@@ -28,7 +28,9 @@ public class Dealership {
     }
 
     public Car getLatestCar() {
-        return data.stream().max(Comparator.comparing(Car::getYear)).orElse(null);
+        return data.stream()
+                .max(Comparator.comparing(Car::getYear))
+                .orElse(null);
     }
 
     public Car getCar(String manufacturer, String model) {
