@@ -1,4 +1,4 @@
-package university;
+package EP7_JavaAdvancedRetakeExam14April2021.A3_University;
 
 import java.util.ArrayList;
 import java.util.List;
