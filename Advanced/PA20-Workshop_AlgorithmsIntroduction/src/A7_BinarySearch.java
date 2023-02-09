@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class A7_Searching {
+public class A7_BinarySearch {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
