@@ -6,7 +6,7 @@ import java.util.Deque;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class Meeting {
+public class A1_Meeting {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
