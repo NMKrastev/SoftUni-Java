@@ -1,4 +1,4 @@
-package EP11_JavaAdvancedRetakeExam15December2021.A3_WaterAdventure;
+package EP6_JavaAdvancedExam20February2021.EP11_JavaAdvancedRetakeExam15December2021.A3_WaterAdventure;
 
 public class Main {
     public static void main(String[] args) {

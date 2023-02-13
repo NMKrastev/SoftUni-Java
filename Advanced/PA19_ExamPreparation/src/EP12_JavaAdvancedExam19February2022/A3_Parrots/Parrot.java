@@ -21,7 +21,7 @@ public class Parrot {
     }
 
     public void setAvailable(boolean available) {
-        available = available;
+        this.available = available;
     }
 
     public boolean isAvailable() {
