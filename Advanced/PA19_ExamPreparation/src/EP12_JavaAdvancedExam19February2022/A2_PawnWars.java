@@ -18,16 +18,6 @@ public class A2_PawnWars {
         while (true) {
 
             //White pawn turn
-            if (checkForBlack(letters, matrix, whiteRow, whiteCol, blackRow, blackCol)) {
-                return;
-            }
-
-            //Black pawn turn
-            if (checkForWhite(letters, matrix, whiteRow, whiteCol, blackRow, blackCol)) {
-                return;
-            }
-
-            //White pawn turn
             if (isInBounds(whiteRow - 1, whiteCol, matrix)) {
                 if (checkForBlack(letters, matrix, whiteRow, whiteCol, blackRow, blackCol)) {
                     return;
