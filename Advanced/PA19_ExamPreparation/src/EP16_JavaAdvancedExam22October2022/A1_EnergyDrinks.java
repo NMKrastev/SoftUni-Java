@@ -17,20 +17,20 @@ public class A1_EnergyDrinks {
         int maxCaffeine = 300;
 
         while (!caffeine.isEmpty() && !energyDrinks.isEmpty()) {
-             int product = caffeine.getLast() * energyDrinks.getFirst();
+            int product = caffeine.getLast() * energyDrinks.getFirst();
 
-             if (product <= maxCaffeine) {
-                 caffeine.removeLast();
-                 energyDrinks.removeFirst();
-                 maxCaffeine -= product;
-             } else {
-                 caffeine.removeLast();
-                 energyDrinks.addLast(energyDrinks.removeFirst());
-                 maxCaffeine += 30;
-                 if (maxCaffeine > 300) {
-                     maxCaffeine = 300;
-                 }
-             }
+            if (product <= maxCaffeine) {
+                caffeine.removeLast();
+                energyDrinks.removeFirst();
+                maxCaffeine -= product;
+            } else {
+                caffeine.removeLast();
+                energyDrinks.addLast(energyDrinks.removeFirst());
+                maxCaffeine += 30;
+                if (maxCaffeine > 300) {
+                    maxCaffeine = 300;
+                }
+            }
         }
         if (!energyDrinks.isEmpty()) {
             System.out.printf("Drinks left: %s\n", energyDrinks.stream().map(String::valueOf).collect(Collectors.joining(", ")));
