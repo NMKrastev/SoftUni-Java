@@ -1,7 +1,6 @@
 package EP17_JavaAdvancedRetakeExam14December2022;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public class A1_ClimbThePeaks {
 
