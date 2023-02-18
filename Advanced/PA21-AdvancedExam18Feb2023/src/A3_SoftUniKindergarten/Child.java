@@ -1,4 +1,4 @@
-package A3k_SoftUniKindergarten;
+package A3_SoftUniKindergarten;
 
 public class Child {
 
