@@ -1,6 +1,6 @@
 package A3_CardsWithPower;
 
-public enum CardRanks {
+public enum CardRank {
 
     ACE(14),
     TWO(2),
@@ -18,7 +18,7 @@ public enum CardRanks {
 
     private int power;
 
-    CardRanks(int power) {
+    CardRank(int power) {
         this.power = power;
     }
 

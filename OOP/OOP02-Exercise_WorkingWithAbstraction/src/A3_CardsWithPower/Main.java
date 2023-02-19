@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        CardRanks cardRanks = CardRanks.valueOf(scanner.nextLine());
+        CardRank cardRank = CardRank.valueOf(scanner.nextLine());
         CardSuit cardSuit = CardSuit.valueOf(scanner.nextLine());
 
         System.out.printf("Card name: %s of %s; Card power: %d\n",
-                cardRanks.name(), cardSuit.name(), cardSuit.getPower() + cardRanks.getPower());
+                cardRank, cardSuit, cardSuit.getPower() + cardRank.getPower());
     }
 }
 /*Create a program that generates a deck of cards (class Card) that have power.
