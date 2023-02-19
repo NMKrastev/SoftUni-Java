@@ -1,4 +1,4 @@
-package jediGalaxy;
+package A5_JediGalaxy;
 
 import java.util.Scanner;
 

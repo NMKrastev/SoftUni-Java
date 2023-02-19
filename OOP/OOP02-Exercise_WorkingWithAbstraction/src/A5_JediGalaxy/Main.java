@@ -1,6 +1,5 @@
-package jediGalaxy;
+package A5_JediGalaxy;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
