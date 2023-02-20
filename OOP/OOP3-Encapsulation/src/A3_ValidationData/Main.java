@@ -30,6 +30,7 @@ public class Main {
             }
 
             person.ifPresent(people::add);
+
         }
 
         double bonus = Double.parseDouble(reader.readLine());
