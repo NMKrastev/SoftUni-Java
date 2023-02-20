@@ -27,12 +27,12 @@ public class Bag {
         }
         switch (item.getItemType()) {
             case GEM:
-                if (getTypeAmount(ItemType.GEM) + item.getAmount() > getTypeAmount(ItemType.GOLD)) {
+                if (getTypeAmount(GEM) + item.getAmount() > getTypeAmount(GOLD)) {
                     return false;
                 }
                 break;
             case CASH:
-                if (getTypeAmount(ItemType.CASH) + item.getAmount() > getTypeAmount(ItemType.GEM)) {
+                if (getTypeAmount(CASH) + item.getAmount() > getTypeAmount(GEM)) {
                     return false;
                 }
                 break;
