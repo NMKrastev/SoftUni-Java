@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/OOP.iml" filepath="$PROJECT_DIR$/.idea/OOP.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP01-WorkingWithAbstraction/OOP01-WorkingWithAbstraction.iml" filepath="$PROJECT_DIR$/OOP01-WorkingWithAbstraction/OOP01-WorkingWithAbstraction.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP02-Exercise_WorkingWithAbstraction/OOP02-Exercise_WorkingWithAbstraction.iml" filepath="$PROJECT_DIR$/OOP02-Exercise_WorkingWithAbstraction/OOP02-Exercise_WorkingWithAbstraction.iml" />
-      <module fileurl="file://$PROJECT_DIR$/OOP3-Encapsulation/OOP3-Encapsulation.iml" filepath="$PROJECT_DIR$/OOP3-Encapsulation/OOP3-Encapsulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP3-Encapsulation/OOP03-Encapsulation.iml" filepath="$PROJECT_DIR$/OOP3-Encapsulation/OOP03-Encapsulation.iml" />
     </modules>
   </component>
 </project>
