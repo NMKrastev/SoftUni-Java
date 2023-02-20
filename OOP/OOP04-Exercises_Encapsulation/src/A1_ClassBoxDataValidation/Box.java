@@ -13,13 +13,11 @@ public class Box {
     }
 
     private void setLength(double length) {
-
         checkParameters(length, "Length");
         this.length = length;
     }
 
     private void setWidth(double width) {
-
         checkParameters(width, "Width");
         this.width = width;
     }

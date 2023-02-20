@@ -10,7 +10,9 @@ public class Main {
         double length = Double.parseDouble(scanner.nextLine());
         double width = Double.parseDouble(scanner.nextLine());
         double height = Double.parseDouble(scanner.nextLine());
+
         Box box;
+
         try {
             box = new Box(length, width, height);
         } catch (IllegalArgumentException e) {
