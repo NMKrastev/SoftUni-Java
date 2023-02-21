@@ -34,9 +34,9 @@ public class Main {
     }
 }
 /*
-!!!Note: All code that is comment passes Judge 100/100 and meets the criteria.
+!!!Note: All of the commented code passes in Judge 100/100 and meets the criteria.
 I've modified the task to work with Enums, but this way it does not pass in judge.
-A4_PizzaCalories.zip files contains the unmodified task!!!
+A4_PizzaCalories.zip file contains the unmodified task!!!
 A Pizza is made of dough and different toppings. You should model a class Pizza which should have a name, dough,
 and toppings as fields. Every type of ingredient should have its class.
 Pizza
