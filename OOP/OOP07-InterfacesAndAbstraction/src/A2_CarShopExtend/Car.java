@@ -1,4 +1,4 @@
-package A1_CarShop;
+package A2_CarShopExtend;
 
 import java.io.Serializable;
 
