@@ -4,13 +4,13 @@ public class Seat implements Car {
 
     private String model;
     private String color;
-    private Integer horsePower;
+    private Integer getHorsePower;
     private String countryProduced;
 
-    public Seat(String model, String color, Integer horsePower, String country) {
+    public Seat(String model, String color, Integer getHorsePower, String country) {
         this.model = model;
         this.color = color;
-        this.horsePower = horsePower;
+        this.getHorsePower = getHorsePower;
         this.countryProduced = country;
     }
 
@@ -26,7 +26,7 @@ public class Seat implements Car {
 
     @Override
     public Integer getHorsePower() {
-        return horsePower;
+        return getHorsePower;
     }
 
     public String getCountryProduced() {
