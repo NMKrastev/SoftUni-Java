@@ -8,7 +8,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        Map<String, List<Buyer>> buyers = new LinkedHashMap<>();
+        Map<String, Buyer> buyers = new LinkedHashMap<>();
 
         int count = Integer.parseInt(scanner.nextLine());
         while (count-- > 0) {
@@ -28,8 +28,7 @@ public class Main {
                 buyer = new Rebel(name, age, group);
             }
 
-            buyers.putIfAbsent(name, new ArrayList<>());
-            buyers.get(name).add(buyer);
+            buyers.put(name, buyer);
         }
 
         String input;
@@ -37,18 +36,11 @@ public class Main {
             final String name = input;
             buyers.entrySet().stream()
                     .filter(e -> e.getKey().equals(name))
-                    .forEach(e -> e.getValue().forEach(Buyer::buyFood));
+                    .forEach(e -> e.getValue().buyFood());
         }
 
-        int sum = 0;
-        for (Map.Entry<String, List<Buyer>> personListEntry : buyers.entrySet()) {
-            sum += personListEntry.getValue().stream()
-                    .map(Buyer::getFood)
-                    .mapToInt(Integer::intValue)
-                    .sum();
-        }
-
-        System.out.println(sum);
+        System.out.println(buyers.values().stream()
+                .mapToInt(Buyer::getFood).sum());
     }
 }
 /*Your totalitarian dystopian society suffers a shortage of food, so many rebels appear.
