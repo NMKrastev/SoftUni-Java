@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/OOP04-Exercises_Encapsulation/OOP04-Exercises_Encapsulation.iml" filepath="$PROJECT_DIR$/OOP04-Exercises_Encapsulation/OOP04-Exercises_Encapsulation.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP05-Inheritance/OOP05-Inheritance.iml" filepath="$PROJECT_DIR$/OOP05-Inheritance/OOP05-Inheritance.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP06-Exercise_Inheritance/OOP06-Exercise_Inheritance.iml" filepath="$PROJECT_DIR$/OOP06-Exercise_Inheritance/OOP06-Exercise_Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP07-InterfacesAndAbstraction/OOP07-InterfacesAndAbstraction.iml" filepath="$PROJECT_DIR$/OOP07-InterfacesAndAbstraction/OOP07-InterfacesAndAbstraction.iml" />
     </modules>
   </component>
 </project>
