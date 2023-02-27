@@ -1,4 +1,4 @@
-package wildFarm;
+package A4_WildFarm;
 
 public abstract class Food {
 
