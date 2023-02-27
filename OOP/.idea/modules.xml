@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/OOP07-InterfacesAndAbstraction/OOP07-InterfacesAndAbstraction.iml" filepath="$PROJECT_DIR$/OOP07-InterfacesAndAbstraction/OOP07-InterfacesAndAbstraction.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP08-Exercise_InterfacesAndAbstraction/OOP08-Exercise_InterfacesAndAbstraction.iml" filepath="$PROJECT_DIR$/OOP08-Exercise_InterfacesAndAbstraction/OOP08-Exercise_InterfacesAndAbstraction.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP09-Polymorphism/OOP09-Polymorphism.iml" filepath="$PROJECT_DIR$/OOP09-Polymorphism/OOP09-Polymorphism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP10-Exercise_Polymorphism/OOP10-Exercise_Polymorphism.iml" filepath="$PROJECT_DIR$/OOP10-Exercise_Polymorphism/OOP10-Exercise_Polymorphism.iml" />
     </modules>
   </component>
 </project>
