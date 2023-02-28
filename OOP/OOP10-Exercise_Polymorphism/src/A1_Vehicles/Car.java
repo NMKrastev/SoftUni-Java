@@ -2,7 +2,7 @@ package A1_Vehicles;
 
 import java.text.DecimalFormat;
 
-import static A1_Vehicles.FuelModifier.CAR;
+import static A1_Vehicles.FuelModifier.CAR_AC_ADDITIONAL_CONSUMPTION;
 
 public class Car extends VehicleImpl {
 
@@ -15,10 +15,10 @@ public class Car extends VehicleImpl {
 
         DecimalFormat df = new DecimalFormat("#.##");
 
-        if (distance * (getLitersPerKm() + CAR.getModifier()) > getFuelQuantity()) {
+        if (distance * (getLitersPerKm() + CAR_AC_ADDITIONAL_CONSUMPTION.getFuelModifier()) > getFuelQuantity()) {
             System.out.println("Car needs refueling");
         } else {
-            setFuelQuantity(getFuelQuantity() - (distance * (getLitersPerKm() + CAR.getModifier())));
+            setFuelQuantity(getFuelQuantity() - (distance * (getLitersPerKm() + CAR_AC_ADDITIONAL_CONSUMPTION.getFuelModifier())));
             System.out.printf("Car travelled %s km\n", df.format(distance));
         }
     }
