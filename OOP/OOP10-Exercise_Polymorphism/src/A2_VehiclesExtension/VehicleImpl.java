@@ -6,6 +6,7 @@ public abstract class VehicleImpl implements Vehicle {
     private double litersPerKm;
 
     private double tankCapacity;
+    private boolean isWithPassengers;
 
     public VehicleImpl(double fuelQuantity, double litersPerKm, double tankCapacity) {
         setFuelQuantity(fuelQuantity);
@@ -35,5 +36,13 @@ public abstract class VehicleImpl implements Vehicle {
 
     private void setTankCapacity(double tankCapacity) {
         this.tankCapacity = tankCapacity;
+    }
+
+    protected boolean isWithPassengers() {
+        return isWithPassengers;
+    }
+
+    public void setIsWithPassengers(boolean isWithPassengers) {
+        this.isWithPassengers = isWithPassengers;
     }
 }

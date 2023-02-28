@@ -27,7 +27,7 @@ public class Main {
         litersPerKm = Double.parseDouble(busInput[2]);
         tankCapacity = Double.parseDouble(busInput[3]);
 
-        Bus bus = new Bus(fuelQuantity, litersPerKm, tankCapacity);
+        VehicleImpl bus = new Bus(fuelQuantity, litersPerKm, tankCapacity);
 
         int numOfCommands = Integer.parseInt(scanner.nextLine());
 
@@ -75,7 +75,7 @@ public class Main {
                 double distance = Double.parseDouble(commandParts[2]);
                 switch (command) {
                     case "Drive":
-                        bus.setWithPassengers(true);
+                        bus.setIsWithPassengers(true);
                         try {
                             bus.drive(distance);
                         } catch (IllegalArgumentException e) {
@@ -83,7 +83,7 @@ public class Main {
                         }
                         break;
                     case "DriveEmpty":
-                        bus.setWithPassengers(false);
+                        bus.setIsWithPassengers(false);
                         try {
                             bus.drive(distance);
                         } catch (IllegalArgumentException e) {

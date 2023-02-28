@@ -6,18 +6,8 @@ import static A2_VehiclesExtension.FuelModifier.BUS_WITH_PASSENGERS;
 
 public class Bus extends VehicleImpl {
 
-    private boolean isWithPassengers;
-
     public Bus(double fuelQuantity, double litersPerKm, double tankCapacity) {
         super(fuelQuantity, litersPerKm, tankCapacity);
-    }
-
-    protected boolean isWithPassengers() {
-        return isWithPassengers;
-    }
-
-    public void setWithPassengers(boolean withPassengers) {
-        isWithPassengers = withPassengers;
     }
 
     @Override
@@ -25,15 +15,15 @@ public class Bus extends VehicleImpl {
 
         DecimalFormat df = new DecimalFormat("#.##");
 
-        if (isWithPassengers && distance * (getLitersPerKm() + BUS_WITH_PASSENGERS.getModifier()) > getFuelQuantity()) {
+        if (isWithPassengers() && distance * (getLitersPerKm() + BUS_WITH_PASSENGERS.getModifier()) > getFuelQuantity()) {
             printError("Bus needs refueling");
         }
 
-        if (!isWithPassengers && distance * getLitersPerKm() > getFuelQuantity()) {
+        if (!isWithPassengers() && distance * getLitersPerKm() > getFuelQuantity()) {
             printError("Bus needs refueling");
         }
 
-        if (isWithPassengers) {
+        if (isWithPassengers()) {
             setFuelQuantity(getFuelQuantity() - (distance * (getLitersPerKm() + BUS_WITH_PASSENGERS.getModifier())));
         } else {
             setFuelQuantity(getFuelQuantity() - (distance * getLitersPerKm()));
