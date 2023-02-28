@@ -1,5 +1,7 @@
 package A2_VehiclesExtension;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -8,103 +10,69 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        String[] carInput = scanner.nextLine().split("\\s+");
-        double fuelQuantity = Double.parseDouble(carInput[1]);
-        double litersPerKm = Double.parseDouble(carInput[2]);
-        double tankCapacity = Double.parseDouble(carInput[3]);
-
-        VehicleImpl car = new Car(fuelQuantity, litersPerKm, tankCapacity);
-
-        String[] truckInput = scanner.nextLine().split("\\s+");
-        fuelQuantity = Double.parseDouble(truckInput[1]);
-        litersPerKm = Double.parseDouble(truckInput[2]);
-        tankCapacity = Double.parseDouble(truckInput[3]);
-
-        VehicleImpl truck = new Truck(fuelQuantity, litersPerKm, tankCapacity);
-
-        String[] busInput = scanner.nextLine().split("\\s+");
-        fuelQuantity = Double.parseDouble(busInput[1]);
-        litersPerKm = Double.parseDouble(busInput[2]);
-        tankCapacity = Double.parseDouble(busInput[3]);
-
-        VehicleImpl bus = new Bus(fuelQuantity, litersPerKm, tankCapacity);
+        Map<String, VehicleImpl> vehicleMap = new LinkedHashMap<>();
+        vehicleMap.put("Car", getVehicle(scanner));
+        vehicleMap.put("Truck", getVehicle(scanner));
+        vehicleMap.put("Bus", getVehicle(scanner));
 
         int numOfCommands = Integer.parseInt(scanner.nextLine());
-
 
         for (int i = 0; i < numOfCommands; i++) {
 
             String[] commandParts = scanner.nextLine().split("\\s+");
             String command = commandParts[0];
             String vehicleType = commandParts[1];
+            double argument = Double.parseDouble(commandParts[2]);
 
-            if (vehicleType.equals("Car")) {
-                if (command.equals("Drive")) {
-                    double distance = Double.parseDouble(commandParts[2]);
+            switch (command) {
+                case "Drive":
+                    vehicleMap.get(vehicleType).setIsWithPassengers(true);
                     try {
-                        car.drive(distance);
+                        vehicleMap.get(vehicleType).drive(argument);
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
-                } else if (command.equals("Refuel")) {
-                    double fuel = Double.parseDouble(commandParts[2]);
+                    break;
+                case "DriveEmpty":
+                    vehicleMap.get(vehicleType).setIsWithPassengers(false);
                     try {
-                        car.refuel(fuel);
+                        vehicleMap.get(vehicleType).drive(argument);
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
-                }
-            } else if (vehicleType.equals("Truck")) {
-                if (command.equals("Drive")) {
-                    double distance = Double.parseDouble(commandParts[2]);
+                    break;
+                case "Refuel":
                     try {
-                        truck.drive(distance);
+                        vehicleMap.get(vehicleType).refuel(argument);
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
-                } else if (command.equals("Refuel")) {
-                    double fuel = Double.parseDouble(commandParts[2]);
-                    try {
-                        truck.refuel(fuel);
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
-                }
-            } else if (vehicleType.equals("Bus")) {
-
-                double distance = Double.parseDouble(commandParts[2]);
-                switch (command) {
-                    case "Drive":
-                        bus.setIsWithPassengers(true);
-                        try {
-                            bus.drive(distance);
-                        } catch (IllegalArgumentException e) {
-                            System.out.println(e.getMessage());
-                        }
-                        break;
-                    case "DriveEmpty":
-                        bus.setIsWithPassengers(false);
-                        try {
-                            bus.drive(distance);
-                        } catch (IllegalArgumentException e) {
-                            System.out.println(e.getMessage());
-                        }
-                        break;
-                    case "Refuel":
-                        double fuel = Double.parseDouble(commandParts[2]);
-                        try {
-                            truck.refuel(fuel);
-                        } catch (IllegalArgumentException e) {
-                            System.out.println(e.getMessage());
-                        }
-                        break;
-                }
+                    break;
             }
         }
 
-        System.out.println(car);
-        System.out.println(truck);
-        System.out.println(bus);
+        vehicleMap.values().forEach(System.out::println);
+    }
+
+    private static VehicleImpl getVehicle(Scanner scanner) {
+
+        String[] vehicleInput = scanner.nextLine().split("\\s+");
+
+        String vehicleType = vehicleInput[0];
+        double fuelQuantity = Double.parseDouble(vehicleInput[1]);
+        double litersPerKm = Double.parseDouble(vehicleInput[2]);
+        double tankCapacity = Double.parseDouble(vehicleInput[3]);
+
+        switch (vehicleType) {
+            case "Car":
+                return new Car(fuelQuantity, litersPerKm, tankCapacity);
+            case "Truck":
+                return new Truck(fuelQuantity, litersPerKm, tankCapacity);
+            case "Bus":
+                return new Bus(fuelQuantity, litersPerKm, tankCapacity);
+            default:
+                throw new IllegalArgumentException("Invalid vehicle type!");
+        }
     }
 }
 /*Use your solution to the previous task for a starting point and add more functionality.

@@ -2,7 +2,7 @@ package A2_VehiclesExtension;
 
 import java.text.DecimalFormat;
 
-import static A2_VehiclesExtension.FuelModifier.CAR;
+import static A2_VehiclesExtension.FuelModifier.CAR_AC_ADDITIONAL_CONSUMPTION;
 
 
 public class Car extends VehicleImpl {
@@ -16,12 +16,12 @@ public class Car extends VehicleImpl {
 
         DecimalFormat df = new DecimalFormat("#.##");
 
-        if (distance * (getLitersPerKm() + CAR.getModifier()) > getFuelQuantity()) {
+        if (distance * (getLitersPerKm() + CAR_AC_ADDITIONAL_CONSUMPTION.getFuelModifier()) > getFuelQuantity()) {
             throw new IllegalArgumentException("Car needs refueling");
-        } else {
-            setFuelQuantity(getFuelQuantity() - (distance * (getLitersPerKm() + CAR.getModifier())));
-            System.out.printf("Car travelled %s km\n", df.format(distance));
         }
+
+        setFuelQuantity(getFuelQuantity() - (distance * (getLitersPerKm() + CAR_AC_ADDITIONAL_CONSUMPTION.getFuelModifier())));
+        System.out.printf("Car travelled %s km\n", df.format(distance));
     }
 
     @Override
@@ -31,7 +31,7 @@ public class Car extends VehicleImpl {
             throw new IllegalArgumentException("Fuel must be a positive number");
         }
 
-        if (getFuelQuantity() + fuel > getTankCapacity()){
+        if (getFuelQuantity() + fuel > getTankCapacity()) {
             throw new IllegalArgumentException("Cannot fit fuel in tank");
         }
 

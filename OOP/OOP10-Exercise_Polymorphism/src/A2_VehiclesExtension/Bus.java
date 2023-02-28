@@ -2,7 +2,7 @@ package A2_VehiclesExtension;
 
 import java.text.DecimalFormat;
 
-import static A2_VehiclesExtension.FuelModifier.BUS_WITH_PASSENGERS;
+import static A2_VehiclesExtension.FuelModifier.BUS_WITH_PASSENGERS_ADDITIONAL_CONSUMPTION;
 
 public class Bus extends VehicleImpl {
 
@@ -15,7 +15,7 @@ public class Bus extends VehicleImpl {
 
         DecimalFormat df = new DecimalFormat("#.##");
 
-        if (isWithPassengers() && distance * (getLitersPerKm() + BUS_WITH_PASSENGERS.getModifier()) > getFuelQuantity()) {
+        if (isWithPassengers() && distance * (getLitersPerKm() + BUS_WITH_PASSENGERS_ADDITIONAL_CONSUMPTION.getFuelModifier()) > getFuelQuantity()) {
             printError("Bus needs refueling");
         }
 
@@ -24,7 +24,7 @@ public class Bus extends VehicleImpl {
         }
 
         if (isWithPassengers()) {
-            setFuelQuantity(getFuelQuantity() - (distance * (getLitersPerKm() + BUS_WITH_PASSENGERS.getModifier())));
+            setFuelQuantity(getFuelQuantity() - (distance * (getLitersPerKm() + BUS_WITH_PASSENGERS_ADDITIONAL_CONSUMPTION.getFuelModifier())));
         } else {
             setFuelQuantity(getFuelQuantity() - (distance * getLitersPerKm()));
         }

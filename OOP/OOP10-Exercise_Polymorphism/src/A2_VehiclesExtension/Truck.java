@@ -2,8 +2,8 @@ package A2_VehiclesExtension;
 
 import java.text.DecimalFormat;
 
-import static A2_VehiclesExtension.FuelModifier.TRUCK;
-import static A2_VehiclesExtension.FuelModifier.TRUCK_FUEL;
+import static A2_VehiclesExtension.FuelModifier.TRUCK_AC_ADDITIONAL_CONSUMPTION;
+import static A2_VehiclesExtension.FuelModifier.TRUCK_TANK_FUEL_DEDUCTION;
 
 public class Truck extends VehicleImpl {
 
@@ -16,13 +16,12 @@ public class Truck extends VehicleImpl {
 
         DecimalFormat df = new DecimalFormat("#.##");
 
-        if (distance * (getLitersPerKm() + TRUCK.getModifier()) > getFuelQuantity()) {
+        if (distance * (getLitersPerKm() + TRUCK_AC_ADDITIONAL_CONSUMPTION.getFuelModifier()) > getFuelQuantity()) {
             throw new IllegalArgumentException("Truck needs refueling");
-        } else {
-            setFuelQuantity(getFuelQuantity() - (distance * (getLitersPerKm() + TRUCK.getModifier())));
-            System.out.printf("Truck travelled %s km\n", df.format(distance));
         }
 
+        setFuelQuantity(getFuelQuantity() - (distance * (getLitersPerKm() + TRUCK_AC_ADDITIONAL_CONSUMPTION.getFuelModifier())));
+        System.out.printf("Truck travelled %s km\n", df.format(distance));
     }
 
     @Override
@@ -32,11 +31,11 @@ public class Truck extends VehicleImpl {
             throw new IllegalArgumentException("Fuel must be a positive number");
         }
 
-        if (getFuelQuantity() + fuel > getTankCapacity()){
+        if (getFuelQuantity() + fuel > getTankCapacity()) {
             throw new IllegalArgumentException("Cannot fit fuel in tank");
         }
 
-        setFuelQuantity(getFuelQuantity() + (fuel * TRUCK_FUEL.getModifier()));
+        setFuelQuantity(getFuelQuantity() + (fuel * TRUCK_TANK_FUEL_DEDUCTION.getFuelModifier()));
     }
 
     @Override
