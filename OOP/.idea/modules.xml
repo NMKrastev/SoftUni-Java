@@ -13,6 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/OOP08-Exercise_InterfacesAndAbstraction/OOP08-Exercise_InterfacesAndAbstraction.iml" filepath="$PROJECT_DIR$/OOP08-Exercise_InterfacesAndAbstraction/OOP08-Exercise_InterfacesAndAbstraction.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP09-Polymorphism/OOP09-Polymorphism.iml" filepath="$PROJECT_DIR$/OOP09-Polymorphism/OOP09-Polymorphism.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP10-Exercise_Polymorphism/OOP10-Exercise_Polymorphism.iml" filepath="$PROJECT_DIR$/OOP10-Exercise_Polymorphism/OOP10-Exercise_Polymorphism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP11-SOLID/OOP11-SOLID.iml" filepath="$PROJECT_DIR$/OOP11-SOLID/OOP11-SOLID.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP12-Exercise_SOLID/OOP12-Exercise_SOLID.iml" filepath="$PROJECT_DIR$/OOP12-Exercise_SOLID/OOP12-Exercise_SOLID.iml" />
     </modules>
   </component>
 </project>
