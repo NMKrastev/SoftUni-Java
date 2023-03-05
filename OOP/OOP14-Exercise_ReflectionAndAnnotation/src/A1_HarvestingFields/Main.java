@@ -11,7 +11,6 @@ public class Main {
 
         Class<RichSoilLand> clazz = RichSoilLand.class;
 
-
         Field[] fields = clazz.getDeclaredFields();
 
         String input;
