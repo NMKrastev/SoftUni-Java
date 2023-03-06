@@ -17,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/OOP12-Exercise_SOLID/OOP12-Exercise_SOLID.iml" filepath="$PROJECT_DIR$/OOP12-Exercise_SOLID/OOP12-Exercise_SOLID.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP13-ReflectionAndAnnotation/OOP13-ReflectionAndAnnotation.iml" filepath="$PROJECT_DIR$/OOP13-ReflectionAndAnnotation/OOP13-ReflectionAndAnnotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP14-Exercise_ReflectionAndAnnotation/OOP14-Exercise_ReflectionAndAnnotation.iml" filepath="$PROJECT_DIR$/OOP14-Exercise_ReflectionAndAnnotation/OOP14-Exercise_ReflectionAndAnnotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP15-ExceptionsAndErrorHandling/OOP15-ExceptionsAndErrorHandling.iml" filepath="$PROJECT_DIR$/OOP15-ExceptionsAndErrorHandling/OOP15-ExceptionsAndErrorHandling.iml" />
     </modules>
   </component>
 </project>
