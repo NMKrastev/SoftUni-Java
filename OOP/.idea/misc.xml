@@ -12,7 +12,13 @@
         <option value="$PROJECT_DIR$/untitled/pom.xml" />
         <option value="$PROJECT_DIR$/OOP16-UnitTesting/pom.xml" />
         <option value="$PROJECT_DIR$/OOP17-Exercise_UnitTesting/pom.xml" />
+        <option value="$PROJECT_DIR$/OOP-ExamPreparation/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/OOP-ExamPreparation/Java OOP Exam - 16 August 2020/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">

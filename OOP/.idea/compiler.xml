@@ -13,5 +13,8 @@
         <module name="OOP17-Exercise_UnitTesting" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Java OOP Exam - 16 August 2020" target="18" />
+    </bytecodeTargetLevel>
   </component>
 </project>
