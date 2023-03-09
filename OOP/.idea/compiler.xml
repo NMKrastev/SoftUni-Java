@@ -10,6 +10,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="OOP16-UnitTesting" />
+        <module name="OOP18-TestDrivenDevelopment" />
         <module name="OOP17-Exercise_UnitTesting" />
       </profile>
     </annotationProcessing>
