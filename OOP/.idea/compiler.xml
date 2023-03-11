@@ -9,13 +9,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="OOP19-Exercise_TestDrivenDevelopment" />
+        <module name="OOP17-Exercise_UnitTesting" />
         <module name="OOP16-UnitTesting" />
         <module name="OOP18-TestDrivenDevelopment" />
-        <module name="OOP17-Exercise_UnitTesting" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Java OOP Exam - 16 August 2020" target="18" />
+      <module name="OOP18-Exercise_TestDrivenDevelopment" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>
