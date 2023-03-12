@@ -1,6 +1,6 @@
-package JavaOOPRetakeExam_19December2020.viceCity.models.neighbourhood;
+package viceCity.models.neighbourhood;
 
-import JavaOOPRetakeExam_19December2020.viceCity.models.players.Player;
+import viceCity.models.players.Player;
 
 import java.util.Collection;
 

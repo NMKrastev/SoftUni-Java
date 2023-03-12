@@ -1,4 +1,4 @@
-package JavaOOPRetakeExam_19December2020.viceCity.models.players;
+package viceCity.models.players;
 
 public class CivilPlayer extends BasePlayer {
 

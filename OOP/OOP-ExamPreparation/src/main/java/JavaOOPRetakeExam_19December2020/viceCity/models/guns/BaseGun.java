@@ -1,6 +1,6 @@
-package JavaOOPRetakeExam_19December2020.viceCity.models.guns;
+package viceCity.models.guns;
 
-import static JavaOOPRetakeExam_19December2020.viceCity.common.ExceptionMessages.*;
+import viceCity.common.ExceptionMessages;
 
 public abstract class BaseGun implements Gun {
 
@@ -18,21 +18,21 @@ public abstract class BaseGun implements Gun {
 
     private void setName(String name) {
         if (name == null || name.trim().isEmpty()) {
-            throw new NullPointerException(NAME_NULL);
+            throw new NullPointerException(ExceptionMessages.NAME_NULL);
         }
         this.name = name;
     }
 
     protected void setBulletsPerBarrel(int bulletsPerBarrel) {
         if (bulletsPerBarrel < 0) {
-            throw new IllegalArgumentException(BULLETS_LESS_THAN_ZERO);
+            throw new IllegalArgumentException(ExceptionMessages.BULLETS_LESS_THAN_ZERO);
         }
         this.bulletsPerBarrel = bulletsPerBarrel;
     }
 
     protected void setTotalBullets(int totalBullets) {
         if (totalBullets < 0) {
-            throw new IllegalArgumentException(TOTAL_BULLETS_LESS_THAN_ZERO);
+            throw new IllegalArgumentException(ExceptionMessages.TOTAL_BULLETS_LESS_THAN_ZERO);
         }
         this.totalBullets = totalBullets;
     }

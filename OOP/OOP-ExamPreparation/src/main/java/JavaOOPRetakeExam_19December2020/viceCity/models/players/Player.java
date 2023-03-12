@@ -1,7 +1,7 @@
-package JavaOOPRetakeExam_19December2020.viceCity.models.players;
+package viceCity.models.players;
 
-import JavaOOPRetakeExam_19December2020.viceCity.models.guns.Gun;
-import JavaOOPRetakeExam_19December2020.viceCity.repositories.interfaces.Repository;
+import viceCity.models.guns.Gun;
+import viceCity.repositories.interfaces.Repository;
 
 public interface Player {
     String getName();

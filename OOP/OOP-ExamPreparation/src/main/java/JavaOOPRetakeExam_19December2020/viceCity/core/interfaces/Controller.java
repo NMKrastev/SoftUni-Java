@@ -1,4 +1,4 @@
-package JavaOOPRetakeExam_19December2020.viceCity.core.interfaces;
+package viceCity.core.interfaces;
 
 public interface Controller {
     String addPlayer(String name);

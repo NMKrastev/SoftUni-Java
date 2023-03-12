@@ -1,11 +1,11 @@
-package JavaOOPRetakeExam_19December2020.viceCity.models.players;
+package viceCity.models.players;
 
-import JavaOOPRetakeExam_19December2020.viceCity.models.guns.Gun;
-import JavaOOPRetakeExam_19December2020.viceCity.repositories.interfaces.GunRepository;
-import JavaOOPRetakeExam_19December2020.viceCity.repositories.interfaces.Repository;
+import viceCity.models.guns.Gun;
+import viceCity.repositories.interfaces.GunRepository;
+import viceCity.repositories.interfaces.Repository;
 
-import static JavaOOPRetakeExam_19December2020.viceCity.common.ExceptionMessages.PLAYER_LIFE_POINTS_LESS_THAN_ZERO;
-import static JavaOOPRetakeExam_19December2020.viceCity.common.ExceptionMessages.PLAYER_NULL_USERNAME;
+import static viceCity.common.ExceptionMessages.PLAYER_LIFE_POINTS_LESS_THAN_ZERO;
+import static viceCity.common.ExceptionMessages.PLAYER_NULL_USERNAME;
 
 public abstract class BasePlayer implements Player {
 

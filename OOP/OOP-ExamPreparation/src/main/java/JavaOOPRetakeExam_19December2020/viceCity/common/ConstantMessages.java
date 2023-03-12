@@ -1,4 +1,4 @@
-package JavaOOPRetakeExam_19December2020.viceCity.common;
+package viceCity.common;
 
 public class ConstantMessages {
     public static final String PLAYER_ADDED = "Successfully added civil player: %s!";

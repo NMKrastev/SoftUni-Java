@@ -1,6 +1,6 @@
-package JavaOOPRetakeExam_19December2020.viceCity.repositories.interfaces;
+package viceCity.repositories.interfaces;
 
-import JavaOOPRetakeExam_19December2020.viceCity.models.guns.Gun;
+import viceCity.models.guns.Gun;
 
 import java.util.ArrayList;
 import java.util.Collection;

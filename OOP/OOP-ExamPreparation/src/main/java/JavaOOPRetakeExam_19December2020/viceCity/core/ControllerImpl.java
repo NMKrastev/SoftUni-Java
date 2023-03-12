@@ -1,21 +1,20 @@
-package JavaOOPRetakeExam_19December2020.viceCity.core;
+package viceCity.core;
 
-import JavaOOPRetakeExam_19December2020.viceCity.core.interfaces.Controller;
-import JavaOOPRetakeExam_19December2020.viceCity.models.guns.Gun;
-import JavaOOPRetakeExam_19December2020.viceCity.models.guns.Pistol;
-import JavaOOPRetakeExam_19December2020.viceCity.models.guns.Rifle;
-import JavaOOPRetakeExam_19December2020.viceCity.models.neighbourhood.GangNeighbourhood;
-import JavaOOPRetakeExam_19December2020.viceCity.models.neighbourhood.Neighbourhood;
-import JavaOOPRetakeExam_19December2020.viceCity.models.players.CivilPlayer;
-import JavaOOPRetakeExam_19December2020.viceCity.models.players.MainPlayer;
-import JavaOOPRetakeExam_19December2020.viceCity.models.players.Player;
-import JavaOOPRetakeExam_19December2020.viceCity.repositories.interfaces.GunRepository;
+import viceCity.core.interfaces.Controller;
+import viceCity.models.guns.Gun;
+import viceCity.models.guns.Pistol;
+import viceCity.models.guns.Rifle;
+import viceCity.models.neighbourhood.GangNeighbourhood;
+import viceCity.models.neighbourhood.Neighbourhood;
+import viceCity.models.players.CivilPlayer;
+import viceCity.models.players.MainPlayer;
+import viceCity.models.players.Player;
+import viceCity.repositories.interfaces.GunRepository;
+import viceCity.common.ConstantMessages;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.stream.Collectors;
-
-import static JavaOOPRetakeExam_19December2020.viceCity.common.ConstantMessages.*;
 
 public class ControllerImpl implements Controller {
 
@@ -36,7 +35,7 @@ public class ControllerImpl implements Controller {
 
         this.civilPlayers.add(new CivilPlayer(name));
 
-        return String.format(PLAYER_ADDED, name);
+        return String.format(ConstantMessages.PLAYER_ADDED, name);
     }
 
     @Override
@@ -50,10 +49,10 @@ public class ControllerImpl implements Controller {
                 this.models.add(new Rifle(name));
                 break;
             default:
-                return String.format(GUN_TYPE_INVALID);
+                return String.format(ConstantMessages.GUN_TYPE_INVALID);
         }
 
-        return String.format(GUN_ADDED, name, type);
+        return String.format(ConstantMessages.GUN_ADDED, name, type);
     }
 
     @Override
@@ -68,7 +67,7 @@ public class ControllerImpl implements Controller {
 
                 this.mainPlayer.getGunRepository().add(gun);
                 models.remove(gun);
-                return String.format(GUN_ADDED_TO_MAIN_PLAYER, gun.getName(), this.mainPlayer.getName());
+                return String.format(ConstantMessages.GUN_ADDED_TO_MAIN_PLAYER, gun.getName(), this.mainPlayer.getName());
 
             } else {
 
@@ -81,14 +80,14 @@ public class ControllerImpl implements Controller {
                 if (player != null) {
                     player.getGunRepository().add(gun);
                     this.models.remove(gun);
-                    return String.format(GUN_ADDED_TO_CIVIL_PLAYER, gun.getName(), player.getName());
+                    return String.format(ConstantMessages.GUN_ADDED_TO_CIVIL_PLAYER, gun.getName(), player.getName());
                 } else {
-                    return String.format(CIVIL_PLAYER_DOES_NOT_EXIST);
+                    return String.format(ConstantMessages.CIVIL_PLAYER_DOES_NOT_EXIST);
                 }
             }
         }
 
-        return String.format(GUN_QUEUE_IS_EMPTY);
+        return String.format(ConstantMessages.GUN_QUEUE_IS_EMPTY);
     }
 
     @Override
@@ -97,20 +96,21 @@ public class ControllerImpl implements Controller {
         int initialSizeOfCivilPlayers = this.civilPlayers.size();
 
         this.neighbourhood.action(this.mainPlayer, this.civilPlayers);
+
         this.civilPlayers = this.civilPlayers
                 .stream()
                 .filter(Player::isAlive)
                 .collect(Collectors.toList());
 
-        if (this.mainPlayer.isAlive() && this.civilPlayers.stream().anyMatch(Player::isAlive)) {
-            return String.format(FIGHT_HOT_HAPPENED);
+        if (this.mainPlayer.isAlive() && this.civilPlayers.size() == initialSizeOfCivilPlayers) {
+            return String.format(ConstantMessages.FIGHT_HOT_HAPPENED);
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format(FIGHT_HAPPENED)).append(System.lineSeparator());
-        sb.append(String.format(MAIN_PLAYER_LIVE_POINTS_MESSAGE, mainPlayer.getLifePoints())).append(System.lineSeparator());
-        sb.append(String.format(MAIN_PLAYER_KILLED_CIVIL_PLAYERS_MESSAGE, initialSizeOfCivilPlayers - this.civilPlayers.size())).append(System.lineSeparator());
-        sb.append(String.format(CIVIL_PLAYERS_LEFT_MESSAGE, this.civilPlayers.size()));
+        sb.append(String.format(ConstantMessages.FIGHT_HAPPENED)).append(System.lineSeparator());
+        sb.append(String.format(ConstantMessages.MAIN_PLAYER_LIVE_POINTS_MESSAGE, mainPlayer.getLifePoints())).append(System.lineSeparator());
+        sb.append(String.format(ConstantMessages.MAIN_PLAYER_KILLED_CIVIL_PLAYERS_MESSAGE, initialSizeOfCivilPlayers - this.civilPlayers.size())).append(System.lineSeparator());
+        sb.append(String.format(ConstantMessages.CIVIL_PLAYERS_LEFT_MESSAGE, this.civilPlayers.size()));
 
         return sb.toString().trim();
     }
