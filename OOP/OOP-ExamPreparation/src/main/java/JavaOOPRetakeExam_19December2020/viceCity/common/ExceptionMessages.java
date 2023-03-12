@@ -1,4 +1,4 @@
-package viceCity.common;
+package JavaOOPRetakeExam_19December2020.viceCity.common;
 
 public class ExceptionMessages {
     public static final String NAME_NULL = "Name cannot be null or whitespace!";

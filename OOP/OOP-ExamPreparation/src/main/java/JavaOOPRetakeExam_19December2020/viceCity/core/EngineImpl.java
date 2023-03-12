@@ -1,8 +1,8 @@
-package viceCity.core;
+package JavaOOPRetakeExam_19December2020.viceCity.core;
 
-import viceCity.common.Command;
-import viceCity.core.interfaces.Controller;
-import viceCity.core.interfaces.Engine;
+import JavaOOPRetakeExam_19December2020.viceCity.core.interfaces.Controller;
+import JavaOOPRetakeExam_19December2020.viceCity.core.interfaces.Engine;
+import JavaOOPRetakeExam_19December2020.viceCity.common.Command;
 
 import java.io.BufferedReader;
 import java.io.IOException;

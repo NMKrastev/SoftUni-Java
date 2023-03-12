@@ -1,6 +1,6 @@
-package viceCity.models.guns;
+package JavaOOPRetakeExam_19December2020.viceCity.models.guns;
 
-import viceCity.common.ExceptionMessages;
+import JavaOOPRetakeExam_19December2020.viceCity.common.ExceptionMessages;
 
 public abstract class BaseGun implements Gun {
 

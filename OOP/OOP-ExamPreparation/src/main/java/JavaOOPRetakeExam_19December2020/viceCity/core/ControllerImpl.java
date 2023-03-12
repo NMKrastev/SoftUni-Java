@@ -1,16 +1,16 @@
-package viceCity.core;
+package JavaOOPRetakeExam_19December2020.viceCity.core;
 
-import viceCity.core.interfaces.Controller;
-import viceCity.models.guns.Gun;
-import viceCity.models.guns.Pistol;
-import viceCity.models.guns.Rifle;
-import viceCity.models.neighbourhood.GangNeighbourhood;
-import viceCity.models.neighbourhood.Neighbourhood;
-import viceCity.models.players.CivilPlayer;
-import viceCity.models.players.MainPlayer;
-import viceCity.models.players.Player;
-import viceCity.repositories.interfaces.GunRepository;
-import viceCity.common.ConstantMessages;
+import JavaOOPRetakeExam_19December2020.viceCity.core.interfaces.Controller;
+import JavaOOPRetakeExam_19December2020.viceCity.models.guns.Gun;
+import JavaOOPRetakeExam_19December2020.viceCity.models.guns.Pistol;
+import JavaOOPRetakeExam_19December2020.viceCity.models.guns.Rifle;
+import JavaOOPRetakeExam_19December2020.viceCity.models.neighbourhood.GangNeighbourhood;
+import JavaOOPRetakeExam_19December2020.viceCity.models.neighbourhood.Neighbourhood;
+import JavaOOPRetakeExam_19December2020.viceCity.models.players.CivilPlayer;
+import JavaOOPRetakeExam_19December2020.viceCity.models.players.MainPlayer;
+import JavaOOPRetakeExam_19December2020.viceCity.models.players.Player;
+import JavaOOPRetakeExam_19December2020.viceCity.repositories.interfaces.GunRepository;
+import JavaOOPRetakeExam_19December2020.viceCity.common.ConstantMessages;
 
 import java.util.ArrayList;
 import java.util.Collection;

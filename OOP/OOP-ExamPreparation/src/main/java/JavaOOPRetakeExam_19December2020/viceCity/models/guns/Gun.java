@@ -1,4 +1,4 @@
-package viceCity.models.guns;
+package JavaOOPRetakeExam_19December2020.viceCity.models.guns;
 
 public interface Gun {
     String getName();

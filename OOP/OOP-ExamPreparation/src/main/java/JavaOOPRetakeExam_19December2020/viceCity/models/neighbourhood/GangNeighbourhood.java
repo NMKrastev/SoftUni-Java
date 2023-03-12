@@ -1,7 +1,7 @@
-package viceCity.models.neighbourhood;
+package JavaOOPRetakeExam_19December2020.viceCity.models.neighbourhood;
 
-import viceCity.models.guns.Gun;
-import viceCity.models.players.Player;
+import JavaOOPRetakeExam_19December2020.viceCity.models.players.Player;
+import JavaOOPRetakeExam_19December2020.viceCity.models.guns.Gun;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
