@@ -11,12 +11,7 @@ import java.util.stream.Collectors;
 
 public class MissionImpl implements Mission {
 
-    private AstronautRepository astronautRepository;
-    private PlanetRepository planetRepository;
-
     public MissionImpl() {
-        this.astronautRepository = new AstronautRepository();
-        this.planetRepository = new PlanetRepository();
     }
 
     @Override
