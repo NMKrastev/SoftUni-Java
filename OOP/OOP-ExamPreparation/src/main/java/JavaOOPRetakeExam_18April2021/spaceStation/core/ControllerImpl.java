@@ -1,7 +1,5 @@
 package JavaOOPRetakeExam_18April2021.spaceStation.core;
 
-import JavaOOPRetakeExam_18April2021.spaceStation.common.ConstantMessages;
-import JavaOOPRetakeExam_18April2021.spaceStation.common.ExceptionMessages;
 import JavaOOPRetakeExam_18April2021.spaceStation.models.astronauts.Biologist;
 import JavaOOPRetakeExam_18April2021.spaceStation.models.astronauts.Meteorologist;
 import JavaOOPRetakeExam_18April2021.spaceStation.models.mission.MissionImpl;
@@ -16,6 +14,9 @@ import JavaOOPRetakeExam_18April2021.spaceStation.models.planets.Planet;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static JavaOOPRetakeExam_18April2021.spaceStation.common.ConstantMessages.*;
+import static JavaOOPRetakeExam_18April2021.spaceStation.common.ExceptionMessages.*;
 
 public class ControllerImpl implements Controller {
 
@@ -45,10 +46,10 @@ public class ControllerImpl implements Controller {
                 this.astronautRepository.add(new Meteorologist(astronautName));
                 break;
             default:
-                throw new IllegalArgumentException(ExceptionMessages.ASTRONAUT_INVALID_TYPE);
+                throw new IllegalArgumentException(ASTRONAUT_INVALID_TYPE);
         }
 
-        return String.format(ConstantMessages.ASTRONAUT_ADDED, type, astronautName);
+        return String.format(ASTRONAUT_ADDED, type, astronautName);
     }
 
     @Override
@@ -56,7 +57,7 @@ public class ControllerImpl implements Controller {
 
         this.planetRepository.add(new PlanetImpl(planetName, items));
 
-        return String.format(ConstantMessages.PLANET_ADDED, planetName);
+        return String.format(PLANET_ADDED, planetName);
     }
 
     @Override
@@ -65,12 +66,12 @@ public class ControllerImpl implements Controller {
         Astronaut astronaut = this.astronautRepository.findByName(astronautName);
 
         if (astronaut == null) {
-            throw new IllegalArgumentException(String.format(ExceptionMessages.ASTRONAUT_DOES_NOT_EXIST, astronautName));
+            throw new IllegalArgumentException(String.format(ASTRONAUT_DOES_NOT_EXIST, astronautName));
         }
 
         this.astronautRepository.remove(astronaut);
 
-        return String.format(ConstantMessages.ASTRONAUT_RETIRED, astronautName);
+        return String.format(ASTRONAUT_RETIRED, astronautName);
     }
 
     @Override
@@ -84,7 +85,7 @@ public class ControllerImpl implements Controller {
                 .collect(Collectors.toList());
 
         if (suitableAstronauts.isEmpty()) {
-            throw new IllegalArgumentException(ExceptionMessages.PLANET_ASTRONAUTS_DOES_NOT_EXISTS);
+            throw new IllegalArgumentException(PLANET_ASTRONAUTS_DOES_NOT_EXISTS);
         }
 
         mission.explore(planet, suitableAstronauts);
@@ -95,7 +96,7 @@ public class ControllerImpl implements Controller {
 
         this.planetsExploredCount++;
 
-        return String.format(ConstantMessages.PLANET_EXPLORED, planetName, deadAstronauts.size());
+        return String.format(PLANET_EXPLORED, planetName, deadAstronauts.size());
     }
 
     @Override
@@ -103,15 +104,15 @@ public class ControllerImpl implements Controller {
 
         StringBuilder sb = new StringBuilder();
 
-        sb.append(String.format(ConstantMessages.REPORT_PLANET_EXPLORED, planetsExploredCount)).append(System.lineSeparator());
-        sb.append(ConstantMessages.REPORT_ASTRONAUT_INFO).append(System.lineSeparator());
+        sb.append(String.format(REPORT_PLANET_EXPLORED, planetsExploredCount)).append(System.lineSeparator());
+        sb.append(REPORT_ASTRONAUT_INFO).append(System.lineSeparator());
         this.astronautRepository.getModels()
                 .forEach(e -> {
-                    sb.append(String.format(ConstantMessages.REPORT_ASTRONAUT_NAME, e.getName())).append(System.lineSeparator());
-                    sb.append(String.format(ConstantMessages.REPORT_ASTRONAUT_OXYGEN, e.getOxygen())).append(System.lineSeparator());
+                    sb.append(String.format(REPORT_ASTRONAUT_NAME, e.getName())).append(System.lineSeparator());
+                    sb.append(String.format(REPORT_ASTRONAUT_OXYGEN, e.getOxygen())).append(System.lineSeparator());
                     sb.append(String.format(e.getBag().getItems().isEmpty()
-                            ? String.format(ConstantMessages.REPORT_ASTRONAUT_BAG_ITEMS, "none")
-                            : ConstantMessages.REPORT_ASTRONAUT_BAG_ITEMS, e.getBag().getItems().stream().map(String::valueOf).collect(Collectors.joining(ConstantMessages.REPORT_ASTRONAUT_BAG_ITEMS_DELIMITER))));
+                            ? String.format(REPORT_ASTRONAUT_BAG_ITEMS, "none")
+                            : REPORT_ASTRONAUT_BAG_ITEMS, e.getBag().getItems().stream().map(String::valueOf).collect(Collectors.joining(REPORT_ASTRONAUT_BAG_ITEMS_DELIMITER))));
                     sb.append(System.lineSeparator());
                 });
 
