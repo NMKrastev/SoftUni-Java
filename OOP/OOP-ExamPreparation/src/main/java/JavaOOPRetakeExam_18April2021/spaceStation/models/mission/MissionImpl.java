@@ -1,10 +1,8 @@
 package JavaOOPRetakeExam_18April2021.spaceStation.models.mission;
 
-import JavaOOPRetakeExam_18April2021.spaceStation.repositories.AstronautRepository;
 import JavaOOPRetakeExam_18April2021.spaceStation.models.astronauts.Astronaut;
 import JavaOOPRetakeExam_18April2021.spaceStation.models.bags.Bag;
 import JavaOOPRetakeExam_18April2021.spaceStation.models.planets.Planet;
-import JavaOOPRetakeExam_18April2021.spaceStation.repositories.PlanetRepository;
 
 import java.util.Collection;
 import java.util.stream.Collectors;

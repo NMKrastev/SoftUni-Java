@@ -1,7 +1,5 @@
 package JavaOOPRetakeExam_18April2021.heroRepository;
 
-import JavaOOPRetakeExam_18April2021.heroRepository.Hero;
-import JavaOOPRetakeExam_18April2021.heroRepository.HeroRepository;
 import org.junit.Before;
 import org.junit.Test;
 
