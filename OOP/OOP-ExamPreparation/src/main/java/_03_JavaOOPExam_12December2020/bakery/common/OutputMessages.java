@@ -1,4 +1,4 @@
-package JavaOOPExam_12December2020.bakery.common;
+package _03_JavaOOPExam_12December2020.bakery.common;
 
 public class OutputMessages {
     public static final String FOOD_ADDED = "Added %s (%s) to the menu";

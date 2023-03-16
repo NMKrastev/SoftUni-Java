@@ -1,4 +1,4 @@
-package JavaOOPExam_12December2020.bankSafe;
+package _03_JavaOOPExam_12December2020.bankSafe;
 
 public class Item {
     private String owner;

@@ -1,16 +1,16 @@
-package JavaOOPExam_12December2020.bakery.entities.tables;
+package _03_JavaOOPExam_12December2020.bakery.entities.tables;
 
-import JavaOOPExam_12December2020.bakery.entities.bakedFoods.interfaces.BakedFood;
-import JavaOOPExam_12December2020.bakery.repositories.interfaces.DrinkRepository;
-import JavaOOPExam_12December2020.bakery.repositories.interfaces.FoodRepository;
-import JavaOOPExam_12December2020.bakery.entities.drinks.interfaces.Drink;
-import JavaOOPExam_12December2020.bakery.entities.tables.interfaces.Table;
+import _03_JavaOOPExam_12December2020.bakery.entities.bakedFoods.interfaces.BakedFood;
+import _03_JavaOOPExam_12December2020.bakery.repositories.interfaces.DrinkRepository;
+import _03_JavaOOPExam_12December2020.bakery.repositories.interfaces.FoodRepository;
+import _03_JavaOOPExam_12December2020.bakery.entities.drinks.interfaces.Drink;
+import _03_JavaOOPExam_12December2020.bakery.entities.tables.interfaces.Table;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
-import static JavaOOPExam_12December2020.bakery.common.ExceptionMessages.INVALID_NUMBER_OF_PEOPLE;
-import static JavaOOPExam_12December2020.bakery.common.ExceptionMessages.INVALID_TABLE_CAPACITY;
+import static _03_JavaOOPExam_12December2020.bakery.common.ExceptionMessages.INVALID_NUMBER_OF_PEOPLE;
+import static _03_JavaOOPExam_12December2020.bakery.common.ExceptionMessages.INVALID_TABLE_CAPACITY;
 
 public abstract class BaseTable implements Table {
 

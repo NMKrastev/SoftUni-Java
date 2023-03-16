@@ -1,8 +1,8 @@
-package JavaOOPExam_12December2020.bakery.entities.drinks;
+package _03_JavaOOPExam_12December2020.bakery.entities.drinks;
 
-import JavaOOPExam_12December2020.bakery.entities.drinks.interfaces.Drink;
+import _03_JavaOOPExam_12December2020.bakery.entities.drinks.interfaces.Drink;
 
-import static JavaOOPExam_12December2020.bakery.common.ExceptionMessages.*;
+import static _03_JavaOOPExam_12December2020.bakery.common.ExceptionMessages.*;
 
 public abstract class BaseDrink implements Drink {
 

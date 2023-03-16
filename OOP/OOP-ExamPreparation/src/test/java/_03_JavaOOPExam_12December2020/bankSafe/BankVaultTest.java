@@ -1,7 +1,5 @@
-package JavaOOPExam_12December2020.bankSafe;
+package _03_JavaOOPExam_12December2020.bankSafe;
 
-import JavaOOPExam_12December2020.bankSafe.BankVault;
-import JavaOOPExam_12December2020.bankSafe.Item;
 import org.junit.Before;
 import org.junit.Test;
 

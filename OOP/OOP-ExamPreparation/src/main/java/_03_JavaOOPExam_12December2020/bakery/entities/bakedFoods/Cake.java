@@ -1,4 +1,4 @@
-package JavaOOPExam_12December2020.bakery.entities.bakedFoods;
+package _03_JavaOOPExam_12December2020.bakery.entities.bakedFoods;
 
 public class Cake extends BaseFood {
 

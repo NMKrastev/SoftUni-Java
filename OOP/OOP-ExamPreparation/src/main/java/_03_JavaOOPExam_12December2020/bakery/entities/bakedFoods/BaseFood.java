@@ -1,8 +1,8 @@
-package JavaOOPExam_12December2020.bakery.entities.bakedFoods;
+package _03_JavaOOPExam_12December2020.bakery.entities.bakedFoods;
 
-import JavaOOPExam_12December2020.bakery.entities.bakedFoods.interfaces.BakedFood;
+import _03_JavaOOPExam_12December2020.bakery.entities.bakedFoods.interfaces.BakedFood;
 
-import static JavaOOPExam_12December2020.bakery.common.ExceptionMessages.*;
+import static _03_JavaOOPExam_12December2020.bakery.common.ExceptionMessages.*;
 
 public abstract class BaseFood implements BakedFood {
 

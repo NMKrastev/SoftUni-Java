@@ -1,7 +1,7 @@
-package JavaOOPExam_12December2020.bakery.io;
+package _03_JavaOOPExam_12December2020.bakery.io;
 
 
-import JavaOOPExam_12December2020.bakery.io.interfaces.InputReader;
+import _03_JavaOOPExam_12December2020.bakery.io.interfaces.InputReader;
 
 import java.io.BufferedReader;
 import java.io.IOException;

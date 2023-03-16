@@ -1,4 +1,4 @@
-package JavaOOPExam_12December2020.bakery.common;
+package _03_JavaOOPExam_12December2020.bakery.common;
 
 public class ExceptionMessages {
     public static final String INVALID_NAME = "Name cannot be null or white space!";

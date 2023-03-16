@@ -1,7 +1,7 @@
-package JavaOOPExam_12December2020.bakery.repositories;
+package _03_JavaOOPExam_12December2020.bakery.repositories;
 
-import JavaOOPExam_12December2020.bakery.entities.tables.interfaces.Table;
-import JavaOOPExam_12December2020.bakery.repositories.interfaces.TableRepository;
+import _03_JavaOOPExam_12December2020.bakery.entities.tables.interfaces.Table;
+import _03_JavaOOPExam_12December2020.bakery.repositories.interfaces.TableRepository;
 
 import java.util.ArrayList;
 import java.util.Collection;

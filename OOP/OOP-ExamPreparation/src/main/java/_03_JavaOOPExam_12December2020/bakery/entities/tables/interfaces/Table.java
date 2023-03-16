@@ -1,7 +1,7 @@
-package JavaOOPExam_12December2020.bakery.entities.tables.interfaces;
+package _03_JavaOOPExam_12December2020.bakery.entities.tables.interfaces;
 
-import JavaOOPExam_12December2020.bakery.entities.bakedFoods.interfaces.BakedFood;
-import JavaOOPExam_12December2020.bakery.entities.drinks.interfaces.Drink;
+import _03_JavaOOPExam_12December2020.bakery.entities.bakedFoods.interfaces.BakedFood;
+import _03_JavaOOPExam_12December2020.bakery.entities.drinks.interfaces.Drink;
 
 public interface Table {
     int getTableNumber();
