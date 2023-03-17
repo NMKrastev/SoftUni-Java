@@ -110,7 +110,9 @@ public abstract class BaseTable implements Table {
                 .sum();
 
 
-        double totalTableBill = this.allPeople = this.numberOfPeople * this.pricePerPerson;
+        this.allPeople = this.numberOfPeople * this.pricePerPerson;
+
+        double totalTableBill = healthyFoodBill + beveragesBill + this.allPeople;
 
         this.clear();
 
