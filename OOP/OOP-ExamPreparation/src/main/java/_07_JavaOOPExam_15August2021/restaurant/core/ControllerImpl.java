@@ -2,6 +2,9 @@ package _07_JavaOOPExam_15August2021.restaurant.core;
 
 import _07_JavaOOPExam_15August2021.restaurant.common.ExceptionMessages;
 import _07_JavaOOPExam_15August2021.restaurant.common.OutputMessages;
+import _07_JavaOOPExam_15August2021.restaurant.common.enums.BeveragesType;
+import _07_JavaOOPExam_15August2021.restaurant.common.enums.HealthyFoodType;
+import _07_JavaOOPExam_15August2021.restaurant.common.enums.TableType;
 import _07_JavaOOPExam_15August2021.restaurant.entities.drinks.interfaces.Beverages;
 import _07_JavaOOPExam_15August2021.restaurant.entities.healthyFoods.interfaces.HealthyFood;
 import _07_JavaOOPExam_15August2021.restaurant.entities.tables.interfaces.Table;
@@ -36,11 +39,13 @@ public class ControllerImpl implements Controller {
 
         Food food = null;
 
-        switch (type) {
-            case "Salad":
+        HealthyFoodType healthyFoodType = HealthyFoodType.valueOf(type);
+
+        switch (healthyFoodType) {
+            case Salad:
                 food = new Salad(name, price);
                 break;
-            case "VeganBiscuits":
+            case VeganBiscuits:
                 food = new VeganBiscuits(name, price);
                 break;
         }
@@ -59,11 +64,13 @@ public class ControllerImpl implements Controller {
 
         Beverages beverage = null;
 
-        switch (type) {
-            case "Smoothie":
+        BeveragesType beveragesType = BeveragesType.valueOf(type);
+
+        switch (beveragesType) {
+            case Smoothie:
                 beverage = new Smoothie(name, counter, brand);
                 break;
-            case "Fresh":
+            case Fresh:
                 beverage = new Fresh(name, counter, brand);
                 break;
         }
@@ -82,11 +89,13 @@ public class ControllerImpl implements Controller {
 
         Table table = null;
 
-        switch (type) {
-            case "InGarden":
+        TableType tableType = TableType.valueOf(type);
+
+        switch (tableType) {
+            case InGarden:
                 table = new InGarden(tableNumber, capacity);
                 break;
-            case "Indoors":
+            case Indoors:
                 table = new Indoors(tableNumber, capacity);
                 break;
         }
