@@ -22,7 +22,7 @@ public class HouseTests {
 
     @Before
     public void setUp() {
-        this.name = "Kitty";
+        this.name = "CatHouse";
         this.capacity = 2;
         this.houseOne = new House(name, capacity);
         this.catOne = new Cat("CatOne");

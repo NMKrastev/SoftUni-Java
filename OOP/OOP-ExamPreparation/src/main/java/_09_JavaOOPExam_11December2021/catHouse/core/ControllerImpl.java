@@ -163,7 +163,6 @@ public class ControllerImpl implements Controller {
     public String getStatistics() {
 
         StringBuilder sb = new StringBuilder();
-
         this.houses.forEach(e -> sb.append(e.getStatistics()).append(System.lineSeparator()));
 
         return sb.toString().trim();
