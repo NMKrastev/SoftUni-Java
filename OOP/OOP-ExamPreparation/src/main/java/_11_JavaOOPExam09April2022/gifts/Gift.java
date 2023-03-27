@@ -1,4 +1,4 @@
-package gifts;
+package _11_JavaOOPExam09April2022.gifts;
 
 public class Gift {
     private String type;

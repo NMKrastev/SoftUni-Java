@@ -1,6 +1,4 @@
-package gifts;
-
-import gifts.Gift;
+package _11_JavaOOPExam09April2022.gifts;
 
 import java.util.ArrayList;
 import java.util.Collection;
