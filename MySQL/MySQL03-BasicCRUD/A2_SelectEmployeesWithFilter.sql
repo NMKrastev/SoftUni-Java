@@ -2,4 +2,5 @@
 #whose salaries are higher than 1000.00, ordered by id. Concatenate fields first_name and last_name into 'full_name'.
 SELECT `id`, CONCAT_WS(' ', `first_name`, `last_name`) AS `full_name`, `job_title`, `salary`
 FROM employees
-WHERE salary > 1000.0 ORDER BY id;
+WHERE `salary` > 1000.0
+ORDER BY `id`;
