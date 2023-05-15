@@ -2,4 +2,4 @@
 # Order the result by id. Submit your query statements as Prepare DB & run queries.
 SELECT `title`
 FROM `books`
-WHERE SUBSTR(`title`, 1, 3) = 'The';
+WHERE SUBSTRING(`title`, 1, 3) = 'The';
