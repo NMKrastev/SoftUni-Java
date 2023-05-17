@@ -13,6 +13,10 @@
 #104         Model X    2
 #105         Model 3    2
 #106         Nova       3
+
+#Insert the data from the example above.
+#• Add primary and foreign keys.
+#Submit your queries by using "MySQL run queries & check DB" strategy.
 CREATE TABLE `manufacturers`
 (
     `manufacturer_id` INT PRIMARY KEY AUTO_INCREMENT,
