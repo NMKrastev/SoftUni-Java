@@ -19,6 +19,11 @@
 #3           103
 #2           102
 #2           103
+
+#Insert the data from the example above.
+#• Add primary and foreign keys.
+#• Have in mind that the table student_exams should have a composite primary key.
+#Submit your queries by using "MySQL run queries & check DB" strategy.
 CREATE TABLE `students`
 (
     `student_id` INT PRIMARY KEY AUTO_INCREMENT,
