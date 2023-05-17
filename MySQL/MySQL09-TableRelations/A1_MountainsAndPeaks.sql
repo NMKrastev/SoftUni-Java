@@ -10,14 +10,14 @@
 CREATE TABLE `mountains`
 (
     `id`   INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    `name` VARCHAR(50)
+    `name` VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE `peaks`
 (
     `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    `name` VARCHAR(50),
-    `mountain_id` INT,
+    `name` VARCHAR(50) NOT NULL,
+    `mountain_id` INT NOT NULL,
     CONSTRAINT `fk_peaks_mountains`
     FOREIGN KEY (`mountain_id`)
     REFERENCES `mountains`(`id`)
