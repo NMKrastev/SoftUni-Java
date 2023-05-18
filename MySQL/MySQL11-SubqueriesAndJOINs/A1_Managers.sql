@@ -6,6 +6,6 @@ SELECT e.`employee_id`,
        d.`department_id`,
        d.`name` AS `department_name`
 FROM `employees` AS e
-RIGHT JOIN  `departments` AS d ON e.`employee_id` = d.`manager_id`
+JOIN  `departments` AS d ON e.`employee_id` = d.`manager_id`
 ORDER BY e.`employee_id`
 LIMIT 5;
