@@ -50,8 +50,8 @@ BEGIN
     INSERT INTO `notification_emails` (`recipient`,
                                        `subject`,
                                        `body`)
-    VALUES (new.`account_id`,
-            CONCAT_WS(' ', 'Balance change for account:', new.`account_id`),
+    VALUES (NEW.`account_id`,
+            CONCAT_WS(' ', 'Balance change for account:', NEW.`account_id`),
             CONCAT_WS(' ', 'On', NOW(), 'your balance was changed from', ROUND(NEW.old_sum), 'to', ROUND(NEW.new_sum),
                       '.'));
 END $$
