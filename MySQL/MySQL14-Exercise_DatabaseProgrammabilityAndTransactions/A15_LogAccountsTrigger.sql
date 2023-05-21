@@ -11,7 +11,7 @@ CREATE TABLE `logs`
 
 DELIMITER $$
 
-CREATE TRIGGER `accounts_after_sum_change`
+CREATE TRIGGER `tr_accounts_after_sum_change`
     AFTER UPDATE
     ON `accounts`
     FOR EACH ROW
