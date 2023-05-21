@@ -6,7 +6,6 @@ DELIMITER $$
 CREATE FUNCTION ufn_count_employees_by_town(town_name VARCHAR(50))
     RETURNS INT
     NOT DETERMINISTIC
-    CONTAINS SQL
     READS SQL DATA
 BEGIN
     DECLARE count_by_town INT;
