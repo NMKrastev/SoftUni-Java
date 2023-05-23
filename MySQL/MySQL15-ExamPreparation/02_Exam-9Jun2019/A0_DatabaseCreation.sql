@@ -53,7 +53,7 @@ CREATE TABLE `bank_accounts`
 
 CREATE TABLE `cards`
 (
-    `id`              INT PRIMARY KEY NOT NULL,
+    `id`              INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `card_number`     VARCHAR(19)     NOT NULL,
     `card_status`     VARCHAR(7)         NOT NULL,
     `bank_account_id` INT             NOT NULL,
