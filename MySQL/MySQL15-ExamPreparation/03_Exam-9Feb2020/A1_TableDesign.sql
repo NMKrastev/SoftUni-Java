@@ -1,3 +1,7 @@
+CREATE DATABASE fsd;
+
+use fsd;
+
 CREATE TABLE `countries`
 (
     `id`   INT PRIMARY KEY AUTO_INCREMENT,
