@@ -27,12 +27,12 @@ public class A4_ChangeTownNamesCasing {
         final Connection connection = Utils.getSQLConnection();
 
         //System.out.print("Enter country: ");
-        String country = scanner.nextLine();
+        final String country = scanner.nextLine();
 
         final PreparedStatement getCountryStatement = connection.prepareStatement(FIND_COUNTRY);
         getCountryStatement.setString(1, country);
 
-        ResultSet getCountrySet = getCountryStatement.executeQuery();
+        final ResultSet getCountrySet = getCountryStatement.executeQuery();
 
         if (getCountrySet.next()) {
 
@@ -40,7 +40,7 @@ public class A4_ChangeTownNamesCasing {
 
             final PreparedStatement getAffectedTownsStatement = getAffectedTowns(connection, country);
 
-            ResultSet affectedTownsResultSet = getAffectedTownsStatement.executeQuery();
+            final ResultSet affectedTownsResultSet = getAffectedTownsStatement.executeQuery();
 
             List<String> townsList = new ArrayList<>();
 
