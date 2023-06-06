@@ -28,6 +28,10 @@ public class A2_GetMinionNames {
 
         final PreparedStatement stmt = connection.prepareStatement(GET_MINION_NAMES);
 
+        //Alternatively the task can be solved with two separate queries -
+        //one finding the villain and checking if it exists
+        //and the other, when we already know that the villain exist,
+        //to get the minions that serve the villain with given id
         System.out.print("Enter villain ID: ");
         final int villainID = Integer.parseInt(scanner.nextLine());
 
