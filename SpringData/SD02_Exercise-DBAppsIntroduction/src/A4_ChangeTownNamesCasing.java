@@ -24,7 +24,7 @@ public class A4_ChangeTownNamesCasing {
 
         Scanner scanner = new Scanner(System.in);
 
-        Connection connection = Utils.getSQLConnection();
+        final Connection connection = Utils.getSQLConnection();
 
         //System.out.print("Enter country: ");
         String country = scanner.nextLine();
