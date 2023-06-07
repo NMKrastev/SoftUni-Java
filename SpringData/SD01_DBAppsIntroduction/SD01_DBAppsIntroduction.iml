@@ -7,6 +7,7 @@
     </content>
     <orderEntry type="jdk" jdkName="13" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="mysql-connector-j-8.0.33" level="project" />
     <orderEntry type="library" name="mysql-connector-j-8.0.331" level="project" />
   </component>
 </module>
