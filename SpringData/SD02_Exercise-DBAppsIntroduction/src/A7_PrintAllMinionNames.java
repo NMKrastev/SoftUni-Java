@@ -21,6 +21,7 @@ public class A7_PrintAllMinionNames {
         List<String> minionsNames = new ArrayList<>();
 
         while (resultSet.next()) {
+
             String name = resultSet.getString(COLUMN_LABEL_NAME);
             minionsNames.add(name);
         }
@@ -28,6 +29,7 @@ public class A7_PrintAllMinionNames {
         int minionsCount = minionsNames.size() - 1;
 
         for (int i = 0; i < minionsNames.size() / 2; i++) {
+
             System.out.println(minionsNames.get(i));
             System.out.println(minionsNames.get(minionsCount - i));
         }
