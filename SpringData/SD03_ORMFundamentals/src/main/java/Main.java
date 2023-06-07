@@ -26,7 +26,7 @@ public class Main {
         first.setUsername("Pesho");
         userManager.persist(first);
 
-        //Deletes entity in the database
+        //Deletes entity from the database
         User userThree = userManager.findFirst(User.class, "id = 3");
         userManager.delete(userThree);
 
