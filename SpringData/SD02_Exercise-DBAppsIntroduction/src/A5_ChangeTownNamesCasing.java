@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class A4_ChangeTownNamesCasing {
+public class A5_ChangeTownNamesCasing {
 
     private static final String FIND_COUNTRY = "SELECT * FROM towns WHERE country = ?;";
     private static final String UPDATE_TOWN =
