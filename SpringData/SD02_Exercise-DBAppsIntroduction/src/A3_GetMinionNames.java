@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class A2_GetMinionNames {
+public class A3_GetMinionNames {
 
     private static final String GET_MINION_NAMES =
             "SELECT DISTINCT m.name, m.age, v.name AS villain_name " +
