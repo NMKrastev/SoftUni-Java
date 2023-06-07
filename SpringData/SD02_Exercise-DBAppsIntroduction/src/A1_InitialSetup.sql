@@ -1,4 +1,5 @@
 CREATE DATABASE minions_db;
+
 USE minions_db;
 
 CREATE TABLE towns(
