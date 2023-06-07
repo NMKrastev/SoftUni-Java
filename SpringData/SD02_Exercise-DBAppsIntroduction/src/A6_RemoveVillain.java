@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class A5_RemoveVillain {
+public class A6_RemoveVillain {
 
     private static final String GET_VILLAIN = "SELECT * FROM villains WHERE id = ?;";
     private static final String GET_RELEASED_MINIONS =
