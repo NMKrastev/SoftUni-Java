@@ -1,0 +1,49 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class A9_IncreaseAgeStoredProcedure {
+
+    private static final String GET_OLDER_PROCEDURE = "CALL usp_get_older(?);";
+    private static final String SELECT_MINION_NAME_AGE =
+            "SELECT name, " +
+                    "age " +
+                    "FROM minions " +
+                    "WHERE id = ?;";
+    private static final String PRINT_MINION_FORMAT = "%s %d\n";
+    private static final String COLUMN_LABEL_NAME = "name";
+    private static final String COLUMN_LABEL_AGE = "age";
+
+    public static void main(String[] args) throws SQLException {
+
+        Scanner scanner = new Scanner(System.in);
+
+        final Connection connection = Utils.getSQLConnection();
+
+        int minionID = Integer.parseInt(scanner.nextLine());
+
+
+        final PreparedStatement callGetOlderStatement = getPreparedStatement(connection, minionID, GET_OLDER_PROCEDURE);
+        callGetOlderStatement.executeUpdate();
+
+        final PreparedStatement selectMinionStatement = getPreparedStatement(connection, minionID, SELECT_MINION_NAME_AGE);
+
+        final ResultSet rs = selectMinionStatement.executeQuery();
+        rs.next();
+
+        String name = rs.getString(COLUMN_LABEL_NAME);
+        int age = rs.getInt(COLUMN_LABEL_AGE);
+
+        System.out.printf(PRINT_MINION_FORMAT, name, age);
+    }
+
+    private static PreparedStatement getPreparedStatement(Connection connection, int minionID, String statement) throws SQLException {
+
+        final PreparedStatement stmt = connection.prepareStatement(statement);
+        stmt.setInt(1, minionID);
+
+        return stmt;
+    }
+}
