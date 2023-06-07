@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class A1_GetVillainsNames {
+public class A2_GetVillainsNames {
 
     private static final String GET_VILLAINS_NAMES_AND_MINIONS_COUNT =
             "SELECT v.name, COUNT(DISTINCT mv.minion_id) AS count " +
