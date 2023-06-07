@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class A3_AddMinion {
+public class A4_AddMinion {
 
     private static final String GET_VILLAIN = "SELECT * FROM villains WHERE name = ?;";
     private static final String ADD_VILLAIN =
