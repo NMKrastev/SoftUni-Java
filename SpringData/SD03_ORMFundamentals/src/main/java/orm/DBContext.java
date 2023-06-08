@@ -9,6 +9,8 @@ public interface DBContext<E> {
 
     boolean delete(E entity) throws IllegalAccessException, SQLException;
 
+    boolean delete(E entity, String where) throws IllegalAccessException, SQLException;
+
     Iterable<E> find(Class<E> entityType) throws SQLException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException;
 
     Iterable<E> find(Class<E> entityType, String where) throws SQLException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException;

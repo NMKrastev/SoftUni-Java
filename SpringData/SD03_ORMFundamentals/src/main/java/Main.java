@@ -17,32 +17,38 @@ public class Main {
         Connection connection = Connector.getConnection();
 
         EntityManager<User> userManager = new EntityManager<>(connection);
+
         //Adds entity to the database
+
         User userOne = new User("UserOne", 20, LocalDate.now());
         userManager.persist(userOne);
 
         //Updates entity in the database
+
         User first = userManager.findFirst(User.class);
-        first.setUsername("Pesho");
+        first.setUsername("Test");
         userManager.persist(first);
 
         //Deletes entity from the database
-        User userThree = userManager.findFirst(User.class, "id = 3");
-        userManager.delete(userThree);
+
+        /*User userThree = userManager.findFirst(User.class, "username = 'UserToDelete'");
+        userManager.delete(userThree);*/
 
         //Check the custom ORMException class
-        EntityManager<Student> studentManager = new EntityManager<>(connection);
+
+        /*EntityManager<Student> studentManager = new EntityManager<>(connection);
         Student student = new Student("Pesho");
-        studentManager.persist(student);
+        studentManager.persist(student);*/
 
         //Prints the entities we are working with
+
         User findFirstUser = userManager.findFirst(User.class);
 
         System.out.println(findFirstUser.getId() + " " + findFirstUser.getUsername());
 
-        Student findsStudentWithName = studentManager.findFirst(Student.class, "name = 'Gosho'");
+        //Student findsStudentWithName = studentManager.findFirst(Student.class, "name = 'Gosho'");
 
-        System.out.println(findsStudentWithName.getId() + " " + findsStudentWithName.getName());
+        //System.out.println(findsStudentWithName.getId() + " " + findsStudentWithName.getName());
 
         userManager.find(User.class, "age > 20 AND DAY(registration_date) BETWEEN 3 AND 4")
                 .forEach(u -> System.out.println(u.toString()));

@@ -44,10 +44,19 @@ public class EntityManager<E> implements DBContext<E> {
     @Override
     public boolean delete(E entity) throws IllegalAccessException, SQLException {
 
+        return this.delete(entity, null);
+    }
+
+    @Override
+    public boolean delete(E entity, String where) throws IllegalAccessException, SQLException {
+
         String tableName = this.getTableName(entity.getClass());
         Long primaryKey = this.getId(entity);
 
-        String query = String.format("DELETE FROM %s WHERE id = %d", tableName, primaryKey);
+        String query = String.format("DELETE FROM %s WHERE %s", tableName,
+                String.format(where == null
+                        ? String.format("id = %d", primaryKey)
+                        : where));
 
         return this.connection.prepareStatement(query).execute();
     }
@@ -169,10 +178,10 @@ public class EntityManager<E> implements DBContext<E> {
 
         if (!valuesList.equals(valuesFromTable)) {
 
-            StringBuilder setValues = new StringBuilder();
-            setValues.append("SET ");
+            StringBuilder setBuilderForValues = new StringBuilder();
+            setBuilderForValues.append("SET ");
 
-            String[] columnName = columnList.split(VALUES_SPLITTER);
+            String[] columnsName = columnList.split(VALUES_SPLITTER);
             String[] oldTableValues = valuesFromTable.split(VALUES_SPLITTER);
             String[] newTableValues = valuesList.split(VALUES_SPLITTER);
 
@@ -180,16 +189,17 @@ public class EntityManager<E> implements DBContext<E> {
 
                 if (!newTableValues[i].equals(oldTableValues[i])) {
 
-                    setValues.append(columnName[i])
+                    setBuilderForValues.append(columnsName[i])
                             .append(" = ")
                             .append(newTableValues[i])
                             .append(", ");
                 }
             }
 
-            setValues.delete(setValues.lastIndexOf(","), setValues.lastIndexOf(" "));
+            int deleteIndex = setBuilderForValues.lastIndexOf( ", ");
+            setBuilderForValues.delete(deleteIndex, deleteIndex + 2);
 
-            query = String.format("UPDATE %s %s WHERE id = %d;", tableName, setValues, primaryKey);
+            query = String.format("UPDATE %s %s WHERE %s;", tableName, setBuilderForValues, where);
         }
 
         if (query.isEmpty()) {
