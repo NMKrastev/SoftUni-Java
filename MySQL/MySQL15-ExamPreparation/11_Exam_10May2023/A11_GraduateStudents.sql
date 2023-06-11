@@ -11,11 +11,3 @@ BEGIN
     WHERE YEAR(`start_date`) = `year_started`;
 
 END $$
-
-DELIMITER ;
-
-UPDATE `students` AS s
-    JOIN `students_courses` AS sc ON s.`id` = sc.`student_id`
-    JOIN `courses` AS c ON c.`id` = sc.`course_id`
-SET `is_graduated` = 1
-WHERE YEAR(`start_date`) = 2017;

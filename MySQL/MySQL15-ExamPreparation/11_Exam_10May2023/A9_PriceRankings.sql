@@ -11,8 +11,3 @@ SELECT u.`name` AS `university_name`,
 FROM `universities` AS u
          JOIN `cities` AS c ON c.`id` = u.`city_id`
 ORDER BY `tuition_fee`;
-
-SELECT u.name,
-       c.name
-FROM universities AS u
-JOIN cities AS c ON c.id = u.city_id;
