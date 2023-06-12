@@ -8,49 +8,34 @@ import java.util.Properties;
 public class Connector {
 
     private static Connection connection;
-    private static final String jdbc = "jdbc:mysql://localhost:3306/%s";
+    private static final String JDBC = "jdbc:mysql://localhost:3306/%s";
+    //private static final String DB_PARAMETERS =
+            //"?allowPublicKeyRetrieval=true&userSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC";
+    private static final String DB_NAME = "soft_uni";
+    private static final String USER_KEY = "user";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD_KEY = "password";
+    private static final String PASSWORD = "root_12345";
 
-    public static void createConnection(String username, String password, String dbName) throws SQLException {
+
+    public static void createConnection() throws SQLException {
+
+        if (connection != null) {
+            return;
+        }
 
         Properties properties = new Properties();
-        properties.setProperty("user", username);
-        properties.setProperty("password", password);
+        properties.setProperty(USER_KEY, USERNAME);
+        properties.setProperty(PASSWORD_KEY, PASSWORD);
 
-        String formattedJDBC = String.format(jdbc, dbName);
+        String formattedJDBC = String.format(JDBC, DB_NAME);
 
         connection = DriverManager.getConnection(formattedJDBC, properties);
-
     }
-
-    public static void createConnection(String dbName) throws SQLException {
-
-        Properties properties = new Properties();
-        properties.setProperty("user", "root");
-        properties.setProperty("password", "root_12345");
-
-        String formattedJDBC = String.format(jdbc, dbName);
-
-        connection = DriverManager.getConnection(formattedJDBC, properties);
-
-    }
-
-    /*public static void createConnection() throws SQLException {
-
-        Properties properties = new Properties();
-        properties.setProperty("user", "root");
-        properties.setProperty("password", "root_12345");
-
-        String formattedJDBC = String.format(jdbc, "dbName");
-
-        connection = DriverManager.getConnection(formattedJDBC, properties);
-
-    }*/
 
     public static Connection getConnection() throws SQLException {
 
-        /*if (connection == null) {
-            createConnection();
-        }*/
+        createConnection();
 
         return connection;
     }

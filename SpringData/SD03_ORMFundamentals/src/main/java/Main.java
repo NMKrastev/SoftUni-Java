@@ -1,3 +1,4 @@
+import entities.Employees;
 import entities.Student;
 import entities.User;
 import orm.Connector;
@@ -12,22 +13,22 @@ public class Main {
 
     public static void main(String[] args) throws SQLException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, InstantiationException, NoSuchFieldException {
 
-        Connector.createConnection("soft_uni");
+        Connector.createConnection();
 
         Connection connection = Connector.getConnection();
 
-        EntityManager<User> userManager = new EntityManager<>(connection);
+        //EntityManager<User> userManager = new EntityManager<>(connection);
 
         //Adds entity to the database
 
-        User userOne = new User("UserOne", 20, LocalDate.now());
-        userManager.persist(userOne);
+        /*User userOne = new User("UserOne", 20, LocalDate.now());
+        userManager.persist(userOne);*/
 
         //Updates entity in the database
 
-        User first = userManager.findFirst(User.class);
+        /*User first = userManager.findFirst(User.class);
         first.setUsername("Test");
-        userManager.persist(first);
+        userManager.persist(first);*/
 
         //Deletes entity from the database
 
@@ -42,16 +43,22 @@ public class Main {
 
         //Prints the entities we are working with
 
-        User findFirstUser = userManager.findFirst(User.class);
+        /*User findFirstUser = userManager.findFirst(User.class);
 
-        System.out.println(findFirstUser.getId() + " " + findFirstUser.getUsername());
+        System.out.println(findFirstUser.getId() + " " + findFirstUser.getUsername());*/
 
         //Student findsStudentWithName = studentManager.findFirst(Student.class, "name = 'Gosho'");
 
         //System.out.println(findsStudentWithName.getId() + " " + findsStudentWithName.getName());
 
-        userManager.find(User.class, "age > 20 AND DAY(registration_date) BETWEEN 3 AND 4")
-                .forEach(u -> System.out.println(u.toString()));
+        /*userManager.find(User.class, "age > 20 AND DAY(registration_date) BETWEEN 3 AND 4")
+                .forEach(u -> System.out.println(u.toString()));*/
+
+        EntityManager<Employees> employeeManager = new EntityManager<>(connection);
+
+        //Employees employee = new Employees("Adam", "Smith", 15000);
+
+        employeeManager.doCreate(Employees.class);
 
         connection.close();
     }

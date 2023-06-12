@@ -5,6 +5,8 @@ import java.sql.SQLException;
 
 public interface DBContext<E> {
 
+    void doCreate(Class<E> entityClass) throws IllegalAccessException, SQLException;
+
     boolean persist(E entity) throws SQLException, IllegalAccessException, NoSuchFieldException, NoSuchMethodException, InvocationTargetException, InstantiationException;
 
     boolean delete(E entity) throws IllegalAccessException, SQLException;

@@ -7,22 +7,82 @@ import orm.annotations.Id;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class EntityManager<E> implements DBContext<E> {
 
     private static final String VALUES_SPLITTER = ",\\s+";
     private static final String VALUES_FORMAT = "'%s'";
+
+    private static final String CREATE_TABLE_FORMAT = "CREATE TABLE %s (id INT PRIMARY KEY AUTO_INCREMENT, %s);";
+    private static final String CREATE_VALUE_FORMAT = "%s %s";
+
+    private static final String INT = "INT";
+    private static final String VARCHAR = "VARCHAR(50)";
+    private static final String DECIMAL = "DECIMAL(19, 2)";
+
     private final Connection connection;
 
     public EntityManager(Connection connection) {
         this.connection = connection;
+    }
+
+    @Override
+    public void doCreate(Class<E> entity) throws SQLException {
+
+        final String tableName = getTableName(entity);
+
+        final List<KeyValuePair> fieldsWithTypes = getAllFieldsAndTypesInKeyValuePairs(entity);
+
+        final String fieldsWithTypesFormatted = fieldsWithTypes
+                .stream()
+                .map(keyValuePair -> String.format(CREATE_VALUE_FORMAT, keyValuePair.key, keyValuePair.value))
+                .collect(Collectors.joining(", "));
+
+        final PreparedStatement stmt = connection.prepareStatement
+                (String.format(CREATE_TABLE_FORMAT, tableName, fieldsWithTypesFormatted));
+
+        stmt.execute();
+
+    }
+
+    private List<KeyValuePair> getAllFieldsAndTypesInKeyValuePairs(Class<E> entity) {
+
+        return getAllFieldsWithoutID(entity)
+                .stream()
+                .map(f -> new KeyValuePair(getSQLColumnName(f), getSQLType(f.getType())))
+                .toList();
+    }
+
+    private List<Field> getAllFieldsWithoutID(Class<E> entity) {
+
+        return Arrays.stream(entity.getDeclaredFields())
+                .filter(f -> !f.isAnnotationPresent(Id.class) && f.isAnnotationPresent(Column.class))
+                .toList();
+    }
+
+    private String getSQLType(Class<?> type) {
+
+        if (type == Integer.class || type == int.class) {
+            return INT;
+        } else if (type == Double.class || type == double.class) {
+            return DECIMAL;
+        } else {
+            return VARCHAR;
+        }
+    }
+
+    private String getSQLColumnName(Field field) {
+
+        return field.getAnnotationsByType(Column.class)[0].name();
     }
 
     @Override
@@ -196,7 +256,7 @@ public class EntityManager<E> implements DBContext<E> {
                 }
             }
 
-            int deleteIndex = setBuilderForValues.lastIndexOf( ", ");
+            int deleteIndex = setBuilderForValues.lastIndexOf(", ");
             setBuilderForValues.delete(deleteIndex, deleteIndex + 2);
 
             query = String.format("UPDATE %s %s WHERE %s;", tableName, setBuilderForValues, where);
@@ -283,5 +343,36 @@ public class EntityManager<E> implements DBContext<E> {
         }
 
         return entity;
+    }
+
+    private List<KeyValuePair> getKeyValuePairs(E entity) {
+
+        final Class<?> clazz = entity.getClass();
+
+        return Arrays.stream(clazz.getDeclaredFields())
+                .filter(f -> !f.isAnnotationPresent(Id.class) && f.isAnnotationPresent(Column.class))
+                .map(f -> new KeyValuePair(f.getAnnotationsByType(Column.class)[0].name(),
+                        mapFieldsToGivenType(f, entity)))
+                .toList();
+    }
+
+    private String mapFieldsToGivenType(Field field, E entity) {
+
+        field.setAccessible(true);
+
+        Object o = null;
+
+        try {
+            o = field.get(entity);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        return o instanceof String || o instanceof LocalDate
+                ? "'" + o + "'"
+                : Objects.requireNonNull(o).toString();
+    }
+
+    private record KeyValuePair(String key, String value) {
     }
 }
