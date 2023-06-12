@@ -11,28 +11,33 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class EntityManager<E> implements DBContext<E> {
 
+    private static final String CREATE_TABLE_FORMAT = "CREATE TABLE IF NOT EXISTS %s (id INT PRIMARY KEY AUTO_INCREMENT, %s);";
+    private static final String DELETE_FROM_TABLE_FORMAT = "DELETE FROM %s WHERE %s";
+    private static final String SELECT_FROM_TABLE_FORMAT = "SELECT * FROM %s %s";
+    private static final String SELECT_FROM_TABLE_LIMIT_1_FORMAT = "SELECT * FROM %s %s LIMIT 1";
+    private static final String ALTER_TABLE_FORMAT = "ALTER TABLE %s %s";
+    private static final String ADD_COLUMN_FORMAT = "ADD COLUMN %s %s";
+    private static final String GET_ALL_COLUMNS_NAMES =
+            "SELECT `COLUMN_NAME` " +
+                    "FROM `INFORMATION_SCHEMA`.`COLUMNS` " +
+                    "WHERE `TABLE_SCHEMA` = 'soft_uni' " +
+                    "  AND `COLUMN_NAME` != 'id' " +
+                    "  AND `TABLE_NAME` = ?;";
+
+    private static final String CREATE_VALUE_FORMAT = "%s %s";
+    private static final String WHERE_ID_FORMAT = "id = %d";
+    private static final String WHERE_FORMAT = "WHERE %s";
     private static final String VALUES_SPLITTER = ",\\s+";
     private static final String VALUES_FORMAT = "'%s'";
 
-    private static final String CREATE_TABLE_FORMAT = "CREATE TABLE IF NOT EXISTS %s (id INT PRIMARY KEY AUTO_INCREMENT, %s);";
-    private static final String CREATE_VALUE_FORMAT = "%s %s";
-    private static final String DELETE_FROM_TABLE_FORMAT = "DELETE FROM %s WHERE %s";
-    private static final String WHERE_ID_FORMAT = "id = %d";
-    private static final String SELECT_FROM_TABLE_FORMAT = "SELECT * FROM %s %s";
-    private static final String SELECT_FROM_TABLE_LIMIT_1_FORMAT = "SELECT * FROM %s %s LIMIT 1";
-    private static final String WHERE_FORMAT = "WHERE %s";
-
     private static final String INT = "INT";
-    private static final String VARCHAR = "VARCHAR(50)";
-    private static final String DECIMAL = "DECIMAL(19, 2)";
+    private static final String VARCHAR = "VARCHAR(50) NOT NULL";
+    private static final String DECIMAL = "DECIMAL(19, 2) NOT NULL";
 
     private final Connection connection;
 
@@ -43,9 +48,9 @@ public class EntityManager<E> implements DBContext<E> {
     @Override
     public void doCreate(Class<E> entity) throws SQLException {
 
-        final String tableName = getTableName(entity);
+        final String tableName = this.getTableName(entity);
 
-        final List<KeyValuePair> fieldsWithTypes = getAllFieldsAndTypesInKeyValuePairs(entity);
+        final List<KeyValuePair> fieldsWithTypes = this.getAllFieldsAndTypesInKeyValuePairs(entity);
 
         final String fieldsWithTypesFormatted = fieldsWithTypes
                 .stream()
@@ -63,7 +68,7 @@ public class EntityManager<E> implements DBContext<E> {
 
         return getAllFieldsWithoutID(entity)
                 .stream()
-                .map(f -> new KeyValuePair(getSQLColumnName(f), getSQLType(f.getType())))
+                .map(f -> new KeyValuePair(this.getSQLColumnName(f), this.getSQLType(f.getType())))
                 .toList();
     }
 
@@ -91,6 +96,63 @@ public class EntityManager<E> implements DBContext<E> {
     }
 
     @Override
+    public void doAlter(Class<E> entity) throws SQLException {
+
+        final String tableName = this.getTableName(entity);
+
+        final String columnStatementForNewFields = addColumnStatementForNewFields(entity, tableName);
+
+        final String alterQuery = String.format(ALTER_TABLE_FORMAT, tableName, columnStatementForNewFields);
+
+        PreparedStatement alterTableStatement = connection.prepareStatement(alterQuery);
+
+        alterTableStatement.execute();
+    }
+
+    private String addColumnStatementForNewFields(Class<E> entity, String tableName) throws SQLException {
+
+        final Set<String> sqlColumns = getSQLColumnNames(entity, tableName);
+        final List<Field> allFieldsWithoutID = getAllFieldsWithoutID(entity);
+
+        List<String> newFieldsStatement = new ArrayList<>();
+
+        for (Field field : allFieldsWithoutID) {
+
+            final String fieldName = getSQLColumnName(field);
+
+            if (sqlColumns.contains(fieldName)) {
+                continue;
+            }
+
+            final String sqlType = getSQLType(field.getType());
+
+            String addStatement = String.format(ADD_COLUMN_FORMAT, fieldName, sqlType);
+
+            newFieldsStatement.add(addStatement);
+        }
+
+        return String.join(", ", newFieldsStatement);
+    }
+
+    private Set<String> getSQLColumnNames(Class<E> entity, String tableName) throws SQLException {
+
+        Set<String> allFields = new HashSet<>();
+
+        final PreparedStatement getAllFieldsStatement = connection.prepareStatement(GET_ALL_COLUMNS_NAMES);
+
+        getAllFieldsStatement.setString(1, tableName);
+
+        final ResultSet resultSet = getAllFieldsStatement.executeQuery();
+
+        while (resultSet.next()) {
+
+            allFields.add(resultSet.getString(1));
+        }
+
+        return allFields;
+    }
+
+    @Override
     public boolean persist(E entity) throws SQLException, IllegalAccessException, InvocationTargetException,
             NoSuchMethodException, InstantiationException {
 
@@ -115,7 +177,7 @@ public class EntityManager<E> implements DBContext<E> {
     @Override
     public boolean delete(E entity, String where) throws IllegalAccessException, SQLException {
 
-        String tableName = this.getTableName(entity.getClass());
+        final String tableName = this.getTableName(entity.getClass());
         Long primaryKey = this.getId(entity);
 
         String query = String.format(DELETE_FROM_TABLE_FORMAT, tableName,
@@ -332,6 +394,10 @@ public class EntityManager<E> implements DBContext<E> {
 
         } else if (field.getType() == int.class || field.getType() == Integer.class) {
 
+            if (value == null) {
+                value = "0";
+            }
+
             field.setInt(entity, Integer.parseInt(value));
 
         } else if (field.getType() == double.class || field.getType() == Double.class) {
@@ -343,6 +409,10 @@ public class EntityManager<E> implements DBContext<E> {
             field.set(entity, LocalDate.parse(value));
 
         } else if (field.getType() == String.class) {
+
+            if (value == null) {
+                value = "0.00";
+            }
 
             field.set(entity, value);
 

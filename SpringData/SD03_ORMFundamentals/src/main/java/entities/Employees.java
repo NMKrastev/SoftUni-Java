@@ -15,6 +15,8 @@ public class Employees {
     private String lastName;
     @Column(name = "salary")
     private double salary;
+    @Column(name = "age")
+    private int age;
 
     public Employees(String firstName, String lastName, double salary) {
         this.firstName = firstName;
@@ -55,6 +57,14 @@ public class Employees {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override

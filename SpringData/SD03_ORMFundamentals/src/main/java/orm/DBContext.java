@@ -7,6 +7,8 @@ public interface DBContext<E> {
 
     void doCreate(Class<E> entityClass) throws IllegalAccessException, SQLException;
 
+    void doAlter(Class<E> entity) throws SQLException;
+
     boolean persist(E entity) throws SQLException, IllegalAccessException, NoSuchFieldException, NoSuchMethodException, InvocationTargetException, InstantiationException;
 
     boolean delete(E entity) throws IllegalAccessException, SQLException;
