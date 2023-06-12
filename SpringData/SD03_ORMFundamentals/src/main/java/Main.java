@@ -54,11 +54,23 @@ public class Main {
         /*userManager.find(User.class, "age > 20 AND DAY(registration_date) BETWEEN 3 AND 4")
                 .forEach(u -> System.out.println(u.toString()));*/
 
+
+        //Creates new table if it doesn't exist and tests it with adding entity into it
         EntityManager<Employees> employeeManager = new EntityManager<>(connection);
 
-        //Employees employee = new Employees("Adam", "Smith", 15000);
-
         employeeManager.doCreate(Employees.class);
+
+        Employees employeeJohn = new Employees("John", "Smith", 15000);
+        employeeManager.persist(employeeJohn);
+
+        employeeJohn = employeeManager.findFirst(Employees.class);
+        employeeJohn.setSalary(20000);
+        employeeManager.persist(employeeJohn);
+
+        employeeJohn = employeeManager.findFirst(Employees.class);
+        employeeManager.delete(employeeJohn);
+
+
 
         connection.close();
     }

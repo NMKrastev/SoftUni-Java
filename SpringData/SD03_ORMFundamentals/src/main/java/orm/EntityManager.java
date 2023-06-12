@@ -22,8 +22,13 @@ public class EntityManager<E> implements DBContext<E> {
     private static final String VALUES_SPLITTER = ",\\s+";
     private static final String VALUES_FORMAT = "'%s'";
 
-    private static final String CREATE_TABLE_FORMAT = "CREATE TABLE %s (id INT PRIMARY KEY AUTO_INCREMENT, %s);";
+    private static final String CREATE_TABLE_FORMAT = "CREATE TABLE IF NOT EXISTS %s (id INT PRIMARY KEY AUTO_INCREMENT, %s);";
     private static final String CREATE_VALUE_FORMAT = "%s %s";
+    private static final String DELETE_FROM_TABLE_FORMAT = "DELETE FROM %s WHERE %s";
+    private static final String WHERE_ID_FORMAT = "id = %d";
+    private static final String SELECT_FROM_TABLE_FORMAT = "SELECT * FROM %s %s";
+    private static final String SELECT_FROM_TABLE_LIMIT_1_FORMAT = "SELECT * FROM %s %s LIMIT 1";
+    private static final String WHERE_FORMAT = "WHERE %s";
 
     private static final String INT = "INT";
     private static final String VARCHAR = "VARCHAR(50)";
@@ -113,9 +118,9 @@ public class EntityManager<E> implements DBContext<E> {
         String tableName = this.getTableName(entity.getClass());
         Long primaryKey = this.getId(entity);
 
-        String query = String.format("DELETE FROM %s WHERE %s", tableName,
+        String query = String.format(DELETE_FROM_TABLE_FORMAT, tableName,
                 String.format(where == null
-                        ? String.format("id = %d", primaryKey)
+                        ? String.format(WHERE_ID_FORMAT, primaryKey)
                         : where));
 
         return this.connection.prepareStatement(query).execute();
@@ -134,8 +139,8 @@ public class EntityManager<E> implements DBContext<E> {
 
         String tableName = this.getTableName(entityType);
 
-        String query = String.format("SELECT * FROM %s %s", tableName,
-                String.format(where == null ? "" : "WHERE %s", where));
+        String query = String.format(SELECT_FROM_TABLE_FORMAT, tableName,
+                String.format(where == null ? "" : WHERE_FORMAT, where));
 
         ResultSet resultSet = this.connection.prepareStatement(query).executeQuery();
 
@@ -167,8 +172,8 @@ public class EntityManager<E> implements DBContext<E> {
 
         String tableName = this.getTableName(entityType);
 
-        String query = String.format("SELECT * FROM %s %s LIMIT 1", tableName,
-                String.format(where == null ? "" : "WHERE %s", where));
+        String query = String.format(SELECT_FROM_TABLE_LIMIT_1_FORMAT, tableName,
+                String.format(where == null ? "" : WHERE_FORMAT, where));
 
         ResultSet resultSet = this.connection.prepareStatement(query).executeQuery();
 
@@ -328,6 +333,10 @@ public class EntityManager<E> implements DBContext<E> {
         } else if (field.getType() == int.class || field.getType() == Integer.class) {
 
             field.setInt(entity, Integer.parseInt(value));
+
+        } else if (field.getType() == double.class || field.getType() == Double.class) {
+
+            field.setDouble(entity, Double.parseDouble(value));
 
         } else if (field.getType() == LocalDate.class) {
 
