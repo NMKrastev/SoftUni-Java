@@ -17,10 +17,14 @@ public class A4_EmployeesWithSalaryOver50000 {
 
         EntityManager manager = factory.createEntityManager();
 
+        manager.getTransaction().begin();
+
         List<Employee> employeeList = manager.createQuery(GET_ALL_EMPLOYEES_WITH_SALARY_OVER_50000, Employee.class)
                 .getResultList();
 
         employeeList.forEach(e -> System.out.println(e.getFirstName()));
+
+        manager.getTransaction().commit();
 
         manager.close();
         factory.close();
