@@ -14,14 +14,15 @@ public class A7_AddressesWithEmployeeCount {
 
     public static void main(String[] args) {
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+        final EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 
-        EntityManager manager = factory.createEntityManager();
+        final EntityManager manager = factory.createEntityManager();
 
         manager.getTransaction().begin();
 
-        List<Object[]> addressList = manager.createQuery(SELECT_COUNT_OF_EMPLOYEES_ON_AN_ADDRESS, Object[].class).setMaxResults(10).getResultList();
-        Map<String, Long> employeesCountOnAddress = new LinkedHashMap<>(addressList.size());
+        final List<Object[]> addressList = manager.createQuery(SELECT_COUNT_OF_EMPLOYEES_ON_AN_ADDRESS, Object[].class).setMaxResults(10).getResultList();
+
+        Map<String, Long> employeesCountOnAddress = new LinkedHashMap<>();
 
         for (Object[] entity : addressList) {
             employeesCountOnAddress.put((String) entity[0], (Long) entity[1]);
