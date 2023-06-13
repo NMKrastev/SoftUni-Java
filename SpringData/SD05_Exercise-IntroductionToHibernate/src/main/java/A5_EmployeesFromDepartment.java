@@ -13,13 +13,13 @@ public class A5_EmployeesFromDepartment {
 
     public static void main(String[] args) {
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+        final EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 
-        EntityManager manager = factory.createEntityManager();
+        final EntityManager manager = factory.createEntityManager();
 
         manager.getTransaction().begin();
 
-        List<Employee> employeesList =
+        final List<Employee> employeesList =
                 manager.createQuery(SELECT_ALL_EMPLOYEES_FROM_RESEARCH_AND_DEVELOPMENT, Employee.class).getResultList();
 
         employeesList
