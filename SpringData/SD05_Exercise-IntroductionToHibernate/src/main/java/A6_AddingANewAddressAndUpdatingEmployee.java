@@ -15,9 +15,9 @@ public class A6_AddingANewAddressAndUpdatingEmployee {
 
         Scanner scanner = new Scanner(System.in);
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+        final EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 
-        EntityManager manager = factory.createEntityManager();
+        final EntityManager manager = factory.createEntityManager();
 
         manager.getTransaction().begin();
 
