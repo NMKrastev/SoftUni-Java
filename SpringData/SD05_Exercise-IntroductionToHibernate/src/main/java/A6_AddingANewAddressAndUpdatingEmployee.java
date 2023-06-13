@@ -25,8 +25,8 @@ public class A6_AddingANewAddressAndUpdatingEmployee {
         address.setText("Vitoshka 15");
         manager.persist(address);
 
-        System.out.println("Please, enter last name: ");
-        String lastName = scanner.nextLine();
+        System.out.print("Please, enter last name: ");
+        final String lastName = scanner.nextLine();
 
         manager.createQuery(SET_ADDRESS_TO_EMPLOYEE_WITH_LAST_NAME)
                 .setParameter(1, lastName).executeUpdate();
