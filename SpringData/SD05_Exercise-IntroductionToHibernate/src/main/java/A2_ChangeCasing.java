@@ -23,7 +23,7 @@ public class A2_ChangeCasing {
 
         manager.createQuery(UPDATE_TOWN_WITH_NAME_LENGTH_MORE_OR_EQUAL_THAN_5).executeUpdate();
 
-        /*List<Town> fromTowns = manager.createQuery(GET_ALL_TOWNS, Town.class).getResultList();
+        /*final List<Town> fromTowns = manager.createQuery(GET_ALL_TOWNS, Town.class).getResultList();
 
         fromTowns.stream()
                 .filter(e -> e.getName().length() <= 5)
