@@ -18,6 +18,8 @@ public class A3_ContainsEmployee {
 
         EntityManager manager = factory.createEntityManager();
 
+        manager.getTransaction().begin();
+
         System.out.print("Please, enter a name: ");
         String fullName = scanner.nextLine();
 
@@ -26,6 +28,8 @@ public class A3_ContainsEmployee {
                 .getSingleResult();
 
         System.out.println(count == 0 ? "No" : "Yes");
+
+        manager.getTransaction().commit();
 
         manager.close();
         factory.close();
