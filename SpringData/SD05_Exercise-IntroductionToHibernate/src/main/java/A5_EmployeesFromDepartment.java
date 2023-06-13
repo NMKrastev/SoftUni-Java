@@ -17,12 +17,16 @@ public class A5_EmployeesFromDepartment {
 
         EntityManager manager = factory.createEntityManager();
 
+        manager.getTransaction().begin();
+
         List<Employee> employeesList =
                 manager.createQuery(SELECT_ALL_EMPLOYEES_FROM_RESEARCH_AND_DEVELOPMENT, Employee.class).getResultList();
 
         employeesList
                 .forEach(e -> System.out.printf("%s %s from %s - $%.2f\n",
                         e.getFirstName(), e.getLastName(), e.getDepartment(), e.getSalary()));
+
+        manager.getTransaction().commit();
 
         manager.close();
         factory.close();
