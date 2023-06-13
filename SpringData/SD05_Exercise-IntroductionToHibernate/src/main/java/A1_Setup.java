@@ -7,9 +7,9 @@ import java.util.List;
 public class A1_Setup {
     public static void main(String[] args) {
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("soft_uni");
+        final EntityManagerFactory factory = Persistence.createEntityManagerFactory("soft_uni");
 
-        EntityManager manager = factory.createEntityManager();
+        final EntityManager manager = factory.createEntityManager();
 
         factory.close();
     }
