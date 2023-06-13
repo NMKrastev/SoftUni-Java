@@ -14,16 +14,16 @@ public class A3_ContainsEmployee {
 
         Scanner scanner = new Scanner(System.in);
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+        final EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 
-        EntityManager manager = factory.createEntityManager();
+        final EntityManager manager = factory.createEntityManager();
 
         manager.getTransaction().begin();
 
         System.out.print("Please, enter a name: ");
-        String fullName = scanner.nextLine();
+        final String fullName = scanner.nextLine();
 
-        long count = manager.createQuery(SELECT_IF_NAME_EXISTS_IN_DB, Long.class)
+        final long count = manager.createQuery(SELECT_IF_NAME_EXISTS_IN_DB, Long.class)
                 .setParameter(1, fullName)
                 .getSingleResult();
 
