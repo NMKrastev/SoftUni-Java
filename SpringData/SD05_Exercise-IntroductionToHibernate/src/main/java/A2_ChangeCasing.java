@@ -8,7 +8,9 @@ import java.util.List;
 public class A2_ChangeCasing {
 
     private static final String PERSISTENCE_UNIT_NAME = "soft_uni";
-    private static final String GET_ALL_TOWNS = "FROM Town";
+    private static final String UPDATE_TOWN_WITH_NAME_LENGTH_MORE_OR_EQUAL_THAN_5 =
+            "UPDATE Town AS t SET t.name = UPPER(t.name) WHERE LENGTH(t.name) <= 5";
+    //private static final String GET_ALL_TOWNS = "FROM Town";
 
 
     public static void main(String[] args) {
@@ -19,11 +21,13 @@ public class A2_ChangeCasing {
 
         manager.getTransaction().begin();
 
-        List<Town> fromTowns = manager.createQuery(GET_ALL_TOWNS, Town.class).getResultList();
+        manager.createQuery(UPDATE_TOWN_WITH_NAME_LENGTH_MORE_OR_EQUAL_THAN_5).executeUpdate();
+
+        /*List<Town> fromTowns = manager.createQuery(GET_ALL_TOWNS, Town.class).getResultList();
 
         fromTowns.stream()
                 .filter(e -> e.getName().length() <= 5)
-                .forEach(e -> e.setName(e.getName().toUpperCase()));
+                .forEach(e -> e.setName(e.getName().toUpperCase()));*/
 
         manager.getTransaction().commit();
 
