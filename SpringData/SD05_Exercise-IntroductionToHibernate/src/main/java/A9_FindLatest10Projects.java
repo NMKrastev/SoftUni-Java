@@ -29,7 +29,7 @@ public class A9_FindLatest10Projects {
                 .sorted(Comparator.comparing(Project::getName))
                 .toList();
 
-        //Project Start Date:xxxx does not have whitespace as shown in the task
+        //Project Start Date:00:00:00.0 does not have whitespace as shown in the task
         sortedByProjectName
                 .forEach(e -> System.out.printf("Project name: %s\n" +
                                 "        Project Description: %s\n" +
