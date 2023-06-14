@@ -57,11 +57,13 @@ public class A13_RemoveTowns {
         manager.getTransaction().commit();
 
         if (addressList.size() != 0) {
+
             if (addressList.size() < 2) {
                 System.out.printf("%d address in %s deleted\n", addressList.size(), townName);
             } else {
                 System.out.printf("%d addresses in %s deleted\n", addressList.size(), townName);
             }
+
         } else {
             System.out.printf("There is no town with name %s\n", townName);
         }
