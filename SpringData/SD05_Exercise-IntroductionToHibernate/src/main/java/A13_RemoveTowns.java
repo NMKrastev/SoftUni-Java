@@ -13,11 +13,11 @@ public class A13_RemoveTowns {
 
     private static final String PERSISTENCE_UNIT_NAME = "soft_uni";
     private static final String SELECT_TOWN_WITH_NAME =
-            "FROM Town AS t WHERE t.name = ?1";
+            "SELECT t FROM Town AS t WHERE t.name = ?1";
     private static final String SELECT_FROM_ADDRESSES_BY_TOWN_ID =
-            "FROM Address AS a WHERE a.town.id = ?1";
+            "SELECT a FROM Address AS a WHERE a.town.id = ?1";
     private static final String SELECT_EMPLOYEES_WITH_ADDRESS_FROM_TOWN_ID =
-            "FROM Employee AS e WHERE e.address.town.id = ?1";
+            "SELECT e FROM Employee AS e WHERE e.address.town.id = ?1";
 
 
     public static void main(String[] args) {

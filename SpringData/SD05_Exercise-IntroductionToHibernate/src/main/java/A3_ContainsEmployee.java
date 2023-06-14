@@ -8,7 +8,7 @@ public class A3_ContainsEmployee {
 
     private static final String PERSISTENCE_UNIT_NAME = "soft_uni";
     private static final String SELECT_IF_NAME_EXISTS_IN_DB =
-            "SELECT COUNT(e) FROM Employee AS e WHERE CONCAT_WS(' ', e.firstName, e.lastName) = ?1";
+            "SELECT COUNT(e) FROM Employee AS e WHERE CONCAT(e.firstName, ' ', e.lastName) = ?1";
 
     public static void main(String[] args) {
 

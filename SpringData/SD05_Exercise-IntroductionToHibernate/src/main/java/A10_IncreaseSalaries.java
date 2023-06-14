@@ -11,7 +11,7 @@ public class A10_IncreaseSalaries {
 
     private static final String PERSISTENCE_UNIT_NAME = "soft_uni";
     private static final String GET_EMPLOYEES_WITH_RAISED_SALARIES =
-            "FROM Employee AS e WHERE e.department.id IN (?1)";
+            "SELECT e FROM Employee AS e WHERE e.department.id IN (?1)";
 
     public static void main(String[] args) {
 

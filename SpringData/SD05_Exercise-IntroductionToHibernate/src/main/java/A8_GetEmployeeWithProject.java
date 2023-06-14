@@ -11,7 +11,7 @@ public class A8_GetEmployeeWithProject {
 
     private static final String PERSISTENCE_UNIT_NAME = "soft_uni";
     private static final String GET_EMPLOYEE_BY_ID =
-            "FROM Employee WHERE id = ?1";
+            "SELECT e FROM Employee AS e WHERE e.id = ?1";
     private static final String GET_PROJECTS_BY_EMPLOYEE_ID =
             "SELECT p.name FROM Project AS p JOIN p.employees AS e WHERE e.id = ?1 ORDER BY p.name";
 

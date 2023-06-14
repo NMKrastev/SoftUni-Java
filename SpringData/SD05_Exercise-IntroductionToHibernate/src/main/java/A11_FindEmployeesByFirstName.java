@@ -10,7 +10,7 @@ public class A11_FindEmployeesByFirstName {
 
     private static final String PERSISTENCE_UNIT_NAME = "soft_uni";
     private static final String GET_EMPLOYEES_WITH_PATTERN_INPUT =
-            "FROM Employee AS e WHERE e.firstName LIKE CONCAT(?1, '%')";
+            "SELECT e FROM Employee AS e WHERE e.firstName LIKE CONCAT(?1, '%')";
 
     public static void main(String[] args) {
 

@@ -10,7 +10,7 @@ public class A7_AddressesWithEmployeeCount {
 
     private static final String PERSISTENCE_UNIT_NAME = "soft_uni";
     private static final String SELECT_COUNT_OF_EMPLOYEES_ON_AN_ADDRESS =
-            "SELECT a.text, COUNT(*) AS peopleCount FROM Address AS a JOIN a.employees AS e GROUP BY a.text ORDER BY peopleCount DESC";
+            "SELECT a.text, COUNT(a) AS peopleCount FROM Address AS a JOIN a.employees AS e GROUP BY a.text ORDER BY peopleCount DESC";
 
     public static void main(String[] args) {
 
