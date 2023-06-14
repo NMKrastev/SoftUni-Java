@@ -23,7 +23,7 @@ public class A11_FindEmployeesByFirstName {
         System.out.print("Enter an input: ");
         String input = scanner.nextLine();
 
-        List<Employee> employeeList =
+        final List<Employee> employeeList =
                 manager.createQuery(GET_EMPLOYEES_WITH_PATTERN_INPUT, Employee.class)
                         .setParameter(1, input)
                         .getResultList();
