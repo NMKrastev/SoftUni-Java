@@ -6,7 +6,16 @@ import java.util.Scanner;
 
 public class A9_IncreaseAgeStoredProcedure {
 
-    private static final String GET_OLDER_PROCEDURE = "CALL usp_get_older(?);";
+    private static final String CREATE_GET_OLDER_PROCEDURE =
+            "DROP PROCEDURE IF EXISTS usp_get_older; " +
+            "DELIMITER $$" +
+            "CREATE PROCEDURE usp_get_older(minion_id INT) " +
+            "BEGIN " +
+            "UPDATE minions " +
+            "SET age = age + 1 " +
+            "WHERE id = ?; " +
+            "END $$";
+    private static final String CALL_OLDER_PROCEDURE = "CALL usp_get_older(?);";
     private static final String SELECT_MINION_NAME_AGE =
             "SELECT name, " +
                     "age " +
@@ -24,8 +33,9 @@ public class A9_IncreaseAgeStoredProcedure {
 
         int minionID = Integer.parseInt(scanner.nextLine());
 
+        final PreparedStatement createGetOlderProcedure = getPreparedStatement(connection, minionID, CREATE_GET_OLDER_PROCEDURE);
 
-        final PreparedStatement callGetOlderStatement = getPreparedStatement(connection, minionID, GET_OLDER_PROCEDURE);
+        final PreparedStatement callGetOlderStatement = getPreparedStatement(connection, minionID, CALL_OLDER_PROCEDURE);
         callGetOlderStatement.executeUpdate();
 
         final PreparedStatement selectMinionStatement = getPreparedStatement(connection, minionID, SELECT_MINION_NAME_AGE);
