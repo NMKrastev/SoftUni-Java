@@ -34,7 +34,7 @@ public class Main {
         System.out.print("Please enter task number from 1 to 6: ");
         int taskNumber = Integer.parseInt(scanner.nextLine());
 
-        if (isNumberNonExistent(taskNumber)) return;
+        if (isTaskNumberNonExistent(taskNumber)) return;
 
         System.out.println(executeTask(taskNumber));
     }
@@ -145,7 +145,7 @@ public class Main {
         manager.getTransaction().commit();
     }
 
-    private static boolean isNumberNonExistent(int taskNumber) {
+    private static boolean isTaskNumberNonExistent(int taskNumber) {
 
         if (taskNumber < 1 || taskNumber > 6) {
             System.out.printf("Task with number %d does not exist!\n", taskNumber);
