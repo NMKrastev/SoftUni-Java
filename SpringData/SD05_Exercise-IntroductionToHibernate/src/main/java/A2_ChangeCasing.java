@@ -1,9 +1,6 @@
-import entities.Town;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-
-import java.util.List;
 
 public class A2_ChangeCasing {
 

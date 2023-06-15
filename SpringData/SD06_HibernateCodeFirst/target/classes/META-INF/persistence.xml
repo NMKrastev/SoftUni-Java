@@ -5,20 +5,20 @@
              http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
 
-    <persistence-unit name="vehicle">
+    <persistence-unit name="relations">
         <properties>
             <property name="hibernate.dialect"
                       value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.connection.driver_class"
                       value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.url"
-                      value="jdbc:mysql://localhost:3306/vehicle?createDatabaseIfNotExist=true&amp;useSSL=false"/>
+                      value="jdbc:mysql://localhost:3306/relations?createDatabaseIfNotExist=true&amp;useSSL=false"/>
             <property name="hibernate.connection.username"
                       value="root"/>
             <property name="hibernate.connection.password"
                       value="root_12345"/>
-            <!--<property name="hibernate.transform_hbm_xml.enable"
-                      value="true"/>-->
+            <property name="hibernate.transform_hbm_xml.enable"
+                      value="true"/>
             <property name="hibernate.hbm2ddl.auto"
                       value="update"/>
             <property name="hibernate.show_sql"

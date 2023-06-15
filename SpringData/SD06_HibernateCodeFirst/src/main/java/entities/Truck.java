@@ -1,21 +1,24 @@
 package entities;
 
-import java.math.BigDecimal;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
-public class Truck extends Vehicle {
+@Entity
+//@Table(name = "trucks")
+public class Truck extends TransportationVehicle {
 
-    private Double loadCapacity;
+    private static final String TRUCK_TYPE = "Truck";
 
-    public Truck(String type, String model, BigDecimal price, String fuelType, Double loadCapacity) {
-        super(type, model, price, fuelType);
+    public Truck() {
+        super(TRUCK_TYPE);
+    }
+
+    public Truck(String model, String fuelType, Double loadCapacity) {
+        this();
+        this.model = model;
+        this.fuelType = fuelType;
         this.loadCapacity = loadCapacity;
     }
 
-    public Double getLoadCapacity() {
-        return loadCapacity;
-    }
-
-    public void setLoadCapacity(Double loadCapacity) {
-        this.loadCapacity = loadCapacity;
-    }
 }

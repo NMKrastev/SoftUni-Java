@@ -5,21 +5,30 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "vehicles")
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+//@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public abstract class Vehicle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.TABLE)
     @Column(name = "id")
-    private Long id;
+    protected Long id;
     @Column(name = "type")
-    private String type;
-    @Column(name = "model")
-    private String model;
+    protected String type;
+    @Column(name = "model", nullable = false)
+    protected String model;
     @Column(name = "price")
-    private BigDecimal price;
+    protected BigDecimal price;
     @Column(name = "fuel_type")
-    private String fuelType;
+    protected String fuelType;
+
+    protected Vehicle() {}
+
+    protected Vehicle(String type) {
+        this.type = type;
+    }
 
     protected Vehicle(String type, String model, BigDecimal price, String fuelType) {
         this.type = type;
@@ -27,8 +36,6 @@ public abstract class Vehicle {
         this.price = price;
         this.fuelType = fuelType;
     }
-
-    public Vehicle() {}
 
     public Long getId() {
         return id;
