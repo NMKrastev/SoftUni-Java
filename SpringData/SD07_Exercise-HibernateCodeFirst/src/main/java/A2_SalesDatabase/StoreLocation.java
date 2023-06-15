@@ -17,7 +17,7 @@ public class StoreLocation {
     @OneToMany(mappedBy = "storeLocation", cascade = CascadeType.ALL)
     private Set<Sale> sales;
 
-    public StoreLocation() {
+    protected StoreLocation() {
         this.sales = new HashSet<>();
     }
 
