@@ -48,10 +48,10 @@ public class Main {
 
         if (isNumberNonExistent(taskNumber)) return;
 
-        executeTask(taskNumber);
+        System.out.println(executeTask(taskNumber));
     }
 
-    private static void executeTask(int taskNumber) {
+    private static String executeTask(int taskNumber) {
 
         //In order for this switch to word the EntityManager can't be final
         EntityManager manager;
@@ -61,18 +61,23 @@ public class Main {
                 manager = Utils.getSQLConnection(GRINGOTTS.getPersistenceUnitName());
                 taskOne(manager);
                 manager.close();
+                return "Task 1 was executed!";
             }
             case 2 -> {
                 manager = Utils.getSQLConnection(SALES.getPersistenceUnitName());
                 taskTwo(manager);
                 manager.close();
+                return "Task 2 was executed!";
             }
             case 3 -> {
                 manager = Utils.getSQLConnection(UNIVERSITY.getPersistenceUnitName());
                 taskThree(manager);
                 manager.close();
+                return "Task 3 was executed!";
             }
         }
+
+        return "Something went wrong with execution!";
     }
 
     private static void taskThree(EntityManager manager) {
