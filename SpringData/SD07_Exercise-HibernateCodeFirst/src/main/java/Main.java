@@ -8,27 +8,15 @@ import A3_UniversitySystem.Student;
 import A3_UniversitySystem.Teacher;
 import jakarta.persistence.EntityManager;
 
-import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Scanner;
 
 import static enums.PersistenceUnitName.*;
+import static enums.Variable.*;
 
 public class Main {
-
-    private static final String FIRST_NAME = "John";
-    private static final String LAST_NAME = "Doe";
-    private static final Integer AGE = 30;
-    private static final String PRODUCT_ONE = "ProductOne";
-    private static final Double QUANTITY = 2.00;
-    private static final BigDecimal PRICE = BigDecimal.valueOf(500);
-    private static final String CUSTOMER_ONE = "CustomerOne";
-    private static final String EMAIL = "test@test.bg";
-    private static final String CARD_NUMBER = "1234554234234";
-    private static final String LOCATION_NAME = "LocationOne";
-    private static final String COURSE_NAME = "CourseOne";
 
     /**
      * Homework is completed using switch case that depending on your choice
