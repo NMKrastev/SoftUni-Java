@@ -25,23 +25,28 @@ public class Main {
     private static final String CARD_NUMBER = "1234554234234";
     private static final String LOCATION_NAME = "LocationOne";
 
+    /**
+     * Homework is completed using switch case that depending on your choice
+     * executes the specific task related to its number.
+     * <p>
+     * Choose a number that correspond to the task from the homework paper,
+     * the application will do the rest. After that you can refresh your DB client
+     * to check the DB, tables, etc.
+     */
 
     public static void main(String[] args) {
 
         final Scanner scanner = new Scanner(System.in);
 
         System.out.print("Please enter task number from 1 to 6: ");
-        int taskNum = Integer.parseInt(scanner.nextLine());
+        int taskNumber = Integer.parseInt(scanner.nextLine());
 
-        if (taskNum < 1 || taskNum > 6) {
-            System.out.printf("Task with number %d does not exist!\n", taskNum);
-            return;
-        }
+        if (isNumberNonExistent(taskNumber)) return;
 
         //In order for this switch to word the EntityManager can't be final
         EntityManager manager;
 
-        switch (taskNum) {
+        switch (taskNumber) {
             case 1 -> {
                 manager = Utils.getSQLConnection(GRINGOTTS.getPersistenceUnitName());
                 taskOne(manager);
@@ -107,5 +112,15 @@ public class Main {
         manager.persist(wizardDeposit);
 
         manager.getTransaction().commit();
+    }
+
+    private static boolean isNumberNonExistent(int taskNumber) {
+
+        if (taskNumber < 1 || taskNumber > 6) {
+            System.out.printf("Task with number %d does not exist!\n", taskNumber);
+            return true;
+        }
+
+        return false;
     }
 }

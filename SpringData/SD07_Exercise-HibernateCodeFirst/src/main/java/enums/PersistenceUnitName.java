@@ -3,7 +3,8 @@ package enums;
 public enum PersistenceUnitName {
 
     GRINGOTTS("gringotts"),
-    SALES("sales");
+    SALES("sales"),
+    UNIVERSITY("university");
 
     private String persistenceUnitName;
 
