@@ -19,7 +19,7 @@ import static enums.Variable.*;
 public class Main {
 
     /**
-     * Homework is completed using switch case that depending on your choice
+     * Homework is completed by using switch case that depending on your choice
      * executes the specific task related to its number.
      * <p>
      * Choose a number that correspond to the task from the homework paper,
@@ -41,8 +41,7 @@ public class Main {
 
     private static String executeTask(int taskNumber) {
 
-        //In order for this switch to word the EntityManager can't be final
-        EntityManager manager;
+        final EntityManager manager;
 
         switch (taskNumber) {
             case 1 -> {
