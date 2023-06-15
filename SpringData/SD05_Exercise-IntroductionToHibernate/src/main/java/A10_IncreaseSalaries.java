@@ -22,7 +22,6 @@ public class A10_IncreaseSalaries {
         manager.getTransaction().begin();
 
         getEmployees(manager).forEach(e -> e.setSalary(e.getSalary().multiply(BigDecimal.valueOf(1.12))));
-        manager.flush();
 
         manager.getTransaction().commit();
 
