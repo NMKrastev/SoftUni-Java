@@ -6,7 +6,7 @@ public enum PersistenceUnitName {
     SALES("sales"),
     UNIVERSITY("university");
 
-    private String persistenceUnitName;
+    private final String persistenceUnitName;
 
     PersistenceUnitName(String persistenceUnitName) {
         this.persistenceUnitName = persistenceUnitName;
