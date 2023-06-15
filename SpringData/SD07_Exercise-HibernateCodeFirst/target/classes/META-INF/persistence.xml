@@ -6,6 +6,8 @@
              version="2.0">
 
     <persistence-unit name="gringotts">
+        <class>A1_GringottsDatabase.WizardDeposit</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect"
                       value="org.hibernate.dialect.MySQLDialect"/>
@@ -29,6 +31,11 @@
     </persistence-unit>
 
     <persistence-unit name="sales">
+        <class>A2_SalesDatabase.Customer</class>
+        <class>A2_SalesDatabase.Product</class>
+        <class>A2_SalesDatabase.Sale</class>
+        <class>A2_SalesDatabase.StoreLocation</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect"
                       value="org.hibernate.dialect.MySQLDialect"/>
