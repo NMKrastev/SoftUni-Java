@@ -85,4 +85,32 @@
         </properties>
     </persistence-unit>
 
+    <persistence-unit name="hospital">
+        <class>A4_HospitalDatabase.Diagnose</class>
+        <class>A4_HospitalDatabase.Medicament</class>
+        <class>A4_HospitalDatabase.Patient</class>
+        <class>A4_HospitalDatabase.Visitation</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.connection.driver_class"
+                      value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/hospital?createDatabaseIfNotExist=true&amp;useSSL=false"/>
+            <property name="hibernate.connection.username"
+                      value="root"/>
+            <property name="hibernate.connection.password"
+                      value="root_12345"/>
+            <property name="hibernate.transform_hbm_xml.enable"
+                      value="true"/>
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update"/>
+            <property name="hibernate.show_sql"
+                      value="true"/>
+            <property name="hibernate.format_sql"
+                      value="true"/>
+        </properties>
+    </persistence-unit>
+
 </persistence>
