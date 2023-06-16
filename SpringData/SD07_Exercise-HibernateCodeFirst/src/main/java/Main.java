@@ -130,21 +130,21 @@ public class Main {
         int id = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Enter comment for today's visitation");
-        String comment = scanner.nextLine();
+        final String comment = scanner.nextLine();
 
         System.out.print("The patient is diagnosed with(name): ");
-        String diagnoseName = scanner.nextLine();
+        final String diagnoseName = scanner.nextLine();
 
         System.out.print("The patient has prescription for the following medicament(name): ");
-        String medicamentName = scanner.nextLine();
+        final String medicamentName = scanner.nextLine();
 
-        Patient patient = manager.createQuery(FIND_PATIENT, Patient.class).setParameter(1, id).getSingleResult();
+        final Patient patient = manager.createQuery(FIND_PATIENT, Patient.class).setParameter(1, id).getSingleResult();
 
-        Diagnose diagnose = manager.createQuery(FIND_DIAGNOSE, Diagnose.class).setParameter(1, diagnoseName).getSingleResult();
+        final Diagnose diagnose = manager.createQuery(FIND_DIAGNOSE, Diagnose.class).setParameter(1, diagnoseName).getSingleResult();
 
-        Medicament medicament = manager.createQuery(FIND_MEDICAMENT, Medicament.class).setParameter(1, medicamentName).getSingleResult();
+        final Medicament medicament = manager.createQuery(FIND_MEDICAMENT, Medicament.class).setParameter(1, medicamentName).getSingleResult();
 
-        Visitation visitation = new Visitation(LocalDate.now(), comment, patient, diagnose, medicament);
+        final Visitation visitation = new Visitation(LocalDate.now(), comment, patient, diagnose, medicament);
 
         manager.persist(visitation);
 
@@ -156,10 +156,10 @@ public class Main {
         manager.getTransaction().begin();
 
         //Bonus code to populate the DB
-        Teacher teacherOne = new Teacher(FIRST_NAME, LAST_NAME);
-        Student studentOne = new Student(FIRST_NAME, LAST_NAME);
-        Student studentTwo = new Student(FIRST_NAME, LAST_NAME);
-        Course courseOne = new Course(COURSE_NAME, LocalDate.now());
+        final Teacher teacherOne = new Teacher(FIRST_NAME, LAST_NAME);
+        final Student studentOne = new Student(FIRST_NAME, LAST_NAME);
+        final Student studentTwo = new Student(FIRST_NAME, LAST_NAME);
+        final Course courseOne = new Course(COURSE_NAME, LocalDate.now());
 
         teacherOne.getCourses().add(courseOne);
         courseOne.setTeacher(teacherOne);
@@ -181,10 +181,10 @@ public class Main {
         manager.getTransaction().begin();
 
         //Bonus code to populate the DB
-        Product product = new Product(PRODUCT_ONE, QUANTITY, PRICE);
-        Customer customer = new Customer(CUSTOMER_ONE, EMAIL, CARD_NUMBER);
-        StoreLocation storeLocation = new StoreLocation(LOCATION_NAME);
-        Sale saleOne = getSale(product, customer, storeLocation);
+        final Product product = new Product(PRODUCT_ONE, QUANTITY, PRICE);
+        final Customer customer = new Customer(CUSTOMER_ONE, EMAIL, CARD_NUMBER);
+        final StoreLocation storeLocation = new StoreLocation(LOCATION_NAME);
+        final Sale saleOne = getSale(product, customer, storeLocation);
 
         product.getSales().add(saleOne);
         saleOne.setProduct(product);
@@ -200,7 +200,7 @@ public class Main {
         manager.persist(storeLocation);
         manager.persist(saleOne);
 
-        Sale saleTwo = getSale(product, customer, storeLocation);
+        final Sale saleTwo = getSale(product, customer, storeLocation);
 
         product.getSales().add(saleTwo);
         saleTwo.setProduct(product);
@@ -224,7 +224,7 @@ public class Main {
 
         manager.getTransaction().begin();
 
-        WizardDeposit wizardDeposit = new WizardDeposit(LAST_NAME, AGE);
+        final WizardDeposit wizardDeposit = new WizardDeposit(LAST_NAME, AGE);
         manager.persist(wizardDeposit);
 
         manager.getTransaction().commit();
