@@ -93,6 +93,7 @@ public class Main {
         String input = scanner.nextLine().toLowerCase();
 
         if (input.equalsIgnoreCase("yes")) {
+
             while (!input.equalsIgnoreCase("No")) {
 
                 manager.getTransaction().begin();
@@ -126,16 +127,16 @@ public class Main {
         manager.getTransaction().begin();
 
         //Could be with patient's name instead of ID
-        System.out.print("Today's visitation is from patient ID: ");
+        System.out.print(VISITATION_FROM_PATIENT_WITH_ID);
         int id = Integer.parseInt(scanner.nextLine());
 
-        System.out.println("Enter comment for today's visitation");
+        System.out.println(COMMENT_FOR_VISITATION);
         final String comment = scanner.nextLine();
 
-        System.out.print("The patient is diagnosed with(name): ");
+        System.out.print(PATIENT_IS_DIAGNOSED_WITH);
         final String diagnoseName = scanner.nextLine();
 
-        System.out.print("The patient has prescription for the following medicament(name): ");
+        System.out.print(PATIENT_WITH_PRESCRIPTION_FOR_MEDICAMENT_NAME);
         final String medicamentName = scanner.nextLine();
 
         final Patient patient = manager.createQuery(FIND_PATIENT, Patient.class).setParameter(1, id).getSingleResult();
@@ -233,7 +234,7 @@ public class Main {
     private static boolean isTaskNumberNonExistent(int taskNumber) {
 
         if (taskNumber < 1 || taskNumber > 6) {
-            System.out.printf("Task with number %d does not exist!\n", taskNumber);
+            System.out.printf(String.format(TASK_DOES_NOT_EXIST, taskNumber));
             return true;
         }
 
@@ -241,6 +242,6 @@ public class Main {
     }
 
     private static String executedTaskNumber(int taskNumber) {
-        return String.format("Task %d was executed!\n", taskNumber);
+        return String.format(TASK_WAS_EXECUTED, taskNumber);
     }
 }

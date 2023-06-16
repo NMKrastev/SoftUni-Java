@@ -11,6 +11,12 @@ public enum Variable {
     public static final String FIND_MEDICAMENT = "FROM Medicament WHERE name = ?1";
 
     public static final String DO_YOU_WANT_TO_POPULATE_DB = "Do you want to populate the database?(Yes/No): ";
+    public static final String VISITATION_FROM_PATIENT_WITH_ID = "Today's visitation is from patient ID: ";
+    public static final String COMMENT_FOR_VISITATION = "Enter comment for today's visitation";
+    public static final String PATIENT_IS_DIAGNOSED_WITH = "The patient is diagnosed with(name): ";
+    public static final String PATIENT_WITH_PRESCRIPTION_FOR_MEDICAMENT_NAME = "The patient has prescription for the following medicament(name): ";
+    public static final String TASK_DOES_NOT_EXIST = "Task with number %d does not exist!\n";
+    public static final String TASK_WAS_EXECUTED = "Task %d was executed!\n";
 
 
     public static final String FIRST_NAME = "John";
