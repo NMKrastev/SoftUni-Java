@@ -75,53 +75,58 @@ public class Main {
     }
 
     /**
-     * Part one: Populating the DB
-     * <p>
-     * Populates the DB with patients, diagnoses and medicaments.
-     * <p>
-     * <p>
-     * Part two: Create a visitation
-     * <p>
+     * Part one: Populating the DB<br>
+     * Populates the DB with patients, diagnoses and medicaments.<br><br>
+     * Part two: Create a visitation<br>
      * Creates a visitation from a patient with the given ID. You can diagnose the patient by entering the diagnosis
      * name that is in the database. Furthermore, you can make a prescription for that patient. All of this is
-     * inserted into the `visitations` table in database "hospital".
+     * inserted into the `visitations` table in database "hospital".<br><br>
+     * Workflow is the following:<br>
+     * 1. The doctor can add to his database patients, diagnoses and medicaments if needed<br>
+     * 2. A doctor(GP) has a visitation<br>
+     * 3. The doctor keeps track of the visitation by adding which patient was on that visitation,
+     * what was the patient's diagnosis, and what was the medicament that was prescribed.<br><br>
+     * Note: If you don't populate the database at first you'll get an exception: No result found for query [FROM Patient WHERE id = ?1]. This is TODO.
      */
     private static void taskFour(EntityManager manager) {
 
         /*Part one*/
-        System.out.println(DO_YOU_WANT_TO_POPULATE_DB);
+        System.out.print(DO_YOU_WANT_TO_POPULATE_DB);
         String input = scanner.nextLine().toLowerCase();
 
-        if (input.equalsIgnoreCase("yes")) {
+        if (input.equalsIgnoreCase("Yes")) {
 
             while (!input.equalsIgnoreCase("No")) {
 
                 manager.getTransaction().begin();
 
-                final String firstName = PatientInfoGatherer.getFirstName();
-                final String lastName = PatientInfoGatherer.getLastName();
-                final String address = PatientInfoGatherer.getAddress();
-                final String email = PatientInfoGatherer.getEmail();
-                final LocalDate date = PatientInfoGatherer.getDateOfBirth();
-                final Boolean isInsured = PatientInfoGatherer.isInsured();
+                final String firstName = InfoGatherer.gatherPatientFirstName();
+                final String lastName = InfoGatherer.gatherPatientLastName();
+                final String address = InfoGatherer.gatherPatientAddress();
+                final String email = InfoGatherer.gatherPatientEmail();
+                final LocalDate date = InfoGatherer.gatherPatientDateOfBirth();
+                final Boolean isInsured = InfoGatherer.isPatientInsured();
                 final Patient patient = new Patient(firstName, lastName, address, email, date, PICTURE_IN_BLOB, isInsured);
                 manager.persist(patient);
 
-                final String diagnoseName = DiagnoseInfoGatherer.getName();
-                final String diagnoseComment = DiagnoseInfoGatherer.getComment();
+                final String diagnoseName = InfoGatherer.gatherDiagnosisName();
+                final String diagnoseComment = InfoGatherer.gatherDiagnosisComment();
                 final Diagnose diagnoseOne = new Diagnose(diagnoseName, diagnoseComment);
                 manager.persist(diagnoseOne);
 
-                final String medicamentName = MedicamentInfoGatherer.getName();
+                final String medicamentName = InfoGatherer.gatherMedicamentName();
                 final Medicament medicament = new Medicament(medicamentName);
                 manager.persist(medicament);
+
+                manager.getTransaction().commit();
 
                 System.out.println(DO_YOU_WANT_TO_POPULATE_DB);
                 input = scanner.nextLine();
 
-                manager.getTransaction().commit();
             }
         }
+
+        //TODO When the app is started check if the DB is populated, and if not ask the user to do so
 
         /*Part two*/
         manager.getTransaction().begin();
@@ -130,7 +135,7 @@ public class Main {
         System.out.print(VISITATION_FROM_PATIENT_WITH_ID);
         int id = Integer.parseInt(scanner.nextLine());
 
-        System.out.println(COMMENT_FOR_VISITATION);
+        System.out.print(COMMENT_FOR_VISITATION);
         final String comment = scanner.nextLine();
 
         System.out.print(PATIENT_IS_DIAGNOSED_WITH);

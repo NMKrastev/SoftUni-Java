@@ -3,7 +3,6 @@ package A4_HospitalDatabase;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -26,7 +25,7 @@ public class Patient {
     private LocalDate dateOfBirth;
     @Column(columnDefinition = "BLOB")
     private String picture;
-    @Column(columnDefinition = "BOOLEAN DEFAULT FALSE")
+    @Column(columnDefinition = "BOOLEAN DEFAULT FALSE", nullable = false)
     private Boolean isInsured;
     @OneToMany(mappedBy = "patient")
     private Set<Visitation> visitations;
@@ -80,11 +79,6 @@ public class Patient {
     }
 
     public void setAddress(String address) {
-
-        if (address == null || address.trim().isEmpty()) {
-            throw new IllegalArgumentException("Invalid last name!");
-        }
-
         this.address = address;
     }
 
@@ -93,11 +87,6 @@ public class Patient {
     }
 
     public void setEmail(String email) {
-
-        if (email == null || email.trim().isEmpty()) {
-            throw new IllegalArgumentException("Invalid last name!");
-        }
-
         this.email = email;
     }
 

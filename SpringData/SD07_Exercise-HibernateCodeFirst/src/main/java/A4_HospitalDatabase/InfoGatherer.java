@@ -5,9 +5,19 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PatientInfoGatherer {
+public class InfoGatherer {
 
     private static final Scanner scanner = new Scanner(System.in);
+    private static final String IS_PATIENT_INSURED = "Please, specify if the patient is insured(y/n): ";
+    private static final String ENTER_PATIENT_BIRTH_DATE = "Please, enter patient's date of birth(yyyy-mm-dd): ";
+    private static final String DOES_PATIENT_HAS_EMAIL = "Does the patient has an email?(y/n): ";
+    private static final String ENTER_PATIENT_EMAIL = "Please, enter patient's email: ";
+    private static final String ENTER_PATIENT_ADDRESS = "Please, enter patient's address: ";
+    private static final String ENTER_LAST_NAME_OF_PATIENT = "Please, enter last name of patient: ";
+    private static final String ENTER_FIRST_NAME_OF_PATIENT = "Please, enter first name of patient: ";
+    private static final String ENTER_DIAGNOSIS_NAME = "Please, enter diagnosis name: ";
+    private static final String ENTER_DIAGNOSIS_COMMENT = "Please, enter diagnosis comment: ";
+    private static final String ENTER_MEDICAMENT_NAME = "Please, enter medicament name: ";
 
     public static Boolean isPatientInsured() {
 
@@ -15,7 +25,7 @@ public class PatientInfoGatherer {
 
         while (isInsured == null) {
 
-            System.out.print("Please, specify if the patient is insured(y/n): ");
+            System.out.print(IS_PATIENT_INSURED);
             String yesOrNo = scanner.nextLine();
 
             if (yesOrNo.equalsIgnoreCase("y")) {
@@ -40,7 +50,7 @@ public class PatientInfoGatherer {
 
         while (birthDate == null) {
 
-            System.out.print("Please, enter patient's date of birth(yyyy-mm-dd): ");
+            System.out.print(ENTER_PATIENT_BIRTH_DATE);
             birthDate = scanner.nextLine();
 
             if (birthDate.trim().isEmpty()) {
@@ -64,14 +74,14 @@ public class PatientInfoGatherer {
 
         String email = null;
 
-        System.out.print("Does the patient has an email?(y/n): ");
+        System.out.print(DOES_PATIENT_HAS_EMAIL);
         String yesOrNo = scanner.nextLine();
 
         if (yesOrNo.equalsIgnoreCase("y")) {
 
             while (email == null) {
 
-                System.out.print("Please, enter patient's email: ");
+                System.out.print(ENTER_PATIENT_EMAIL);
                 email = scanner.nextLine();
 
                 if (email.trim().isEmpty()) {
@@ -89,7 +99,7 @@ public class PatientInfoGatherer {
 
         while (address == null) {
 
-            System.out.print("Please, enter patient's address: ");
+            System.out.print(ENTER_PATIENT_ADDRESS);
             address = scanner.nextLine();
 
             if (address.trim().isEmpty()) {
@@ -106,7 +116,7 @@ public class PatientInfoGatherer {
 
         while (lastName == null) {
 
-            System.out.print("Please, enter last name of patient: ");
+            System.out.print(ENTER_LAST_NAME_OF_PATIENT);
             lastName = scanner.nextLine();
 
             if (lastName.trim().isEmpty()) {
@@ -123,7 +133,7 @@ public class PatientInfoGatherer {
 
         while (firstName == null) {
 
-            System.out.print("Please, enter first name of patient: ");
+            System.out.print(ENTER_FIRST_NAME_OF_PATIENT);
             firstName = scanner.nextLine();
 
             if (firstName.trim().isEmpty()) {
@@ -140,7 +150,7 @@ public class PatientInfoGatherer {
 
         while (name == null) {
 
-            System.out.print("Please, enter diagnose name: ");
+            System.out.print(ENTER_DIAGNOSIS_NAME);
             name = scanner.nextLine();
 
             if (name.trim().isEmpty()) {
@@ -151,13 +161,13 @@ public class PatientInfoGatherer {
         return name;
     }
 
-    public static String getComment() {
+    public static String gatherDiagnosisComment() {
 
         String comment = null;
 
         while (comment == null) {
 
-            System.out.print("Please, enter diagnose comment: ");
+            System.out.print(ENTER_DIAGNOSIS_COMMENT);
             comment = scanner.nextLine();
 
             if (comment.trim().isEmpty()) {
@@ -174,7 +184,7 @@ public class PatientInfoGatherer {
 
         while (name == null) {
 
-            System.out.print("Please, enter medicament name: ");
+            System.out.print(ENTER_MEDICAMENT_NAME);
             name = scanner.nextLine();
 
             if (name.trim().isEmpty()) {
