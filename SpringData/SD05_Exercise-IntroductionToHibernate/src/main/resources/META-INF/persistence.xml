@@ -14,9 +14,9 @@
             <property name="hibernate.connection.url"
                       value="jdbc:mysql://localhost:3306/soft_uni?createDatabaseIfNotExist=true&amp;useSSL=false"/>
             <property name="hibernate.connection.username"
-                      value="*****"/>
+                      value="root"/>
             <property name="hibernate.connection.password"
-                      value="*****"/>
+                      value="root_12345"/>
             <!--<property name="hibernate.transform_hbm_xml.enable"
                       value="true"/>-->
             <property name="hibernate.hbm2ddl.auto"
