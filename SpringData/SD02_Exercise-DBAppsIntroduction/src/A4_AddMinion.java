@@ -41,7 +41,7 @@ public class A4_AddMinion {
 
         final Connection connection = Utils.getSQLConnection();
 
-        //System.out.println("Enter minion info: ");
+        System.out.println("Enter minion info: ");
         String[] minionInfo = scanner.nextLine().split(":\\s+|\\s+");
         final String minionName = minionInfo[1];
         final int minionAge = Integer.parseInt(minionInfo[2]);

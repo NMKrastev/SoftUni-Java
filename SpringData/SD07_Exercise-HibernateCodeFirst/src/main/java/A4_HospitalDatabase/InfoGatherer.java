@@ -9,7 +9,7 @@ public class PatientInfoGatherer {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static Boolean isInsured() {
+    public static Boolean isPatientInsured() {
 
         Boolean isInsured = null;
 
@@ -28,7 +28,7 @@ public class PatientInfoGatherer {
         return isInsured;
     }
 
-    public static LocalDate getDateOfBirth() {
+    public static LocalDate gatherPatientDateOfBirth() {
 
         String birthDate = null;
         String regex = "([0-9]{4})-([0-9]{2})-([0-9]{2})";
@@ -60,7 +60,7 @@ public class PatientInfoGatherer {
         return LocalDate.of(year, month, day);
     }
 
-    public static String getEmail() {
+    public static String gatherPatientEmail() {
 
         String email = null;
 
@@ -83,7 +83,7 @@ public class PatientInfoGatherer {
         return email;
     }
 
-    public static String getAddress() {
+    public static String gatherPatientAddress() {
 
         String address = null;
 
@@ -100,7 +100,7 @@ public class PatientInfoGatherer {
         return address;
     }
 
-    public static String getLastName() {
+    public static String gatherPatientLastName() {
 
         String lastName = null;
 
@@ -117,7 +117,7 @@ public class PatientInfoGatherer {
         return lastName;
     }
 
-    public static String getFirstName() {
+    public static String gatherPatientFirstName() {
 
         String firstName = null;
 
@@ -132,5 +132,56 @@ public class PatientInfoGatherer {
         }
 
         return firstName;
+    }
+
+    public static String gatherDiagnosisName() {
+
+        String name = null;
+
+        while (name == null) {
+
+            System.out.print("Please, enter diagnose name: ");
+            name = scanner.nextLine();
+
+            if (name.trim().isEmpty()) {
+                name = null;
+            }
+        }
+
+        return name;
+    }
+
+    public static String getComment() {
+
+        String comment = null;
+
+        while (comment == null) {
+
+            System.out.print("Please, enter diagnose comment: ");
+            comment = scanner.nextLine();
+
+            if (comment.trim().isEmpty()) {
+                comment = null;
+            }
+        }
+
+        return comment;
+    }
+    
+    public static String gatherMedicamentName() {
+
+        String name = null;
+
+        while (name == null) {
+
+            System.out.print("Please, enter medicament name: ");
+            name = scanner.nextLine();
+
+            if (name.trim().isEmpty()) {
+                name = null;
+            }
+        }
+
+        return name;
     }
 }

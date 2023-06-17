@@ -26,7 +26,7 @@ public class A5_ChangeTownNamesCasing {
 
         final Connection connection = Utils.getSQLConnection();
 
-        //System.out.print("Enter country: ");
+        System.out.print("Enter country: ");
         final String country = scanner.nextLine();
 
         final PreparedStatement getCountryStatement = connection.prepareStatement(FIND_COUNTRY);

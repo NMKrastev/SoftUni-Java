@@ -30,6 +30,7 @@ public class A6_RemoveVillain {
 
         final Connection connection = Utils.getSQLConnection();
 
+        System.out.print("Enter ID: ");
         int id = Integer.parseInt(scanner.nextLine());
 
         final PreparedStatement findVillainStatement = prepareStatement(connection, id, GET_VILLAIN);
