@@ -5,7 +5,8 @@ public enum PersistenceUnitName {
     GRINGOTTS("gringotts"),
     SALES("sales"),
     UNIVERSITY("university"),
-    HOSPITAL("hospital");
+    HOSPITAL("hospital"),
+    BILLING_SYSTEM("billing_system");
 
     private final String persistenceUnitName;
 

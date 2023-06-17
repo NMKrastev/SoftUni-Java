@@ -113,4 +113,32 @@
         </properties>
     </persistence-unit>
 
+    <persistence-unit name="billing_system">
+        <class>A5_BillsPaymentSystem.BankAccount</class>
+        <class>A5_BillsPaymentSystem.BillingDetail</class>
+        <class>A5_BillsPaymentSystem.CreditCard</class>
+        <class>A5_BillsPaymentSystem.User</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.connection.driver_class"
+                      value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/billing_system?createDatabaseIfNotExist=true&amp;useSSL=false"/>
+            <property name="hibernate.connection.username"
+                      value="root"/>
+            <property name="hibernate.connection.password"
+                      value="root_12345"/>
+            <property name="hibernate.transform_hbm_xml.enable"
+                      value="true"/>
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update"/>
+            <property name="hibernate.show_sql"
+                      value="true"/>
+            <property name="hibernate.format_sql"
+                      value="true"/>
+        </properties>
+    </persistence-unit>
+
 </persistence>

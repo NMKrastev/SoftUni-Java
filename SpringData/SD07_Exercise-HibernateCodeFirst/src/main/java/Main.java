@@ -7,6 +7,10 @@ import A3_UniversitySystem.Course;
 import A3_UniversitySystem.Student;
 import A3_UniversitySystem.Teacher;
 import A4_HospitalDatabase.*;
+import A5_BillsPaymentSystem.BankAccount;
+import A5_BillsPaymentSystem.CreditCard;
+import A5_BillsPaymentSystem.CreditCardType;
+import A5_BillsPaymentSystem.User;
 import jakarta.persistence.EntityManager;
 
 import java.time.Instant;
@@ -69,9 +73,44 @@ public class Main {
                 manager.close();
                 return executedTaskNumber(taskNumber);
             }
+            case 5 -> {
+                manager = Utils.getSQLConnection(BILLING_SYSTEM.getPersistenceUnitName());
+                taskFive(manager);
+                manager.close();
+                return executedTaskNumber(taskNumber);
+            }
         }
 
         return "Something went wrong with execution!";
+    }
+
+    private static void taskFive(EntityManager manager) {
+
+        manager.getTransaction().begin();
+
+        User user = new User();
+        user.setFirstName(FIRST_NAME);
+        user.setLastName(LAST_NAME);
+        user.setEmail(EMAIL);
+        user.setPassword(PASSWORD);
+        manager.persist(user);
+
+        BankAccount bankAccount = new BankAccount();
+        bankAccount.setName(BANK_NAME);
+        bankAccount.setNumber(BANK_NUMBER);
+        bankAccount.setSWIFTCode(SWIFT_CODE);
+        bankAccount.setOwner(user);
+        manager.persist(bankAccount);
+
+        CreditCard creditCard = new CreditCard();
+        creditCard.setNumber(CARD_NUMBER);
+        creditCard.setOwner(user);
+        creditCard.setCreditCardType(CreditCardType.MASTERCARD);
+        creditCard.setExpirationMonth(5);
+        creditCard.setExpirationYear(2026);
+        manager.persist(creditCard);
+
+        manager.getTransaction().commit();
     }
 
     /**
