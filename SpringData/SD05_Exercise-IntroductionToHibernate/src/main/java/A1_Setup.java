@@ -9,6 +9,7 @@ public class A1_Setup {
 
         final EntityManager manager = factory.createEntityManager();
 
+        manager.close();
         factory.close();
     }
 }
