@@ -141,4 +141,44 @@
         </properties>
     </persistence-unit>
 
+    <persistence-unit name="football_betting">
+        <class>A6_FootballBettingDatabase.Continent</class>
+        <class>A6_FootballBettingDatabase.Country</class>
+        <class>A6_FootballBettingDatabase.Bet</class>
+        <class>A6_FootballBettingDatabase.User</class>
+        <class>A6_FootballBettingDatabase.Town</class>
+        <class>A6_FootballBettingDatabase.Color</class>
+        <class>A6_FootballBettingDatabase.Team</class>
+        <class>A6_FootballBettingDatabase.CompetitionType</class>
+        <class>A6_FootballBettingDatabase.Competition</class>
+        <class>A6_FootballBettingDatabase.Round</class>
+        <class>A6_FootballBettingDatabase.Position</class>
+        <class>A6_FootballBettingDatabase.Player</class>
+        <class>A6_FootballBettingDatabase.PlayerStatistic</class>
+        <class>A6_FootballBettingDatabase.Game</class>
+        <class>A6_FootballBettingDatabase.ResultPrediction</class>
+        <class>A6_FootballBettingDatabase.BetGames</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.connection.driver_class"
+                      value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/football_betting?createDatabaseIfNotExist=true&amp;useSSL=false"/>
+            <property name="hibernate.connection.username"
+                      value="root"/>
+            <property name="hibernate.connection.password"
+                      value="root_12345"/>
+            <property name="hibernate.transform_hbm_xml.enable"
+                      value="true"/>
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update"/>
+            <property name="hibernate.show_sql"
+                      value="true"/>
+            <property name="hibernate.format_sql"
+                      value="true"/>
+        </properties>
+    </persistence-unit>
+
 </persistence>

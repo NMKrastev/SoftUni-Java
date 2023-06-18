@@ -79,6 +79,12 @@ public class Main {
                 manager.close();
                 return executedTaskNumber(taskNumber);
             }
+            case 6 -> {
+                manager = Utils.getSQLConnection(FOOTBALL_BETTING.getPersistenceUnitName());
+
+                manager.close();
+                return executedTaskNumber(taskNumber);
+            }
         }
 
         return "Something went wrong with execution!";
