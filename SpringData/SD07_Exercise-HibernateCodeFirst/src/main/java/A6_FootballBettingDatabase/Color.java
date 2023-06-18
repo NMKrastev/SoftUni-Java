@@ -12,7 +12,5 @@ public class Color {
     @Column
     private String name;
 
-    public Color() {
-
-    }
+    public Color() {}
 }

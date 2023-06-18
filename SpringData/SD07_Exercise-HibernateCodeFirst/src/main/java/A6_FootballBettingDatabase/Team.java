@@ -30,6 +30,5 @@ public class Team {
     @Column
     private BigDecimal budget;
 
-    public Team() {
-    }
+    public Team() {}
 }

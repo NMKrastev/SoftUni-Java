@@ -13,6 +13,5 @@ public class CompetitionType {
     @Column
     private CompetitionTypes name;
 
-    public CompetitionType() {
-    }
+    public CompetitionType() {}
 }

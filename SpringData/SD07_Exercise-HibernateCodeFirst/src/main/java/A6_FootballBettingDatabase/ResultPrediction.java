@@ -11,4 +11,6 @@ public class ResultPrediction {
     private Integer id;
     @Column
     private String prediction;
+
+    public ResultPrediction() {}
 }

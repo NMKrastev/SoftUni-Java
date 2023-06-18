@@ -20,6 +20,5 @@ public class BetGames {
     @JoinColumn(name = "result_prediction")
     private ResultPrediction result;
 
-    public BetGames() {
-    }
+    public BetGames() {}
 }

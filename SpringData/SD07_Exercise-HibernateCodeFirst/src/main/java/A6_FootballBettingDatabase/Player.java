@@ -2,8 +2,6 @@ package A6_FootballBettingDatabase;
 
 import jakarta.persistence.*;
 
-import java.util.Set;
-
 @Entity
 @Table(name = "players")
 public class Player {
@@ -23,6 +21,5 @@ public class Player {
     @Column(name = "is_injured", columnDefinition = "BOOLEAN")
     private Boolean isInjured;
 
-    public Player() {
-    }
+    public Player() {}
 }

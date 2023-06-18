@@ -36,6 +36,5 @@ public class Game {
     @JoinColumn(name = "competition_id")
     private Competition competition;
 
-    public Game() {
-    }
+    public Game() {}
 }

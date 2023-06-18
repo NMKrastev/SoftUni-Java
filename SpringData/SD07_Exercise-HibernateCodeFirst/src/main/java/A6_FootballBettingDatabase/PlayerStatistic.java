@@ -20,4 +20,6 @@ public class PlayerStatistic {
     private Integer playerAssists;
     @Column(name = "played_minutes")
     private Integer playedMinutes;
+
+    public PlayerStatistic() {}
 }

@@ -14,6 +14,5 @@ public class Position {
     @Column(name = "position_description")
     private String positionDescription;
 
-    public Position() {
-    }
+    public Position() {}
 }

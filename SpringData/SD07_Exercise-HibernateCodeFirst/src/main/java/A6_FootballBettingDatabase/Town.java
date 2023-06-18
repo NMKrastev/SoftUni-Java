@@ -15,6 +15,5 @@ public class Town {
     @JoinColumn(name = "country_id", referencedColumnName = "id")
     private Country country;
 
-    public Town() {
-    }
+    public Town() {}
 }

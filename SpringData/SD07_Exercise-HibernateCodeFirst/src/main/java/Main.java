@@ -81,7 +81,6 @@ public class Main {
             }
             case 6 -> {
                 manager = Utils.getSQLConnection(FOOTBALL_BETTING.getPersistenceUnitName());
-
                 manager.close();
                 return executedTaskNumber(taskNumber);
             }

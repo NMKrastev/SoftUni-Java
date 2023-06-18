@@ -14,9 +14,7 @@ public class GameBetId implements Serializable {
     @Column(name = "bet_id")
     private Integer betId;
 
-
-    public GameBetId() {
-    }
+    public GameBetId() {}
 
     @Override
     public boolean equals(Object o) {

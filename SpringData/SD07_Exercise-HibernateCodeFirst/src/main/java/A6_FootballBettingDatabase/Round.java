@@ -12,6 +12,5 @@ public class Round {
     @Column
     private String name;
 
-    public Round() {
-    }
+    public Round() {}
 }

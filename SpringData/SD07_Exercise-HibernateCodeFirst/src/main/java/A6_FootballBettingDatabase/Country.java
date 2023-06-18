@@ -12,8 +12,6 @@ public class Country {
     @Column
     private String name;
 
-
-    public Country() {
-    }
+    public Country() {}
 
 }

@@ -14,8 +14,7 @@ public class GamePlayerId implements Serializable {
     @Column(name = "player_id")
     private Integer playerId;
 
-    public GamePlayerId() {
-    }
+    public GamePlayerId() {}
 
     @Override
     public boolean equals(Object o) {

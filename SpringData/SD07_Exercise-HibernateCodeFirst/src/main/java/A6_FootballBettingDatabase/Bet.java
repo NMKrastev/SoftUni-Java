@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
-@Table(name =  "bets")
+@Table(name = "bets")
 public class Bet {
 
     @Id
@@ -19,8 +19,7 @@ public class Bet {
     @ManyToOne
     private User user;
 
-    public Bet() {
-    }
+    public Bet() {}
 
 
 }

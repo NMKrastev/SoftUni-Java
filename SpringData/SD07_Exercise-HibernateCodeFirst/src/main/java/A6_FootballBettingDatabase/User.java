@@ -25,6 +25,5 @@ public class User {
     @OneToMany(mappedBy = "user")
     private Set<Bet> bet;
 
-    public User() {
-    }
+    public User() {}
 }

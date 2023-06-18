@@ -15,6 +15,5 @@ public class Competition {
     @JoinColumn(name = "competition_type")
     private CompetitionType competitionType;
 
-    public Competition() {
-    }
+    public Competition() {}
 }
