@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_demo?createDatabaseIfNotExist=true
+    username: root
+    password: root_12345
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org.hibernate.sql: DEBUG
+    org.hibernate.type.descriptor: TRACE
