@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Sd09ExerciseSpringDataIntroApplication {
+public class A1_BookshopSystem {
 
     public static void main(String[] args) {
-        SpringApplication.run(Sd09ExerciseSpringDataIntroApplication.class, args);
+       SpringApplication.run(A1_BookshopSystem.class, args);
     }
 }
