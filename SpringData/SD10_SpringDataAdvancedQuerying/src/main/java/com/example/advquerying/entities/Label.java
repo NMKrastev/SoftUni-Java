@@ -32,7 +32,7 @@ public class Label extends BaseEntity {
         this.subtitle = subtitle;
     }
 
-    @OneToMany(mappedBy = "label", targetEntity = Shampoo.class)
+    @OneToMany(mappedBy = "label", targetEntity = Shampoo.class, fetch = FetchType.EAGER)
     public Set<Shampoo> getShampoos() {
         return this.shampoos;
     }

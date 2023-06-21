@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class ShampooServiceImpl implements ShampooService {
@@ -59,6 +61,28 @@ public class ShampooServiceImpl implements ShampooService {
     public List<Shampoo> findByPriceGreaterThan(BigDecimal price) {
 
         return this.shampooRepository.findByPriceGreaterThanOrderByPriceDesc(price)
+                .orElseThrow(NoSuchElementException::new);
+    }
+
+    @Override
+    public Integer countShampoosByPriceLessThan(BigDecimal price) {
+
+        Optional<List<Shampoo>> byPriceLessThan = this.shampooRepository.findByPriceLessThan(price);
+
+        return byPriceLessThan.map(List::size).orElse(0);
+    }
+
+    @Override
+    public List<String> findAllByIngredientsIn(List<String> ingredients) {
+
+        return this.shampooRepository.findAllByIngredientsIn(ingredients)
+                .orElseThrow(NoSuchElementException::new);
+    }
+
+    @Override
+    public List<Shampoo> findAllByIngredientsCountLessThan(int count) {
+
+        return this.shampooRepository.findAllByIngredientsCountLessThan(count)
                 .orElseThrow(NoSuchElementException::new);
     }
 }

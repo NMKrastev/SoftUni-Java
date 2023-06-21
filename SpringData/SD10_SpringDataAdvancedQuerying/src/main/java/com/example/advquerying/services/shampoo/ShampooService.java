@@ -4,6 +4,7 @@ import com.example.advquerying.entities.Shampoo;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Set;
 
 public interface ShampooService {
 
@@ -17,4 +18,10 @@ public interface ShampooService {
     List<Shampoo> findAllBySizeOrLabelIdOrderByPrice(String size, Long label);
 
     List<Shampoo> findByPriceGreaterThan(BigDecimal price);
+
+    Integer countShampoosByPriceLessThan(BigDecimal price);
+
+    List<String> findAllByIngredientsIn(List<String> ingredients);
+
+    List<Shampoo> findAllByIngredientsCountLessThan(int count);
 }
