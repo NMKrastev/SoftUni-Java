@@ -18,6 +18,8 @@ import static com.example.A1_BookshopSystem.constants.Constant.*;
 //@Service
 public class ConsoleRunner implements CommandLineRunner {
 
+    private static final Scanner scanner = new Scanner(System.in);
+
     private final SeedService seedService;
     private final AuthorService authorService;
     private final BookService bookService;
@@ -35,26 +37,26 @@ public class ConsoleRunner implements CommandLineRunner {
         //Populates the DB with the given files
         this.seedService.seedAllData();
 
-        //1. Get all books after the year 2000. Print only their titles.
-        this.getAllBooksAfterGivenYear();
+        System.out.print(ENTER_TASK_NUMBER);
+        int taskNumber = Integer.parseInt(scanner.nextLine());
 
-        //2. Get all authors with at least one book with a release date before 1990. Print their first name and last name.
-        this.getAllAuthorsWithBookBeforeGivenYear();
-
-        //3. Get all authors, ordered by the number of their books (descending). Print their first name, last name and book count.
-        this.getAllAuthorsByNumberOfBooks();
-
-        //4. Get all books from author George Powell, ordered by their release date (descending),
-        //then by book title (ascending). Print the book's title, release date and copies.
-        this.getAllBooksByAuthor();
-
+        switch (taskNumber) {
+            //1. Get all books after the year 2000. Print only their titles.
+            case 1 -> this.getAllBooksAfterGivenYear();
+            //2. Get all authors with at least one book with a release date before 1990. Print their first name and last name.
+            case 2 -> this.getAllAuthorsWithBookBeforeGivenYear();
+            //3. Get all authors, ordered by the number of their books (descending). Print their first name, last name and book count.
+            case 3 -> this.getAllAuthorsByNumberOfBooks();
+            //4. Get all books from author George Powell, ordered by their release date (descending),
+            //then by book title (ascending). Print the book's title, release date and copies.
+            case 4 -> this.getAllBooksByAuthor();
+        }
     }
 
     private void getAllBooksByAuthor() {
 
-        System.out.println("----------------------------------------------------------------------------------------------------------------------");
-        System.out.println("4. Get all books from author George Powell, ordered by their release date (descending), \n" +
-                "then by book title (ascending). Print the book's title, release date and copies.");
+        System.out.println(SEPARATOR);
+        System.out.println(TASK_FOUR_DESCRIPTION);
 
         String firstName = FULL_NAME.split("\\s+")[0];
         String lastName = FULL_NAME.split("\\s+")[1];
@@ -67,8 +69,8 @@ public class ConsoleRunner implements CommandLineRunner {
 
     private void getAllAuthorsByNumberOfBooks() {
 
-        System.out.println("----------------------------------------------------------------------------------------------------------------------");
-        System.out.println("3. Get all authors, ordered by the number of their books (descending). Print their first name, last name and book count.");
+        System.out.println(SEPARATOR);
+        System.out.println(TASK_THREE_DESCRIPTION);
 
         List<Object[]> allAuthorsByNumberOfTheirBooks = this.authorService.findAllAuthorsByNumberOfTheirBooks();
 
@@ -84,8 +86,8 @@ public class ConsoleRunner implements CommandLineRunner {
 
     private void getAllAuthorsWithBookBeforeGivenYear() {
 
-        System.out.println("----------------------------------------------------------------------------------------------------------------------");
-        System.out.println("2. Get all authors with at least one book with a release date before 1990. Print their first name and last name.");
+        System.out.println(SEPARATOR);
+        System.out.println(TASK_TWO_DESCRIPTION);
 
         List<Author> allByBooksReleaseDateBefore = this.authorService.findAllByBooksReleaseDateBefore(BOOK_BEFORE_YEAR);
 
@@ -95,7 +97,8 @@ public class ConsoleRunner implements CommandLineRunner {
 
     private void getAllBooksAfterGivenYear() {
 
-        System.out.println("1. Get all books after the year 2000. Print only their titles.");
+        System.out.println(SEPARATOR);
+        System.out.println(TASK_ONE_DESCRIPTION);
 
         this.bookService.findBooksByReleaseDateAfter(BOOK_AFTER_YEAR)
                 .forEach(e -> System.out.printf("Title: %s\n", e.getTitle()));
