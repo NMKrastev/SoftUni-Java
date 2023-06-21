@@ -1,5 +1,6 @@
 package com.example.A2_UserSystem.models;
 
+import com.example.A2_UserSystem.models.enums.BackgroundColorType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -27,8 +28,5 @@ public class Album extends BaseEntity {
     @ManyToMany
     @JoinTable(name = "albums_pictures", joinColumns = @JoinColumn(name = "album_id"), inverseJoinColumns = @JoinColumn(name = "picture_id"))
     private Set<Picture> pictures;
-
-    @OneToOne
-    private User user;
 
 }
