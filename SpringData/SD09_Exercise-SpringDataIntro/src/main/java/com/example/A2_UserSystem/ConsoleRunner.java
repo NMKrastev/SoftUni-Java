@@ -12,6 +12,8 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.example.A2_UserSystem.constants.Constants.*;
+
 @Service
 public class ConsoleRunner implements CommandLineRunner {
 
@@ -41,9 +43,9 @@ public class ConsoleRunner implements CommandLineRunner {
 
     private void removeInactiveUsers() {
 
-        System.out.println("-----------------------------------------------------------------------------------------");
-        System.out.println("2. Remove Inactive Users");
-        System.out.print("Please enter date in format (d-m-yyyy/1-1-1900): ");
+        System.out.println(SEPARATOR);
+        System.out.println(TASK_TWO_TITLE);
+        System.out.print(ENTER_DATE_IN_FORMAT);
         final String date = scanner.nextLine();
 
         //Setting users for deletion
@@ -58,7 +60,7 @@ public class ConsoleRunner implements CommandLineRunner {
         usersNotLoggedInAfterGivenDate
                 .forEach(e -> this.userService.deleteById(e.getId()));
 
-        System.out.println("Users deleted!");
+        System.out.println(USERS_DELETED);
     }
 
     private List<User> setUsersForDeletion(String date) {
@@ -70,20 +72,21 @@ public class ConsoleRunner implements CommandLineRunner {
 
         usersNotLoggedInAfterGivenDate.forEach(e -> e.setIsDeleted(true));
 
-        System.out.printf("Users set as deleted: %s\n", usersNotLoggedInAfterGivenDate.size());
+        System.out.printf(USERS_SET_AS_DELETED, usersNotLoggedInAfterGivenDate.size());
 
         return usersNotLoggedInAfterGivenDate;
     }
 
     private void getAllUsersByEmailProvider() {
 
-        System.out.println("1. Get Users by Email Provider");
-        System.out.print("Enter a provider(gmail.com): ");
+        System.out.println(SEPARATOR);
+        System.out.println(TASK_ONE_TITLE);
+        System.out.print(ENTER_EMAIL_PROVIDER);
         final String emailProvider = scanner.nextLine();
 
         final List<User> allByEmailLike = this.userService.findAllByEmailLike(emailProvider);
 
         allByEmailLike
-                .forEach(e -> System.out.printf("Username: %s, Email: %s\n", e.getUsername(), e.getEmail()));
+                .forEach(e -> System.out.printf(PRINT_USER_EMAIL_FORMAT, e.getUsername(), e.getEmail()));
     }
 }
