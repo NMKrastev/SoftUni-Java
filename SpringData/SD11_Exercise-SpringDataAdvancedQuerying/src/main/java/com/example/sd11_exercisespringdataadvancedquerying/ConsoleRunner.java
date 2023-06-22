@@ -67,7 +67,6 @@ public class ConsoleRunner implements CommandLineRunner {
             case 13 -> deleteBookByCopiesLowerThanGiven();
             //14. Stored Procedure
             case 14 -> getAuthorWrittenBookCountUsingUSP();
-
         }
     }
 

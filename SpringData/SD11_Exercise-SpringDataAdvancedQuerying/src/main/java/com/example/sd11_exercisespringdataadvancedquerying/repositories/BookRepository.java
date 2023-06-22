@@ -1,13 +1,11 @@
 package com.example.sd11_exercisespringdataadvancedquerying.repositories;
 
-import com.example.sd11_exercisespringdataadvancedquerying.models.Author;
 import com.example.sd11_exercisespringdataadvancedquerying.models.Book;
 import com.example.sd11_exercisespringdataadvancedquerying.models.enums.AgeRestrictionType;
 import com.example.sd11_exercisespringdataadvancedquerying.models.enums.BookEditionType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
@@ -17,10 +15,6 @@ import java.util.Optional;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
-
-    Optional<List<Book>> findBooksByReleaseDateAfter(LocalDate date);
-
-    Optional<List<Book>> findAllByAuthorOrderByReleaseDateDescTitleAsc(Author author);
 
     Optional<List<Book>> findBooksByAgeRestriction(AgeRestrictionType ageRestrictionType);
 

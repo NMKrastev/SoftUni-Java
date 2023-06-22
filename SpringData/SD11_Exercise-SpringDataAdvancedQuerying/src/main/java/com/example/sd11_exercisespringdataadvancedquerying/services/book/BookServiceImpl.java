@@ -1,18 +1,15 @@
 package com.example.sd11_exercisespringdataadvancedquerying.services.book;
 
-import com.example.sd11_exercisespringdataadvancedquerying.models.Author;
 import com.example.sd11_exercisespringdataadvancedquerying.models.Book;
 import com.example.sd11_exercisespringdataadvancedquerying.models.enums.AgeRestrictionType;
 import com.example.sd11_exercisespringdataadvancedquerying.models.enums.BookEditionType;
 import com.example.sd11_exercisespringdataadvancedquerying.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.util.List;
@@ -37,20 +34,6 @@ public class BookServiceImpl implements BookService {
     @Override
     public boolean isDataSeeded() {
         return this.bookRepository.count() > 0;
-    }
-
-    @Override
-    public List<Book> findBooksByReleaseDateAfter(LocalDate date) {
-
-        return this.bookRepository.findBooksByReleaseDateAfter(date)
-                .orElseThrow(NoSuchElementException::new);
-    }
-
-    @Override
-    public List<Book> findAllByAuthorOrderByReleaseDateDescTitleAsc(Author author) {
-
-        return this.bookRepository.findAllByAuthorOrderByReleaseDateDescTitleAsc(author)
-                .orElseThrow(NoSuchElementException::new);
     }
 
     @Override
@@ -163,6 +146,7 @@ public class BookServiceImpl implements BookService {
     @Override
     @Transactional
     public int deleteBookByCopiesLowerThanGiven(int copies) {
+
         return this.bookRepository.deleteBookByCopiesLessThan(copies);
     }
 }

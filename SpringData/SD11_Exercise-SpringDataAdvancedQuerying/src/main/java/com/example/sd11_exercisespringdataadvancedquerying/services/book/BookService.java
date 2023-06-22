@@ -1,10 +1,7 @@
 package com.example.sd11_exercisespringdataadvancedquerying.services.book;
 
-
-import com.example.sd11_exercisespringdataadvancedquerying.models.Author;
 import com.example.sd11_exercisespringdataadvancedquerying.models.Book;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public interface BookService {
@@ -12,10 +9,6 @@ public interface BookService {
     void seedBooks(List<Book> books);
 
     boolean isDataSeeded();
-
-    List<Book> findBooksByReleaseDateAfter(LocalDate date);
-
-    List<Book> findAllByAuthorOrderByReleaseDateDescTitleAsc(Author author);
 
     List<Book> findAllTitlesByAgeRestriction(String agerRestriction);
 

@@ -5,7 +5,6 @@ import com.example.sd11_exercisespringdataadvancedquerying.repositories.AuthorRe
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Random;
@@ -17,6 +16,7 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Autowired
     public AuthorServiceImpl(AuthorRepository authorRepository) {
+
         this.authorRepository = authorRepository;
     }
 
@@ -28,6 +28,7 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public boolean isDataSeeded() {
+
         return this.authorRepository.count() > 0;
     }
 
@@ -44,28 +45,6 @@ public class AuthorServiceImpl implements AuthorService {
         }
 
         throw new RuntimeException("Authors table is empty!");
-
-    }
-
-    @Override
-    public Author findAuthorByFirstNameAndLastName(String firstName, String lastName) {
-
-        return this.authorRepository.findAuthorByFirstNameAndLastName(firstName, lastName)
-                .orElseThrow(NoSuchElementException::new);
-    }
-
-    @Override
-    public List<Author> findAllByBooksReleaseDateBefore(LocalDate date) {
-
-        return this.authorRepository.findAllByBooksReleaseDateBefore(date)
-                .orElseThrow(NoSuchElementException::new);
-    }
-
-    @Override
-    public List<Object[]> findAllAuthorsByNumberOfTheirBooks() {
-
-        return this.authorRepository.findAllAuthorsByNumberOfTheirBooks()
-                .orElseThrow(NoSuchElementException::new);
     }
 
     @Override

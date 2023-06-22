@@ -1,7 +1,5 @@
 package com.example.sd11_exercisespringdataadvancedquerying.constants;
 
-import java.time.LocalDate;
-
 public enum Constant {
 
     ;
