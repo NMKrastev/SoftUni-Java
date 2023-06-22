@@ -138,15 +138,15 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public int getAuthorWrittenBookCountUsingUSP(String fullName) {
-
-        return this.bookRepository.getAuthorWrittenBookCountUsingUSP(fullName);
-    }
-
-    @Override
     @Transactional
     public int deleteBookByCopiesLowerThanGiven(int copies) {
 
         return this.bookRepository.deleteBookByCopiesLessThan(copies);
+    }
+
+    @Override
+    public int getAuthorWrittenBookCountUsingUSP(String fullName) {
+
+        return this.bookRepository.getAuthorWrittenBookCountUsingUSP(fullName);
     }
 }
