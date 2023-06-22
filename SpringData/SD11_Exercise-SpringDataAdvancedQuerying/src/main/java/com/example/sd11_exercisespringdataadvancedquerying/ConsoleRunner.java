@@ -130,7 +130,6 @@ public class ConsoleRunner implements CommandLineRunner {
 
     private void getBooksTotalCopiesByAuthor() {
         //10. Total Book Copies
-
         final List<Object[]> totalBooksCopiesByAuthor =
                 this.bookService.findTotalBooksCopiesByAuthor();
 
@@ -172,7 +171,7 @@ public class ConsoleRunner implements CommandLineRunner {
     }
 
     private void getBooksThatContainGivenString() {
-
+        //7. Books Search
         System.out.print(ENTER_STRING);
         final String input = scanner.nextLine();
 
