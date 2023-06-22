@@ -9,14 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-
 import java.util.*;
 
 import static com.example.sd11_exercisespringdataadvancedquerying.constants.Constant.*;
 
-
-@Component //- Very similar to Service - can be used if something is not quite a Service
-//@Service
+@Component
 public class ConsoleRunner implements CommandLineRunner {
 
     private static final Scanner scanner = new Scanner(System.in);
@@ -95,7 +92,6 @@ public class ConsoleRunner implements CommandLineRunner {
                 this.bookService.getAuthorWrittenBookCountUsingUSP(fullName);
 
         System.out.printf(AUTHOR_NAME_BOOKS_COUNT_FORMAT, fullName, count);
-
     }
 
     private void deleteBookByCopiesLowerThanGiven() {
@@ -160,7 +156,6 @@ public class ConsoleRunner implements CommandLineRunner {
                 this.bookService.countBooksWithTitleLongerThanGiven(length);
 
         System.out.println(count);
-
     }
 
     private void getBooksByAuthorLastNameStartsWith() {
