@@ -1,0 +1,7 @@
+usernameOne P@ssw0rd test1@gmail.com 10 0
+usernameTwo P@ssw0rd test2@gmail.com 20 0
+usernameThree P@ssw0rd test1@yahoo.com 30 0
+usernameFour P@ssw0rd test2@yahoo.com 40 0
+usernameFive P@ssw0rd test1@gmail.co.uk 50 0
+usernameSix P@ssw0rd test1@abv.bg 60 0
+usernameSeven P@ssw0rd test1@test.eu 70 0
