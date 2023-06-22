@@ -44,9 +44,9 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     @Modifying
     Optional<Integer> updateCopiesOfBooksReleasedBeforeDate(LocalDate date, int copies);
 
-    @Modifying
-    int deleteBookByCopiesLessThan(int copies);
-
     @Query(value = "CALL usp_get_count_of_written_books_by_author(?1)", nativeQuery = true)
     int getAuthorWrittenBookCountUsingUSP(String fullName);
+
+    @Modifying
+    int deleteBookByCopiesLessThan(int copies);
 }

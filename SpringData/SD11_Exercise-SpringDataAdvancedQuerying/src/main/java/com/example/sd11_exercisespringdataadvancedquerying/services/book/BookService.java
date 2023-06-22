@@ -32,7 +32,7 @@ public interface BookService {
 
     int updateCopiesOfBooksReleasedBeforeDate(String date, int copies);
 
-    int deleteBookByCopiesLowerThanGiven(int copies);
-
     int getAuthorWrittenBookCountUsingUSP(String fullName);
+
+    int deleteBookByCopiesLowerThanGiven(int copies);
 }
