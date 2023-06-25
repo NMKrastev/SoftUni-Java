@@ -4,6 +4,7 @@ public enum Messages {
 
     ;
 
+    public static final String ENTER_COMMAND = "Please, enter command and data or \"Close\" to exit: ";
     public static final String USER_REGISTERED = "%s was registered.";
     public static final String USER_LOGGED_IN_SUCCESSFULLY = "Successfully logged in %s.";
     public static final String USER_LOGGED_OUT_SUCCESSFULLY = "User %s successfully logged out.";

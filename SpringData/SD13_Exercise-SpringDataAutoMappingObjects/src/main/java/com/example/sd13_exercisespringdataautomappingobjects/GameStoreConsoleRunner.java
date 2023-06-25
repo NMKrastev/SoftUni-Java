@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 import static com.example.sd13_exercisespringdataautomappingobjects.constants.Commands.*;
+import static com.example.sd13_exercisespringdataautomappingobjects.constants.Messages.ENTER_COMMAND;
 import static com.example.sd13_exercisespringdataautomappingobjects.constants.Validations.COMMAND_NOT_FOUND_MESSAGE;
 
 @Component
@@ -30,10 +31,10 @@ public class GameStoreConsoleRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         //Separated by |
-        System.out.print("Enter command and data: ");
+        System.out.print(ENTER_COMMAND);
         String input = scanner.nextLine();
 
-        while (!input.equalsIgnoreCase("end")) {
+        while (!input.equalsIgnoreCase("Close")) {
 
             final String command = input.split("\\|")[0];
 
@@ -46,11 +47,14 @@ public class GameStoreConsoleRunner implements CommandLineRunner {
                 case ADD_GAME -> this.gameService.addGame(data);
                 case EDIT_GAME -> this.gameService.editGame(data);
                 case DELETE_GAME -> this.gameService.deleteGame(data);
+                case ALL_GAMES -> this.gameService.getAllGames();
+                case DETAIL_GAME -> this.gameService.getInfoAboutAGame(data);
                 default -> COMMAND_NOT_FOUND_MESSAGE;
             };
 
             System.out.println(output);
 
+            System.out.print(ENTER_COMMAND);
             input = scanner.nextLine();
         }
     }

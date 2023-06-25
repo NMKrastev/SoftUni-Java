@@ -9,4 +9,7 @@ public interface GameService {
     String deleteGame(String[] gameData);
 
 
+    String getAllGames();
+
+    String getInfoAboutAGame(String[] data);
 }

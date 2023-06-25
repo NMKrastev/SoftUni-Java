@@ -3,6 +3,8 @@ package com.example.sd13_exercisespringdataautomappingobjects.services.game;
 import com.example.sd13_exercisespringdataautomappingobjects.entities.Game;
 import com.example.sd13_exercisespringdataautomappingobjects.entities.User;
 import com.example.sd13_exercisespringdataautomappingobjects.entities.dtos.game.GameDTO;
+import com.example.sd13_exercisespringdataautomappingobjects.entities.dtos.game.GameDetailedInfoDTO;
+import com.example.sd13_exercisespringdataautomappingobjects.entities.dtos.game.GameTitlePriceDTO;
 import com.example.sd13_exercisespringdataautomappingobjects.repositories.GameRepository;
 import com.example.sd13_exercisespringdataautomappingobjects.services.user.UserService;
 import org.modelmapper.ModelMapper;
@@ -14,7 +16,9 @@ import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 import static com.example.sd13_exercisespringdataautomappingobjects.constants.Messages.*;
@@ -81,13 +85,13 @@ public class GameServiceImpl implements GameService {
 
         final Long id = Long.valueOf(gameData[0]);
 
-        Optional<Game> doesGameExist = this.gameRepository.findById(id);
+        final Optional<Game> doesGameExist = this.gameRepository.findById(id);
 
         if (doesGameExist.isEmpty()) {
             return String.format(GAME_DOES_NOT_EXISTS, id);
         }
 
-        Game game = doesGameExist.get();
+        final Game game = doesGameExist.get();
 
         final Field[] declaredFields = game.getClass().getDeclaredFields();
 
@@ -108,7 +112,7 @@ public class GameServiceImpl implements GameService {
 
         final Long id = Long.valueOf(gameData[0]);
 
-        Optional<Game> doesGameExist = this.gameRepository.findById(id);
+        final Optional<Game> doesGameExist = this.gameRepository.findById(id);
 
         if (doesGameExist.isEmpty()) {
             return String.format(GAME_DOES_NOT_EXISTS, id);
@@ -117,6 +121,42 @@ public class GameServiceImpl implements GameService {
         this.gameRepository.deleteById(id);
 
         return String.format(GAME_DELETED_SUCCESSFULLY, doesGameExist.get().getTitle());
+    }
+
+    @Override
+    public String getAllGames() {
+
+        final List<Game> allGames = this.gameRepository.findAll();
+
+        final List<GameTitlePriceDTO> gameTitlePriceDTOS = new ArrayList<>();
+
+        allGames.forEach(e -> gameTitlePriceDTOS.add(mapper.map(e, GameTitlePriceDTO.class)));
+
+        final StringBuilder sb = new StringBuilder();
+
+        gameTitlePriceDTOS
+                .forEach(e -> sb.append(String.format("%s %.2f", e.getTitle(), e.getPrice()))
+                        .append(System.lineSeparator()));
+
+        return sb.toString().trim();
+    }
+
+    @Override
+    public String getInfoAboutAGame(String[] data) {
+
+        final String title = data[0];
+
+        final Optional<Game> gameByTitle = this.gameRepository.findFirstByTitle(title);
+
+        if (gameByTitle.isEmpty()) {
+            return String.format(GAME_TITLE_DOES_NOT_EXISTS, title);
+        }
+
+        final Game game = gameByTitle.get();
+
+        final GameDetailedInfoDTO gameDetailedInfoDTO = mapper.map(game, GameDetailedInfoDTO.class);
+
+        return gameDetailedInfoDTO.toString();
     }
 
     private static void updateFieldsValue(String[] gameData, Game game, Field[] declaredFields) {
