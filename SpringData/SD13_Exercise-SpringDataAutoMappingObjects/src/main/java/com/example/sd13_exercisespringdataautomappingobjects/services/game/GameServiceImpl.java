@@ -160,6 +160,7 @@ public class GameServiceImpl implements GameService {
     }
 
     private static void updateFieldsValue(String[] gameData, Game game, Field[] declaredFields) {
+
         for (String data : Arrays.stream(gameData).skip(1).toArray(String[]::new)) {
 
             final String column = data.split("=")[0];

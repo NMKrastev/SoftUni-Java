@@ -13,4 +13,5 @@ public enum Commands {
     public static final String ALL_GAMES = "AllGames";
     public static final String DETAIL_GAME = "DetailGame";
     public static final String OWNED_GAMES = "OwnedGames";
+    public static final String PURCHASE_GAME = "PurchaseGame";
 }

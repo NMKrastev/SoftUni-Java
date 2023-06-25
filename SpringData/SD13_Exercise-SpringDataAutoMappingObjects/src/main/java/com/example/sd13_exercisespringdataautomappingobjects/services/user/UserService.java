@@ -12,4 +12,7 @@ public interface UserService {
 
     User getLoggedInUser();
 
+    String purchaseGame(String[] data);
+
+    String getUserOwnedGames();
 }

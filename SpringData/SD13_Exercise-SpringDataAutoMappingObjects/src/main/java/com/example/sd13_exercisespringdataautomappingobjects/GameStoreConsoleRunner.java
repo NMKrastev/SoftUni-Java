@@ -49,6 +49,8 @@ public class GameStoreConsoleRunner implements CommandLineRunner {
                 case DELETE_GAME -> this.gameService.deleteGame(data);
                 case ALL_GAMES -> this.gameService.getAllGames();
                 case DETAIL_GAME -> this.gameService.getInfoAboutAGame(data);
+                case PURCHASE_GAME -> this.userService.purchaseGame(data);
+                case OWNED_GAMES -> this.userService.getUserOwnedGames();
                 default -> COMMAND_NOT_FOUND_MESSAGE;
             };
 
