@@ -1,6 +1,7 @@
 package com.example.sd13_exercisespringdataautomappingobjects;
 
 import com.example.sd13_exercisespringdataautomappingobjects.services.game.GameService;
+import com.example.sd13_exercisespringdataautomappingobjects.services.order.OrderService;
 import com.example.sd13_exercisespringdataautomappingobjects.services.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -19,12 +20,14 @@ public class GameStoreConsoleRunner implements CommandLineRunner {
     private final Scanner scanner;
     private final UserService userService;
     private final GameService gameService;
+    private final OrderService orderService;
 
     @Autowired
-    public GameStoreConsoleRunner(Scanner scanner, UserService userService, GameService gameService) {
+    public GameStoreConsoleRunner(Scanner scanner, UserService userService, GameService gameService, OrderService orderService) {
         this.scanner = scanner;
         this.userService = userService;
         this.gameService = gameService;
+        this.orderService = orderService;
     }
 
     @Override
@@ -51,8 +54,13 @@ public class GameStoreConsoleRunner implements CommandLineRunner {
                 case DETAIL_GAME -> this.gameService.getInfoAboutAGame(data);
                 case PURCHASE_GAME -> this.userService.purchaseGame(data);
                 case OWNED_GAMES -> this.userService.getUserOwnedGames();
+                case ADD_ITEM -> this.userService.addItemToShoppingCart(data);
+                case REMOVE_ITEM -> this.userService.removeItemFromShoppingCart(data);
+                case BUY_ITEM -> this.userService.buyItemsFromShoppingCart();
                 default -> COMMAND_NOT_FOUND_MESSAGE;
             };
+
+            this.orderService.createOrder();
 
             System.out.println(output);
 

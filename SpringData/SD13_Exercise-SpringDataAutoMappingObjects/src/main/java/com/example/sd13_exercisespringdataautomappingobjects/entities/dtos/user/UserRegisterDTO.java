@@ -1,7 +1,5 @@
 package com.example.sd13_exercisespringdataautomappingobjects.entities.dtos.user;
 
-import com.example.sd13_exercisespringdataautomappingobjects.entities.User;
-
 import java.util.regex.Pattern;
 
 import static com.example.sd13_exercisespringdataautomappingobjects.constants.Messages.USER_REGISTERED;
@@ -16,6 +14,7 @@ public class UserRegisterDTO {
     private String confirmPassword;
 
     private String fullName;
+
 
     public UserRegisterDTO(String email, String password, String confirmPassword, String fullName) {
         this.email = email;

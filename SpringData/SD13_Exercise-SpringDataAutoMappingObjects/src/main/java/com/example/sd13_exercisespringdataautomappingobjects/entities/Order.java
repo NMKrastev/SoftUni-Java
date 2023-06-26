@@ -12,7 +12,10 @@ public class Order extends BaseEntity {
     @ManyToOne
     private User user;
 
-    @ManyToMany(targetEntity = Game.class, fetch = FetchType.EAGER)
+    @OneToMany(targetEntity = Game.class, fetch = FetchType.EAGER)
+    @JoinTable(name = "orders_games",
+            joinColumns = @JoinColumn(name = "order_id"),
+            inverseJoinColumns = @JoinColumn(name = "game_id"))
     private Set<Game> games;
 
     public Order() {

@@ -15,4 +15,12 @@ public interface UserService {
     String purchaseGame(String[] data);
 
     String getUserOwnedGames();
+
+    String addItemToShoppingCart(String[] data);
+
+    String removeItemFromShoppingCart(String[] data);
+
+    String buyItemsFromShoppingCart();
+
+    //String createOrder();
 }
