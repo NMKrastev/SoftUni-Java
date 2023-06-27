@@ -12,8 +12,6 @@ public interface UserService {
 
     User getLoggedInUser();
 
-    String purchaseGame(String[] data);
-
     String getUserOwnedGames();
 
     String addItemToShoppingCart(String[] data);
@@ -21,6 +19,4 @@ public interface UserService {
     String removeItemFromShoppingCart(String[] data);
 
     String buyItemsFromShoppingCart();
-
-    //String createOrder();
 }

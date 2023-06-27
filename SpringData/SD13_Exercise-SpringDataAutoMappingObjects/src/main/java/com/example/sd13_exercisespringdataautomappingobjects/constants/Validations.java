@@ -1,9 +1,5 @@
 package com.example.sd13_exercisespringdataautomappingobjects.constants;
 
-import com.example.sd13_exercisespringdataautomappingobjects.entities.dtos.game.GameDTO;
-
-import java.math.BigDecimal;
-
 public enum Validations {
 
     ;
@@ -30,5 +26,6 @@ public enum Validations {
     public static final String USER_ALREADY_BOUGHT_TITLE = "User already bought title \"%s\"";
     public static final String GAME_ALREADY_IN_CART = "Game \"%s\" is already in your cart!";
     public static final String SHOPPING_CART_EMPTY = "Your shopping cart is empty!";
+    public static final String USER_DOES_NOT_OWN_GAMES = "%s does not own any games yet!";
 
 }

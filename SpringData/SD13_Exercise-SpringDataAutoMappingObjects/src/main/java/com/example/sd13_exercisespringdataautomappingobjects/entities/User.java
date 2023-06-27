@@ -26,18 +26,19 @@ public class User extends BaseEntity {
     @Column(columnDefinition = "TINYINT")
     private Boolean isAdministrator;
 
-    @OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER)
     @JoinTable(name = "users_games",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "game_id"))
     private Set<Game> games;
 
 
-    @OneToMany(mappedBy = "user", targetEntity = Order.class, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user",
+            cascade = CascadeType.ALL,
+            targetEntity = Order.class,
+            fetch = FetchType.EAGER)
     private Set<Order> orders;
-
-    /*@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private ShoppingCart shoppingCart;*/
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_shopping_cart__games",
@@ -52,12 +53,11 @@ public class User extends BaseEntity {
         this.shoppingCart = new LinkedHashSet<>();
     }
 
-    public User(String email, String password, String fullName /*ShoppingCart shoppingCart*/) {
+    public User(String email, String password, String fullName) {
         this();
         this.email = email;
         this.password = password;
         this.fullName = fullName;
-        //this.shoppingCart = shoppingCart;
     }
 
     public String getEmail() {
@@ -107,14 +107,6 @@ public class User extends BaseEntity {
     public void setOrders(Set<Order> orders) {
         this.orders = orders;
     }
-
-    /*public ShoppingCart getShoppingCart() {
-        return shoppingCart;
-    }
-
-    public void setShoppingCart(ShoppingCart shoppingCart) {
-        this.shoppingCart = shoppingCart;
-    }*/
 
     public Set<Game> getShoppingCart() {
         return shoppingCart;

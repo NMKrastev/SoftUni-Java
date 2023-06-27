@@ -9,12 +9,13 @@ import com.example.sd13_exercisespringdataautomappingobjects.entities.dtos.user.
 import com.example.sd13_exercisespringdataautomappingobjects.repositories.GameRepository;
 import com.example.sd13_exercisespringdataautomappingobjects.repositories.OrderRepository;
 import com.example.sd13_exercisespringdataautomappingobjects.repositories.UserRepository;
-import org.aspectj.weaver.ast.Or;
+import com.example.sd13_exercisespringdataautomappingobjects.services.order.OrderService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.LinkedHashSet;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -30,13 +31,15 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final GameRepository gameRepository;
     private final OrderRepository orderRepository;
+    private final OrderService orderService;
 
     @Autowired
-    public UserServiceImpl(ModelMapper mapper, UserRepository userRepository, GameRepository gameRepository, OrderRepository orderRepository) {
+    public UserServiceImpl(ModelMapper mapper, UserRepository userRepository, GameRepository gameRepository, OrderRepository orderRepository, OrderService orderService) {
         this.mapper = mapper;
         this.userRepository = userRepository;
         this.gameRepository = gameRepository;
         this.orderRepository = orderRepository;
+        this.orderService = orderService;
     }
 
     @Override
@@ -58,12 +61,10 @@ public class UserServiceImpl implements UserService {
         boolean isUserFound = this.userRepository.findByEmail(userRegisterDTO.getEmail()).isPresent();
 
         if (isUserFound) {
-            //throw new IllegalArgumentException(EMAIL_ALREADY_EXISTS);
             return EMAIL_ALREADY_EXISTS;
         }
 
         final User user = this.mapper.map(userRegisterDTO, User.class);
-        //final User user2 = userRegisterDTO.toUser();
 
         user.setAdministrator(this.userRepository.count() == 0);
 
@@ -111,39 +112,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getLoggedInUser() {
-        return this.loggedInUser;
-    }
-
-    @Override
-    public String purchaseGame(String[] data) {
-
-        if (this.loggedInUser == null) {
-            return USER_MUST_BE_LOGGED_IN;
-        }
-
-        final String title = data[0];
-
-        final Optional<Game> gameByTitle = this.gameRepository.findFirstByTitle(title);
-
-        if (gameByTitle.isEmpty()) {
-            return String.format(GAME_TITLE_DOES_NOT_EXISTS, title);
-        }
-
-        final Game game = gameByTitle.get();
-        final User user = this.loggedInUser;
-
-        if (hasUserBoughtTitle(title, user)) {
-            return String.format(USER_ALREADY_BOUGHT_TITLE, title);
-        }
-
-        user.getGames().add(game);
-        this.userRepository.save(user);
-
-        return String.format(USER_BOUGHT_GAME_SUCCESSFULLY, user.getFullName(), game.getTitle());
-    }
-
-    @Override
     public String getUserOwnedGames() {
 
         if (this.loggedInUser == null) {
@@ -152,7 +120,12 @@ public class UserServiceImpl implements UserService {
 
         final StringBuilder sb = new StringBuilder();
 
-        final Set<Game> ownedGames = this.loggedInUser.getGames();
+        final User user = this.userRepository.findUserById(this.loggedInUser.getId()).get();
+        final Set<Game> ownedGames = user.getGames();
+
+        if (ownedGames.isEmpty()) {
+            return String.format(USER_DOES_NOT_OWN_GAMES, user.getFullName());
+        }
 
         final Set<UserOwnedGameTitlesDTO> userOwnedGameTitlesDTOS =
                 ownedGames
@@ -186,6 +159,10 @@ public class UserServiceImpl implements UserService {
         final User user = this.userRepository.findUserById(this.loggedInUser.getId()).get();
         final Game game = gameByTitle.get();
 
+        if (hasUserBoughtTitle(title, user)) {
+            return String.format(USER_ALREADY_BOUGHT_TITLE, title);
+        }
+
         for (Game currentGame : user.getShoppingCart()) {
             if (currentGame.getTitle().equals(title)) {
                 return String.format(GAME_ALREADY_IN_CART, title);
@@ -217,6 +194,10 @@ public class UserServiceImpl implements UserService {
 
         final User user = this.userRepository.findUserById(this.loggedInUser.getId()).get();
 
+        if (user.getShoppingCart().isEmpty()) {
+            return SHOPPING_CART_EMPTY;
+        }
+
         for (Game currentGame : user.getShoppingCart()) {
             if (currentGame.getTitle().equals(title)) {
                 user.getShoppingCart().remove(currentGame);
@@ -243,6 +224,11 @@ public class UserServiceImpl implements UserService {
             return SHOPPING_CART_EMPTY;
         }
 
+        final Set<Game> shoppingCart = new LinkedHashSet<>(user.getShoppingCart());
+        final Order order = new Order(user, shoppingCart);
+
+        this.orderRepository.save(order);
+
         user.getGames().addAll(user.getShoppingCart());
 
         user.getShoppingCart().clear();
@@ -251,37 +237,20 @@ public class UserServiceImpl implements UserService {
 
         final StringBuilder sb = new StringBuilder();
 
-        user.getGames()
-                .stream()
-                .map(Game::getTitle)
-                .forEach(e -> sb.append(String.format(" -%s", e)).append(System.lineSeparator()));
+        shoppingCart
+                .forEach(e -> sb.append(String.format(" -%s", e.getTitle()))
+                        .append(System.lineSeparator()));
 
         return String.format(SUCCESSFULLY_BOUGHT_GAMES, sb);
     }
 
-/*    @Override
-    public String createOrder() {
-
-        final User user = this.userRepository.findUserById(this.loggedInUser.getId()).get();
-
-        final Set<Game> games = user.getGames();
-
-        final Order order = new Order(user, games);
-
-        this.orderRepository.save(order);
-
-        final StringBuilder sb = new StringBuilder();
-
-        user.getGames()
-                .stream()
-                .map(Game::getTitle)
-                .forEach(e -> sb.append(String.format(" -%s", e)).append(System.lineSeparator()));
-
-        return sb.toString().trim();
-
-    }*/
+    @Override
+    public User getLoggedInUser() {
+        return this.loggedInUser;
+    }
 
     private static boolean hasUserBoughtTitle(String title, User user) {
+
         final Set<Game> games = user.getGames();
 
         for (Game current : games) {
@@ -289,6 +258,7 @@ public class UserServiceImpl implements UserService {
                 return true;
             }
         }
+
         return false;
     }
 }

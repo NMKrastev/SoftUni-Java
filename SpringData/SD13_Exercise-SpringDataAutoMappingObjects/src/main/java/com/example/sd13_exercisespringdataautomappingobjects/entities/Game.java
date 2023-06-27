@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "games")
@@ -18,7 +16,7 @@ public class Game extends BaseEntity {
     @Column(name = "trailer_id")
     private String trailerId;
 
-    @Column(name = "image_url")
+    @Column(name = "thumbnail_url")
     private String thumbnailUrl;
 
     @Column

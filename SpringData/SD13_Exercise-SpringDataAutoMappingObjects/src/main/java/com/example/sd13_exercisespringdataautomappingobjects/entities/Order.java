@@ -9,10 +9,12 @@ import java.util.Set;
 @Table(name = "orders")
 public class Order extends BaseEntity {
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private User user;
 
-    @OneToMany(targetEntity = Game.class, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL,
+            targetEntity = Game.class,
+            fetch = FetchType.EAGER)
     @JoinTable(name = "orders_games",
             joinColumns = @JoinColumn(name = "order_id"),
             inverseJoinColumns = @JoinColumn(name = "game_id"))

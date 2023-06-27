@@ -118,6 +118,8 @@ public class GameServiceImpl implements GameService {
             return String.format(GAME_DOES_NOT_EXISTS, id);
         }
 
+        deleteDetachedEntries(id);
+
         this.gameRepository.deleteById(id);
 
         return String.format(GAME_DELETED_SUCCESSFULLY, doesGameExist.get().getTitle());
@@ -184,7 +186,7 @@ public class GameServiceImpl implements GameService {
                         case "description":
                             game.setDescription(value);
                             break label;
-                    }
+                    }                                                //maybe an extra condition
                 } else if (declaredField.getName().equals(column) && column.equals("price")
                         && declaredField.getType().equals(BigDecimal.class)) {
 
@@ -203,6 +205,13 @@ public class GameServiceImpl implements GameService {
                 }
             }
         }
+    }
+
+    private void deleteDetachedEntries(Long id) {
+
+        this.gameRepository.deleteGameInOrdersById(id);
+        this.gameRepository.deleteGameInUsersById(id);
+        this.gameRepository.deleteGameInCartsById(id);
     }
 
     private boolean isUserLoggedInAdministrator() {

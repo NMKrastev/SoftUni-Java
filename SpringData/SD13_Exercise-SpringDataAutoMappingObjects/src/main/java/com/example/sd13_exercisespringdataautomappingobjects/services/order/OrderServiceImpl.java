@@ -21,19 +21,4 @@ public class OrderServiceImpl implements OrderService {
         this.orderRepository = orderRepository;
         this.userRepository = userRepository;
     }
-
-    @Override
-    public void createOrder() {
-
-        final User user = this.userRepository.findUserById(1L).get();
-
-        final Set<Game> games = user.getGames();
-
-        final Order order = new Order(user, games);
-
-        this.orderRepository.save(order);
-
-
-        System.out.println();
-    }
 }
