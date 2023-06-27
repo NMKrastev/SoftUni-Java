@@ -4,8 +4,8 @@ public enum Constant {
 
     ;
 
-    public static final String ENTER_TASK_NUMBER = "Please, enter task number: ";
-
+    public static final String ENTER_TASK_NUMBER = "Please, enter task number or 0 to exit: ";
+    public static final String NOT_VALID_TASK_NUMBER = "Not a valid task number %d!\n";
     public static final String ENTER_AGE_RESTRICTION = "Please, enter age restriction: ";
     public static final String BOOK_TITLE_PRICE_FORMAT = "%s - $%.2f\n";
     public static final String ENTER_YEAR_OF_BOOK_RELEASE = "Please, enter year of book release: ";

@@ -33,40 +33,48 @@ public class ConsoleRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         //Populates the DB with the given files
-        //this.seedService.seedAllData();
+        this.seedService.seedAllData();
 
         System.out.print(ENTER_TASK_NUMBER);
         int taskNumber = Integer.parseInt(scanner.nextLine());
 
-        switch (taskNumber) {
-            //1. Book Titles By Age Restriction
-            case 1 -> getBooksTitleByAgeRestriction();
-            //2. Golden Books
-            case 2 -> getAllGoldenBooksWithLessThan5kCopies();
-            //3. Books By Price
-            case 3 -> getAllBooksByPriceLowerOrUpperThan();
-            //4. Not Released Books
-            case 4 -> getAllBooksNotReleaseInGivenYear();
-            //5. Books Released Before Date
-            case 5 -> getBooksReleasedBeforeDate();
-            //6. Authors Search
-            case 6 -> getAuthorsThatFirstNameEndsWith();
-            //7. Books Search
-            case 7 -> getBooksThatContainGivenString();
-            //8. Book Titles Search
-            case 8 -> getBooksByAuthorLastNameStartsWith();
-            //9. Count Books
-            case 9 -> getBooksCountWithTitleLongerThan();
-            //10. Total Book Copies
-            case 10 -> getBooksTotalCopiesByAuthor();
-            //11. Reduced Book
-            case 11 -> getTitLeEditionRestrictionPriceOfBook();
-            //12. Increase Book Copies
-            case 12 -> updateCopiesOfBooksReleasedBeforeDate();
-            //13. Remove Books
-            case 13 -> deleteBookByCopiesLowerThanGiven();
-            //14. Stored Procedure
-            case 14 -> getAuthorWrittenBookCountUsingUSP();
+        while (taskNumber != 0) {
+
+            switch (taskNumber) {
+                //1. Book Titles By Age Restriction
+                case 1 -> getBooksTitleByAgeRestriction();
+                //2. Golden Books
+                case 2 -> getAllGoldenBooksWithLessThan5kCopies();
+                //3. Books By Price
+                case 3 -> getAllBooksByPriceLowerOrUpperThan();
+                //4. Not Released Books
+                case 4 -> getAllBooksNotReleaseInGivenYear();
+                //5. Books Released Before Date
+                case 5 -> getBooksReleasedBeforeDate();
+                //6. Authors Search
+                case 6 -> getAuthorsThatFirstNameEndsWith();
+                //7. Books Search
+                case 7 -> getBooksThatContainGivenString();
+                //8. Book Titles Search
+                case 8 -> getBooksByAuthorLastNameStartsWith();
+                //9. Count Books
+                case 9 -> getBooksCountWithTitleLongerThan();
+                //10. Total Book Copies
+                case 10 -> getBooksTotalCopiesByAuthor();
+                //11. Reduced Book
+                case 11 -> getTitLeEditionRestrictionPriceOfBook();
+                //12. Increase Book Copies
+                case 12 -> updateCopiesOfBooksReleasedBeforeDate();
+                //13. Remove Books
+                case 13 -> deleteBookByCopiesLowerThanGiven();
+                //14. Stored Procedure
+                case 14 -> getAuthorWrittenBookCountUsingUSP();
+                //No valid task number
+                default -> System.out.printf(NOT_VALID_TASK_NUMBER, taskNumber);
+            }
+
+            System.out.print(ENTER_TASK_NUMBER);
+            taskNumber = Integer.parseInt(scanner.nextLine());
         }
     }
 
