@@ -20,10 +20,10 @@ public enum Validations {
     public static final String INVALID_DESCRIPTION_LENGTH_MESSAGE = "Description should be at least 20 characters long!";
     public static final String USER_MUST_BE_LOGGED_OR_ADMIN_TO_ADD_OR_EDIT_GAME = "User must be logged in or be an admin to Add, Edit or Delete a game!";
     public static final String GAME_ALREADY_EXISTS = "Game already exists!";
-    public static final String GAME_TITLE_DOES_NOT_EXISTS = "Game with title \"%s\" does not exist";
+    public static final String GAME_TITLE_DOES_NOT_EXISTS = "Game with title \"%s\" does not exist!";
     public static final String GAME_DOES_NOT_EXISTS = "Game with id: %d does not exist!";
-    public static final String USER_MUST_BE_LOGGED_IN = "User must be logged in.";
-    public static final String USER_ALREADY_BOUGHT_TITLE = "User already bought title \"%s\"";
+    public static final String USER_MUST_BE_LOGGED_IN = "User must be logged in!";
+    public static final String USER_ALREADY_BOUGHT_TITLE = "User already bought title \"%s\"!";
     public static final String GAME_ALREADY_IN_CART = "Game \"%s\" is already in your cart!";
     public static final String SHOPPING_CART_EMPTY = "Your shopping cart is empty!";
     public static final String USER_DOES_NOT_OWN_GAMES = "%s does not own any games yet!";

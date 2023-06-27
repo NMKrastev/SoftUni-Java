@@ -240,7 +240,7 @@ public class UserServiceImpl implements UserService {
                 .forEach(e -> sb.append(String.format(" -%s", e.getTitle()))
                         .append(System.lineSeparator()));
 
-        return String.format(SUCCESSFULLY_BOUGHT_GAMES, sb);
+        return String.format(SUCCESSFULLY_BOUGHT_GAMES, sb.toString().trim().replaceAll("(?m)^[ \t]*\r?\n", ""));
     }
 
     @Override
