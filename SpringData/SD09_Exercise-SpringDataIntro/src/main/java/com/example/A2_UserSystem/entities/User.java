@@ -1,8 +1,8 @@
-package com.example.A2_UserSystem.models;
+package com.example.A2_UserSystem.entities;
 
 
-import com.example.A2_UserSystem.models.annotations.email.Email;
-import com.example.A2_UserSystem.models.annotations.password.Password;
+import com.example.A2_UserSystem.entities.annotations.email.Email;
+import com.example.A2_UserSystem.entities.annotations.password.Password;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.*;
@@ -25,8 +25,7 @@ public class User extends BaseEntity {
 
     @Column(nullable = false)
     //"Contains" fields are grayed out because that is their default value(true)
-    @Password(minLength = 8, maxLength = 20, containsDigit = true,
-            containsLowercase = true, containsUppercase = true, containsSpecialSymbol = true)
+    @Password(minLength = 8, maxLength = 20)
     private String password;
 
     @Column(nullable = false)

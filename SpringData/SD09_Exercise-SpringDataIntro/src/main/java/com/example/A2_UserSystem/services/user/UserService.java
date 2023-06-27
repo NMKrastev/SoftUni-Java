@@ -1,7 +1,7 @@
 package com.example.A2_UserSystem.services.user;
 
 
-import com.example.A2_UserSystem.models.User;
+import com.example.A2_UserSystem.entities.User;
 
 import java.time.LocalDate;
 import java.util.List;

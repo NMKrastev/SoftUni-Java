@@ -1,6 +1,6 @@
 package com.example.A2_UserSystem.services.user;
 
-import com.example.A2_UserSystem.models.User;
+import com.example.A2_UserSystem.entities.User;
 import com.example.A2_UserSystem.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

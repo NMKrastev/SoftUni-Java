@@ -1,6 +1,6 @@
 package com.example.A2_UserSystem.services.town;
 
-import com.example.A2_UserSystem.models.Town;
+import com.example.A2_UserSystem.entities.Town;
 
 import java.util.List;
 

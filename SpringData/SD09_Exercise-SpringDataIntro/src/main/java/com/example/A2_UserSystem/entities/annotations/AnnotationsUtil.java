@@ -1,4 +1,4 @@
-package com.example.A2_UserSystem.models.annotations;
+package com.example.A2_UserSystem.entities.annotations;
 
 import jakarta.validation.ConstraintValidatorContext;
 

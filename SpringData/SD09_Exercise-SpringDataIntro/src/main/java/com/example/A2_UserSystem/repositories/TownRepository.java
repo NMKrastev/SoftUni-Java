@@ -1,6 +1,6 @@
 package com.example.A2_UserSystem.repositories;
 
-import com.example.A2_UserSystem.models.Town;
+import com.example.A2_UserSystem.entities.Town;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

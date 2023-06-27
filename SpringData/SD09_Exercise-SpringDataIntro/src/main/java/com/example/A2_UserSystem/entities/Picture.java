@@ -1,4 +1,4 @@
-package com.example.A2_UserSystem.models;
+package com.example.A2_UserSystem.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;

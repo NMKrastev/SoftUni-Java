@@ -1,6 +1,6 @@
 package com.example.A2_UserSystem;
 
-import com.example.A2_UserSystem.models.User;
+import com.example.A2_UserSystem.entities.User;
 import com.example.A2_UserSystem.services.seed.SeedService;
 import com.example.A2_UserSystem.services.town.TownService;
 import com.example.A2_UserSystem.services.user.UserService;

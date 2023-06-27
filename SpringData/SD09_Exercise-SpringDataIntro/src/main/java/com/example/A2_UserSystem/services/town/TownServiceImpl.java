@@ -1,6 +1,6 @@
 package com.example.A2_UserSystem.services.town;
 
-import com.example.A2_UserSystem.models.Town;
+import com.example.A2_UserSystem.entities.Town;
 import com.example.A2_UserSystem.repositories.TownRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

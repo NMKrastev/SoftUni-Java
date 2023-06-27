@@ -1,6 +1,6 @@
-package com.example.A2_UserSystem.models;
+package com.example.A2_UserSystem.entities;
 
-import com.example.A2_UserSystem.models.enums.BackgroundColorType;
+import com.example.A2_UserSystem.entities.enums.BackgroundColorType;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -10,7 +10,7 @@ public enum Constant {
     public static final LocalDate BOOK_BEFORE_YEAR = LocalDate.of(1990, 1, 1);
     public static final String FULL_NAME = "George Powell";
 
-    public static final String ENTER_TASK_NUMBER = "Please, enter task number: ";
+    public static final String ENTER_TASK_NUMBER = "Please, enter task number or 0 to exit: ";
 
     public static final String TASK_ONE_DESCRIPTION = "1. Get all books after the year 2000. Print only their titles.";
     public static final String TASK_TWO_DESCRIPTION = "2. Get all authors with at least one book with a release date before 1990. Print their first name and last name.";

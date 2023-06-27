@@ -1,4 +1,4 @@
-package com.example.A2_UserSystem.models.enums;
+package com.example.A2_UserSystem.entities.enums;
 
 public enum BackgroundColorType {
 

@@ -1,7 +1,7 @@
 package com.example.A2_UserSystem.services.seed;
 
-import com.example.A2_UserSystem.models.Town;
-import com.example.A2_UserSystem.models.User;
+import com.example.A2_UserSystem.entities.Town;
+import com.example.A2_UserSystem.entities.User;
 import com.example.A2_UserSystem.services.town.TownService;
 import com.example.A2_UserSystem.services.user.UserService;
 import org.springframework.stereotype.Service;

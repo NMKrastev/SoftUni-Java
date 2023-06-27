@@ -1,4 +1,4 @@
-package com.example.A2_UserSystem.models.annotations.email;
+package com.example.A2_UserSystem.entities.annotations.email;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

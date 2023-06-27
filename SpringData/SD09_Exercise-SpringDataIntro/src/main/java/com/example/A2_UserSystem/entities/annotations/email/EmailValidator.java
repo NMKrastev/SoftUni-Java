@@ -1,6 +1,6 @@
-package com.example.A2_UserSystem.models.annotations.email;
+package com.example.A2_UserSystem.entities.annotations.email;
 
-import com.example.A2_UserSystem.models.annotations.AnnotationsUtil;
+import com.example.A2_UserSystem.entities.annotations.AnnotationsUtil;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import org.springframework.stereotype.Component;

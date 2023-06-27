@@ -1,4 +1,4 @@
-package com.example.A2_UserSystem.models.annotations.password;
+package com.example.A2_UserSystem.entities.annotations.password;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

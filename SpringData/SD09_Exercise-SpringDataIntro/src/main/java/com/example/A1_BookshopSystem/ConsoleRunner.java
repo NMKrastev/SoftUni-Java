@@ -40,16 +40,22 @@ public class ConsoleRunner implements CommandLineRunner {
         System.out.print(ENTER_TASK_NUMBER);
         int taskNumber = Integer.parseInt(scanner.nextLine());
 
-        switch (taskNumber) {
-            //1. Get all books after the year 2000. Print only their titles.
-            case 1 -> this.getAllBooksAfterGivenYear();
-            //2. Get all authors with at least one book with a release date before 1990. Print their first name and last name.
-            case 2 -> this.getAllAuthorsWithBookBeforeGivenYear();
-            //3. Get all authors, ordered by the number of their books (descending). Print their first name, last name and book count.
-            case 3 -> this.getAllAuthorsByNumberOfBooks();
-            //4. Get all books from author George Powell, ordered by their release date (descending),
-            //then by book title (ascending). Print the book's title, release date and copies.
-            case 4 -> this.getAllBooksByAuthor();
+        while (taskNumber != 0) {
+
+            switch (taskNumber) {
+                //1. Get all books after the year 2000. Print only their titles.
+                case 1 -> this.getAllBooksAfterGivenYear();
+                //2. Get all authors with at least one book with a release date before 1990. Print their first name and last name.
+                case 2 -> this.getAllAuthorsWithBookBeforeGivenYear();
+                //3. Get all authors, ordered by the number of their books (descending). Print their first name, last name and book count.
+                case 3 -> this.getAllAuthorsByNumberOfBooks();
+                //4. Get all books from author George Powell, ordered by their release date (descending),
+                //then by book title (ascending). Print the book's title, release date and copies.
+                case 4 -> this.getAllBooksByAuthor();
+            }
+
+            System.out.print(ENTER_TASK_NUMBER);
+            taskNumber = Integer.parseInt(scanner.nextLine());
         }
     }
 
@@ -58,11 +64,11 @@ public class ConsoleRunner implements CommandLineRunner {
         System.out.println(SEPARATOR);
         System.out.println(TASK_FOUR_DESCRIPTION);
 
-        String firstName = FULL_NAME.split("\\s+")[0];
-        String lastName = FULL_NAME.split("\\s+")[1];
-        Author author = authorService.findAuthorByFirstNameAndLastName(firstName, lastName);
+        final String firstName = FULL_NAME.split("\\s+")[0];
+        final String lastName = FULL_NAME.split("\\s+")[1];
+        final Author author = authorService.findAuthorByFirstNameAndLastName(firstName, lastName);
 
-        List<Book> books = bookService.findAllByAuthorOrderByReleaseDateDescTitleAsc(author);
+        final List<Book> books = bookService.findAllByAuthorOrderByReleaseDateDescTitleAsc(author);
 
         books.forEach(e -> System.out.printf("Title: %s, Release date: %s, Copies: %d\n", e.getTitle(), e.getReleaseDate(), e.getCopies()));
     }
@@ -72,9 +78,9 @@ public class ConsoleRunner implements CommandLineRunner {
         System.out.println(SEPARATOR);
         System.out.println(TASK_THREE_DESCRIPTION);
 
-        List<Object[]> allAuthorsByNumberOfTheirBooks = this.authorService.findAllAuthorsByNumberOfTheirBooks();
+        final List<Object[]> allAuthorsByNumberOfTheirBooks = this.authorService.findAllAuthorsByNumberOfTheirBooks();
 
-        Map<Author, Long> authorsByBooksCount = new LinkedHashMap<>();
+        final Map<Author, Long> authorsByBooksCount = new LinkedHashMap<>();
 
         allAuthorsByNumberOfTheirBooks
                 .forEach(e -> authorsByBooksCount.put((Author) e[0], (Long) e[1]));
@@ -89,7 +95,7 @@ public class ConsoleRunner implements CommandLineRunner {
         System.out.println(SEPARATOR);
         System.out.println(TASK_TWO_DESCRIPTION);
 
-        List<Author> allByBooksReleaseDateBefore = this.authorService.findAllByBooksReleaseDateBefore(BOOK_BEFORE_YEAR);
+        final List<Author> allByBooksReleaseDateBefore = this.authorService.findAllByBooksReleaseDateBefore(BOOK_BEFORE_YEAR);
 
         allByBooksReleaseDateBefore
                 .forEach(e -> System.out.printf("%s %s\n", e.getFirstName(), e.getFirstName()));

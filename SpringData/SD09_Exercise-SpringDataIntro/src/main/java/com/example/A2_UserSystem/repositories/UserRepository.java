@@ -1,6 +1,6 @@
 package com.example.A2_UserSystem.repositories;
 
-import com.example.A2_UserSystem.models.User;
+import com.example.A2_UserSystem.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
