@@ -7,6 +7,7 @@ import com.example.sd13_exercisespringdataautomappingobjects.repositories.OrderR
 import com.example.sd13_exercisespringdataautomappingobjects.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Set;
 
@@ -20,5 +21,14 @@ public class OrderServiceImpl implements OrderService {
     public OrderServiceImpl(OrderRepository orderRepository, UserRepository userRepository) {
         this.orderRepository = orderRepository;
         this.userRepository = userRepository;
+    }
+
+    @Override
+    @Transactional
+    public void createOrder(User user, Set<Game> shoppingCart) {
+
+        final Order order = new Order(user, shoppingCart);
+
+        this.orderRepository.save(order);
     }
 }

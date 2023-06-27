@@ -26,7 +26,7 @@ public class User extends BaseEntity {
     @Column(columnDefinition = "TINYINT")
     private Boolean isAdministrator;
 
-    @OneToMany(cascade = CascadeType.ALL,
+    @ManyToMany(cascade = CascadeType.ALL,
             fetch = FetchType.EAGER)
     @JoinTable(name = "users_games",
             joinColumns = @JoinColumn(name = "user_id"),

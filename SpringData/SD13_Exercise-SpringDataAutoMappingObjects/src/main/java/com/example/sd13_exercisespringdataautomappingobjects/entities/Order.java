@@ -12,7 +12,7 @@ public class Order extends BaseEntity {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private User user;
 
-    @OneToMany(cascade = CascadeType.ALL,
+    @ManyToMany(cascade = CascadeType.ALL,
             targetEntity = Game.class,
             fetch = FetchType.EAGER)
     @JoinTable(name = "orders_games",

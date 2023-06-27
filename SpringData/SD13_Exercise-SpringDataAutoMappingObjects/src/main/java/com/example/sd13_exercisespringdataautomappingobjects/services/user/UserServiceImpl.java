@@ -225,9 +225,8 @@ public class UserServiceImpl implements UserService {
         }
 
         final Set<Game> shoppingCart = new LinkedHashSet<>(user.getShoppingCart());
-        final Order order = new Order(user, shoppingCart);
 
-        this.orderRepository.save(order);
+        this.orderService.createOrder(user, shoppingCart);
 
         user.getGames().addAll(user.getShoppingCart());
 
