@@ -4,7 +4,7 @@ public interface GameService {
 
     String addGame(String[] gameData);
 
-    String editGame(String[] gameData) throws IllegalAccessException;
+    String editGame(String[] gameData) throws Exception;
 
     String deleteGame(String[] gameData);
 

@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Optional;
 
 import static com.example.sd13_exercisespringdataautomappingobjects.constants.Messages.*;
-import static com.example.sd13_exercisespringdataautomappingobjects.constants.Validations.*;
 
 @Service
 public class GameServiceImpl implements GameService {
@@ -50,7 +49,7 @@ public class GameServiceImpl implements GameService {
         final Optional<Game> doesGameExist = this.gameRepository.findFirstByTitle(title);
 
         if (doesGameExist.isPresent()) {
-            return GAME_ALREADY_EXISTS;
+            return String.format(GAME_ALREADY_EXISTS, title);
         }
 
         final BigDecimal price = BigDecimal.valueOf(Double.parseDouble(gameData[1]));
@@ -83,7 +82,13 @@ public class GameServiceImpl implements GameService {
             return USER_MUST_BE_LOGGED_OR_ADMIN_TO_ADD_OR_EDIT_GAME;
         }
 
-        final Long id = Long.valueOf(gameData[0]);
+        final Long id;
+
+        try {
+            id = Long.valueOf(gameData[0]);
+        } catch (Exception e) {
+            return ENTER_VALID_ID;
+        }
 
         final Optional<Game> doesGameExist = this.gameRepository.findById(id);
 
@@ -95,7 +100,11 @@ public class GameServiceImpl implements GameService {
 
         final Field[] declaredFields = game.getClass().getDeclaredFields();
 
-        updateFieldsValue(gameData, game, declaredFields);
+        try {
+            updateFieldsValue(gameData, game, declaredFields);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
 
         this.gameRepository.save(game);
 
@@ -110,7 +119,12 @@ public class GameServiceImpl implements GameService {
             return USER_MUST_BE_LOGGED_OR_ADMIN_TO_ADD_OR_EDIT_GAME;
         }
 
-        final Long id = Long.valueOf(gameData[0]);
+        final Long id;
+        try {
+            id = Long.valueOf(gameData[0]);
+        } catch (Exception e) {
+            return ENTER_VALID_ID;
+        }
 
         final Optional<Game> doesGameExist = this.gameRepository.findById(id);
 
@@ -129,6 +143,10 @@ public class GameServiceImpl implements GameService {
     public String getAllGames() {
 
         final List<Game> allGames = this.gameRepository.findAll();
+
+        if (allGames.isEmpty()) {
+            return GAME_STORE_IS_EMPTY;
+        }
 
         final List<GameTitlePriceDTO> gameTitlePriceDTOS = new ArrayList<>();
 
@@ -161,7 +179,7 @@ public class GameServiceImpl implements GameService {
         return gameDetailedInfoDTO.toString();
     }
 
-    private static void updateFieldsValue(String[] gameData, Game game, Field[] declaredFields) {
+    private static void updateFieldsValue(String[] gameData, Game game, Field[] declaredFields) throws Exception {
 
         for (String data : Arrays.stream(gameData).skip(1).toArray(String[]::new)) {
 
@@ -186,21 +204,33 @@ public class GameServiceImpl implements GameService {
                         case "description":
                             game.setDescription(value);
                             break label;
-                    }                                                //maybe an extra condition
+                    }                                               //maybe an extra condition
                 } else if (declaredField.getName().equals(column) && column.equals("price")
                         && declaredField.getType().equals(BigDecimal.class)) {
 
-                    game.setPrice(BigDecimal.valueOf(Double.parseDouble(value)));
+                    try {
+                        game.setPrice(BigDecimal.valueOf(Double.parseDouble(value)));
+                    } catch (Exception e) {
+                        throw new Exception(ENTER_VALID_PRICE);
+                    }
                     break;
                 } else if (declaredField.getName().equals(column) && column.equals("size")
                         && declaredField.getType().equals(Double.class)) {
 
-                    game.setSize(Double.parseDouble(value));
+                    try {
+                        game.setSize(Double.parseDouble(value));
+                    } catch (Exception e) {
+                        throw new Exception(ENTER_VALID_SIZE);
+                    }
                     break;
                 } else if (declaredField.getName().equals(column) && column.equals("releaseDate")
                         && declaredField.getType().equals(LocalDate.class)) {
 
-                    game.setReleaseDate(LocalDate.parse(value, DateTimeFormatter.ofPattern("dd-MM-yyyy")));
+                    try {
+                        game.setReleaseDate(LocalDate.parse(value, DateTimeFormatter.ofPattern("dd-MM-yyyy")));
+                    } catch (Exception e) {
+                        throw new Exception(ENTER_VALID_DATE_FORMAT);
+                    }
                     break;
                 }
             }

@@ -1,20 +1,16 @@
 package com.example.sd13_exercisespringdataautomappingobjects.entities;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
-
-import static com.example.sd13_exercisespringdataautomappingobjects.constants.Validations.EMAIL_PATTERN;
 
 @Entity
 @Table(name = "users")
 public class User extends BaseEntity {
 
     @Column(nullable = false, unique = true)
-    @Email(regexp = EMAIL_PATTERN)
     private String email;
 
     @Column(nullable = false)

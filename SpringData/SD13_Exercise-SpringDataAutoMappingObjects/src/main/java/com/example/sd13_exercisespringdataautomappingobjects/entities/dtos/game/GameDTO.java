@@ -3,7 +3,7 @@ package com.example.sd13_exercisespringdataautomappingobjects.entities.dtos.game
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import static com.example.sd13_exercisespringdataautomappingobjects.constants.Validations.*;
+import static com.example.sd13_exercisespringdataautomappingobjects.constants.Messages.*;
 
 public class GameDTO {
 

@@ -2,8 +2,7 @@ package com.example.sd13_exercisespringdataautomappingobjects.entities.dtos.user
 
 import java.util.regex.Pattern;
 
-import static com.example.sd13_exercisespringdataautomappingobjects.constants.Messages.USER_REGISTERED;
-import static com.example.sd13_exercisespringdataautomappingobjects.constants.Validations.*;
+import static com.example.sd13_exercisespringdataautomappingobjects.constants.Messages.*;
 
 public class UserRegisterDTO {
 

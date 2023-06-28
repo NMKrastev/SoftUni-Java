@@ -1,13 +1,11 @@
 package com.example.sd13_exercisespringdataautomappingobjects.services.user;
 
 import com.example.sd13_exercisespringdataautomappingobjects.entities.Game;
-import com.example.sd13_exercisespringdataautomappingobjects.entities.Order;
 import com.example.sd13_exercisespringdataautomappingobjects.entities.User;
 import com.example.sd13_exercisespringdataautomappingobjects.entities.dtos.user.UserLoginDTO;
 import com.example.sd13_exercisespringdataautomappingobjects.entities.dtos.user.UserOwnedGameTitlesDTO;
 import com.example.sd13_exercisespringdataautomappingobjects.entities.dtos.user.UserRegisterDTO;
 import com.example.sd13_exercisespringdataautomappingobjects.repositories.GameRepository;
-import com.example.sd13_exercisespringdataautomappingobjects.repositories.OrderRepository;
 import com.example.sd13_exercisespringdataautomappingobjects.repositories.UserRepository;
 import com.example.sd13_exercisespringdataautomappingobjects.services.order.OrderService;
 import org.modelmapper.ModelMapper;
@@ -21,7 +19,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import static com.example.sd13_exercisespringdataautomappingobjects.constants.Messages.*;
-import static com.example.sd13_exercisespringdataautomappingobjects.constants.Validations.*;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -30,15 +27,13 @@ public class UserServiceImpl implements UserService {
     private final ModelMapper mapper;
     private final UserRepository userRepository;
     private final GameRepository gameRepository;
-    private final OrderRepository orderRepository;
     private final OrderService orderService;
 
     @Autowired
-    public UserServiceImpl(ModelMapper mapper, UserRepository userRepository, GameRepository gameRepository, OrderRepository orderRepository, OrderService orderService) {
+    public UserServiceImpl(ModelMapper mapper, UserRepository userRepository, GameRepository gameRepository, OrderService orderService) {
         this.mapper = mapper;
         this.userRepository = userRepository;
         this.gameRepository = gameRepository;
-        this.orderRepository = orderRepository;
         this.orderService = orderService;
     }
 
@@ -118,8 +113,6 @@ public class UserServiceImpl implements UserService {
             return USER_MUST_BE_LOGGED_IN;
         }
 
-        final StringBuilder sb = new StringBuilder();
-
         final User user = this.userRepository.findUserById(this.loggedInUser.getId()).get();
         final Set<Game> ownedGames = user.getGames();
 
@@ -132,6 +125,10 @@ public class UserServiceImpl implements UserService {
                         .stream()
                         .map(e -> mapper.map(e, UserOwnedGameTitlesDTO.class))
                         .collect(Collectors.toSet());
+
+        final StringBuilder sb = new StringBuilder();
+        sb.append(String.format(USER_OWNS_GAMES, user.getFullName()))
+                .append(System.lineSeparator());
 
         userOwnedGameTitlesDTOS
                 .forEach(e -> sb.append(e.getTitle())
