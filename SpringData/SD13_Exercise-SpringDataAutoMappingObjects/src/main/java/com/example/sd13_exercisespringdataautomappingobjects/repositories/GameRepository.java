@@ -13,7 +13,7 @@ public interface GameRepository extends JpaRepository<Game, Long> {
 
     Optional<Game> findFirstByTitle(String title);
 
-    @Query(nativeQuery = true, value = "DELETE FROM orders_games WHERE game_id = ?1")
+    @Query(nativeQuery = true, value = "DELETE FROM orders_products WHERE product_id = ?1")
     @Modifying
     void deleteGameInOrdersById(Long gameId);
 
@@ -21,7 +21,7 @@ public interface GameRepository extends JpaRepository<Game, Long> {
     @Modifying
     void deleteGameInUsersById(Long gameId);
 
-    @Query(nativeQuery = true, value = "DELETE FROM user_shopping_cart__games WHERE game_id = ?1")
+    @Query(nativeQuery = true, value = "DELETE FROM users_shopping_cart__products WHERE product_id = ?1")
     @Modifying
     void deleteGameInCartsById(Long gameId);
 }

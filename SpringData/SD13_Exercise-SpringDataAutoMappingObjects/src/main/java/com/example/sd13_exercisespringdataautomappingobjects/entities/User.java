@@ -34,16 +34,16 @@ public class User extends BaseEntity {
     private Set<Game> games;
 
 
-    @OneToMany(mappedBy = "user",
+    @OneToMany(mappedBy = "buyer",
             cascade = CascadeType.ALL,
             targetEntity = Order.class,
             fetch = FetchType.EAGER)
     private Set<Order> orders;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name = "user_shopping_cart__games",
+    @JoinTable(name = "users_shopping_cart__products",
             joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "game_id"))
+            inverseJoinColumns = @JoinColumn(name = "product_id"))
     private Set<Game> shoppingCart;
 
 

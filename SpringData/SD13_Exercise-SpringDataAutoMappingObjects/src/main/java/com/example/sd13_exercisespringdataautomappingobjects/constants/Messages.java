@@ -15,6 +15,6 @@ public enum Messages {
     public static final String GAME_DELETED_SUCCESSFULLY = "Deleted \"%s\".";
     public static final String GAME_ADDED_TO_CART_SUCCESSFULLY = "Game \"%s\" was added to your shopping cart.";
     public static final String GAME_REMOVED_FROM_CART_SUCCESSFULLY = "Game \"%s\" was removed from your shopping cart.";
-    public static final String SUCCESSFULLY_BOUGHT_GAMES = "Successfully bought games:\n%s";
+    public static final String SUCCESSFULLY_BOUGHT_GAMES = "Successfully bought games:\n %s";
 
 }

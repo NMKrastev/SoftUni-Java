@@ -10,38 +10,38 @@ import java.util.Set;
 public class Order extends BaseEntity {
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private User user;
+    private User buyer;
 
     @ManyToMany(cascade = CascadeType.ALL,
             targetEntity = Game.class,
             fetch = FetchType.EAGER)
-    @JoinTable(name = "orders_games",
+    @JoinTable(name = "orders_products",
             joinColumns = @JoinColumn(name = "order_id"),
-            inverseJoinColumns = @JoinColumn(name = "game_id"))
-    private Set<Game> games;
+            inverseJoinColumns = @JoinColumn(name = "product_id"))
+    private Set<Game> products;
 
     public Order() {
-        this.games = new HashSet<>();
+        this.products = new HashSet<>();
     }
 
-    public Order(User user, Set<Game> games) {
-        this.user = user;
-        this.games = games;
+    public Order(User buyer, Set<Game> games) {
+        this.buyer = buyer;
+        this.products = games;
     }
 
-    public User getUser() {
-        return user;
+    public User getBuyer() {
+        return buyer;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setBuyer(User user) {
+        this.buyer = user;
     }
 
-    public Set<Game> getGames() {
-        return games;
+    public Set<Game> getProducts() {
+        return products;
     }
 
-    public void setGames(Set<Game> games) {
-        this.games = games;
+    public void setProducts(Set<Game> games) {
+        this.products = games;
     }
 }
