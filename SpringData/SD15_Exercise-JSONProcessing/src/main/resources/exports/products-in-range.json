@@ -1,62 +1,52 @@
 [
   {
-    "name": "TRAMADOL HYDROCHLORIDE",
-    "price": 516.48,
-    "seller": "Betty Lawson"
-  },
-  {
     "name": "Extra Strength Pain Reliever PM",
     "price": 542.72,
-    "seller": "Patricia Fuller"
-  },
-  {
-    "name": "DAYWEAR PLUS MULTI PROTECTION TINTED MOISTURIZER",
-    "price": 555.12,
-    "seller": "Betty Lawson"
-  },
-  {
-    "name": "Ketorolac Tromethamine",
-    "price": 608.18,
     "seller": "Billy Parker"
   },
   {
-    "name": "Glipizide",
-    "price": 621.78,
-    "seller": "Thompson"
+    "name": "Propranolol Hydrochloride",
+    "price": 546.95,
+    "seller": "Doris Cook"
+  },
+  {
+    "name": "Pleo Ginkgo",
+    "price": 613.65,
+    "seller": "Jennifer Riley"
   },
   {
     "name": "ziprasidone hydrochloride",
     "price": 628.66,
-    "seller": "Jennifer Riley"
-  },
-  {
-    "name": "Acnezzol Base",
-    "price": 710.60,
-    "seller": "Stewart"
+    "seller": "Billy Parker"
   },
   {
     "name": "Pollens - Weeds and Garden Plants, Nettle Urtica dioica",
     "price": 782.77,
-    "seller": "Jean Henry"
+    "seller": "Fox"
   },
   {
-    "name": "Moore Medical Sinus Pain and Pressure Relief",
-    "price": 855.39,
-    "seller": "Brenda Howell"
+    "name": "Isosorbide Mononitrate",
+    "price": 789.91,
+    "seller": "Arthur Reynolds"
   },
   {
-    "name": "Homeopathic Rheumatism",
-    "price": 967.08,
-    "seller": "Brenda Howell"
+    "name": "RESCRIPTOR",
+    "price": 850.52,
+    "seller": "Kathy Gilbert"
   },
   {
-    "name": "Clearskin",
-    "price": 968.59,
-    "seller": "Thompson"
+    "name": "Levothyroxine Sodium",
+    "price": 885.86,
+    "seller": "Jennifer Riley"
   },
   {
-    "name": "Megestrol Acetate",
-    "price": 976.15,
+    "name": "Glipizide and Metformin Hydrochloride",
+    "price": 953.60,
     "seller": "Stewart"
+  },
+  {
+    "name": "NEO-POLY-BAC HYDRO",
+    "price": 967.32,
+    "seller": "Kathy Gilbert"
   }
 ]

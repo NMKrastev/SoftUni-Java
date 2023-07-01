@@ -18,5 +18,4 @@ public class ProductInRangeWithNoBuyerDTO {
     private BigDecimal price;
 
     private String seller;
-
 }

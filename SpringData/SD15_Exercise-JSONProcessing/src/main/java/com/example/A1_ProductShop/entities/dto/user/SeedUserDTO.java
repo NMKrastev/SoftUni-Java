@@ -16,5 +16,4 @@ public class SeedUserDTO {
     private String lastName;
 
     private int age;
-
 }

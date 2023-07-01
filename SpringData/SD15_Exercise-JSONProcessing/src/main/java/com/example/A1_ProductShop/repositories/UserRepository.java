@@ -16,8 +16,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> getRandomEntity();
 
     Optional<List<User>> findAllBySellingProductsBuyerIsNotNullOrderByLastNameAscFirstNameAsc();
-
-    @Query("SELECT u FROM User AS u JOIN Product AS p ON u.id = p.seller.id WHERE p.buyer.id IS NOT NULL ORDER BY u.lastName, u.firstName")
-    Optional<List<User>> findAllUsersWithSoldProductsToAtLeastOneBuyer();
-
 }

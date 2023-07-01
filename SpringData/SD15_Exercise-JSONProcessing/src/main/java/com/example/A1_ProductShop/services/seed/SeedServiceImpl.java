@@ -9,7 +9,6 @@ import com.example.A1_ProductShop.entities.dto.user.SeedUserDTO;
 import com.example.A1_ProductShop.repositories.CategoryRepository;
 import com.example.A1_ProductShop.repositories.ProductRepository;
 import com.example.A1_ProductShop.repositories.UserRepository;
-import com.example.A1_ProductShop.services.user.UserService;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
@@ -31,16 +30,15 @@ public class SeedServiceImpl implements SeedService {
     private final Gson gson;
     private final ModelMapper mapper;
     private final UserRepository userRepository;
-    private final UserService userService;
     private final CategoryRepository categoryRepository;
     private final ProductRepository productRepository;
 
     @Autowired
-    public SeedServiceImpl(Gson gson, ModelMapper mapper, UserRepository userRepository, UserService userService, CategoryRepository categoryRepository, ProductRepository productRepository) {
+    public SeedServiceImpl(Gson gson, ModelMapper mapper, UserRepository userRepository,
+                           CategoryRepository categoryRepository, ProductRepository productRepository) {
         this.gson = gson;
         this.mapper = mapper;
         this.userRepository = userRepository;
-        this.userService = userService;
         this.categoryRepository = categoryRepository;
         this.productRepository = productRepository;
     }
@@ -52,8 +50,7 @@ public class SeedServiceImpl implements SeedService {
             return USER_DATA_ALREADY_SEEDED;
         }
 
-        final Type type = new TypeToken<List<SeedUserDTO>>() {
-        }.getType();
+        final Type type = new TypeToken<List<SeedUserDTO>>(){}.getType();
 
         final JsonReader reader = new JsonReader(new FileReader(USER_JSON_FILE_PATH.toFile()));
 
@@ -73,13 +70,13 @@ public class SeedServiceImpl implements SeedService {
             this.userRepository.saveAllAndFlush(users);
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+
+            return e.getMessage();
         }
 
         reader.close();
 
         return USER_DATA_SEEDED_SUCCESSFULLY;
-
     }
 
     @Override
@@ -89,21 +86,24 @@ public class SeedServiceImpl implements SeedService {
             return CATEGORY_DATA_ALREADY_SEEDED;
         }
 
-        final Type type = new TypeToken<List<SeedCategoryDTO>>() {
-        }.getType();
+        final Type type = new TypeToken<List<SeedCategoryDTO>>(){}.getType();
 
         final JsonReader reader = new JsonReader(new FileReader(CATEGORIES_JSON_FILE_PATH.toFile()));
 
         final List<SeedCategoryDTO> categoriesDTO = this.gson.fromJson(reader, type);
 
         try {
+
             final List<Category> categories = categoriesDTO
                     .stream()
                     .map(dto -> this.mapper.map(dto, Category.class))
                     .toList();
+
             this.categoryRepository.saveAllAndFlush(categories);
+
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+
+            return e.getMessage();
         }
 
         reader.close();
@@ -118,14 +118,14 @@ public class SeedServiceImpl implements SeedService {
             return PRODUCT_DATA_ALREADY_SEEDED;
         }
 
-        final Type type = new TypeToken<List<SeedProductDTO>>() {
-        }.getType();
+        final Type type = new TypeToken<List<SeedProductDTO>>(){}.getType();
 
         final JsonReader reader = new JsonReader(new FileReader(PRODUCTS_JSON_FILE_PATH.toFile()));
 
         final List<SeedProductDTO> productsDTO = this.gson.fromJson(reader, type);
 
         try {
+
             final List<Product> products = productsDTO
                     .stream()
                     .map(product -> this.mapper.map(product, Product.class))
@@ -133,9 +133,12 @@ public class SeedServiceImpl implements SeedService {
                     .map(this::setRandomBuyer)
                     .map(this::setRandomCategories)
                     .toList();
+
             this.productRepository.saveAllAndFlush(products);
+
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+
+            return e.getMessage();
         }
 
         reader.close();

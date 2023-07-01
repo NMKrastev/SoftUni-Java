@@ -6,8 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,6 +19,4 @@ public class UserWithProductsDTO {
     private int age;
 
     private ProductsSoldWithCountDTO products;
-
-
 }

@@ -10,6 +10,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
+import java.util.Objects;
 import java.util.Scanner;
 
 @Configuration
@@ -23,7 +24,7 @@ public class Config {
 
         DriverManagerDataSource manager = new DriverManagerDataSource();
 
-        manager.setDriverClassName(environment.getProperty("product-shop.spring.datasource.driver-class-name"));
+        manager.setDriverClassName(Objects.requireNonNull(environment.getProperty("product-shop.spring.datasource.driver-class-name")));
         manager.setUrl(environment.getProperty("product-shop.spring.datasource.url"));
         manager.setUsername(environment.getProperty("product-shop.spring.datasource.username"));
         manager.setPassword(environment.getProperty("product-shop.spring.datasource.password"));

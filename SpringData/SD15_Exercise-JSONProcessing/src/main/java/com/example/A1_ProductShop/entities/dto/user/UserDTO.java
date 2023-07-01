@@ -1,7 +1,5 @@
 package com.example.A1_ProductShop.entities.dto.user;
 
-import com.example.A1_ProductShop.entities.Product;
-import com.example.A1_ProductShop.entities.User;
 import com.example.A1_ProductShop.entities.dto.product.ProductBasicInfoDTO;
 import com.example.A1_ProductShop.entities.dto.product.ProductDTO;
 import com.example.A1_ProductShop.entities.dto.product.ProductsSoldWithCountDTO;
@@ -10,7 +8,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -36,15 +33,18 @@ public class UserDTO {
     }
 
     public UsersWithProductsWrapperDTO toUsersWithProductsWrapperDTO() {
+
         return new UsersWithProductsWrapperDTO();
     }
 
     public UserWithProductsDTO toUserWithProductsDTO() {
+
         return new UserWithProductsDTO(this.firstName, this.lastName, this.age, toProductsSoldWithCountDTO());
     }
 
 
     public ProductsSoldWithCountDTO toProductsSoldWithCountDTO() {
+
         return new ProductsSoldWithCountDTO(sellingProducts
                 .stream()
                 .map(this::toProductBasicInfoDTO)
@@ -52,7 +52,7 @@ public class UserDTO {
     }
 
     public ProductBasicInfoDTO toProductBasicInfoDTO(ProductDTO productDTO) {
+
         return new ProductBasicInfoDTO(productDTO.getName(), productDTO.getPrice());
     }
-
 }

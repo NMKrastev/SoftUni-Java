@@ -20,5 +20,4 @@ public class ProductSoldDTO {
     private String buyerFirstName;
 
     private String buyerLastName;
-
 }

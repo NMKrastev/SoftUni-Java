@@ -4,8 +4,6 @@ import com.example.A1_ProductShop.entities.Product;
 import com.example.A1_ProductShop.entities.dto.product.ProductDTO;
 import com.example.A1_ProductShop.entities.dto.product.ProductInRangeWithNoBuyerDTO;
 import com.example.A1_ProductShop.repositories.ProductRepository;
-import com.example.A1_ProductShop.services.category.CategoryService;
-import com.google.gson.Gson;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,17 +20,13 @@ import static com.example.A1_ProductShop.utils.Utils.writeJsonIntoFile;
 @Service
 public class ProductServiceImpl implements ProductService {
 
-    private final Gson gson;
     private final ModelMapper mapper;
     private final ProductRepository productRepository;
-    private final CategoryService categoryService;
 
     @Autowired
-    public ProductServiceImpl(Gson gson, ModelMapper mapper, ProductRepository productRepository, CategoryService categoryService) {
-        this.gson = gson;
+    public ProductServiceImpl(ModelMapper mapper, ProductRepository productRepository) {
         this.mapper = mapper;
         this.productRepository = productRepository;
-        this.categoryService = categoryService;
     }
 
     @Override
@@ -42,11 +36,11 @@ public class ProductServiceImpl implements ProductService {
         final Optional<List<Product>> productsInRange =
                 this.productRepository.findAllByPriceBetweenAndBuyerIsNullOrderByPrice(minRange, maxRange);
 
-        if (productsInRange.isEmpty()) {
+        final List<Product> products = productsInRange.get();
+
+        if (products.isEmpty()) {
             return NO_PRODUCTS_FOR_GIVEN_CRITERIA;
         }
-
-        final List<Product> products = productsInRange.get();
 
         final List<ProductInRangeWithNoBuyerDTO> productsInRangeDTO = products
                 .stream()

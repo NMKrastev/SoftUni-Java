@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
 
         writeJsonIntoFile(userWithSoldProductsDTO, USER_WITH_SOLD_PRODUCTS_FILE_PATH);
 
-        return USERS_WITH_SOLD_PRODUCTS_SAVE_SUCCESSFULLY;
+        return USERS_WITH_SOLD_PRODUCTS_SAVED_SUCCESSFULLY;
     }
 
     @Override
@@ -62,10 +62,15 @@ public class UserServiceImpl implements UserService {
                 .map(UserDTO::toUserWithProductsDTO)
                 .toList();
 
-        final UsersWithProductsWrapperDTO usersWithProductsWrapperDTO = new UsersWithProductsWrapperDTO(userWithProductsDTOS);
+        final UsersWithProductsWrapperDTO usersWithProductsWrapperDTO =
+                new UsersWithProductsWrapperDTO(userWithProductsDTOS);
 
-        writeJsonIntoFile(usersWithProductsWrapperDTO, USERS_AND_PRODUCTS_FILE_PATH);
+        if (usersWithProductsWrapperDTO.getUsers().isEmpty()) {
+            return NO_DATA_IN_FOR_USERS;
+        }
 
-        return USERS_AND_PRODUCTS_SAVE_SUCCESSFULLY;
+            writeJsonIntoFile(usersWithProductsWrapperDTO, USERS_AND_PRODUCTS_FILE_PATH);
+
+        return USERS_AND_PRODUCTS_SAVED_SUCCESSFULLY;
     }
 }

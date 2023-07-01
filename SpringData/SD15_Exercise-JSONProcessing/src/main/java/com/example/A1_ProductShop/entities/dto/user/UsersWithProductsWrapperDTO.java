@@ -1,6 +1,5 @@
 package com.example.A1_ProductShop.entities.dto.user;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

@@ -22,12 +22,12 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
     Optional<Set<Category>> getRandomEntity();
 
     @Query("""
-SELECT NEW com.example.A1_ProductShop
-.entities.dto.category.CategoryByProductsSummaryDTO(c.name, COUNT(p.id), AVG(p.price), SUM(p.price))
-FROM Product AS p
-JOIN p.categories AS c
-GROUP BY c.id
-ORDER BY COUNT(p.id) DESC
-            """)
+            SELECT NEW com.example.A1_ProductShop
+            .entities.dto.category.CategoryByProductsSummaryDTO(c.name, COUNT(p.id), AVG(p.price), SUM(p.price))
+            FROM Product AS p
+            JOIN p.categories AS c
+            GROUP BY c.id
+            ORDER BY COUNT(p.id) DESC
+                        """)
     Optional<List<CategoryByProductsSummaryDTO>> getCategoriesByProductSummary();
 }

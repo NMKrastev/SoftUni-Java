@@ -19,5 +19,4 @@ public class UserWithSoldProductDTO {
     private String lastName;
 
     private List<ProductSoldDTO> sellingProducts;
-
 }
