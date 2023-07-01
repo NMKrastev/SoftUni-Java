@@ -1,4 +1,4 @@
-package com.example.A1_ProductShop.config;
+package com.example.A2_CarDealer.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -11,6 +11,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
 import java.util.Objects;
+import java.util.Random;
 import java.util.Scanner;
 
 @Configuration
@@ -20,12 +21,12 @@ public class Config {
     private Environment environment;
 
     @Bean
-    public DataSource createProductShopDataSource() {
+    public DataSource createCarDealerDataSource() {
 
         DriverManagerDataSource manager = new DriverManagerDataSource();
 
         manager.setDriverClassName(Objects.requireNonNull(environment.getProperty("spring.datasource.driver-class-name")));
-        manager.setUrl(environment.getProperty("product-shop.spring.datasource.url"));
+        manager.setUrl(environment.getProperty("car-dealer.spring.datasource.url"));
         manager.setUsername(environment.getProperty("spring.datasource.username"));
         manager.setPassword(environment.getProperty("spring.datasource.password"));
 
@@ -50,5 +51,11 @@ public class Config {
     public Scanner createScanner() {
 
         return new Scanner(System.in);
+    }
+
+    @Bean
+    public Random createRandom() {
+
+        return new Random();
     }
 }
