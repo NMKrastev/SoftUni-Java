@@ -45,5 +45,4 @@ public enum Messages {
     public static final String ENTER_VALID_PRICE = "Please, enter valid price!";
     public static final String ENTER_VALID_SIZE = "Please, enter valid size!";
     public static final String ENTER_VALID_DATE_FORMAT = "Please, enter valid date!";
-
 }
