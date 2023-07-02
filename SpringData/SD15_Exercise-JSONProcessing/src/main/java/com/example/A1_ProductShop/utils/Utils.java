@@ -13,6 +13,7 @@ public enum Utils {
     public static void writeJsonIntoFile(List<?> objects, Path filePath) throws IOException {
 
         final FileWriter fileWriter = new FileWriter(filePath.toFile());
+
         final Gson gson = new Gson();
 
         gson.toJson(objects, fileWriter);
@@ -24,6 +25,7 @@ public enum Utils {
     public static void writeJsonIntoFile(Object object, Path filePath) throws IOException {
 
         final FileWriter fileWriter = new FileWriter(filePath.toFile());
+
         final Gson gson = new Gson();
 
         gson.toJson(object, fileWriter);

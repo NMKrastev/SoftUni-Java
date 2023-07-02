@@ -22,7 +22,7 @@ public class Config {
     @Bean
     public DataSource createProductShopDataSource() {
 
-        DriverManagerDataSource manager = new DriverManagerDataSource();
+        final DriverManagerDataSource manager = new DriverManagerDataSource();
 
         manager.setDriverClassName(Objects.requireNonNull(environment.getProperty("spring.datasource.driver-class-name")));
         manager.setUrl(environment.getProperty("product-shop.spring.datasource.url"));

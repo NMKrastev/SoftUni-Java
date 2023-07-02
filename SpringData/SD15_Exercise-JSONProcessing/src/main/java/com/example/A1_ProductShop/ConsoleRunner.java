@@ -33,6 +33,7 @@ public class ConsoleRunner implements CommandLineRunner {
         this.scanner = scanner;
     }
 
+    //If the paths for seeding data don't work just remove "SD15_Exercise-JSONProcessing" from them
     @Override
     public void run(String... args) throws Exception {
 

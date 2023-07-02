@@ -3,6 +3,7 @@ package com.example.A1_ProductShop;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+//If the paths for seeding data don't work just remove "SD15_Exercise-JSONProcessing" from them
 @SpringBootApplication
 public class A1_ProductShop {
 
