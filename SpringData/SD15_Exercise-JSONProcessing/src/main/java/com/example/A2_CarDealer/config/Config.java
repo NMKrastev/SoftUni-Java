@@ -1,7 +1,10 @@
 package com.example.A2_CarDealer.config;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.example.A2_CarDealer.entities.Customer;
+import com.example.A2_CarDealer.entities.dto.customer.CustomerImportDTO;
+import com.example.A2_CarDealer.entities.dto.customer.CustomerInfoOrderedDTO;
+import com.google.gson.*;
+import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -10,9 +13,13 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
+import java.lang.reflect.Type;
+import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
+
+import static java.time.format.DateTimeFormatter.ofPattern;
 
 @Configuration
 public class Config {
@@ -44,7 +51,21 @@ public class Config {
     @Bean
     public ModelMapper createModelMapper() {
 
-        return new ModelMapper();
+        final ModelMapper mapper = new ModelMapper();
+
+        final Converter<String, LocalDateTime> toLocalDateTime = mappingContext ->
+                LocalDateTime.parse(mappingContext.getSource(), ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
+
+        final Converter<LocalDateTime, String> fromLocalDate = mappingContext -> mappingContext.getSource().toString();
+        mapper.addConverter(toLocalDateTime);
+
+        mapper.typeMap(CustomerImportDTO.class, Customer.class)
+                .addMappings(map -> map.using(toLocalDateTime).map(CustomerImportDTO::getBirthDate, Customer::setBirthDate));
+
+        mapper.typeMap(Customer.class, CustomerInfoOrderedDTO.class)
+                .addMappings(map -> map.using(fromLocalDate).map(Customer::getBirthDate, CustomerInfoOrderedDTO::setBirthDate));
+
+        return mapper;
     }
 
     @Bean

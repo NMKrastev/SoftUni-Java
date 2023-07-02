@@ -1,1 +1,132 @@
-[{"name":"Allopurinol","price":518.50,"seller":"Fox"},{"name":"Parsley","price":519.06,"seller":"Brenda Howell"},{"name":"Extra Strength Pain Reliever PM","price":542.72,"seller":"Jennifer Riley"},{"name":"Propranolol Hydrochloride","price":546.95,"seller":"Fox"},{"name":"DAYWEAR PLUS MULTI PROTECTION TINTED MOISTURIZER","price":555.12,"seller":"Stewart"},{"name":"Topiramate","price":578.77,"seller":"Patricia Fuller"},{"name":"Gemcitabine","price":594.79,"seller":"Kathy Gilbert"},{"name":"Ketorolac Tromethamine","price":608.18,"seller":"Sandra Riley"},{"name":"Imipramine Hydrochloride","price":648.69,"seller":"Arthur Reynolds"},{"name":"Childrens Allegra Allergy","price":650.97,"seller":"Benjamin Henry"},{"name":"Amitiza","price":666.58,"seller":"Arthur Reynolds"},{"name":"Prostate","price":716.05,"seller":"Arthur Reynolds"},{"name":"Naproxen","price":807.22,"seller":"Billy Parker"},{"name":"Clarins Paris Skin Illusion - 114 cappuccino","price":811.42,"seller":"Stewart"},{"name":"Azithromycin","price":813.87,"seller":"Sandra Riley"},{"name":"Aquafresh","price":849.93,"seller":"Stewart"},{"name":"Moore Medical Sinus Pain and Pressure Relief","price":855.39,"seller":"Jean Henry"},{"name":"Perrigo Benzoyl Peroxide","price":873.24,"seller":"Benjamin Henry"},{"name":"Myristica Argentum Sinus Relief","price":904.52,"seller":"Kathy Gilbert"},{"name":"Spironolactone","price":933.69,"seller":"Stewart"},{"name":"pain relief","price":938.23,"seller":"Kathy Gilbert"},{"name":"Glipizide and Metformin Hydrochloride","price":953.60,"seller":"Betty Lawson"},{"name":"Homeopathic Rheumatism","price":967.08,"seller":"Benjamin Henry"},{"name":"Megestrol Acetate","price":976.15,"seller":"Jennifer Riley"},{"name":"Smooth texture Orange flavor","price":976.65,"seller":"Jennifer Riley"},{"name":"Retin-A MICRO","price":995.98,"seller":"Jennifer Riley"}]
+[
+  {
+    "name": "Allopurinol",
+    "price": 518.50,
+    "seller": "Fox"
+  },
+  {
+    "name": "Parsley",
+    "price": 519.06,
+    "seller": "Brenda Howell"
+  },
+  {
+    "name": "Extra Strength Pain Reliever PM",
+    "price": 542.72,
+    "seller": "Jennifer Riley"
+  },
+  {
+    "name": "Propranolol Hydrochloride",
+    "price": 546.95,
+    "seller": "Fox"
+  },
+  {
+    "name": "DAYWEAR PLUS MULTI PROTECTION TINTED MOISTURIZER",
+    "price": 555.12,
+    "seller": "Stewart"
+  },
+  {
+    "name": "Topiramate",
+    "price": 578.77,
+    "seller": "Patricia Fuller"
+  },
+  {
+    "name": "Gemcitabine",
+    "price": 594.79,
+    "seller": "Kathy Gilbert"
+  },
+  {
+    "name": "Ketorolac Tromethamine",
+    "price": 608.18,
+    "seller": "Sandra Riley"
+  },
+  {
+    "name": "Imipramine Hydrochloride",
+    "price": 648.69,
+    "seller": "Arthur Reynolds"
+  },
+  {
+    "name": "Childrens Allegra Allergy",
+    "price": 650.97,
+    "seller": "Benjamin Henry"
+  },
+  {
+    "name": "Amitiza",
+    "price": 666.58,
+    "seller": "Arthur Reynolds"
+  },
+  {
+    "name": "Prostate",
+    "price": 716.05,
+    "seller": "Arthur Reynolds"
+  },
+  {
+    "name": "Naproxen",
+    "price": 807.22,
+    "seller": "Billy Parker"
+  },
+  {
+    "name": "Clarins Paris Skin Illusion - 114 cappuccino",
+    "price": 811.42,
+    "seller": "Stewart"
+  },
+  {
+    "name": "Azithromycin",
+    "price": 813.87,
+    "seller": "Sandra Riley"
+  },
+  {
+    "name": "Aquafresh",
+    "price": 849.93,
+    "seller": "Stewart"
+  },
+  {
+    "name": "Moore Medical Sinus Pain and Pressure Relief",
+    "price": 855.39,
+    "seller": "Jean Henry"
+  },
+  {
+    "name": "Perrigo Benzoyl Peroxide",
+    "price": 873.24,
+    "seller": "Benjamin Henry"
+  },
+  {
+    "name": "Myristica Argentum Sinus Relief",
+    "price": 904.52,
+    "seller": "Kathy Gilbert"
+  },
+  {
+    "name": "Spironolactone",
+    "price": 933.69,
+    "seller": "Stewart"
+  },
+  {
+    "name": "pain relief",
+    "price": 938.23,
+    "seller": "Kathy Gilbert"
+  },
+  {
+    "name": "Glipizide and Metformin Hydrochloride",
+    "price": 953.60,
+    "seller": "Betty Lawson"
+  },
+  {
+    "name": "Homeopathic Rheumatism",
+    "price": 967.08,
+    "seller": "Benjamin Henry"
+  },
+  {
+    "name": "Megestrol Acetate",
+    "price": 976.15,
+    "seller": "Jennifer Riley"
+  },
+  {
+    "name": "Smooth texture Orange flavor",
+    "price": 976.65,
+    "seller": "Jennifer Riley"
+  },
+  {
+    "name": "Retin-A MICRO",
+    "price": 995.98,
+    "seller": "Jennifer Riley"
+  }
+]

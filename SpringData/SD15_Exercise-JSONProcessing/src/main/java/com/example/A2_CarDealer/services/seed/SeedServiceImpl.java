@@ -153,15 +153,17 @@ public class SeedServiceImpl implements SeedService {
 
         final List<Customer> customers = customersImportDTO
                 .stream()
-                .map(customerDto -> {
-
-                    final String birthDate = customerDto.getBirthDate();
-                    final Customer customer = this.mapper.map(customerDto, Customer.class);
-                    customer.setBirthDate(LocalDateTime.parse(birthDate));
-                    return customer;
-
-                })
+                .map(customerDto -> this.mapper.map(customerDto, Customer.class))
                 .toList();
+
+        /*{
+
+            final String birthDate = customerDto.getBirthDate();
+            final Customer customer = this.mapper.map(customerDto, Customer.class);
+            customer.setBirthDate(LocalDateTime.parse(birthDate));
+            return customer;
+
+        }*/
 
         try {
             this.customerRepository.saveAllAndFlush(customers);

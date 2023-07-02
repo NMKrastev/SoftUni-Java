@@ -26,7 +26,7 @@ public interface SeedService {
         sb.append(this.seedCustomers()).append(System.lineSeparator());
         sb.append(this.populateSales()).append(System.lineSeparator());
 
-        System.out.println(sb);
+        System.out.print(sb);
         System.out.println(DATA_SEEDING_PROCEDURE_FINISHED);
     }
 }
