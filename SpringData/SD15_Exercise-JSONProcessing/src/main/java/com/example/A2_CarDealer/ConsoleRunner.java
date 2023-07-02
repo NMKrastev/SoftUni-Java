@@ -62,7 +62,7 @@ public class ConsoleRunner implements CommandLineRunner {
 
                 case 7 -> this.output = this.saleService.findAllSalesWithInformationAboutCarAndCustomer();
 
-                default -> this.output = String.format(INVALID_TASK_NUMBER, taskNumber);
+                default -> this.output = String.format(INVALID_TASK_NUMBER, this.taskNumber);
             }
 
             System.out.println(this.output);

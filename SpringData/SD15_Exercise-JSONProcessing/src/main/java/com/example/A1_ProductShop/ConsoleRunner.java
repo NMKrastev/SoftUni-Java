@@ -21,7 +21,7 @@ public class ConsoleRunner implements CommandLineRunner {
     private final UserService userService;
     private final CategoryService categoryService;
     private final Scanner scanner;
-
+    private int taskNumber;
     private String output;
 
     @Autowired
@@ -38,20 +38,20 @@ public class ConsoleRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         System.out.print(ENTER_TASK_NUMBER);
-        int taskNumber = Integer.parseInt(this.scanner.nextLine());
+        this.taskNumber = Integer.parseInt(this.scanner.nextLine());
 
-        while (taskNumber != 0) {
+        while (this.taskNumber != 0) {
 
-            switch (taskNumber) {
+            switch (this.taskNumber) {
 
                 case 1 -> this.output = this.seedService.seedAllData();
 
                 case 2 -> {
                     System.out.print(ENTER_MIN_PRICE_RANGE);
-                    final BigDecimal minRangePrice = BigDecimal.valueOf(Double.parseDouble(scanner.nextLine()));
+                    final BigDecimal minRangePrice = BigDecimal.valueOf(Double.parseDouble(this.scanner.nextLine()));
 
                     System.out.print(ENTER_MAX_PRICE_RANGE);
-                    final BigDecimal maxRangePrice = BigDecimal.valueOf(Double.parseDouble(scanner.nextLine()));
+                    final BigDecimal maxRangePrice = BigDecimal.valueOf(Double.parseDouble(this.scanner.nextLine()));
 
                     this.output = this.productService.findAllProductsInPriceRange(minRangePrice, maxRangePrice);
                 }
@@ -62,13 +62,13 @@ public class ConsoleRunner implements CommandLineRunner {
 
                 case 5 -> this.output = this.userService.findUsersWithSoldProductsAndCount();
 
-                default -> this.output = String.format(TASK_NUMBER_DOES_NOT_EXISTS, taskNumber);
+                default -> this.output = String.format(TASK_NUMBER_DOES_NOT_EXISTS, this.taskNumber);
             }
 
-            System.out.println(output);
+            System.out.println(this.output);
 
             System.out.print(ENTER_TASK_NUMBER);
-            taskNumber = Integer.parseInt(this.scanner.nextLine());
+            this.taskNumber = Integer.parseInt(this.scanner.nextLine());
         }
     }
 }
