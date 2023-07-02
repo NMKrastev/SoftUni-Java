@@ -8,14 +8,13 @@ import lombok.Getter;
 public enum SaleDiscountType {
 
     A(0),
-    B(5),
-    C(10),
-    D(15),
-    E(20),
-    F(30),
-    G(40),
-    H(50);
+    B(0.05),
+    C(0.10),
+    D(0.15),
+    E(0.20),
+    F(0.30),
+    G(0.40),
+    H(0.50);
 
     private final double percentage;
-
 }

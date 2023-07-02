@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
-import java.time.LocalDateTime;
 import java.util.*;
 
 import static com.example.A2_CarDealer.constants.Messages.*;
@@ -82,7 +81,7 @@ public class SeedServiceImpl implements SeedService {
             return PARTS_DATA_ALREADY_SEEDED;
         }
 
-        final Type type = new TypeToken<List<PartImportDTO>>() {}.getType();
+        final Type type = new TypeToken<List<PartImportDTO>>(){}.getType();
 
         final JsonReader reader = new JsonReader(new FileReader(PARTS_FILE_PATH.toFile()));
 
@@ -156,15 +155,6 @@ public class SeedServiceImpl implements SeedService {
                 .map(customerDto -> this.mapper.map(customerDto, Customer.class))
                 .toList();
 
-        /*{
-
-            final String birthDate = customerDto.getBirthDate();
-            final Customer customer = this.mapper.map(customerDto, Customer.class);
-            customer.setBirthDate(LocalDateTime.parse(birthDate));
-            return customer;
-
-        }*/
-
         try {
             this.customerRepository.saveAllAndFlush(customers);
         } catch (Exception e) {
@@ -177,11 +167,17 @@ public class SeedServiceImpl implements SeedService {
     @Override
     public String populateSales() {
 
-        final List<SaleDiscountType> discountTypes = Arrays.asList(SaleDiscountType.values());
-
         if (this.carRepository.count() == 0 || this.customerRepository.count() == 0) {
             return CAR_OR_CUSTOMER_TABLE_EMPTY;
         }
+
+        if (this.saleRepository.count() != 0) {
+            return SALES_DATA_ALREADY_SEEDED;
+        }
+
+        final List<SaleDiscountType> discountTypes = Arrays.asList(SaleDiscountType.values());
+
+        final Set<Sale> sales = new HashSet<>();
 
         for (int i = 0; i < SALES_COUNT; i++) {
 
@@ -198,8 +194,13 @@ public class SeedServiceImpl implements SeedService {
             final int randomDiscountId = this.random.nextInt(1, SaleDiscountType.values().length);
             double discountPercentage = discountTypes.get(randomDiscountId).getPercentage();
 
-            final Sale sale = new Sale(discountPercentage, car, customer);
-            this.saleRepository.saveAndFlush(sale);
+            sales.add(new Sale(discountPercentage, car, customer));
+        }
+
+        try {
+            this.saleRepository.saveAllAndFlush(sales);
+        } catch (Exception e) {
+            return e.getMessage();
         }
 
         return SALES_DATA_SEEDED_SUCCESSFULLY;
@@ -207,7 +208,7 @@ public class SeedServiceImpl implements SeedService {
 
     private Part setRandomSupplier(Part part) {
 
-        long randomId = this.random.nextLong(1L, this.supplierRepository.count()) + 1L;
+        long randomId = this.random.nextLong(this.supplierRepository.count()) + 1L;
 
         final Supplier supplier = this.supplierRepository.findById(randomId)
                 .orElseThrow(NoSuchElementException::new);
@@ -223,7 +224,7 @@ public class SeedServiceImpl implements SeedService {
 
         while (parts.size() < 3) {
 
-            final long randomId = this.random.nextLong(1L, this.partRepository.count()) + 1L;
+            final long randomId = this.random.nextLong(this.partRepository.count()) + 1L;
 
             final Part part = this.partRepository.findById(randomId).orElseThrow(NoSuchElementException::new);
 

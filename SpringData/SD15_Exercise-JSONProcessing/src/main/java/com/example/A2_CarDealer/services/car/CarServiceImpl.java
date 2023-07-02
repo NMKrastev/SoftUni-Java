@@ -1,6 +1,5 @@
 package com.example.A2_CarDealer.services.car;
 
-import com.example.A2_CarDealer.entities.Car;
 import com.example.A2_CarDealer.entities.dto.car.CarDetailedInfoDTO;
 import com.example.A2_CarDealer.entities.dto.car.CarToyotaDTO;
 import com.example.A2_CarDealer.repositories.CarRepository;
@@ -32,11 +31,12 @@ public class CarServiceImpl implements CarService {
     @Override
     public String findAllCarsFromMakeToyota() throws IOException {
 
-        final List<CarToyotaDTO> carsToyotaDTO = this.carRepository.findAllByMakeOrderByModelAscTravelledDistanceDesc(TOYOTA)
-                .orElseThrow(NoSuchElementException::new)
-                .stream()
-                .map(car -> this.mapper.map(car, CarToyotaDTO.class))
-                .toList();
+        final List<CarToyotaDTO> carsToyotaDTO =
+                this.carRepository.findAllByMakeOrderByModelAscTravelledDistanceDesc(TOYOTA)
+                        .orElseThrow(NoSuchElementException::new)
+                        .stream()
+                        .map(car -> this.mapper.map(car, CarToyotaDTO.class))
+                        .toList();
 
         writeJsonIntoFile(carsToyotaDTO, ALL_TOYOTA_CARS_FILE_PATH);
 
@@ -46,10 +46,11 @@ public class CarServiceImpl implements CarService {
     @Override
     public String findAllCarsAndTheirParts() throws IOException {
 
-        final List<CarDetailedInfoDTO> carDetailedInfoDTOS = this.carRepository.findAll()
-                .stream()
-                .map(car -> this.mapper.map(car, CarDetailedInfoDTO.class))
-                .toList();
+        final List<CarDetailedInfoDTO> carDetailedInfoDTOS =
+                this.carRepository.findAll()
+                        .stream()
+                        .map(car -> this.mapper.map(car, CarDetailedInfoDTO.class))
+                        .toList();
 
         writeJsonIntoFile(carDetailedInfoDTOS, CARS_AND_PARTS_FILE_PATH);
 

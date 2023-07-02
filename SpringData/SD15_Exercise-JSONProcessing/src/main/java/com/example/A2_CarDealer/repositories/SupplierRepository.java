@@ -13,12 +13,12 @@ import java.util.Optional;
 public interface SupplierRepository extends JpaRepository<Supplier, Long> {
 
     @Query("""
-SELECT NEW com.example
-.A2_CarDealer.entities.dto.supplier.SupplierNotImporterByPartCountDTO(s.id, s.name, COUNT(p.id))
-FROM Supplier AS s
-JOIN s.parts AS p
-WHERE s.isImporter = FALSE
-GROUP BY s.id
-""")
+            SELECT NEW com.example
+            .A2_CarDealer.entities.dto.supplier.SupplierNotImporterByPartCountDTO(s.id, s.name, COUNT(p.id))
+            FROM Supplier AS s
+            JOIN s.parts AS p
+            WHERE s.isImporter = FALSE
+            GROUP BY s.id
+            """)
     Optional<List<SupplierNotImporterByPartCountDTO>> searchAllByIsImporterFalseAndPartsCount();
 }

@@ -2,7 +2,6 @@ package com.example.A2_CarDealer.services.supplier;
 
 import com.example.A2_CarDealer.entities.dto.supplier.SupplierNotImporterByPartCountDTO;
 import com.example.A2_CarDealer.repositories.SupplierRepository;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,18 +17,17 @@ import static com.example.A2_CarDealer.utils.Utils.writeJsonIntoFile;
 public class SupplierServiceImpl implements SupplierService {
 
     private final SupplierRepository supplierRepository;
-    private final ModelMapper mapper;
 
     @Autowired
-    public SupplierServiceImpl(SupplierRepository supplierRepository, ModelMapper mapper) {
+    public SupplierServiceImpl(SupplierRepository supplierRepository) {
         this.supplierRepository = supplierRepository;
-        this.mapper = mapper;
     }
 
     @Override
     public String findAllLocalSuppliersByPartsCount() throws IOException {
 
-        final List<SupplierNotImporterByPartCountDTO> suppliersNotImporterByPartCountDTO = this.supplierRepository.searchAllByIsImporterFalseAndPartsCount()
+        final List<SupplierNotImporterByPartCountDTO> suppliersNotImporterByPartCountDTO =
+                this.supplierRepository.searchAllByIsImporterFalseAndPartsCount()
                 .orElseThrow(NoSuchElementException::new);
 
         writeJsonIntoFile(suppliersNotImporterByPartCountDTO, LOCAL_SUPPLIERS_FILE_PATH);

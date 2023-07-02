@@ -13,7 +13,6 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
-import java.lang.reflect.Type;
 import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Random;
@@ -30,7 +29,7 @@ public class Config {
     @Bean
     public DataSource createCarDealerDataSource() {
 
-        DriverManagerDataSource manager = new DriverManagerDataSource();
+        final DriverManagerDataSource manager = new DriverManagerDataSource();
 
         manager.setDriverClassName(Objects.requireNonNull(environment.getProperty("spring.datasource.driver-class-name")));
         manager.setUrl(environment.getProperty("car-dealer.spring.datasource.url"));

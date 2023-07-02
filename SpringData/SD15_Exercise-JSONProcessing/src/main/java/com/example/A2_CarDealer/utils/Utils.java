@@ -15,6 +15,7 @@ public enum Utils {
     public static void writeJsonIntoFile(List<?> objects, Path filePath) throws IOException {
 
         final FileWriter fileWriter = new FileWriter(filePath.toFile());
+
         final Gson gson = new GsonBuilder()
                 .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")
                 .setPrettyPrinting()
@@ -29,6 +30,7 @@ public enum Utils {
     public static void writeJsonIntoFile(Object object, Path filePath) throws IOException {
 
         final FileWriter fileWriter = new FileWriter(filePath.toFile());
+
         final Gson gson = new GsonBuilder()
                 .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")
                 .setPrettyPrinting()

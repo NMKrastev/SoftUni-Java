@@ -1,6 +1,5 @@
 package com.example.A2_CarDealer.services.customer;
 
-import com.example.A2_CarDealer.entities.Customer;
 import com.example.A2_CarDealer.entities.dto.customer.CustomerInfoOrderedDTO;
 import com.example.A2_CarDealer.entities.dto.customer.CustomerWithTotalSalesDTO;
 import com.example.A2_CarDealer.repositories.CustomerRepository;
@@ -33,15 +32,14 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public String findAllCustomersAndOrderByCriteria() throws IOException {
 
-        final List<Customer> allCustomers = this.customerRepository.findAllByOrderByBirthDateAscIsYoungDriverAsc()
-                .orElseThrow(NoSuchElementException::new);
+        final List<CustomerInfoOrderedDTO> customers =
+                this.customerRepository.findAllByOrderByBirthDateAscIsYoungDriverAsc()
+                        .orElseThrow(NoSuchElementException::new)
+                        .stream()
+                        .map(customer -> this.mapper.map(customer, CustomerInfoOrderedDTO.class))
+                        .toList();
 
-        final List<CustomerInfoOrderedDTO> customers = allCustomers
-                .stream()
-                .map(customer -> this.mapper.map(customer, CustomerInfoOrderedDTO.class))
-                .toList();
-
-            writeJsonIntoFile(customers, ORDERED_CUSTOMERS_FILE_PATH);
+        writeJsonIntoFile(customers, ORDERED_CUSTOMERS_FILE_PATH);
 
         return ORDERED_CUSTOMERS_SAVED_SUCCESSFULLY;
     }

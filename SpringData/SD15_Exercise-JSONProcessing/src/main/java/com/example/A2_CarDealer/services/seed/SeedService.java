@@ -16,7 +16,7 @@ public interface SeedService {
 
     String populateSales();
 
-    default void seedAllData() throws FileNotFoundException {
+    default String seedAllData() throws FileNotFoundException {
 
         final StringBuilder sb = new StringBuilder();
 
@@ -25,8 +25,8 @@ public interface SeedService {
         sb.append(this.seedCars()).append(System.lineSeparator());
         sb.append(this.seedCustomers()).append(System.lineSeparator());
         sb.append(this.populateSales()).append(System.lineSeparator());
+        sb.append(DATA_SEEDING_PROCEDURE_FINISHED).append(System.lineSeparator());
 
-        System.out.print(sb);
-        System.out.println(DATA_SEEDING_PROCEDURE_FINISHED);
+        return sb.toString().trim();
     }
 }

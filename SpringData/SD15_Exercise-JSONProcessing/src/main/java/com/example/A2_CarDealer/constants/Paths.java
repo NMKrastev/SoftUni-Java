@@ -24,4 +24,6 @@ public enum Paths {
             Path.of("SD15_Exercise-JSONProcessing", "src", "main", "resources", "exports", "cars-and-parts.json");
     public static final Path CUSTOMERS_TOTAL_SALES_FILE_PATH =
             Path.of("SD15_Exercise-JSONProcessing", "src", "main", "resources", "exports", "customers-total-sales.json");
+    public static final Path SALES_DISCOUNTS_FILE_PATH =
+            Path.of("SD15_Exercise-JSONProcessing", "src", "main", "resources", "exports", "sales-discounts.json");
 }
