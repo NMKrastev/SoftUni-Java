@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import static com.example.A1_ProductShop.constants.Constants.*;
+import static com.example.A1_ProductShop.constants.Paths.USERS_AND_PRODUCTS_FILE_PATH;
 import static com.example.A1_ProductShop.constants.Paths.USER_WITH_SOLD_PRODUCTS_FILE_PATH;
 
 @Service
@@ -32,7 +33,6 @@ public class UserServiceImpl implements UserService {
         this.mapper = mapper;
         this.userRepository = userRepository;
     }
-
 
     @Override
     public String findAllUsersWithSoldProductsToAtLeastOneBuyer() throws IOException, JAXBException {
@@ -60,13 +60,11 @@ public class UserServiceImpl implements UserService {
 
         addressMarshal.marshal(usersWithSoldProductWrapperDTO, USER_WITH_SOLD_PRODUCTS_FILE_PATH.toFile());
 
-        //writeJsonIntoFile(userWithSoldProductsDTO, USER_WITH_SOLD_PRODUCTS_FILE_PATH);
-
         return USERS_WITH_SOLD_PRODUCTS_SAVED_SUCCESSFULLY;
     }
 
     @Override
-    public String findUsersWithSoldProductsAndCount() throws IOException {
+    public String findUsersWithSoldProductsAndCount() throws IOException, JAXBException {
 
 
         final List<UserWithProductsDTO> userWithProductsDTOS = this.userRepository
@@ -84,7 +82,12 @@ public class UserServiceImpl implements UserService {
             return NO_DATA_IN_FOR_USERS;
         }
 
-            //writeJsonIntoFile(usersWithProductsWrapperDTO, USERS_AND_PRODUCTS_FILE_PATH);
+        final JAXBContext context = JAXBContext.newInstance(UsersWithProductsWrapperDTO.class);
+        final Marshaller marshaller = context.createMarshaller();
+
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+        marshaller.marshal(usersWithProductsWrapperDTO, USERS_AND_PRODUCTS_FILE_PATH.toFile());
 
         return USERS_AND_PRODUCTS_SAVED_SUCCESSFULLY;
     }

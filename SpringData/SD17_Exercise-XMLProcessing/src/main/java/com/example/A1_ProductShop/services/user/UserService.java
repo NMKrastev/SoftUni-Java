@@ -8,5 +8,5 @@ public interface UserService {
 
     String findAllUsersWithSoldProductsToAtLeastOneBuyer() throws IOException, JAXBException;
 
-    String findUsersWithSoldProductsAndCount() throws IOException;
+    String findUsersWithSoldProductsAndCount() throws IOException, JAXBException;
 }
