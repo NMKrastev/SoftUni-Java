@@ -3,7 +3,7 @@ package com.example.A2_CarDealer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//If the paths for seeding data don't work just remove "SD15_Exercise-JSONProcessing" from them
+//If the paths for seeding data don't work just remove "SD17_Exercise-XMLProcessing" from them
 @SpringBootApplication
 public class A2_CarDealer {
 

@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <products>
-    <product name="TRAMADOL HYDROCHLORIDE" price="516.48" seller="Brenda Howell"/>
-    <product name="equaline" price="520.45" seller="Thompson"/>
-    <product name="Extra Strength Pain Reliever PM" price="542.72" seller="Stewart"/>
-    <product name="PLANTAGO LANCEOLATA POLLEN" price="561.68" seller="Stewart"/>
+    <product name="Propranolol Hydrochloride" price="546.95" seller="Jennifer Riley"/>
+    <product name="Prednisone" price="550.72" seller="Betty Lawson"/>
+    <product name="Echinacea Quartz Gum Support" price="570.08" seller="Patricia Fuller"/>
     <product name="Glipizide" price="621.78" seller="Doris Cook"/>
-    <product name="AVANDAMET" price="632.08" seller="Benjamin Henry"/>
-    <product name="Imipramine Hydrochloride" price="648.69" seller="Betty Lawson"/>
-    <product name="Childrens Allegra Allergy" price="650.97" seller="Thompson"/>
-    <product name="Ampicillin" price="674.63" seller="Fox"/>
-    <product name="CLARINS Ever Matte SPF 15 - 105 Nude" price="696.06" seller="Betty Lawson"/>
-    <product name="CALMING DIAPER RASH" price="700.92" seller="Jean Henry"/>
-    <product name="Prostate" price="716.05" seller="Betty Lawson"/>
-    <product name="Azithromycin" price="813.87" seller="Thompson"/>
-    <product name="RESCRIPTOR" price="850.52" seller="Stewart"/>
-    <product name="Moore Medical Sinus Pain and Pressure Relief" price="855.39" seller="Betty Lawson"/>
-    <product name="Shopko Lip Treatment" price="861.42" seller="Thompson"/>
-    <product name="Glipizide and Metformin Hydrochloride" price="953.60" seller="Kathy Gilbert"/>
-    <product name="NEO-POLY-BAC HYDRO" price="967.32" seller="Billy Parker"/>
-    <product name="Megestrol Acetate" price="976.15" seller="Doris Cook"/>
-    <product name="Retin-A MICRO" price="995.98" seller="Kathy Gilbert"/>
+    <product name="AMARANTHUS PALMERI POLLEN" price="623.16" seller="Jennifer Riley"/>
+    <product name="Foaming Hand Sanitizer" price="624.72" seller="Stewart"/>
+    <product name="Imipramine Hydrochloride" price="648.69" seller="Doris Cook"/>
+    <product name="Acnezzol Base" price="710.60" seller="Betty Lawson"/>
+    <product name="Prostate" price="716.05" seller="Benjamin Henry"/>
+    <product name="GOONG SECRET CALMING BATH" price="742.47" seller="Stewart"/>
+    <product name="Pollens - Weeds and Garden Plants, Nettle Urtica dioica" price="782.77" seller="Kathy Gilbert"/>
+    <product name="Naproxen" price="807.22" seller="Stewart"/>
+    <product name="Meloxicam" price="809.18" seller="Jean Henry"/>
+    <product name="LV-FX" price="820.87" seller="Brenda Howell"/>
+    <product name="Aquafresh" price="849.93" seller="Patricia Fuller"/>
+    <product name="Moore Medical Sinus Pain and Pressure Relief" price="855.39" seller="Fox"/>
+    <product name="ESIKA" price="879.37" seller="Billy Parker"/>
+    <product name="EPZICOM" price="895.65" seller="Stewart"/>
+    <product name="Clearskin" price="968.59" seller="Benjamin Henry"/>
+    <product name="Dawn Ultra Antibacterial Hand" price="969.86" seller="Betty Lawson"/>
+    <product name="Smooth texture Orange flavor" price="976.65" seller="Fox"/>
 </products>

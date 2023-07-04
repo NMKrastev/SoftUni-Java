@@ -2,7 +2,6 @@ package com.example.A1_ProductShop.services.user;
 
 import com.example.A1_ProductShop.entities.dto.user.UserDTO;
 import com.example.A1_ProductShop.entities.dto.user.UserWithProductsDTO;
-import com.example.A1_ProductShop.entities.dto.user.UserWithSoldProductDTO;
 import com.example.A1_ProductShop.entities.dto.user.UserWithSoldProductXmlDTO;
 import com.example.A1_ProductShop.entities.dto.user.wrapper.UsersWithProductsWrapperDTO;
 import com.example.A1_ProductShop.entities.dto.user.wrapper.UsersWithSoldProductWrapperDTO;
@@ -14,7 +13,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -35,7 +33,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String findAllUsersWithSoldProductsToAtLeastOneBuyer() throws IOException, JAXBException {
+    public String findAllUsersWithSoldProductsToAtLeastOneBuyer() throws JAXBException {
 
         final List<UserWithSoldProductXmlDTO> userWithSoldProductsDTO =
                 this.userRepository
@@ -64,8 +62,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String findUsersWithSoldProductsAndCount() throws IOException, JAXBException {
-
+    public String findUsersWithSoldProductsAndCount() throws JAXBException {
 
         final List<UserWithProductsDTO> userWithProductsDTOS = this.userRepository
                 .findAllBySellingProductsBuyerIsNotNullOrderByLastNameAscFirstNameAsc()

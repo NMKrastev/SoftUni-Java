@@ -1,22 +1,24 @@
 package com.example.A2_CarDealer.services.seed;
 
+import jakarta.xml.bind.JAXBException;
+
 import java.io.FileNotFoundException;
 
 import static com.example.A2_CarDealer.constants.Messages.DATA_SEEDING_PROCEDURE_FINISHED;
 
 public interface SeedService {
 
-    String seedSuppliers() throws FileNotFoundException;
+    String seedSuppliers() throws FileNotFoundException, JAXBException;
 
-    String seedParts() throws FileNotFoundException;
+    String seedParts() throws FileNotFoundException, JAXBException;
 
-    String seedCars() throws FileNotFoundException;
+    String seedCars() throws FileNotFoundException, JAXBException;
 
-    String seedCustomers() throws FileNotFoundException;
+    String seedCustomers() throws FileNotFoundException, JAXBException;
 
     String populateSales();
 
-    default String seedAllData() throws FileNotFoundException {
+    default String seedAllData() throws FileNotFoundException, JAXBException {
 
         final StringBuilder sb = new StringBuilder();
 

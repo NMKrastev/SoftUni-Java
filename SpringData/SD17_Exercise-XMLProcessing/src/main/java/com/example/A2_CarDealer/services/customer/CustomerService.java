@@ -1,10 +1,10 @@
 package com.example.A2_CarDealer.services.customer;
 
-import java.io.IOException;
+import jakarta.xml.bind.JAXBException;
 
 public interface CustomerService {
 
-    String findAllCustomersAndOrderByCriteria() throws IOException;
+    String findAllCustomersAndOrderByCriteria() throws JAXBException;
 
-    String findAllCustomersWithTotalSalesAndMoneySpent() throws IOException;
+    String findAllCustomersWithTotalSalesAndMoneySpent() throws JAXBException;
 }

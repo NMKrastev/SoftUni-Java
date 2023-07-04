@@ -47,8 +47,11 @@ public class SeedServiceImpl implements SeedService {
         }
 
         final FileReader reader = new FileReader(USER_XML_FILE_PATH.toFile());
+
         final JAXBContext context = JAXBContext.newInstance(UsersImportWrapperDTO.class);
+
         final Unmarshaller unmarshaller = context.createUnmarshaller();
+
         final UsersImportWrapperDTO usersDTO = (UsersImportWrapperDTO) unmarshaller.unmarshal(reader);
 
         try {
@@ -82,8 +85,11 @@ public class SeedServiceImpl implements SeedService {
         }
 
         final FileReader reader = new FileReader(CATEGORIES_XML_FILE_PATH.toFile());
+
         final JAXBContext context = JAXBContext.newInstance(CategoriesImportWrapperDTO.class);
+
         final Unmarshaller unmarshaller = context.createUnmarshaller();
+
         final CategoriesImportWrapperDTO categoriesDTO = (CategoriesImportWrapperDTO) unmarshaller.unmarshal(reader);
 
         try {
@@ -113,8 +119,11 @@ public class SeedServiceImpl implements SeedService {
         }
 
         final FileReader reader = new FileReader(PRODUCTS_XML_FILE_PATH.toFile());
+
         final JAXBContext context = JAXBContext.newInstance(ProductsImportWrapperDTO.class);
+
         final Unmarshaller unmarshaller = context.createUnmarshaller();
+
         final ProductsImportWrapperDTO productsDTO = (ProductsImportWrapperDTO) unmarshaller.unmarshal(reader);
 
         try {

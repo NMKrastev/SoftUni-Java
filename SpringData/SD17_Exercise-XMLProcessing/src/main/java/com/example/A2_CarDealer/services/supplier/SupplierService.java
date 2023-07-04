@@ -1,8 +1,8 @@
 package com.example.A2_CarDealer.services.supplier;
 
-import java.io.IOException;
+import jakarta.xml.bind.JAXBException;
 
 public interface SupplierService {
 
-    String findAllLocalSuppliersByPartsCount() throws IOException;
+    String findAllLocalSuppliersByPartsCount() throws JAXBException;
 }

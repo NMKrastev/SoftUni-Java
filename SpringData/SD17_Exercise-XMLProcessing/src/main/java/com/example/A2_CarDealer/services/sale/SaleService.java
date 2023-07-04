@@ -1,8 +1,9 @@
 package com.example.A2_CarDealer.services.sale;
 
-import java.io.IOException;
+
+import jakarta.xml.bind.JAXBException;
 
 public interface SaleService {
 
-    String findAllSalesWithInformationAboutCarAndCustomer() throws IOException;
+    String findAllSalesWithInformationAboutCarAndCustomer() throws JAXBException;
 }

@@ -2,12 +2,15 @@ package com.example.A2_CarDealer.services.sale;
 
 import com.example.A2_CarDealer.entities.Part;
 import com.example.A2_CarDealer.entities.dto.sale.SaleDiscountDTO;
+import com.example.A2_CarDealer.entities.dto.sale.wrapper.SaleDiscountWrapperDTO;
 import com.example.A2_CarDealer.repositories.SaleRepository;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Set;
@@ -28,7 +31,7 @@ public class SaleServiceImpl implements SaleService {
     }
 
     @Override
-    public String findAllSalesWithInformationAboutCarAndCustomer() throws IOException {
+    public String findAllSalesWithInformationAboutCarAndCustomer() throws JAXBException {
 
         final List<SaleDiscountDTO> saleDiscountDTOS = this.saleRepository.findAll()
                 .stream()
@@ -56,7 +59,16 @@ public class SaleServiceImpl implements SaleService {
                 })
                 .toList();
 
-        //writeJsonIntoFile(saleDiscountDTOS, SALES_DISCOUNTS_FILE_PATH);
+        final SaleDiscountWrapperDTO saleDiscountWrapperDTO =
+                new SaleDiscountWrapperDTO(saleDiscountDTOS);
+
+        final JAXBContext context = JAXBContext.newInstance(SaleDiscountWrapperDTO.class);
+
+        final Marshaller addressMarshal = context.createMarshaller();
+
+        addressMarshal.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+        addressMarshal.marshal(saleDiscountWrapperDTO, SALES_DISCOUNTS_FILE_PATH.toFile());
 
         return SALES_DISCOUNTS_SAVED_SUCCESSFULLY;
     }

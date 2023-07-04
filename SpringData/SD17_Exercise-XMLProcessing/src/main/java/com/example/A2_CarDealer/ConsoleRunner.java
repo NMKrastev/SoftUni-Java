@@ -37,7 +37,7 @@ public class ConsoleRunner implements CommandLineRunner {
         this.saleService = saleService;
     }
 
-    //If the paths for seeding data don't work just remove "SD15_Exercise-JSONProcessing" from them
+    //If the paths for seeding data don't work just remove "SD17_Exercise-XMLProcessing" from them
     @Override
     public void run(String... args) throws Exception {
 

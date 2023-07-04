@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customers>
+    <customer name="Hai Everton" bought-cars="7" spent-money="9554.16"/>
+    <customer name="Rico Peer" bought-cars="6" spent-money="7298.14"/>
+    <customer name="Garret Capron" bought-cars="3" spent-money="6310.26"/>
+    <customer name="Carole Witman" bought-cars="5" spent-money="5430.66"/>
+    <customer name="Johnette Derryberry" bought-cars="3" spent-money="5142.47"/>
+    <customer name="Faustina Burgher" bought-cars="6" spent-money="4845.02"/>
+    <customer name="Marcelle Griego" bought-cars="5" spent-money="4626.64"/>
+    <customer name="Jimmy Grossi" bought-cars="3" spent-money="4599.26"/>
+    <customer name="Yvonne Mccalla" bought-cars="4" spent-money="4110.38"/>
+    <customer name="Oren Perlman" bought-cars="5" spent-money="4068.92"/>
+    <customer name="Brett Brickley" bought-cars="6" spent-money="3996.38"/>
+    <customer name="Louann Holzworth" bought-cars="3" spent-money="3176.54"/>
+    <customer name="Cinthia Lasala" bought-cars="3" spent-money="3111.67"/>
+    <customer name="Daniele Zarate" bought-cars="4" spent-money="2575.50"/>
+    <customer name="Kristian Engberg" bought-cars="3" spent-money="2391.61"/>
+    <customer name="Natalie Poli" bought-cars="2" spent-money="2059.29"/>
+    <customer name="Taina Achenbach" bought-cars="2" spent-money="2043.82"/>
+    <customer name="Ann Mcenaney" bought-cars="2" spent-money="2009.29"/>
+    <customer name="Teddy Hobby" bought-cars="5" spent-money="1652.87"/>
+    <customer name="Carri Knapik" bought-cars="3" spent-money="1596.91"/>
+    <customer name="Lino Subia" bought-cars="3" spent-money="1572.52"/>
+    <customer name="Hipolito Lamoreaux" bought-cars="2" spent-money="1519.20"/>
+    <customer name="Sylvie Mcelravy" bought-cars="1" spent-money="1139.32"/>
+    <customer name="Emmitt Benally" bought-cars="2" spent-money="981.91"/>
+    <customer name="Zada Attwood" bought-cars="3" spent-money="928.05"/>
+    <customer name="Rema Revelle" bought-cars="3" spent-money="807.71"/>
+    <customer name="Nisha Markwell" bought-cars="1" spent-money="706.57"/>
+    <customer name="Francis Mckim" bought-cars="2" spent-money="577.49"/>
+    <customer name="Audrea Cardinal" bought-cars="1" spent-money="418.89"/>
+    <customer name="Donnetta Soliz" bought-cars="1" spent-money="105.38"/>
+</customers>

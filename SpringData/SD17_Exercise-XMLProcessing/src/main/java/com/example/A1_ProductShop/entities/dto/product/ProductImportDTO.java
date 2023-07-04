@@ -1,6 +1,5 @@
 package com.example.A1_ProductShop.entities.dto.product;
 
-
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;

@@ -1,11 +1,14 @@
 package com.example.A2_CarDealer.services.supplier;
 
 import com.example.A2_CarDealer.entities.dto.supplier.SupplierNotImporterByPartCountDTO;
+import com.example.A2_CarDealer.entities.dto.supplier.wrapper.SupplierNotImporterByPartCountWrapperDTO;
 import com.example.A2_CarDealer.repositories.SupplierRepository;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -23,13 +26,22 @@ public class SupplierServiceImpl implements SupplierService {
     }
 
     @Override
-    public String findAllLocalSuppliersByPartsCount() throws IOException {
+    public String findAllLocalSuppliersByPartsCount() throws JAXBException {
 
         final List<SupplierNotImporterByPartCountDTO> suppliersNotImporterByPartCountDTO =
                 this.supplierRepository.searchAllByIsImporterFalseAndPartsCount()
                 .orElseThrow(NoSuchElementException::new);
 
-        //writeJsonIntoFile(suppliersNotImporterByPartCountDTO, LOCAL_SUPPLIERS_FILE_PATH);
+        final SupplierNotImporterByPartCountWrapperDTO supplierNotImporterByPartCountWrapperDTO =
+                new SupplierNotImporterByPartCountWrapperDTO(suppliersNotImporterByPartCountDTO);
+
+        final JAXBContext context = JAXBContext.newInstance(SupplierNotImporterByPartCountWrapperDTO.class);
+
+        final Marshaller addressMarshal = context.createMarshaller();
+
+        addressMarshal.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+        addressMarshal.marshal(supplierNotImporterByPartCountWrapperDTO, LOCAL_SUPPLIERS_FILE_PATH.toFile());
 
         return SUPPLIER_NOT_IMPORTER_BY_PART_COUNT_SAVED_SUCCESSFULLY;
     }

@@ -22,10 +22,10 @@ public enum Messages {
     public static final int SALES_COUNT = 100;
     public static final String TOYOTA = "Toyota";
 
-    public static final String ORDERED_CUSTOMERS_SAVED_SUCCESSFULLY = "Customers saved to resources/exports/ordered-customers.json";
-    public static final String ALL_TOYOTA_CARS_SAVED_SUCCESSFULLY = "Toyota cars saved to resources/exports/toyota-cars.json";
-    public static final String SUPPLIER_NOT_IMPORTER_BY_PART_COUNT_SAVED_SUCCESSFULLY = "All suppliers that are not importers are saved to resources/exports/toyota-cars.json";
-    public static final String CARS_AND_PARTS_SAVED_SUCCESSFULLY = "All cars and their parts saved to resources/exports/cars-and-parts.json";
-    public static final String CUSTOMERS_TOTAL_SALES_SAVED_SUCCESSFULLY = "Customer with total sales and money spent are saved to resources/exports/customers-total-sales.json";
-    public static final String SALES_DISCOUNTS_SAVED_SUCCESSFULLY = "Sales with discounts are saved to resources/exports/sales-discounts.json";
+    public static final String ORDERED_CUSTOMERS_SAVED_SUCCESSFULLY = "Customers saved to resources/exports/ordered-customers.xml";
+    public static final String ALL_TOYOTA_CARS_SAVED_SUCCESSFULLY = "Toyota cars saved to resources/exports/toyota-cars.xml";
+    public static final String SUPPLIER_NOT_IMPORTER_BY_PART_COUNT_SAVED_SUCCESSFULLY = "All suppliers that are not importers are saved to resources/exports/toyota-cars.xml";
+    public static final String CARS_AND_PARTS_SAVED_SUCCESSFULLY = "All cars and their parts saved to resources/exports/cars-and-parts.xml";
+    public static final String CUSTOMERS_TOTAL_SALES_SAVED_SUCCESSFULLY = "Customer with total sales and money spent are saved to resources/exports/customers-total-sales.xml";
+    public static final String SALES_DISCOUNTS_SAVED_SUCCESSFULLY = "Sales with discounts are saved to resources/exports/sales-discounts.xml";
 }

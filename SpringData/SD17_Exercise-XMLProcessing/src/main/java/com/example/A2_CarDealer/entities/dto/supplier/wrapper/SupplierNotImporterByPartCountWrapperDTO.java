@@ -1,5 +1,6 @@
-package com.example.A2_CarDealer.entities.dto.customer;
+package com.example.A2_CarDealer.entities.dto.supplier.wrapper;
 
+import com.example.A2_CarDealer.entities.dto.supplier.SupplierNotImporterByPartCountDTO;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -9,24 +10,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "customer")
+@XmlRootElement(name = "suppliers")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CustomerInfoOrderedDTO {
+public class SupplierNotImporterByPartCountWrapperDTO {
 
-    @XmlElement
-    private Long id;
-
-    @XmlElement
-    private String name;
-
-    @XmlElement(name = "birth-date")
-    private String birthDate;
-
-    @XmlElement(name = "is-young-driver")
-    private Boolean isYoungDriver;
-
+    @XmlElement(name = "supplier")
+    private List<SupplierNotImporterByPartCountDTO> suppliers;
 }

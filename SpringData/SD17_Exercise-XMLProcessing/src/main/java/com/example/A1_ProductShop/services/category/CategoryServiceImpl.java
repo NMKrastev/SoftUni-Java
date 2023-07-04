@@ -10,7 +10,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -31,7 +30,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public String getCategoriesByProductSummary() throws IOException, JAXBException {
+    public String getCategoriesByProductSummary() throws JAXBException {
 
         final List<CategoryByProductsSummaryDTO> categoriesByProductSummary =
                 this.categoryRepository.getCategoriesByProductSummary()
