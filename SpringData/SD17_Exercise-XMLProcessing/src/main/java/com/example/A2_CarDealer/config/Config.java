@@ -39,11 +39,6 @@ public class Config {
     }
 
     @Bean
-    public void createGson() {
-
-    }
-
-    @Bean
     public ModelMapper createModelMapper() {
 
         final ModelMapper mapper = new ModelMapper();
