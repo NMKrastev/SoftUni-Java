@@ -6,21 +6,66 @@
     "IsYoungerDriver": false,
     "Sales": [
       {
-        "Id": 38,
-        "Discount": 0.2,
+        "Id": 43,
+        "Discount": 0.1,
         "Car": {
-          "Make": "Nissan",
-          "Model": "370Z",
-          "TraveledDistance": 21447
+          "Make": "Seat",
+          "Model": "Ibiza",
+          "TraveledDistance": 213647
         }
       },
       {
-        "Id": 30,
+        "Id": 49,
+        "Discount": 0.5,
+        "Car": {
+          "Make": "Seat",
+          "Model": "Toledo",
+          "TraveledDistance": 21483647
+        }
+      },
+      {
+        "Id": 56,
+        "Discount": 0.05,
+        "Car": {
+          "Make": "Peugeot",
+          "Model": "308",
+          "TraveledDistance": 2147483647
+        }
+      },
+      {
+        "Id": 78,
+        "Discount": 0.1,
+        "Car": {
+          "Make": "Chevy",
+          "Model": "Impala",
+          "TraveledDistance": 214747
+        }
+      },
+      {
+        "Id": 18,
+        "Discount": 0.1,
+        "Car": {
+          "Make": "Fiat",
+          "Model": "Freemont",
+          "TraveledDistance": 2147647
+        }
+      },
+      {
+        "Id": 16,
+        "Discount": 0.1,
+        "Car": {
+          "Make": "Opel",
+          "Model": "Astra",
+          "TraveledDistance": 922337203685807
+        }
+      },
+      {
+        "Id": 70,
         "Discount": 0.4,
         "Car": {
-          "Make": "Nissan",
-          "Model": "Altima",
-          "TraveledDistance": 92233707
+          "Make": "Chevy",
+          "Model": "Impala",
+          "TraveledDistance": 214748347
         }
       }
     ]
@@ -32,21 +77,39 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 60,
-        "Discount": 0.05,
+        "Id": 47,
+        "Discount": 0.3,
         "Car": {
-          "Make": "Lamborghini",
-          "Model": "Murciélago",
+          "Make": "Peugeot",
+          "Model": "405",
+          "TraveledDistance": 92233854775807
+        }
+      },
+      {
+        "Id": 66,
+        "Discount": 0.4,
+        "Car": {
+          "Make": "Toyota",
+          "Model": "Camry Hybrid",
           "TraveledDistance": 2143647
         }
       },
       {
-        "Id": 28,
-        "Discount": 0.05,
+        "Id": 68,
+        "Discount": 0.2,
         "Car": {
-          "Make": "Opel",
-          "Model": "Omega",
-          "TraveledDistance": 9223336854775807
+          "Make": "Ferrari",
+          "Model": "Daytona",
+          "TraveledDistance": 2147447
+        }
+      },
+      {
+        "Id": 32,
+        "Discount": 0.15,
+        "Car": {
+          "Make": "Chevy",
+          "Model": "Corvette",
+          "TraveledDistance": 92233720375807
         }
       }
     ]
@@ -58,21 +121,30 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 99,
-        "Discount": 0.2,
+        "Id": 22,
+        "Discount": 0.1,
         "Car": {
-          "Make": "Ferrari",
-          "Model": "275",
-          "TraveledDistance": 92854775807
+          "Make": "Citroen",
+          "Model": "C1",
+          "TraveledDistance": 2147
         }
       },
       {
-        "Id": 12,
-        "Discount": 0.2,
+        "Id": 81,
+        "Discount": 0.05,
         "Car": {
-          "Make": "BMW",
-          "Model": "X6 M",
-          "TraveledDistance": 922775807
+          "Make": "Mercedes",
+          "Model": "W212",
+          "TraveledDistance": 927
+        }
+      },
+      {
+        "Id": 50,
+        "Discount": 0.3,
+        "Car": {
+          "Make": "Toyota",
+          "Model": "Prius",
+          "TraveledDistance": 214747
         }
       }
     ]
@@ -84,66 +156,21 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 43,
-        "Discount": 0.05,
+        "Id": 59,
+        "Discount": 0.1,
         "Car": {
-          "Make": "Alfa Romeo",
-          "Model": "AR51",
-          "TraveledDistance": 922337275807
-        }
-      },
-      {
-        "Id": 49,
-        "Discount": 0.2,
-        "Car": {
-          "Make": "Ford",
-          "Model": "Fiesta",
-          "TraveledDistance": 2143647
-        }
-      },
-      {
-        "Id": 97,
-        "Discount": 0.4,
-        "Car": {
-          "Make": "Chevy",
-          "Model": "Camaro",
-          "TraveledDistance": 92233854775807
+          "Make": "Mercedes",
+          "Model": "W203",
+          "TraveledDistance": 5807
         }
       },
       {
         "Id": 74,
-        "Discount": 0.3,
+        "Discount": 0.4,
         "Car": {
-          "Make": "Opel",
-          "Model": "Corsa",
-          "TraveledDistance": 21474847
-        }
-      },
-      {
-        "Id": 29,
-        "Discount": 0.05,
-        "Car": {
-          "Make": "Seat",
-          "Model": "Toledo",
-          "TraveledDistance": 2147647
-        }
-      },
-      {
-        "Id": 63,
-        "Discount": 0.5,
-        "Car": {
-          "Make": "Opel",
-          "Model": "Omega",
-          "TraveledDistance": 2147483647
-        }
-      },
-      {
-        "Id": 23,
-        "Discount": 0.15,
-        "Car": {
-          "Make": "Citroen",
-          "Model": "Elysée",
-          "TraveledDistance": 922354775807
+          "Make": "Lamborghini",
+          "Model": "Gallardo",
+          "TraveledDistance": 92234775807
         }
       }
     ]
@@ -155,12 +182,30 @@
     "IsYoungerDriver": false,
     "Sales": [
       {
-        "Id": 44,
-        "Discount": 0.05,
+        "Id": 46,
+        "Discount": 0.3,
         "Car": {
-          "Make": "Alfa Romeo",
-          "Model": "AR51",
-          "TraveledDistance": 2147483647
+          "Make": "Nissan",
+          "Model": "GT-R",
+          "TraveledDistance": 954775807
+        }
+      },
+      {
+        "Id": 19,
+        "Discount": 0.2,
+        "Car": {
+          "Make": "Skoda",
+          "Model": "Fabia",
+          "TraveledDistance": 922337203775807
+        }
+      },
+      {
+        "Id": 31,
+        "Discount": 0.5,
+        "Car": {
+          "Make": "Toyota",
+          "Model": "Tacoma",
+          "TraveledDistance": 21474647
         }
       }
     ]
@@ -172,39 +217,21 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 57,
-        "Discount": 0.05,
-        "Car": {
-          "Make": "Opel",
-          "Model": "Vectra",
-          "TraveledDistance": 9223372854775807
-        }
-      },
-      {
-        "Id": 45,
+        "Id": 53,
         "Discount": 0.3,
         "Car": {
-          "Make": "Citroen",
-          "Model": "C3",
-          "TraveledDistance": 214647
+          "Make": "Great Wall",
+          "Model": "Haval H6",
+          "TraveledDistance": 214747
         }
       },
       {
-        "Id": 56,
-        "Discount": 0.4,
+        "Id": 54,
+        "Discount": 0.5,
         "Car": {
-          "Make": "Mercedes",
-          "Model": "W203",
-          "TraveledDistance": 5807
-        }
-      },
-      {
-        "Id": 95,
-        "Discount": 0.15,
-        "Car": {
-          "Make": "Citroen",
-          "Model": "C1",
-          "TraveledDistance": 9854775807
+          "Make": "Peugeot",
+          "Model": "405",
+          "TraveledDistance": 9226854775807
         }
       }
     ]
@@ -216,57 +243,30 @@
     "IsYoungerDriver": false,
     "Sales": [
       {
-        "Id": 59,
+        "Id": 23,
         "Discount": 0.15,
         "Car": {
-          "Make": "Fiat",
-          "Model": "500L",
-          "TraveledDistance": 922337204775807
+          "Make": "Skoda",
+          "Model": "Citigo",
+          "TraveledDistance": 92233854775807
         }
       },
       {
-        "Id": 47,
-        "Discount": 0.5,
+        "Id": 21,
+        "Discount": 0.15,
         "Car": {
           "Make": "Peugeot",
           "Model": "206",
-          "TraveledDistance": 214647
+          "TraveledDistance": 21474647
         }
       },
       {
-        "Id": 80,
-        "Discount": 0.05,
+        "Id": 67,
+        "Discount": 0.3,
         "Car": {
           "Make": "Seat",
-          "Model": "Mii",
-          "TraveledDistance": 92236854775807
-        }
-      },
-      {
-        "Id": 96,
-        "Discount": 0.4,
-        "Car": {
-          "Make": "Renault",
-          "Model": "Alaskan",
-          "TraveledDistance": 92233720375807
-        }
-      },
-      {
-        "Id": 11,
-        "Discount": 0.05,
-        "Car": {
-          "Make": "Mercedes",
-          "Model": "W212",
-          "TraveledDistance": 927254775807
-        }
-      },
-      {
-        "Id": 41,
-        "Discount": 0.4,
-        "Car": {
-          "Make": "Peugeot",
-          "Model": "306",
-          "TraveledDistance": 2147483647
+          "Model": "Toledo",
+          "TraveledDistance": 21483647
         }
       }
     ]
@@ -278,30 +278,48 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 18,
-        "Discount": 0.4,
+        "Id": 13,
+        "Discount": 0.15,
         "Car": {
-          "Make": "Peugeot",
-          "Model": "206",
+          "Make": "Ferrari",
+          "Model": "275",
+          "TraveledDistance": 92854775807
+        }
+      },
+      {
+        "Id": 17,
+        "Discount": 0.5,
+        "Car": {
+          "Make": "Mercedes",
+          "Model": "W211",
           "TraveledDistance": 922775807
         }
       },
       {
-        "Id": 82,
-        "Discount": 0.2,
+        "Id": 61,
+        "Discount": 0.1,
         "Car": {
-          "Make": "Fiat",
-          "Model": "Panda 4x4 Antarctica",
-          "TraveledDistance": 214747
+          "Make": "Mercedes",
+          "Model": "W210",
+          "TraveledDistance": 2147483647
         }
       },
       {
-        "Id": 76,
-        "Discount": 0.5,
+        "Id": 12,
+        "Discount": 0.2,
         "Car": {
-          "Make": "Peugeot",
-          "Model": "206",
-          "TraveledDistance": 214647
+          "Make": "Citroen",
+          "Model": "C3",
+          "TraveledDistance": 9223336854775807
+        }
+      },
+      {
+        "Id": 42,
+        "Discount": 0.05,
+        "Car": {
+          "Make": "Seat",
+          "Model": "Toledo",
+          "TraveledDistance": 21447
         }
       }
     ]
@@ -313,56 +331,20 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 78,
-        "Discount": 0.05,
+        "Id": 57,
+        "Discount": 0.15,
         "Car": {
-          "Make": "Ford",
-          "Model": "Fiesta",
-          "TraveledDistance": 922337775807
-        }
-      },
-      {
-        "Id": 71,
-        "Discount": 0.3,
-        "Car": {
-          "Make": "Rolls-Royce",
-          "Model": "Phantom",
-          "TraveledDistance": 214647
-        }
-      },
-      {
-        "Id": 53,
-        "Discount": 0.05,
-        "Car": {
-          "Make": "Toyota",
-          "Model": "Camry Hybrid",
-          "TraveledDistance": 214647
-        }
-      },
-      {
-        "Id": 91,
-        "Discount": 0.4,
-        "Car": {
-          "Make": "Nissan",
-          "Model": "GT-R",
+          "Make": "Dacia",
+          "Model": "Sandero",
           "TraveledDistance": 2147647
         }
       },
       {
-        "Id": 94,
-        "Discount": 0.15,
+        "Id": 79,
+        "Discount": 0.4,
         "Car": {
-          "Make": "Dacia",
-          "Model": "Duster",
-          "TraveledDistance": 922375807
-        }
-      },
-      {
-        "Id": 100,
-        "Discount": 0.1,
-        "Car": {
-          "Make": "Ferrari",
-          "Model": "275",
+          "Make": "Ford",
+          "Model": "Fiesta",
           "TraveledDistance": 214647
         }
       }
@@ -375,21 +357,12 @@
     "IsYoungerDriver": false,
     "Sales": [
       {
-        "Id": 4,
+        "Id": 98,
         "Discount": 0.15,
         "Car": {
-          "Make": "Seat",
-          "Model": "Ibiza",
-          "TraveledDistance": 92234775807
-        }
-      },
-      {
-        "Id": 69,
-        "Discount": 0.4,
-        "Car": {
-          "Make": "Fiat",
-          "Model": "Panda 4x4",
-          "TraveledDistance": 92233736854775807
+          "Make": "Chevy",
+          "Model": "Camaro",
+          "TraveledDistance": 283647
         }
       }
     ]
@@ -401,21 +374,66 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 61,
+        "Id": 58,
         "Discount": 0.05,
         "Car": {
-          "Make": "Peugeot",
-          "Model": "306",
+          "Make": "Opel",
+          "Model": "Omega",
           "TraveledDistance": 2147483647
         }
       },
       {
-        "Id": 1,
+        "Id": 7,
+        "Discount": 0.5,
+        "Car": {
+          "Make": "Opel",
+          "Model": "Omega",
+          "TraveledDistance": 1
+        }
+      },
+      {
+        "Id": 4,
+        "Discount": 0.4,
+        "Car": {
+          "Make": "Ferrari",
+          "Model": "Daytona",
+          "TraveledDistance": 922337275807
+        }
+      },
+      {
+        "Id": 45,
+        "Discount": 0.05,
+        "Car": {
+          "Make": "Mercedes",
+          "Model": "W210",
+          "TraveledDistance": 9223372036854775807
+        }
+      },
+      {
+        "Id": 34,
         "Discount": 0.15,
         "Car": {
-          "Make": "Lamborghini",
-          "Model": "Gallardo",
-          "TraveledDistance": 9223372054775807
+          "Make": "Ford",
+          "Model": "Taurus",
+          "TraveledDistance": 9223375807
+        }
+      },
+      {
+        "Id": 25,
+        "Discount": 0.15,
+        "Car": {
+          "Make": "Citroen",
+          "Model": "C3",
+          "TraveledDistance": 2147647
+        }
+      },
+      {
+        "Id": 29,
+        "Discount": 0.4,
+        "Car": {
+          "Make": "Skoda",
+          "Model": "Rapid",
+          "TraveledDistance": 9223372775807
         }
       }
     ]
@@ -427,21 +445,57 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 8,
-        "Discount": 0.1,
-        "Car": {
-          "Make": "Chevy",
-          "Model": "Camaro",
-          "TraveledDistance": 21473647
-        }
-      },
-      {
-        "Id": 88,
-        "Discount": 0.1,
+        "Id": 52,
+        "Discount": 0.2,
         "Car": {
           "Make": "Seat",
           "Model": "Mii",
           "TraveledDistance": 936854775807
+        }
+      },
+      {
+        "Id": 3,
+        "Discount": 0.5,
+        "Car": {
+          "Make": "Citroen",
+          "Model": "C5",
+          "TraveledDistance": 213647
+        }
+      },
+      {
+        "Id": 64,
+        "Discount": 0.5,
+        "Car": {
+          "Make": "Ferrari",
+          "Model": "F40",
+          "TraveledDistance": 214647
+        }
+      },
+      {
+        "Id": 86,
+        "Discount": 0.2,
+        "Car": {
+          "Make": "BMW",
+          "Model": "M6 E63",
+          "TraveledDistance": 92235807
+        }
+      },
+      {
+        "Id": 27,
+        "Discount": 0.5,
+        "Car": {
+          "Make": "Alfa Romeo",
+          "Model": "Giulietta",
+          "TraveledDistance": 2036854775807
+        }
+      },
+      {
+        "Id": 15,
+        "Discount": 0.5,
+        "Car": {
+          "Make": "Ford",
+          "Model": "Taurus",
+          "TraveledDistance": 21473647
         }
       }
     ]
@@ -453,17 +507,17 @@
     "IsYoungerDriver": false,
     "Sales": [
       {
-        "Id": 98,
-        "Discount": 0.4,
+        "Id": 30,
+        "Discount": 0.2,
         "Car": {
-          "Make": "Fiat",
-          "Model": "500 (2007) Abarth 695 Tributo Maserati",
-          "TraveledDistance": 214747
+          "Make": "Great Wall",
+          "Model": "Steed 3",
+          "TraveledDistance": 922336854775807
         }
       },
       {
-        "Id": 17,
-        "Discount": 0.5,
+        "Id": 10,
+        "Discount": 0.4,
         "Car": {
           "Make": "Dacia",
           "Model": "Logan",
@@ -471,21 +525,12 @@
         }
       },
       {
-        "Id": 3,
-        "Discount": 0.3,
-        "Car": {
-          "Make": "Mercedes",
-          "Model": "A 140",
-          "TraveledDistance": 92233754775807
-        }
-      },
-      {
-        "Id": 10,
+        "Id": 80,
         "Discount": 0.2,
         "Car": {
-          "Make": "Chevy",
-          "Model": "Corvette",
-          "TraveledDistance": 92233720375807
+          "Make": "Renault",
+          "Model": "Espace",
+          "TraveledDistance": 9223375807
         }
       }
     ]
@@ -497,30 +542,39 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 20,
+        "Id": 55,
         "Discount": 0.5,
         "Car": {
-          "Make": "Seat",
-          "Model": "Ibiza",
-          "TraveledDistance": 213647
+          "Make": "Skoda",
+          "Model": "Fabia",
+          "TraveledDistance": 9223372036875807
         }
       },
       {
-        "Id": 51,
-        "Discount": 0.2,
+        "Id": 39,
+        "Discount": 0.1,
+        "Car": {
+          "Make": "Ferrari",
+          "Model": "Daytona",
+          "TraveledDistance": 2147447
+        }
+      },
+      {
+        "Id": 99,
+        "Discount": 0.15,
         "Car": {
           "Make": "Toyota",
-          "Model": "Camry Hybrid",
-          "TraveledDistance": 2143647
+          "Model": "Prius",
+          "TraveledDistance": 92233775807
         }
       },
       {
-        "Id": 21,
-        "Discount": 0.2,
+        "Id": 87,
+        "Discount": 0.05,
         "Car": {
-          "Make": "Citroen",
-          "Model": "C3",
-          "TraveledDistance": 2147647
+          "Make": "BMW",
+          "Model": "F25",
+          "TraveledDistance": 9223372036854775807
         }
       }
     ]
@@ -532,12 +586,57 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 9,
-        "Discount": 0.5,
+        "Id": 75,
+        "Discount": 0.15,
         "Car": {
-          "Make": "Citroen",
-          "Model": "C4",
-          "TraveledDistance": 2147487
+          "Make": "Seat",
+          "Model": "Toledo",
+          "TraveledDistance": 21447
+        }
+      },
+      {
+        "Id": 84,
+        "Discount": 0.05,
+        "Car": {
+          "Make": "Ford",
+          "Model": "Pinto",
+          "TraveledDistance": 9854775807
+        }
+      },
+      {
+        "Id": 93,
+        "Discount": 0.05,
+        "Car": {
+          "Make": "Ford",
+          "Model": "Fiesta",
+          "TraveledDistance": 214647
+        }
+      },
+      {
+        "Id": 9,
+        "Discount": 0.15,
+        "Car": {
+          "Make": "Ferrari",
+          "Model": "250 GTO",
+          "TraveledDistance": 213647
+        }
+      },
+      {
+        "Id": 24,
+        "Discount": 0.4,
+        "Car": {
+          "Make": "Mercedes",
+          "Model": "W211",
+          "TraveledDistance": 922775807
+        }
+      },
+      {
+        "Id": 60,
+        "Discount": 0.15,
+        "Car": {
+          "Make": "Mercedes",
+          "Model": "W124",
+          "TraveledDistance": 922336854775807
         }
       }
     ]
@@ -549,48 +648,39 @@
     "IsYoungerDriver": false,
     "Sales": [
       {
-        "Id": 48,
-        "Discount": 0.3,
+        "Id": 69,
+        "Discount": 0.5,
         "Car": {
-          "Make": "Chevy",
-          "Model": "Malibu",
-          "TraveledDistance": 922337775807
+          "Make": "Opel",
+          "Model": "Vectra",
+          "TraveledDistance": 9223372854775807
         }
       },
       {
         "Id": 40,
         "Discount": 0.5,
         "Car": {
-          "Make": "Ferrari",
-          "Model": "275",
-          "TraveledDistance": 92854775807
+          "Make": "Peugeot",
+          "Model": "206",
+          "TraveledDistance": 214647
         }
       },
       {
-        "Id": 36,
-        "Discount": 0.15,
+        "Id": 6,
+        "Discount": 0.4,
         "Car": {
-          "Make": "Alfa Romeo",
-          "Model": "Giulietta",
-          "TraveledDistance": 21474847
+          "Make": "Chevy",
+          "Model": "Cruze",
+          "TraveledDistance": 92775807
         }
       },
       {
-        "Id": 75,
-        "Discount": 0.1,
+        "Id": 91,
+        "Discount": 0.3,
         "Car": {
-          "Make": "Dacia",
-          "Model": "Sandero",
-          "TraveledDistance": 2143647
-        }
-      },
-      {
-        "Id": 25,
-        "Discount": 0.1,
-        "Car": {
-          "Make": "Citroen",
-          "Model": "C8",
-          "TraveledDistance": 83647
+          "Make": "Renault",
+          "Model": "Alaskan",
+          "TraveledDistance": 2147483647
         }
       }
     ]
@@ -602,12 +692,48 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 16,
+        "Id": 1,
         "Discount": 0.2,
         "Car": {
           "Make": "Alfa Romeo",
-          "Model": "AR51",
+          "Model": "Giulietta",
+          "TraveledDistance": 21474847
+        }
+      },
+      {
+        "Id": 20,
+        "Discount": 0.15,
+        "Car": {
+          "Make": "Opel",
+          "Model": "Insignia",
           "TraveledDistance": 2147483647
+        }
+      },
+      {
+        "Id": 71,
+        "Discount": 0.1,
+        "Car": {
+          "Make": "Chevy",
+          "Model": "Caprice",
+          "TraveledDistance": 2143647
+        }
+      },
+      {
+        "Id": 88,
+        "Discount": 0.15,
+        "Car": {
+          "Make": "Renault",
+          "Model": "Duster",
+          "TraveledDistance": 922337203685807
+        }
+      },
+      {
+        "Id": 44,
+        "Discount": 0.1,
+        "Car": {
+          "Make": "Peugeot",
+          "Model": "206",
+          "TraveledDistance": 214647
         }
       }
     ]
@@ -617,26 +743,7 @@
     "Name": "Carole Witman",
     "BirthDate": "1987-10-01T00:00",
     "IsYoungerDriver": false,
-    "Sales": [
-      {
-        "Id": 68,
-        "Discount": 0.15,
-        "Car": {
-          "Make": "Ferrari",
-          "Model": "250 GTO",
-          "TraveledDistance": 2183647
-        }
-      },
-      {
-        "Id": 50,
-        "Discount": 0.4,
-        "Car": {
-          "Make": "Ford",
-          "Model": "Taurus",
-          "TraveledDistance": 21473647
-        }
-      }
-    ]
+    "Sales": []
   },
   {
     "Id": 13,
@@ -645,21 +752,12 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 55,
-        "Discount": 0.15,
+        "Id": 73,
+        "Discount": 0.05,
         "Car": {
-          "Make": "Citroen",
-          "Model": "C3",
-          "TraveledDistance": 2147647
-        }
-      },
-      {
-        "Id": 35,
-        "Discount": 0.5,
-        "Car": {
-          "Make": "Dacia",
-          "Model": "Sandero",
-          "TraveledDistance": 2143647
+          "Make": "Peugeot",
+          "Model": "306",
+          "TraveledDistance": 2036854775807
         }
       }
     ]
@@ -671,48 +769,30 @@
     "IsYoungerDriver": false,
     "Sales": [
       {
-        "Id": 62,
-        "Discount": 0.4,
-        "Car": {
-          "Make": "Fiat",
-          "Model": "Freemont",
-          "TraveledDistance": 92233685477
-        }
-      },
-      {
-        "Id": 46,
+        "Id": 26,
         "Discount": 0.2,
         "Car": {
-          "Make": "Alfa Romeo",
-          "Model": "75",
-          "TraveledDistance": 9223372775807
+          "Make": "Citroen",
+          "Model": "C1",
+          "TraveledDistance": 922336854775807
         }
       },
       {
-        "Id": 26,
-        "Discount": 0.4,
-        "Car": {
-          "Make": "Ferrari",
-          "Model": "250 GTO",
-          "TraveledDistance": 2183647
-        }
-      },
-      {
-        "Id": 77,
+        "Id": 37,
         "Discount": 0.5,
         "Car": {
-          "Make": "Nissan",
-          "Model": "Altima",
-          "TraveledDistance": 214647
+          "Make": "Citroen",
+          "Model": "C8",
+          "TraveledDistance": 2147447
         }
       },
       {
-        "Id": 2,
-        "Discount": 0.5,
+        "Id": 94,
+        "Discount": 0.15,
         "Car": {
-          "Make": "Chevy",
-          "Model": "Caprice",
-          "TraveledDistance": 2143647
+          "Make": "Dacia",
+          "Model": "Logan",
+          "TraveledDistance": 9275807
         }
       }
     ]
@@ -724,21 +804,12 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 86,
-        "Discount": 0.3,
-        "Car": {
-          "Make": "Peugeot",
-          "Model": "405",
-          "TraveledDistance": 9226854775807
-        }
-      },
-      {
-        "Id": 81,
-        "Discount": 0.1,
+        "Id": 28,
+        "Discount": 0.15,
         "Car": {
           "Make": "Renault",
-          "Model": "Espace",
-          "TraveledDistance": 9223375807
+          "Model": "Alaskan",
+          "TraveledDistance": 92807
         }
       }
     ]
@@ -750,21 +821,30 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 15,
-        "Discount": 0.1,
+        "Id": 33,
+        "Discount": 0.15,
         "Car": {
-          "Make": "Ford",
-          "Model": "Pinto",
-          "TraveledDistance": 9223807
+          "Make": "Toyota",
+          "Model": "Prius",
+          "TraveledDistance": 922337807
         }
       },
       {
-        "Id": 7,
+        "Id": 5,
+        "Discount": 0.2,
+        "Car": {
+          "Make": "Ferrari",
+          "Model": "F40",
+          "TraveledDistance": 2647
+        }
+      },
+      {
+        "Id": 97,
         "Discount": 0.15,
         "Car": {
-          "Make": "Great Wall",
-          "Model": "H8",
-          "TraveledDistance": 21447
+          "Make": "Seat",
+          "Model": "Toledo",
+          "TraveledDistance": 2147647
         }
       }
     ]
@@ -776,39 +856,39 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 83,
-        "Discount": 0.2,
+        "Id": 89,
+        "Discount": 0.4,
         "Car": {
-          "Make": "Toyota",
-          "Model": "Tacoma",
-          "TraveledDistance": 922337807
+          "Make": "Peugeot",
+          "Model": "405",
+          "TraveledDistance": 9226854775807
         }
       },
       {
-        "Id": 37,
-        "Discount": 0.4,
+        "Id": 63,
+        "Discount": 0.5,
         "Car": {
-          "Make": "Lamborghini",
-          "Model": "Diablo",
-          "TraveledDistance": 283647
+          "Make": "Renault",
+          "Model": "Espace",
+          "TraveledDistance": 9223375807
         }
       },
       {
-        "Id": 54,
-        "Discount": 0.4,
+        "Id": 35,
+        "Discount": 0.5,
         "Car": {
-          "Make": "Skoda",
-          "Model": "Fabia",
+          "Make": "Ferrari",
+          "Model": "250 GTO",
           "TraveledDistance": 214747
         }
       },
       {
-        "Id": 90,
-        "Discount": 0.3,
+        "Id": 36,
+        "Discount": 0.2,
         "Car": {
-          "Make": "Mercedes",
-          "Model": "W212",
-          "TraveledDistance": 54775807
+          "Make": "Peugeot",
+          "Model": "206",
+          "TraveledDistance": 214748347
         }
       }
     ]
@@ -820,39 +900,39 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 70,
-        "Discount": 0.15,
-        "Car": {
-          "Make": "BMW",
-          "Model": "F04",
-          "TraveledDistance": 483647
-        }
-      },
-      {
-        "Id": 42,
+        "Id": 51,
         "Discount": 0.1,
         "Car": {
-          "Make": "Opel",
-          "Model": "Insignia",
-          "TraveledDistance": 9223372036854775807
+          "Make": "Skoda",
+          "Model": "Citigo",
+          "TraveledDistance": 2183647
         }
       },
       {
-        "Id": 22,
-        "Discount": 0.05,
-        "Car": {
-          "Make": "Nissan",
-          "Model": "GT-R",
-          "TraveledDistance": 96854775807
-        }
-      },
-      {
-        "Id": 52,
+        "Id": 72,
         "Discount": 0.4,
         "Car": {
-          "Make": "BMW",
-          "Model": "E67",
-          "TraveledDistance": 21447
+          "Make": "Opel",
+          "Model": "Astra",
+          "TraveledDistance": 922337203685807
+        }
+      },
+      {
+        "Id": 11,
+        "Discount": 0.1,
+        "Car": {
+          "Make": "Ferrari",
+          "Model": "Enzo",
+          "TraveledDistance": 2147483647
+        }
+      },
+      {
+        "Id": 38,
+        "Discount": 0.4,
+        "Car": {
+          "Make": "Renault",
+          "Model": "Captur",
+          "TraveledDistance": 9223807
         }
       }
     ]
@@ -864,75 +944,21 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 87,
+        "Id": 8,
         "Discount": 0.15,
         "Car": {
-          "Make": "Chevy",
-          "Model": "Malibu",
-          "TraveledDistance": 922337775807
+          "Make": "Ferrari",
+          "Model": "275",
+          "TraveledDistance": 2147647
         }
       },
       {
-        "Id": 13,
-        "Discount": 0.05,
-        "Car": {
-          "Make": "Toyota",
-          "Model": "Prius",
-          "TraveledDistance": 214747
-        }
-      },
-      {
-        "Id": 31,
-        "Discount": 0.2,
+        "Id": 83,
+        "Discount": 0.3,
         "Car": {
           "Make": "Alfa Romeo",
-          "Model": "75",
-          "TraveledDistance": 9775807
-        }
-      },
-      {
-        "Id": 5,
-        "Discount": 0.3,
-        "Car": {
-          "Make": "Skoda",
-          "Model": "Citigo",
-          "TraveledDistance": 2183647
-        }
-      },
-      {
-        "Id": 27,
-        "Discount": 0.1,
-        "Car": {
-          "Make": "Opel",
-          "Model": "Omega",
-          "TraveledDistance": 2147483647
-        }
-      },
-      {
-        "Id": 73,
-        "Discount": 0.3,
-        "Car": {
-          "Make": "Chevy",
-          "Model": "Caprice",
-          "TraveledDistance": 9223372034775807
-        }
-      },
-      {
-        "Id": 19,
-        "Discount": 0.15,
-        "Car": {
-          "Make": "Skoda",
-          "Model": "Rapid",
-          "TraveledDistance": 2147447
-        }
-      },
-      {
-        "Id": 65,
-        "Discount": 0.05,
-        "Car": {
-          "Make": "Citroen",
-          "Model": "Berlingo",
-          "TraveledDistance": 9223354775807
+          "Model": "Giulietta",
+          "TraveledDistance": 2036854775807
         }
       }
     ]
@@ -944,12 +970,39 @@
     "IsYoungerDriver": false,
     "Sales": [
       {
+        "Id": 96,
+        "Discount": 0.2,
+        "Car": {
+          "Make": "Toyota",
+          "Model": "Tacoma",
+          "TraveledDistance": 94775807
+        }
+      },
+      {
+        "Id": 62,
+        "Discount": 0.2,
+        "Car": {
+          "Make": "Toyota",
+          "Model": "Tacoma",
+          "TraveledDistance": 9225807
+        }
+      },
+      {
         "Id": 14,
-        "Discount": 0.15,
+        "Discount": 0.5,
+        "Car": {
+          "Make": "Opel",
+          "Model": "Omega",
+          "TraveledDistance": 1
+        }
+      },
+      {
+        "Id": 85,
+        "Discount": 0.4,
         "Car": {
           "Make": "Peugeot",
           "Model": "407",
-          "TraveledDistance": 9223372775807
+          "TraveledDistance": 922036854775807
         }
       }
     ]
@@ -961,57 +1014,21 @@
     "IsYoungerDriver": false,
     "Sales": [
       {
-        "Id": 32,
-        "Discount": 0.4,
-        "Car": {
-          "Make": "BMW",
-          "Model": "X6 M",
-          "TraveledDistance": 922775807
-        }
-      },
-      {
-        "Id": 33,
-        "Discount": 0.1,
-        "Car": {
-          "Make": "Nissan",
-          "Model": "GT-R",
-          "TraveledDistance": 2143647
-        }
-      },
-      {
-        "Id": 79,
+        "Id": 48,
         "Discount": 0.3,
         "Car": {
+          "Make": "Lamborghini",
+          "Model": "Gallardo",
+          "TraveledDistance": 9223372054775807
+        }
+      },
+      {
+        "Id": 82,
+        "Discount": 0.1,
+        "Car": {
           "Make": "Mercedes",
-          "Model": "W212",
-          "TraveledDistance": 927254775807
-        }
-      },
-      {
-        "Id": 89,
-        "Discount": 0.15,
-        "Car": {
-          "Make": "Ferrari",
-          "Model": "F40",
-          "TraveledDistance": 214647
-        }
-      },
-      {
-        "Id": 39,
-        "Discount": 0.15,
-        "Car": {
-          "Make": "Citroen",
-          "Model": "Berlingo",
-          "TraveledDistance": 9223354775807
-        }
-      },
-      {
-        "Id": 84,
-        "Discount": 0.05,
-        "Car": {
-          "Make": "Fiat",
-          "Model": "500L",
-          "TraveledDistance": 2147647
+          "Model": "A 160 CDI",
+          "TraveledDistance": 4775807
         }
       }
     ]
@@ -1023,48 +1040,21 @@
     "IsYoungerDriver": false,
     "Sales": [
       {
-        "Id": 66,
-        "Discount": 0.2,
-        "Car": {
-          "Make": "Nissan",
-          "Model": "GT-R",
-          "TraveledDistance": 23647
-        }
-      },
-      {
-        "Id": 92,
-        "Discount": 0.15,
-        "Car": {
-          "Make": "Dacia",
-          "Model": "Sandero Stepway",
-          "TraveledDistance": 92233724775807
-        }
-      },
-      {
-        "Id": 24,
-        "Discount": 0.2,
-        "Car": {
-          "Make": "Nissan",
-          "Model": "Rogue",
-          "TraveledDistance": 9223807
-        }
-      },
-      {
-        "Id": 58,
-        "Discount": 0.1,
+        "Id": 41,
+        "Discount": 0.05,
         "Car": {
           "Make": "Mercedes",
-          "Model": "W202",
-          "TraveledDistance": 2147647
+          "Model": "W212",
+          "TraveledDistance": 927254775807
         }
       },
       {
-        "Id": 72,
-        "Discount": 0.1,
+        "Id": 100,
+        "Discount": 0.15,
         "Car": {
-          "Make": "Dacia",
-          "Model": "Logan",
-          "TraveledDistance": 9036854775807
+          "Make": "Citroen",
+          "Model": "C8",
+          "TraveledDistance": 83647
         }
       }
     ]
@@ -1076,12 +1066,30 @@
     "IsYoungerDriver": true,
     "Sales": [
       {
-        "Id": 93,
-        "Discount": 0.05,
+        "Id": 65,
+        "Discount": 0.1,
         "Car": {
           "Make": "Citroen",
           "Model": "C5",
           "TraveledDistance": 922337204775807
+        }
+      },
+      {
+        "Id": 92,
+        "Discount": 0.1,
+        "Car": {
+          "Make": "Seat",
+          "Model": "Ibiza",
+          "TraveledDistance": 21474847
+        }
+      },
+      {
+        "Id": 2,
+        "Discount": 0.05,
+        "Car": {
+          "Make": "Great Wall",
+          "Model": "Wingle 5",
+          "TraveledDistance": 214747
         }
       }
     ]
@@ -1093,48 +1101,39 @@
     "IsYoungerDriver": false,
     "Sales": [
       {
-        "Id": 64,
+        "Id": 90,
         "Discount": 0.1,
         "Car": {
-          "Make": "Dacia",
-          "Model": "Sandero Stepway",
-          "TraveledDistance": 922337807
+          "Make": "Skoda",
+          "Model": "Citigo",
+          "TraveledDistance": 214747
         }
       },
       {
-        "Id": 67,
-        "Discount": 0.15,
-        "Car": {
-          "Make": "Toyota",
-          "Model": "Tacoma",
-          "TraveledDistance": 9225807
-        }
-      },
-      {
-        "Id": 85,
+        "Id": 95,
         "Discount": 0.1,
         "Car": {
-          "Make": "Mercedes",
-          "Model": "W212",
-          "TraveledDistance": 54775807
+          "Make": "Rolls-Royce",
+          "Model": "Phantom",
+          "TraveledDistance": 214647
         }
       },
       {
-        "Id": 34,
+        "Id": 77,
         "Discount": 0.3,
-        "Car": {
-          "Make": "Toyota",
-          "Model": "Prius",
-          "TraveledDistance": 922335807
-        }
-      },
-      {
-        "Id": 6,
-        "Discount": 0.1,
         "Car": {
           "Make": "BMW",
           "Model": "X6 M",
-          "TraveledDistance": 483647
+          "TraveledDistance": 922775807
+        }
+      },
+      {
+        "Id": 76,
+        "Discount": 0.15,
+        "Car": {
+          "Make": "Chevy",
+          "Model": "Malibu",
+          "TraveledDistance": 92233854775807
         }
       }
     ]

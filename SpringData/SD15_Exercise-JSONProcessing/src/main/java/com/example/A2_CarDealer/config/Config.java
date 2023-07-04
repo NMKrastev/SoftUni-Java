@@ -1,10 +1,8 @@
 package com.example.A2_CarDealer.config;
 
-import com.example.A2_CarDealer.entities.Customer;
-import com.example.A2_CarDealer.entities.dto.customer.CustomerImportDTO;
-import com.example.A2_CarDealer.entities.dto.customer.CustomerInfoOrderedDTO;
+import com.example.A2_CarDealer.utils.LocalDateTimeAdapterDeserializer;
+import com.example.A2_CarDealer.utils.LocalDateTimeAdapterSerializer;
 import com.google.gson.*;
-import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +11,9 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Random;
@@ -43,6 +44,8 @@ public class Config {
     public Gson createGson() {
 
         return new GsonBuilder()
+                .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapterSerializer())
+                .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapterDeserializer())
                 .setPrettyPrinting()
                 .create();
     }
@@ -52,7 +55,8 @@ public class Config {
 
         final ModelMapper mapper = new ModelMapper();
 
-        final Converter<String, LocalDateTime> toLocalDateTime = mappingContext ->
+        //Converter FROM String to LocalDateTime and vice-versa - will remain here if someone needs it
+        /*final Converter<String, LocalDateTime> toLocalDateTime = mappingContext ->
                 LocalDateTime.parse(mappingContext.getSource(), ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
 
         final Converter<LocalDateTime, String> fromLocalDate = mappingContext -> mappingContext.getSource().toString();
@@ -62,7 +66,7 @@ public class Config {
                 .addMappings(map -> map.using(toLocalDateTime).map(CustomerImportDTO::getBirthDate, Customer::setBirthDate));
 
         mapper.typeMap(Customer.class, CustomerInfoOrderedDTO.class)
-                .addMappings(map -> map.using(fromLocalDate).map(Customer::getBirthDate, CustomerInfoOrderedDTO::setBirthDate));
+                .addMappings(map -> map.using(fromLocalDate).map(Customer::getBirthDate, CustomerInfoOrderedDTO::setBirthDate));*/
 
         return mapper;
     }

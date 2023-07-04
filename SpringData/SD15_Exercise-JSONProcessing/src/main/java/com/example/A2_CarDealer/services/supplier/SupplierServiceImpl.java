@@ -2,6 +2,7 @@ package com.example.A2_CarDealer.services.supplier;
 
 import com.example.A2_CarDealer.entities.dto.supplier.SupplierNotImporterByPartCountDTO;
 import com.example.A2_CarDealer.repositories.SupplierRepository;
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +17,12 @@ import static com.example.A2_CarDealer.utils.Utils.writeJsonIntoFile;
 @Service
 public class SupplierServiceImpl implements SupplierService {
 
+    private final Gson gson;
     private final SupplierRepository supplierRepository;
 
     @Autowired
-    public SupplierServiceImpl(SupplierRepository supplierRepository) {
+    public SupplierServiceImpl(Gson gson, SupplierRepository supplierRepository) {
+        this.gson = gson;
         this.supplierRepository = supplierRepository;
     }
 
@@ -30,7 +33,7 @@ public class SupplierServiceImpl implements SupplierService {
                 this.supplierRepository.searchAllByIsImporterFalseAndPartsCount()
                 .orElseThrow(NoSuchElementException::new);
 
-        writeJsonIntoFile(suppliersNotImporterByPartCountDTO, LOCAL_SUPPLIERS_FILE_PATH);
+        writeJsonIntoFile(this.gson, suppliersNotImporterByPartCountDTO, LOCAL_SUPPLIERS_FILE_PATH);
 
         return SUPPLIER_NOT_IMPORTER_BY_PART_COUNT_SAVED_SUCCESSFULLY;
     }

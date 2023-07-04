@@ -3,6 +3,7 @@ package com.example.A2_CarDealer.services.car;
 import com.example.A2_CarDealer.entities.dto.car.CarDetailedInfoDTO;
 import com.example.A2_CarDealer.entities.dto.car.CarToyotaDTO;
 import com.example.A2_CarDealer.repositories.CarRepository;
+import com.google.gson.Gson;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,11 +20,13 @@ import static com.example.A2_CarDealer.utils.Utils.writeJsonIntoFile;
 @Service
 public class CarServiceImpl implements CarService {
 
+    private final Gson gson;
     private final ModelMapper mapper;
     private final CarRepository carRepository;
 
     @Autowired
-    public CarServiceImpl(ModelMapper mapper, CarRepository carRepository) {
+    public CarServiceImpl(Gson gson, ModelMapper mapper, CarRepository carRepository) {
+        this.gson = gson;
         this.mapper = mapper;
         this.carRepository = carRepository;
     }
@@ -38,7 +41,7 @@ public class CarServiceImpl implements CarService {
                         .map(car -> this.mapper.map(car, CarToyotaDTO.class))
                         .toList();
 
-        writeJsonIntoFile(carsToyotaDTO, ALL_TOYOTA_CARS_FILE_PATH);
+        writeJsonIntoFile(this.gson, carsToyotaDTO, ALL_TOYOTA_CARS_FILE_PATH);
 
         return ALL_TOYOTA_CARS_SAVED_SUCCESSFULLY;
     }
@@ -52,7 +55,7 @@ public class CarServiceImpl implements CarService {
                         .map(car -> this.mapper.map(car, CarDetailedInfoDTO.class))
                         .toList();
 
-        writeJsonIntoFile(carDetailedInfoDTOS, CARS_AND_PARTS_FILE_PATH);
+        writeJsonIntoFile(this.gson, carDetailedInfoDTOS, CARS_AND_PARTS_FILE_PATH);
 
         return CARS_AND_PARTS_SAVED_SUCCESSFULLY;
     }

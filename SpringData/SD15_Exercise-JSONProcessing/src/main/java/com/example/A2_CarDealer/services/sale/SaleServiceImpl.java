@@ -3,6 +3,7 @@ package com.example.A2_CarDealer.services.sale;
 import com.example.A2_CarDealer.entities.Part;
 import com.example.A2_CarDealer.entities.dto.sale.SaleDiscountDTO;
 import com.example.A2_CarDealer.repositories.SaleRepository;
+import com.google.gson.Gson;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,11 +20,13 @@ import static com.example.A2_CarDealer.utils.Utils.writeJsonIntoFile;
 @Service
 public class SaleServiceImpl implements SaleService {
 
+    private final Gson gson;
     private final ModelMapper mapper;
     private final SaleRepository saleRepository;
 
     @Autowired
-    public SaleServiceImpl(ModelMapper mapper, SaleRepository saleRepository) {
+    public SaleServiceImpl(Gson gson, ModelMapper mapper, SaleRepository saleRepository) {
+        this.gson = gson;
         this.mapper = mapper;
         this.saleRepository = saleRepository;
     }
@@ -57,7 +60,7 @@ public class SaleServiceImpl implements SaleService {
                 })
                 .toList();
 
-        writeJsonIntoFile(saleDiscountDTOS, SALES_DISCOUNTS_FILE_PATH);
+        writeJsonIntoFile(this.gson, saleDiscountDTOS, SALES_DISCOUNTS_FILE_PATH);
 
         return SALES_DISCOUNTS_SAVED_SUCCESSFULLY;
     }
