@@ -3,11 +3,11 @@
       xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <th:block th:include="~{fragments/head}"></th:block>
+    <th:block th:insert="~{fragments/head}"></th:block>
 </head>
 <body>
 <header>
-    <th:block th:include="~{fragments/nav-bar}"></th:block>
+    <th:block th:insert="~{fragments/nav-bar}"></th:block>
 </header>
 <main>
     <div class="jumbotron">
@@ -25,7 +25,7 @@
     </div>
 </main>
 <footer>
-    <th:block th:include="~{fragments/footer}"></th:block>
+    <th:block th:insert="~{fragments/footer}"></th:block>
 </footer>
 </body>
 </html>

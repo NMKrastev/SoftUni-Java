@@ -33,4 +33,8 @@ public class Employee extends BaseEntity {
     @ManyToOne(optional = false)
     @Fetch(FetchMode.JOIN)
     private Project project;
+
+    public String getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
 }

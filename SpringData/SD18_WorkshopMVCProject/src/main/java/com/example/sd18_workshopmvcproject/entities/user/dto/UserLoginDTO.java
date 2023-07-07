@@ -1,4 +1,4 @@
-package com.example.sd18_workshopmvcproject.entities.user;
+package com.example.sd18_workshopmvcproject.entities.user.dto;
 
 import lombok.*;
 

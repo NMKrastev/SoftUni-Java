@@ -15,7 +15,6 @@ import org.hibernate.annotations.FetchMode;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Date;
 
 @Getter
 @Setter

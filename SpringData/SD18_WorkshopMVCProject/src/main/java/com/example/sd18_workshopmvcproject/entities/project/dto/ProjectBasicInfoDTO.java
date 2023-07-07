@@ -1,4 +1,4 @@
-package com.example.sd18_workshopmvcproject.entities.company.dto;
+package com.example.sd18_workshopmvcproject.entities.project.dto;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -9,16 +9,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "companies")
+@XmlRootElement(name = "project")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CompanyImportWrapperDTO {
+public class ProjectBasicInfoDTO {
 
-    @XmlElement(name = "company")
-    private List<CompanyImportDTO> companies;
+    @XmlElement
+    private String name;
 }

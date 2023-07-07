@@ -56,12 +56,15 @@ public class CompanyServiceImpl implements CompanyService {
 
 
         try {
-            List<Company> companies = companiesDTO.getCompanies()
+
+            final List<Company> companies = companiesDTO.getCompanies()
                     .stream()
                     .map(companyDTO -> this.mapper.map(companyDTO, Company.class))
                     .map(this.companyRepository::saveAndFlush)
                     .toList();
+
         } catch (Exception e) {
+
             System.out.println("Invalid company!");
         }
     }
