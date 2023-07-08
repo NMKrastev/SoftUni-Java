@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 public class LocalDateTimeAdapterSerializer implements JsonSerializer<LocalDateTime> {
 
     @Override
-    public JsonElement serialize(LocalDateTime localDateTime, Type type, JsonSerializationContext jsonSerializationContext) {
+    public JsonElement serialize(LocalDateTime localDateTime, Type type, JsonSerializationContext context) {
 
         return new JsonPrimitive(localDateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
     }
