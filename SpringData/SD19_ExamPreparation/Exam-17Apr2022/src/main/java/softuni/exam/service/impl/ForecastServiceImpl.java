@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import softuni.exam.models.dto.forecast.ForecastImportDTO;
 import softuni.exam.models.dto.forecast.ForecastImportWrapperDTO;
 import softuni.exam.models.entity.City;
-import softuni.exam.models.entity.DayOfWeekType;
 import softuni.exam.models.entity.Forecast;
 import softuni.exam.repository.CityRepository;
 import softuni.exam.repository.ForecastRepository;
@@ -14,7 +13,6 @@ import softuni.exam.util.ValidationUtils;
 import softuni.exam.util.XmlParser;
 
 import javax.xml.bind.JAXBException;
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.List;
@@ -83,7 +81,7 @@ public class ForecastServiceImpl implements ForecastService {
             this.forecastRepository.saveAndFlush(forecast);
 
             this.sb.append(String.format(SUCCESSFUL_IMPORT, FORECAST,
-                    forecast.getDayOfWeek(), forecast.getMaxTemperature()))
+                            forecast.getDayOfWeek(), forecast.getMaxTemperature()))
                     .append(System.lineSeparator());
 
         }
@@ -101,10 +99,10 @@ public class ForecastServiceImpl implements ForecastService {
         for (Forecast forecast : forecasts) {
 
             this.sb.append(String.format(PRINT_FORMAT,
-                    forecast.getCity().getCityName(),
-                    forecast.getMinTemperature(), forecast.getMaxTemperature(),
-                    forecast.getSunrise(),
-                    forecast.getSunset()))
+                            forecast.getCity().getCityName(),
+                            forecast.getMinTemperature(), forecast.getMaxTemperature(),
+                            forecast.getSunrise(),
+                            forecast.getSunset()))
                     .append(System.lineSeparator());
         }
 

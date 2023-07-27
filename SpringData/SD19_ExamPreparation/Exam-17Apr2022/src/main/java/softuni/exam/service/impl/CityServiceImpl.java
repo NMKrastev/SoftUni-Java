@@ -80,7 +80,7 @@ public class CityServiceImpl implements CityService {
             this.cityRepository.saveAndFlush(city);
 
             this.sb.append(String.format(SUCCESSFUL_IMPORT, CITY,
-                    city.getCityName(), city.getPopulation()))
+                            city.getCityName(), city.getPopulation()))
                     .append(System.lineSeparator());
         }
 
