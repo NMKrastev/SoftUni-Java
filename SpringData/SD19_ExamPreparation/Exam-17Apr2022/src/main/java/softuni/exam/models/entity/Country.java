@@ -1,49 +1,25 @@
 package softuni.exam.models.entity;
 
-import org.modelmapper.spi.SourceGetter;
-import softuni.exam.models.dto.CityDTO;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.*;
-import javax.validation.constraints.Size;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "countries")
-public class Country extends BaseEntity implements SourceGetter<CityDTO> {
+public class Country extends BaseEntity {
 
     @Column(name = "country_name", unique = true, nullable = false)
-    @Size(min = 2, max = 60)
     private String countryName;
 
     @Column(nullable = false)
-    @Size(min = 2, max = 20)
     private String currency;
-
-    public Country() {
-    }
-
-    public Country(String countryName, String currency) {
-        this.countryName = countryName;
-        this.currency = currency;
-    }
-
-    public String getCountryName() {
-        return countryName;
-    }
-
-    public void setCountryName(String countryName) {
-        this.countryName = countryName;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
-
-    @Override
-    public Object get(CityDTO source) {
-        return null;
-    }
 }

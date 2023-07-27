@@ -1,6 +1,6 @@
 package softuni.exam.models.entity;
 
-public enum DaysOfWeekEnum {
+public enum DayOfWeekType {
 
     FRIDAY,
     SATURDAY,

@@ -3,7 +3,7 @@ package softuni.exam.util;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.time.LocalTime;
 
-public class TimeAdapter extends XmlAdapter<String, LocalTime> {
+public class XmlLocalTimeAdapter extends XmlAdapter<String, LocalTime> {
 
     @Override
     public LocalTime unmarshal(String time) throws Exception {
@@ -11,7 +11,7 @@ public class TimeAdapter extends XmlAdapter<String, LocalTime> {
     }
 
     @Override
-    public String marshal(LocalTime time) throws Exception {
-        return time.toString();
+    public String marshal(LocalTime localTime) throws Exception {
+        return localTime.toString();
     }
 }

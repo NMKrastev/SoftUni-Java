@@ -1,25 +1,23 @@
 package softuni.exam.service.impl;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.stream.JsonReader;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import softuni.exam.models.dto.CountryDTO;
+import softuni.exam.models.dto.country.CountryImportDTO;
 import softuni.exam.models.entity.Country;
 import softuni.exam.repository.CountryRepository;
 import softuni.exam.service.CountryService;
+import softuni.exam.util.ValidationUtils;
 
-import java.io.FileReader;
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import static softuni.exam.util.Constant.*;
+import static softuni.exam.constant.Message.*;
+import static softuni.exam.constant.Paths.COUNTRIES_PATH;
 
 @Service
 public class CountryServiceImpl implements CountryService {
@@ -27,58 +25,54 @@ public class CountryServiceImpl implements CountryService {
     private final StringBuilder sb;
     private final Gson gson;
     private final ModelMapper mapper;
-
+    private final ValidationUtils validationUtils;
     private final CountryRepository countryRepository;
 
     @Autowired
-    public CountryServiceImpl(Gson gson, ModelMapper mapper, CountryRepository countryRepository) {
+    public CountryServiceImpl(Gson gson, ModelMapper mapper,
+                              ValidationUtils validationUtils, CountryRepository countryRepository) {
         this.sb = new StringBuilder();
         this.gson = gson;
         this.mapper = mapper;
+        this.validationUtils = validationUtils;
         this.countryRepository = countryRepository;
     }
 
     @Override
     public boolean areImported() {
-        return this.countryRepository.count() != 0;
+        return this.countryRepository.count() > 0;
     }
 
     @Override
     public String readCountriesFromFile() throws IOException {
-        return new String(Files.readAllBytes(Paths.get(COUNTRIES_JSON_FILE_PATH)));
+        return Files.readString(COUNTRIES_PATH);
     }
 
     @Override
     public String importCountries() throws IOException {
 
-        final Type type = new TypeToken<List<CountryDTO>>(){}.getType();
+        final List<CountryImportDTO> countriesImportDTO =
+                Arrays.stream(this.gson.fromJson(this.readCountriesFromFile(), CountryImportDTO[].class))
+                        .toList();
 
-        final JsonReader reader = new JsonReader(new FileReader(COUNTRIES_JSON_FILE_PATH));
+        for (CountryImportDTO countryDTO : countriesImportDTO) {
 
-        final List<CountryDTO> countriesDTO = gson.fromJson(reader, type);
+            final Optional<Country> optionalCountry =
+                    this.countryRepository.findFirstByCountryName(countryDTO.getCountryName());
 
-        for (CountryDTO countryDTO : countriesDTO) {
+            if (!this.validationUtils.isValid(countryDTO) || optionalCountry.isPresent()) {
 
-            final Optional<Country> byCountryName = this.countryRepository.findByCountryName(countryDTO.getCountryName());
-
-            final Country country;
-
-            if (byCountryName.isEmpty()) {
-
-                try {
-                    country = this.mapper.map(countryDTO, Country.class);
-                    this.countryRepository.save(country);
-                } catch (Exception e) {
-                    this.sb.append(INVALID_COUNTRY).append(System.lineSeparator());
-                    continue;
-                }
-
-            } else {
-                this.sb.append(INVALID_COUNTRY).append(System.lineSeparator());
+                this.sb.append(String.format(INVALID_ENTITY, COUNTRY))
+                        .append(System.lineSeparator());
                 continue;
             }
 
-            this.sb.append(String.format(COUNTRY_IMPORTED_FORMAT, country.getCountryName(), country.getCurrency()))
+            final Country country = this.mapper.map(countryDTO, Country.class);
+
+            this.countryRepository.saveAndFlush(country);
+
+            this.sb.append(String.format(SUCCESSFUL_IMPORT, COUNTRY,
+                            country.getCountryName(), country.getCurrency()))
                     .append(System.lineSeparator());
         }
 
