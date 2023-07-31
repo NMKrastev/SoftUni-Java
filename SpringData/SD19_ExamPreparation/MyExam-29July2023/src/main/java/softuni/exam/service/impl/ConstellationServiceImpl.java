@@ -39,7 +39,6 @@ public class ConstellationServiceImpl implements ConstellationService {
         this.constellationRepository = constellationRepository;
     }
 
-
     @Override
     public boolean areImported() {
         return this.constellationRepository.count() > 0;

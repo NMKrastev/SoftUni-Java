@@ -1,6 +1,5 @@
 package softuni.exam.service;
 
-
 import java.io.IOException;
 
 public interface ConstellationService {

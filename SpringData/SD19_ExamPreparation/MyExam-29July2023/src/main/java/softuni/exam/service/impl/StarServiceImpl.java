@@ -25,7 +25,6 @@ import static softuni.exam.constant.Paths.STARS_FILE;
 @Service
 public class StarServiceImpl implements StarService {
 
-
     private final StringBuilder sb;
     private final Gson gson;
     private final ModelMapper mapper;
