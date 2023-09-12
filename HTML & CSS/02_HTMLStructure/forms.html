@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Forms</h1>
+
+    <form action="success.html" method="POST">
+
+        <div>
+            <label for="username">username</label>
+            <input id="username" name="username" type="text" placeholder="username" />
+        </div>
+
+        <div>
+            <label for="password">password</label>
+            <input id="password" name="password" type="password" placeholder="password" />
+        </div>
+
+        <div>
+            <label for="email">email</label>
+            <input id="email" name="email" type="email" placeholder="test@test.test" disabled="true" />
+        </div>
+
+        <div>
+            <h2>Select a car</h2>
+            <label for="mercedes">Mercedes</label>
+            <input id="mercedes" type="checkbox" value="MERCEDES" name="brand" />
+
+            <label for="bmw">BMW</label>
+            <input id="bmw" type="checkbox" value="BMW" name="brand" />
+
+            <label for="audi">Audi</label>
+            <input id="audi" type="checkbox" value="AUDI" name="brand" />
+        </div>
+
+        <div>
+            <h2>Select a country</h2>
+            <label for="de">Germany</label>
+            <input id="de" type="radio" value="de" name="country" />
+
+            <label for="bg">Bulgaria</label>
+            <input id="bg" type="radio" value="bg" name="country" />
+
+            <label for="fr">France</label>
+            <input id="fr" type="radio" value="fr" name="country" />
+        </div>
+
+        <div>
+            <label for="msg">Message</label>
+            <textarea name="" id="msg" cols="30" rows="10"></textarea>
+        </div>
+
+        <button type="submit">Submit <b>button</b></button>
+        <button type="reset">Reset</button>
+        <button type="button">Normal</button>
+        <input type="button" value="Does not have options for changing text">
+
+    </form>
+
+</body>
+
+</html>
