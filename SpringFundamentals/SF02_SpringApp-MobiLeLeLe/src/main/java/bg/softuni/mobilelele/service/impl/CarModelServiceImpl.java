@@ -31,7 +31,7 @@ public class CarModelServiceImpl implements CarModelService {
     public void populate() {
 
         final ResourceDatabasePopulator resourceDatabasePopulator =
-                new ResourceDatabasePopulator(new ClassPathResource("sql/car_models.sql"));
+                new ResourceDatabasePopulator(new ClassPathResource("sql/car_models_data.sql"));
 
         resourceDatabasePopulator.execute(dataSource);
     }
