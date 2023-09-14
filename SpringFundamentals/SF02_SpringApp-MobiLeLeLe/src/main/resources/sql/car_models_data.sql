@@ -1,5 +1,6 @@
 /*I have to find a way to create view/function or anything else to replace
-"FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = ?)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW()))"*/
+"FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = ?)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW()))"
+with something shorter for better readability.*/
 
 INSERT INTO models (name, brand_id, created)
 VALUES ('Acura MODEL 1', 1, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = 1)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW()))),
