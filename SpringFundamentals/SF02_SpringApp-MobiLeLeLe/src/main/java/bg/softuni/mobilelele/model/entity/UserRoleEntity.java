@@ -15,11 +15,20 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "roles")
-public class RoleEntity extends BaseEntity {
+public class UserRoleEntity extends BaseEntity {
 
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private RoleEnum name;
 
     @OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
     private List<UserEntity> users;
+
+    @Override
+    public String toString() {
+        return "RoleEntity{" +
+                "name=" + name +
+                ", users=" + users +
+                '}';
+    }
 }

@@ -18,9 +18,9 @@ import java.util.List;
 public class UserEntity extends BaseEntity {
 
     @Column(nullable = false)
-    private String username;
+    private String email;
 
-    @Column(nullable = false)
+    @Column
     private String password;
 
     @Column(name = "first_name")
@@ -32,8 +32,8 @@ public class UserEntity extends BaseEntity {
     @Column(name = "is_active", columnDefinition = "TINYINT")
     private boolean isActive;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    private RoleEntity role;
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private UserRoleEntity role;
 
     @Column(name = "image_url", columnDefinition = "BLOB")
     private String imageUrl;
@@ -46,4 +46,20 @@ public class UserEntity extends BaseEntity {
 
     @OneToMany(mappedBy = "seller")
     private List<OfferEntity> offers;
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "username='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", isActive=" + isActive +
+                ", role=" + role +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", created=" + created +
+                ", modified=" + modified +
+                ", offers=" + offers +
+                '}';
+    }
 }

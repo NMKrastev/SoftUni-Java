@@ -3,10 +3,7 @@ package bg.softuni.mobilelele.model.entity;
 import bg.softuni.mobilelele.model.enums.CategoryEnum;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -22,6 +19,7 @@ public class ModelEntity extends BaseEntity {
     @Column(nullable = false)
     private String name;
 
+    //@Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private CategoryEnum category;
 
@@ -41,9 +39,24 @@ public class ModelEntity extends BaseEntity {
     @Column
     private LocalDateTime modified;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private BrandEntity brand;
 
     @OneToMany(mappedBy = "model")
     private List<OfferEntity> offer;
+
+    @Override
+    public String toString() {
+        return "ModelEntity{" +
+                "name='" + name + '\'' +
+                ", category=" + category +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", startYear=" + startYear +
+                ", endYear=" + endYear +
+                ", created=" + created +
+                ", modified=" + modified +
+                ", brand=" + (brand != null ? brand.getName() : null) +
+                ", offer=" + offer +
+                '}';
+    }
 }

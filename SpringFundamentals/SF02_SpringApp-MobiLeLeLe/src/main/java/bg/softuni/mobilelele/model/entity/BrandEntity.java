@@ -1,10 +1,7 @@
 package bg.softuni.mobilelele.model.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -13,6 +10,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Entity
 @Table(name = "brands")
 public class BrandEntity extends BaseEntity {
@@ -26,8 +24,7 @@ public class BrandEntity extends BaseEntity {
     @Column
     private LocalDateTime modified;
 
-    @OneToMany(mappedBy = "brand", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "brand", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<ModelEntity> models;
-
 
 }

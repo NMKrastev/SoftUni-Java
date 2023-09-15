@@ -19,9 +19,10 @@ import java.time.LocalDateTime;
 @Table(name = "offers")
 public class OfferEntity extends BaseEntity {
 
-    @Column(columnDefinition = "TEXT")
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String description;
 
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private EngineEnum engine;
 
@@ -34,6 +35,7 @@ public class OfferEntity extends BaseEntity {
     @Column
     private BigDecimal price;
 
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private TransmissionEnum transmission;
 
@@ -46,9 +48,26 @@ public class OfferEntity extends BaseEntity {
     @Column
     private LocalDateTime modified;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private ModelEntity model;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private UserEntity seller;
+
+    @Override
+    public String toString() {
+        return "OfferEntity{" +
+                "description='" + description + '\'' +
+                ", engine=" + engine +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", mileage=" + mileage +
+                ", price=" + price +
+                ", transmission=" + transmission +
+                ", year=" + year +
+                ", created=" + created +
+                ", modified=" + modified +
+                ", model=" + model +
+                ", seller=" + seller +
+                '}';
+    }
 }
