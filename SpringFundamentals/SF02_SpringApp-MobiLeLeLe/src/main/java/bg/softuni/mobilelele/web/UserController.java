@@ -1,6 +1,7 @@
 package bg.softuni.mobilelele.web;
 
-import bg.softuni.mobilelele.model.dto.UserDTO;
+import bg.softuni.mobilelele.model.dto.UserLoginDTO;
+import bg.softuni.mobilelele.model.dto.UserRegisterDTO;
 import bg.softuni.mobilelele.service.impl.RoleServiceImpl;
 import bg.softuni.mobilelele.service.impl.UserServiceImpl;
 import org.springframework.stereotype.Controller;
@@ -30,9 +31,9 @@ public class UserController {
     }
 
     @PostMapping("/users/register")
-    public ModelAndView createUser(ModelAndView modelAndView, UserDTO userDTO) {
+    public ModelAndView createUser(ModelAndView modelAndView, UserRegisterDTO userRegisterDTO) {
 
-        this.userService.registerUser(userDTO);
+        this.userService.registerUser(userRegisterDTO);
 
         modelAndView.setViewName("index");
 
@@ -43,6 +44,16 @@ public class UserController {
     public ModelAndView showLogin(ModelAndView modelAndView) {
 
         modelAndView.setViewName("auth-login");
+
+        return modelAndView;
+    }
+
+    @PostMapping("/users/login")
+    public ModelAndView loginUser(ModelAndView modelAndView, UserLoginDTO userLoginDTO) {
+
+        this.userService.loginUser(userLoginDTO);
+
+        modelAndView.setViewName("index");
 
         return modelAndView;
     }

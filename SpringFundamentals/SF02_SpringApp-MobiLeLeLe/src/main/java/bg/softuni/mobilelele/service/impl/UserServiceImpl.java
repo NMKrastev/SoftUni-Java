@@ -1,6 +1,7 @@
 package bg.softuni.mobilelele.service.impl;
 
-import bg.softuni.mobilelele.model.dto.UserDTO;
+import bg.softuni.mobilelele.model.dto.UserLoginDTO;
+import bg.softuni.mobilelele.model.dto.UserRegisterDTO;
 import bg.softuni.mobilelele.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -8,8 +9,13 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
 
     @Override
-    public void registerUser(UserDTO userDTO) {
+    public void registerUser(UserRegisterDTO userDTO) {
 
+
+    }
+
+    @Override
+    public void loginUser(UserLoginDTO userLoginDTO) {
 
     }
 }
