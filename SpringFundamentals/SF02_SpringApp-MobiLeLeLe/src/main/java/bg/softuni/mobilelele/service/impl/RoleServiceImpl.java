@@ -18,16 +18,8 @@ public class RoleServiceImpl implements RoleService {
         this.roleRepository = roleRepository;
     }
 
-    public String findAllRoles() {
+    public List<UserRoleEntity> findAllRoles() {
 
-        final StringBuilder sb = new StringBuilder();
-
-        final List<UserRoleEntity> allRoles = this.roleRepository.findAll();
-
-        for (UserRoleEntity role : allRoles) {
-            sb.append(role).append(System.lineSeparator());
-        }
-
-        return sb.toString();
+        return this.roleRepository.findAll();
     }
 }
