@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Pathfinder" />
         <module name="SF01_HTTPProtocol" />
         <module name="SF03_SpringIntroductionMVC" />
       </profile>
@@ -21,6 +22,8 @@
       <module name="mobilelele" target="17" />
       <module name="mobilelele.main" target="17" />
       <module name="mobilelele.test" target="17" />
+      <module name="Pathfinder.main" target="17" />
+      <module name="Pathfinder.test" target="17" />
       <module name="SF03_SpringIntroductionMVC.main" target="17" />
       <module name="SF03_SpringIntroductionMVC.test" target="17" />
     </bytecodeTargetLevel>
@@ -28,6 +31,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="MobiLeLeLe" options="-parameters" />
+      <module name="Pathfinder" options="-parameters" />
       <module name="SF01_HTTPProtocol" options="-parameters" />
       <module name="SF03_SpringIntroductionMVC" options="-parameters" />
     </option>

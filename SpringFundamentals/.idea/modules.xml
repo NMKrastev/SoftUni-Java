@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MobiLeLeLe.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MobiLeLeLe.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SF04_PathfinderWorkShop/Pathfinder.iml" filepath="$PROJECT_DIR$/SF04_PathfinderWorkShop/Pathfinder.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringFundamentals.iml" filepath="$PROJECT_DIR$/.idea/SpringFundamentals.iml" />
     </modules>
   </component>
