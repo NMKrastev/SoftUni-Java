@@ -9,6 +9,7 @@ import org.modelmapper.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -33,5 +34,10 @@ public class RouteServiceImpl implements RouteService {
     public Optional<Route> findById(Long id) {
 
         return routeRepository.findById(id);
+    }
+
+    @Override
+    public List<Route> findAllRoutes() {
+        return this.routeRepository.findAll();
     }
 }

@@ -1,16 +1,14 @@
 package bg.softuni.pathfinder.web;
 
 import bg.softuni.pathfinder.model.entity.Route;
-import bg.softuni.pathfinder.model.enums.LevelEnumType;
 import bg.softuni.pathfinder.service.RouteService;
-import jakarta.persistence.Lob;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.Optional;
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -60,9 +58,23 @@ public class HomeController {
 
         final Route route = routeService.findById(Long.valueOf(id)).get();
 
+        String fullName = route.getAuthor().getFullName();
+
         modelAndView.addObject("route", route);
 
         modelAndView.setViewName("route-details");
+
+        return modelAndView;
+    }
+
+    @GetMapping("/routes")
+    public ModelAndView routes(ModelAndView modelAndView) {
+
+        final List<Route> allRoutes = this.routeService.findAllRoutes();
+
+        modelAndView.addObject("routes", allRoutes);
+
+        modelAndView.setViewName("routes");
 
         return modelAndView;
     }
