@@ -94,6 +94,8 @@
         </section>
         <section id="map"></section>
         <section id="video">
+            <!--This should be changed to take the vide url for the specific route (th:src="${route.getVideoUrl()}").
+            This will be changed when video urls are inserted for each route!-->
             <iframe id="frame" src="https://www.youtube.com/embed/ZUKPTZMbuh8?si=WZsXFx6sf9d31i9L">
             </iframe>
         </section>
@@ -102,8 +104,9 @@
             <p id="route-description"><span th:text="${route.getDescription()}"></span></p>
         </section>
         <section class="gallery">
-            <img class="rounded" src="/images/pic4.jpg" height="100%" alt="">
-            <img class="rounded" src="/images/pic1.jpg" height="100%" alt="">
+            <div th:each="picture : ${route.getPictures()}">
+            <img class="rounded" th:src="${picture.getUrl()}" height="100%" alt="">
+            </div>
         </section>
         <section class="comments">
             <h1>Comments</h1>

@@ -52,7 +52,7 @@
 </header>
 
     <section class="road" th:each="route : ${routes}">
-        <img th:src="${route.getPictures()[0].getUrl()}" alt="Title image">
+        <img th:src="${route.getPictures()[0].getUrl().toString()}" alt="Title image">
         <div>
             <h2><span th:text="${route.getName()}"></span></h2>
             <p><span th:text="${route.getDescription()}"></span></p>
