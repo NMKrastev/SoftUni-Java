@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http://thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -68,9 +68,10 @@
 <div class="container">
     <h2 class="text-center text-white m-3">All Brands</h2>
     <div class='row mb-4 d-flex justify-content-around'>
-        <div class="brand-section col-md-5 mr-auto d-flex flex-column">
+        <div class="brand-section col-md-5 mr-auto d-flex flex-column"
+        th:each="brand : ${allBrands}">
             <h2>Car brand:
-                <span>Brand name</span>
+                <span th:text="${brand.getName()}"></span>
             </h2>
             <div>Models:
                 <table>
@@ -82,15 +83,17 @@
                         <th>End Year</th>
                         <th>Picture</th>
                     </tr>
+                    <div th:each="model : ${brand.getModels()}">
                     <tr>
                         <th>No</th>
-                        <th>Model Name</th>
-                        <th>Model Category</th>
-                        <th>Model Start Year</th>
-                        <th>Model End Year</th>
-                        <th><img alt="image" src="/"
+                        <th><span th:text="${model.getName()}"></span></th>
+                        <th><span th:text="${model.getCategory()}"></span></th>
+                        <th><span th:text="${model.getStartYear()}"></span></th>
+                        <th><span th:text="${model.getEndYear()}"></span></th>
+                        <th><img alt="image" th:src="${model.getImageUrl()}"
                                  class="img-thumbnail rounded"></th>
                     </tr>
+                    </div>
                 </table>
             </div>
         </div>

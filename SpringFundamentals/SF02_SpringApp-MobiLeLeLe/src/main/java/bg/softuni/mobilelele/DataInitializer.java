@@ -19,12 +19,15 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        if (!this.carBrandService.isPopulated()) {
+        //Use the data initializer in the application.properties
+        // or use the code below
+
+        /*if (!this.carBrandService.isPopulated()) {
             this.carBrandService.populate();
         }
 
         if (!this.carModelService.isPopulated()) {
             this.carModelService.populate();
-        }
+        }*/
     }
 }

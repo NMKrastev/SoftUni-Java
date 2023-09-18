@@ -1,5 +1,6 @@
 package bg.softuni.mobilelele.service.impl;
 
+import bg.softuni.mobilelele.model.entity.BrandEntity;
 import bg.softuni.mobilelele.repository.CarBrandRepository;
 import bg.softuni.mobilelele.service.CarBrandService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
+import java.util.List;
 
 @Service
 public class CarBrandServiceImpl implements CarBrandService {
@@ -34,5 +36,10 @@ public class CarBrandServiceImpl implements CarBrandService {
                 new ResourceDatabasePopulator(new ClassPathResource("sql/car_brands_data.sql"));
 
         resourceDatabasePopulator.execute(dataSource);
+    }
+
+    @Override
+    public List<BrandEntity> getAllBrands() {
+        return this.carBrandRepository.findAll();
     }
 }

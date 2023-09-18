@@ -1,3 +1,5 @@
+DROP VIEW IF EXISTS car_brand_creation_datetime;
+
 CREATE VIEW car_brand_creation_datetime AS
 SELECT CURRENT_TIMESTAMP - INTERVAL FLOOR(RAND() * 20000 * 24 * 60 * 60) SECOND;
 

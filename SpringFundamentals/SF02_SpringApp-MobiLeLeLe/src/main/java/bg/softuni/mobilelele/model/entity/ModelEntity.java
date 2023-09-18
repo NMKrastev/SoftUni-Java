@@ -28,7 +28,7 @@ public class ModelEntity extends BaseEntity {
     private String imageUrl;
 
     @Column(name = "star_year")
-    private int startYear;
+    private Integer startYear;
 
     @Column(name = "end_year")
     private Integer endYear;
