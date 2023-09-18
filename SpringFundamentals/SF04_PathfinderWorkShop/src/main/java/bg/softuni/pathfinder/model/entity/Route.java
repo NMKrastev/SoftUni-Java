@@ -39,7 +39,7 @@ public class Route extends BaseEntity {
     @ManyToMany
     private Set<Category> categories;
 
-    @OneToMany(mappedBy = "route")
+    @OneToMany(mappedBy = "route", fetch = FetchType.EAGER)
     private Set<Picture> pictures;
 
     public Route() {

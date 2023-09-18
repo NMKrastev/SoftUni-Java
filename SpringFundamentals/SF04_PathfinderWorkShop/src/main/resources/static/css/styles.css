@@ -223,7 +223,17 @@ footer {
     grid-row: 3;
 }
 
-.level {
+.level .beginner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.level .intermediate {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.level .advanced {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }

@@ -24,28 +24,28 @@
     <nav class="main-nav">
         <ul>
                 <li>
-                    <a href="/">Home</a>
+                    <a th:href="@{/}">Home</a>
                 </li>
                 <li>
-                    <a href="/">Login</a>
+                    <a th:href="@{/user/login}">Login</a>
                 </li>
                 <li>
-                    <a href="/">Register</a>
+                    <a th:href="@{/user/register}">Register</a>
                 </li>
                 <li>
-                    <a href="/">About</a>
+                    <a th:href="@{/about}">About</a>
                 </li>
 				<li>
-                    <a href="/">Add new route</a>
+                    <a th:href="@{/add-route}">Add new route</a>
                 </li>
                 <li>
-                    <a href="/">Profile</a>
+                    <a th:href="@{/profile}">Profile</a>
                 </li>
                 <li>
-                    <a href="/">Admin</a>
+                    <a th:href="@{/admin}">Admin</a>
                 </li>
                 <li>
-                    <a href="/">Logout</a>
+                    <a th:href="@{/logout}">Logout</a>
                 </li>
         </ul>
     </nav>
@@ -103,12 +103,14 @@
 
     <!-- Info Section -->
     <section class="road">
-        <img src="/images/most-commented.jpg" alt="">
+        <!-- Most commented route first picture-->
+        <img th:src="${mostCommented.getPictures[0].getUrl()}" alt="">
         <div>
-            <h2>The most commented route</h2>
+            <h2>The most commented route: <span th:text="${mostCommented.getName()}"></span></h2>
             <p>Read more about the most commented route and do not miss the
                 chance to visit it and give your opinion to help other users.</p>
-            <a href="/" class="btn">Learn More</a>
+            <!--Generate link to route-->
+            <a th:href="@{'/routes/details/{id}'(id = ${mostCommented.id})}" class="btn">Learn More</a>
         </div>
     </section>
 
