@@ -20,7 +20,6 @@ public class HomeController {
         this.routeService = routeService;
     }
 
-
     @GetMapping("/")
     public ModelAndView home(ModelAndView modelAndView) {
 
