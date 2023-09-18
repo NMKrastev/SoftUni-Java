@@ -38,12 +38,6 @@ public class HomeController {
         return "about";
     }
 
-    @GetMapping("/user/login")
-    public String login() {
-
-        return "login";
-    }
-
     @GetMapping("/user/register")
     public String register() {
 
