@@ -1,5 +1,6 @@
 package bg.softuni.pathfinder.service;
 
+import bg.softuni.pathfinder.model.dto.RouteLearnMoreDTO;
 import bg.softuni.pathfinder.model.entity.Route;
 
 import java.util.Optional;

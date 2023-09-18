@@ -60,10 +60,6 @@ public class HomeController {
 
         final Route route = routeService.findById(Long.valueOf(id)).get();
 
-        String fullName = route.getAuthor().getFullName();
-
-        String level = route.getLevel().toString();
-
         modelAndView.addObject("route", route);
 
         modelAndView.setViewName("route-details");
