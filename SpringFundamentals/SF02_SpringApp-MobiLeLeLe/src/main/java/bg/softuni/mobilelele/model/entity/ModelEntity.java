@@ -19,11 +19,12 @@ public class ModelEntity extends BaseEntity {
     @Column(nullable = false)
     private String name;
 
-    //@Column(nullable = false)
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private CategoryEnum category;
 
-    @Column(name = "image_url", columnDefinition = "BLOB")
+    //By requirement should be VARCHAR(512). Could be BLOB if needed.
+    @Column(name = "image_url", columnDefinition = "TEXT")
     @Size(min = 8, max = 512)
     private String imageUrl;
 
