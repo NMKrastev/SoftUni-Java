@@ -24,7 +24,6 @@
         Welcome to MobiLeLeLe,
         <span th:if="${@currentUser.isLoggedIn()}"
               th:text="${@currentUser.getFullName()}">
-
         </span>
 
         <span th:if="${@currentUser.isAnonymous()}">
