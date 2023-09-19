@@ -11,7 +11,7 @@
 
 <div>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
-        <a class="navbar-brand" href="/"><img alt="car picture" src="/img/car.png" class="logo"></a>
+        <a class="navbar-brand" th::href="@{/}"><img alt="car picture" src="/img/car.png" class="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,32 +19,32 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto col-12 justify-content-between">
-                <li class="nav-item"
-                >
-                    <a class="nav-link" href="/brands/all">All Brands</a>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/brands/all}">All Brands</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/offers/add">Add Offer</a>
+                    <a class="nav-link" th:href="@{/offers/add}">Add Offer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/offers/all">All Offers</a>
+                    <a class="nav-link" th:href="@{/offers/all}">All Offers</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" th:href="@{/}" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Admin
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/">Action</a>
-                        <a class="dropdown-item" href="/">Another action</a>
+                        <a class="dropdown-item" th:href="@{/}">Action</a>
+                        <a class="dropdown-item" th:href="@{/}">Another action</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/">Something else here</a>
+                        <a class="dropdown-item" th:href="@{/}">Something else here</a>
                     </div>
                 </li>
                 <li class="nav-item" th:if="${@currentUser.isLoggedIn()}">
                     <div class="form-inline my-2 my-lg-0 border px-3">
-                        <div class="logged-user"
-                             >Welcome, <span th:text="${@currentUser.getFirstName()}"></span></div>
+                        <div class="logged-user">
+                            Welcome, <span th:text="${@currentUser.getFirstName()}"></span>
+                        </div>
                         <a class="nav-link" th:href="@{/users/logout}">Logout</a>
                     </div>
                 </li>

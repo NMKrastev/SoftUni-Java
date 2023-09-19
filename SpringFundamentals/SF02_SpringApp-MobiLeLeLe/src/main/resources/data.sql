@@ -1,10 +1,16 @@
+/*Adding roles*/
+
 INSERT INTO roles (name)
 VALUES ('ADMIN'),
        ('MODERATOR'),
        ('USER');
 
+/*Adding admin user*/
+
 INSERT INTO users (email, password, is_active, first_name, last_name, created, image_url, role_id)
 VALUES ('admin@admin@.bg', '83bd877c071b68186148c1d9981523ec37f58ce0ff52c23613e3002803260e45e29020eca63e1910', '1', 'Admin', 'Adminov', NOW(), 'https://media.istockphoto.com/id/1192884194/vector/admin-sign-on-laptop-icon-stock-vector.jpg?s=612x612&w=0&k=20&c=W7ClQXF-0UP_9trbNMvC04qUE4f__SOgg6BUdoX6hdQ=', 1);
+
+/*Populating brands table*/
 
 DROP VIEW IF EXISTS car_brand_creation_datetime;
 
@@ -75,17 +81,7 @@ VALUES ('Acura', (SELECT * FROM car_brand_creation_datetime)),
        ('Volkswagen', (SELECT * FROM car_brand_creation_datetime)),
        ('Volvo', (SELECT * FROM car_brand_creation_datetime));
 
-/*DROP PROCEDURE IF EXISTS car_model_creation_datetime;
-
-CREATE FUNCTION car_model_creation_datetime(brand_id INT)
-    RETURNS DATETIME
-    NOT DETERMINISTIC
-    READS SQL DATA
-BEGIN
-    DECLARE model_creation DATETIME;
-    SET model_creation := FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW()));
-    RETURN model_creation;
-END;*/
+/*Populating models table*/
 
 INSERT INTO models (name, brand_id, created, category, star_year, end_year)
 VALUES ('Acura MODEL 1', 1, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2017, 2022),
@@ -219,4 +215,11 @@ VALUES ('Acura MODEL 1', 1, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMES
        ('Volvo MODEL 1', 62, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 1990, NULL),
        ('Volvo MODEL 2', 62, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'TRUCK', 2000, 2010),
        ('Volvo MODEL 3', 62, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2005, 2011),
-       ('Volvo MODEL 4', 62, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2003, 2023);;
+       ('Volvo MODEL 4', 62, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2003, 2023);
+
+/*Adding offers*/
+
+INSERT INTO offers (created, description, engine, image_url, mileage, price, transmission, year, model_id, seller_id)
+VALUES (NOW(), 'Perfect condition!', 'GASOLINE', 'https://images.drive.com.au/driveau/image/upload/t_wp-default/v1/cms/uploads/ipbwdw9jxtiewinmhsdr', 45000, 180000, 'MANUAL', 2002, 85, 1),
+       (NOW(), 'Like new!', 'GASOLINE', 'https://www.motortrend.com/uploads/f/161584358.jpg?fit=around%7C875:492', 30000, 120000, 'MANUAL', 2000, 65, 1),
+       (NOW(), 'Mint condition!', 'GASOLINE', 'https://petrolpositive.at/wp-content/uploads/2022/09/Nissan-Silvia-S15-Spec-R-Aero-Perlmutt-Weiss_7.jpg', 90000, 80000, 'MANUAL', 1999, 86, 1);

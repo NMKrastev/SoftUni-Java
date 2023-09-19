@@ -26,7 +26,7 @@ public class OfferEntity extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private EngineEnum engine;
 
-    @Column(name = "image_url", columnDefinition = "BLOB")
+    @Column(name = "image_url")
     private String imageUrl;
 
     @Column
