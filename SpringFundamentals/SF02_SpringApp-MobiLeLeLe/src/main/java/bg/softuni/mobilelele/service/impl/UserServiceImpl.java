@@ -76,6 +76,7 @@ public class UserServiceImpl implements UserService {
     private void login(UserEntity user) {
 
         this.currentUser.setLoggedIn(true);
+        this.currentUser.setFirstName(user.getFirstName());
         this.currentUser.setFullName(user.getFirstName() + " " + user.getLastName());
     }
 }

@@ -13,6 +13,8 @@ import org.springframework.web.context.annotation.SessionScope;
 @SessionScope
 public class CurrentUser {
 
+    private String firstName;
+
     private String fullName;
 
     private boolean loggedIn;
