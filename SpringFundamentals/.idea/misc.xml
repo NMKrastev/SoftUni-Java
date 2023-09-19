@@ -4,7 +4,8 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/SF02_SpringApp-MobiLeLeLe" />
     <file type="web" url="file://$PROJECT_DIR$/SF03_SpringIntroductionMVC" />
-    <file type="web" url="file://$PROJECT_DIR$/SF04_PathfinderWorkshop" />
+    <file type="web" url="file://$PROJECT_DIR$/SF04_PathfinderWorkShop" />
+    <file type="web" url="file://$PROJECT_DIR$/SF05_StateManagement" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
