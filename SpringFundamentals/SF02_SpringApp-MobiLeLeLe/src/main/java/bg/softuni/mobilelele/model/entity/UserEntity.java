@@ -29,13 +29,13 @@ public class UserEntity extends BaseEntity {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "is_active", columnDefinition = "TINYINT")
+    @Column(name = "is_active", columnDefinition = "TINYINT", nullable = false)
     private boolean isActive;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private UserRoleEntity role;
 
-    @Column(name = "image_url", columnDefinition = "BLOB")
+    @Column(name = "image_url")
     private String imageUrl;
 
     @Column

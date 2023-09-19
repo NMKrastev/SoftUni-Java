@@ -19,5 +19,5 @@ public class UserRegisterDTO {
 
     private String password;
 
-    private String roles;
+    private String confirmPassword;
 }

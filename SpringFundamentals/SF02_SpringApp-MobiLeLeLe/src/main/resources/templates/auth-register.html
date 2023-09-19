@@ -107,7 +107,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="text-center text-white font-weight-bold" for="roles">Roles</label>
+            <!--<label class="text-center text-white font-weight-bold" for="roles">Roles</label>
             <select  id="roles" title="roles" name="roles" class="form-control" multiple>
                 <option>ADMIN</option>
                 <option>MODERATOR</option>
@@ -115,6 +115,12 @@
             </select>
             <p class="errors alert alert-danger">
                 Selecting a role is required.
+            </p>-->
+            <label for="password" class="text-white font-weight-bold">Password</label>
+            <input id="confirmPassword" title="confirmPassword" name="confirmPassword" type="password" min="2" max="20" class="form-control"
+                   placeholder="Confirm Password"/>
+            <p class="errors alert alert-danger">
+                Password should match.
             </p>
         </div>
 
