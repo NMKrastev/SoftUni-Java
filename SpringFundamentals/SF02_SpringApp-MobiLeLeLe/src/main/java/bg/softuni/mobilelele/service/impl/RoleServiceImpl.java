@@ -1,6 +1,7 @@
 package bg.softuni.mobilelele.service.impl;
 
 import bg.softuni.mobilelele.model.entity.UserRoleEntity;
+import bg.softuni.mobilelele.model.enums.RoleEnum;
 import bg.softuni.mobilelele.repository.RoleRepository;
 import bg.softuni.mobilelele.service.RoleService;
 import org.springframework.stereotype.Service;
@@ -21,5 +22,11 @@ public class RoleServiceImpl implements RoleService {
     public List<UserRoleEntity> findAllRoles() {
 
         return this.roleRepository.findAll();
+    }
+
+    @Override
+    public UserRoleEntity getUserRole() {
+
+        return this.roleRepository.findByName(RoleEnum.USER);
     }
 }

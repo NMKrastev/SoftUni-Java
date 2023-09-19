@@ -20,8 +20,9 @@ public class CurrentUser {
     private boolean loggedIn;
 
     public void clear() {
-        this.loggedIn = false;
+        this.firstName = null;
         this.fullName = null;
+        this.loggedIn = false;
     }
 
     public boolean isAnonymous() {

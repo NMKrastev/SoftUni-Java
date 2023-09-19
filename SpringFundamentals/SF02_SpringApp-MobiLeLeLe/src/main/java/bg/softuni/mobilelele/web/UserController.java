@@ -18,8 +18,8 @@ public class UserController {
     private final UserServiceImpl userService;
 
     public UserController(RoleServiceImpl roleService, UserServiceImpl userService) {
-        this.roleService = roleService;
 
+        this.roleService = roleService;
         this.userService = userService;
     }
 
@@ -43,12 +43,15 @@ public class UserController {
 
     @PostMapping("/login")
     public ModelAndView login(ModelAndView modelAndView, UserLoginDTO userLoginDTO) {
+        //System.out.println("User is logged: " + this.userService.loginUser(userLoginDTO));
 
-        this.userService.loginUser(userLoginDTO);
+        boolean isUserLoggedIn = this.userService.loginUser(userLoginDTO);
 
-        System.out.println("User is logged: " + this.userService.loginUser(userLoginDTO));
-
-        modelAndView.setViewName("redirect:/");
+        if (isUserLoggedIn) {
+            modelAndView.setViewName("redirect:/");
+        } else {
+            modelAndView.setViewName("auth-login");
+        }
 
         return modelAndView;
     }
@@ -66,9 +69,13 @@ public class UserController {
     @PostMapping("/register")
     public ModelAndView register(ModelAndView modelAndView, UserRegisterDTO userRegisterDTO) {
 
-        this.userService.registerUser(userRegisterDTO);
+        boolean isUserRegistered = this.userService.registerUser(userRegisterDTO);
 
-        modelAndView.setViewName("redirect:/");
+        if (isUserRegistered) {
+            modelAndView.setViewName("redirect:/");
+        } else {
+            modelAndView.setViewName("auth-register");
+        }
 
         return modelAndView;
     }

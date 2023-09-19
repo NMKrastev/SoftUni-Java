@@ -1,10 +1,8 @@
 package bg.softuni.mobilelele.model.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -13,6 +11,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "users")
 public class UserEntity extends BaseEntity {
@@ -32,7 +31,7 @@ public class UserEntity extends BaseEntity {
     @Column(name = "is_active", columnDefinition = "TINYINT", nullable = false)
     private boolean isActive;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private UserRoleEntity role;
 
     @Column(name = "image_url")

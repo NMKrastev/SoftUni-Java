@@ -4,6 +4,7 @@ import bg.softuni.mobilelele.model.dto.UserLoginDTO;
 import bg.softuni.mobilelele.model.dto.UserRegisterDTO;
 import bg.softuni.mobilelele.model.entity.UserEntity;
 import bg.softuni.mobilelele.repository.UserRepository;
+import bg.softuni.mobilelele.service.RoleService;
 import bg.softuni.mobilelele.service.UserService;
 import bg.softuni.mobilelele.user.CurrentUser;
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
@@ -18,11 +20,14 @@ public class UserServiceImpl implements UserService {
 
     private final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
     private final UserRepository userRepository;
+    private final RoleService roleService;
     private final CurrentUser currentUser;
     private final PasswordEncoder encoder;
 
-    public UserServiceImpl(UserRepository userRepository, CurrentUser currentUser, PasswordEncoder encoder) {
+    public UserServiceImpl(UserRepository userRepository, RoleService roleService,
+                           CurrentUser currentUser, PasswordEncoder encoder) {
         this.userRepository = userRepository;
+        this.roleService = roleService;
         this.currentUser = currentUser;
         this.encoder = encoder;
     }
@@ -38,7 +43,7 @@ public class UserServiceImpl implements UserService {
         }
 
         final String rawPassword = userLoginDTO.getPassword();
-        final String  encodedPassword = userOpt.get().getPassword();
+        final String encodedPassword = userOpt.get().getPassword();
 
         final boolean success = this.encoder.matches(rawPassword, encodedPassword);
 
@@ -58,19 +63,28 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void registerUser(UserRegisterDTO userDTO) {
+    public boolean registerUser(UserRegisterDTO userDTO) {
 
-        UserEntity newUser = new UserEntity();
+        if (!userDTO.getPassword().equals(userDTO.getConfirmPassword())) {
+            this.logoutUser();
+            return false;
+        }
+
+        final UserEntity newUser = new UserEntity();
+
         newUser.setActive(true);
         newUser.setEmail(userDTO.getEmail());
         newUser.setPassword(this.encoder.encode(userDTO.getPassword()));
         newUser.setFirstName(userDTO.getFirstName());
         newUser.setLastName(userDTO.getLastName());
+        newUser.setCreated(LocalDateTime.now());
+        newUser.setRole(this.roleService.getUserRole());
 
-        newUser = this.userRepository.save(newUser);
+        final UserEntity savedUser = this.userRepository.saveAndFlush(newUser);
 
-        this.login(newUser);
+        this.login(savedUser);
 
+        return true;
     }
 
     private void login(UserEntity user) {
