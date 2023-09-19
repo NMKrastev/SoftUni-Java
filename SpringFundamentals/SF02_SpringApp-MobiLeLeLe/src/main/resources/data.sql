@@ -1,5 +1,10 @@
-INSERT INTO users (email, password, is_active, first_name, last_name, created, image_url)
-VALUES ('admin@admin@.bg', '83bd877c071b68186148c1d9981523ec37f58ce0ff52c23613e3002803260e45e29020eca63e1910', '1', 'Admin', 'Adminov', NOW(), 'https://media.istockphoto.com/id/1192884194/vector/admin-sign-on-laptop-icon-stock-vector.jpg?s=612x612&w=0&k=20&c=W7ClQXF-0UP_9trbNMvC04qUE4f__SOgg6BUdoX6hdQ=');
+INSERT INTO roles (name)
+VALUES ('ADMIN'),
+       ('MODERATOR'),
+       ('USER');
+
+INSERT INTO users (email, password, is_active, first_name, last_name, created, image_url, role_id)
+VALUES ('admin@admin@.bg', '83bd877c071b68186148c1d9981523ec37f58ce0ff52c23613e3002803260e45e29020eca63e1910', '1', 'Admin', 'Adminov', NOW(), 'https://media.istockphoto.com/id/1192884194/vector/admin-sign-on-laptop-icon-stock-vector.jpg?s=612x612&w=0&k=20&c=W7ClQXF-0UP_9trbNMvC04qUE4f__SOgg6BUdoX6hdQ=', 1);
 
 DROP VIEW IF EXISTS car_brand_creation_datetime;
 

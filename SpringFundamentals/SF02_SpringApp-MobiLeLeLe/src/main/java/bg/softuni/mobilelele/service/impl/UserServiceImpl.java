@@ -60,6 +60,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public void registerUser(UserRegisterDTO userDTO) {
 
+        UserEntity newUser = new UserEntity();
+        newUser.setActive(true);
+        newUser.setEmail(userDTO.getEmail());
+        newUser.setPassword(this.encoder.encode(userDTO.getPassword()));
+        newUser.setFirstName(userDTO.getFirstName());
+        newUser.setLastName(userDTO.getLastName());
+
+        newUser = this.userRepository.save(newUser);
+
+        this.login(newUser);
 
     }
 
