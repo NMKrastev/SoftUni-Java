@@ -39,7 +39,7 @@
                     <div class="card-text">• Transmission type: <span th:text="${offer.getTransmission()}"></span></div>
                     <div class="card-text">• Offer created: <span th:text="${offer.getCreated()}"></span></div>
                     <div class="card-text">• Offer modified: <span th:text="${offer.getModified()}"></span></div>
-                    <div class="card-text">• Seller - First and Last name: <span th:text="${offer.getSeller().getFirstName() + ' ' + offer.getSeller().getLastName()}"></span></div>
+                    <div class="card-text">• Seller: <span th:text="${offer.getSeller().getFirstName() + ' ' + offer.getSeller().getLastName()}"></span></div>
                 </li>
             </ul>
             <div class="card-body">
