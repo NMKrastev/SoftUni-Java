@@ -1,7 +1,6 @@
 package bg.softuni.mobilelele.web;
 
 import bg.softuni.mobilelele.model.dto.UserLoginDTO;
-import bg.softuni.mobilelele.model.dto.UserRegisterDTO;
 import bg.softuni.mobilelele.service.UserService;
 import bg.softuni.mobilelele.service.impl.UserServiceImpl;
 import jakarta.validation.Valid;

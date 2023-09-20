@@ -1,7 +1,7 @@
 package bg.softuni.mobilelele.service.impl;
 
 import bg.softuni.mobilelele.model.dto.UserLoginDTO;
-import bg.softuni.mobilelele.model.dto.UserRegisterDTO;
+import bg.softuni.mobilelele.model.dto.UserRegistrationDTO;
 import bg.softuni.mobilelele.model.entity.UserEntity;
 import bg.softuni.mobilelele.repository.UserRepository;
 import bg.softuni.mobilelele.service.RoleService;
@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean registerUser(UserRegisterDTO userDTO) {
+    public boolean registerUser(UserRegistrationDTO userDTO) {
 
         if (this.userRepository.findByEmail(userDTO.getEmail()).isPresent()
                 || !userDTO.getPassword().equals(userDTO.getConfirmPassword())) {

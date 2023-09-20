@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserRegisterDTO {
+public class UserRegistrationDTO {
 
     @NotEmpty
     @Size(min = 2, max = 20)
@@ -30,5 +30,7 @@ public class UserRegisterDTO {
     @Size(min = 5)
     private String password;
 
+    @NotEmpty
+    @Size(min = 5)
     private String confirmPassword;
 }

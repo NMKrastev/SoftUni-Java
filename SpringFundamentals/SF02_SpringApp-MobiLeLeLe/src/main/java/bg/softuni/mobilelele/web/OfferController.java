@@ -47,7 +47,6 @@ public class OfferController {
         return modelAndView;
     }
 
-
     //TODO: Create Offer details DTO to show all needed data.
     //TODO: Convert the date in the correct format!
 
@@ -64,5 +63,4 @@ public class OfferController {
         return modelAndView;
 
     }
-
 }
