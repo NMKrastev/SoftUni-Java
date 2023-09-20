@@ -10,7 +10,7 @@ VALUES ('ADMIN'),
 INSERT INTO users (email, password, is_active, first_name, last_name, created, image_url, role_id)
 VALUES ('admin@admin.bg', 'a545053099c97ba2aecdce579d84da59545252cce4fe48ef7eeea9cc2226c0639ae54fc577bb2d2f', 1, 'Admin', 'Adminov', NOW(), 'https://media.istockphoto.com/id/1192884194/vector/admin-sign-on-laptop-icon-stock-vector.jpg?s=612x612&w=0&k=20&c=W7ClQXF-0UP_9trbNMvC04qUE4f__SOgg6BUdoX6hdQ=', 1),
        ('ivan@test.bg', 'bd38c740e52982eb61814c03665270db601d310402d4f614c71665567405a9436343920f13525827', 1, 'Ivan', 'Ivanov', NOW(), 'https://www.freeiconspng.com/thumbs/computer-user-icon/computer-user-icon-28.png', 3),
-       ('peter@test.bg', 'd963dfaafbc0f5bbab031e89c150b024ad9da994b5e6f8616ef5f6e026d978eeb0e2ac1d3660ac85', 1, 'Ivan', 'Ivanov', NOW(), 'https://www.freeiconspng.com/thumbs/computer-user-icon/computer-user-icon-28.png', 3);
+       ('peter@test.bg', 'd963dfaafbc0f5bbab031e89c150b024ad9da994b5e6f8616ef5f6e026d978eeb0e2ac1d3660ac85', 1, 'Peter', 'Petrov', NOW(), 'https://www.freeiconspng.com/thumbs/computer-user-icon/computer-user-icon-28.png', 3);
 
 /*Populating brands table*/
 

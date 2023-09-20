@@ -71,15 +71,16 @@ public class UserServiceImpl implements UserService {
             return false;
         }
 
-        final UserEntity newUser = new UserEntity();
-
-        newUser.setActive(true);
-        newUser.setEmail(userDTO.getEmail());
-        newUser.setPassword(this.encoder.encode(userDTO.getPassword()));
-        newUser.setFirstName(userDTO.getFirstName());
-        newUser.setLastName(userDTO.getLastName());
-        newUser.setCreated(LocalDateTime.now());
-        newUser.setRole(this.roleService.getUserRole());
+        final UserEntity newUser = UserEntity
+                .builder()
+                .isActive(true)
+                .email(userDTO.getEmail())
+                .password(this.encoder.encode(userDTO.getPassword()))
+                .firstName(userDTO.getFirstName())
+                .lastName(userDTO.getLastName())
+                .created(LocalDateTime.now())
+                .role(this.roleService.getUserRole())
+                .build();
 
         final UserEntity savedUser = this.userRepository.saveAndFlush(newUser);
 
