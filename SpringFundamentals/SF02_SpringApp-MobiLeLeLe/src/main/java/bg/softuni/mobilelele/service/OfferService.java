@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface OfferService {
     List<OfferEntity> findAllOffers();
+
+    OfferEntity findOfferById(Long id);
 }
