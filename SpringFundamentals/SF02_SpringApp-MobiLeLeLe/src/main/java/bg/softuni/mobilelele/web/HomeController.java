@@ -14,4 +14,12 @@ public class HomeController {
 
         return modelAndView;
     }
+
+    @GetMapping("/")
+    public ModelAndView index(ModelAndView modelAndView) {
+
+        modelAndView.setViewName("index");
+
+        return modelAndView;
+    }
 }
