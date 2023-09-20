@@ -8,9 +8,9 @@ VALUES ('ADMIN'),
 /*Adding admin user*/
 
 INSERT INTO users (email, password, is_active, first_name, last_name, created, image_url, role_id)
-VALUES ('admin@admin.bg', 'a545053099c97ba2aecdce579d84da59545252cce4fe48ef7eeea9cc2226c0639ae54fc577bb2d2f', 1, 'Admin', 'Adminov', NOW(), 'https://media.istockphoto.com/id/1192884194/vector/admin-sign-on-laptop-icon-stock-vector.jpg?s=612x612&w=0&k=20&c=W7ClQXF-0UP_9trbNMvC04qUE4f__SOgg6BUdoX6hdQ=', 1),
-       ('ivan@test.bg', 'bd38c740e52982eb61814c03665270db601d310402d4f614c71665567405a9436343920f13525827', 1, 'Ivan', 'Ivanov', NOW(), 'https://www.freeiconspng.com/thumbs/computer-user-icon/computer-user-icon-28.png', 3),
-       ('peter@test.bg', 'd963dfaafbc0f5bbab031e89c150b024ad9da994b5e6f8616ef5f6e026d978eeb0e2ac1d3660ac85', 1, 'Peter', 'Petrov', NOW(), 'https://www.freeiconspng.com/thumbs/computer-user-icon/computer-user-icon-28.png', 3);
+VALUES ('admin@test.bg', '96d92cbb4363df247d8ef2c0b387ae60f892bae884ece6441e6d3c7d4d152f2ecf211d86f2ede0ee9aa9b0e604ec215d', 1, 'Admin', 'Adminov', NOW(), 'https://media.istockphoto.com/id/1192884194/vector/admin-sign-on-laptop-icon-stock-vector.jpg?s=612x612&w=0&k=20&c=W7ClQXF-0UP_9trbNMvC04qUE4f__SOgg6BUdoX6hdQ=', 1),
+       ('ivan@test.bg', '90c4ad80eec0bb4984432eab226a084475c53588f9e840151f3c88496759abe826bd20615d863be3cab6b085935ab543', 1, 'Ivan', 'Ivanov', NOW(), 'https://www.freeiconspng.com/thumbs/computer-user-icon/computer-user-icon-28.png', 3),
+       ('peter@test.bg', 'ddce10e3313df95a9c8b2b21c1a051f6c6d6567c016dd08c2f551d2da72f3b5ab19f724aaaf91f11831bf8844d52cbe7', 1, 'Peter', 'Petrov', NOW(), 'https://www.freeiconspng.com/thumbs/computer-user-icon/computer-user-icon-28.png', 3);
 
 /*Populating brands table*/
 
@@ -150,7 +150,7 @@ VALUES ('Acura MODEL 1', 1, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMES
        ('Lexus MODEL 2', 33, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())),'CAR', 2020, 2023),
        ('Lincoln MODEL 1', 34, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())),'CAR', 2016, 2021),
        ('Lotus MODEL 1', 35, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2021, NULL),
-       ('Mazda MODEL 1', 36, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2020, NULL),
+       ('RX-7 FD3S', 36, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2020, NULL),
        ('Mazda MODEL 2', 36, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2019, 2023),
        ('Mazda MODEL 3', 36, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2020, NULL),
        ('Maserati MODEL 1', 37, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2021, NULL),
@@ -170,8 +170,8 @@ VALUES ('Acura MODEL 1', 1, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMES
        ('Mitsubishi MODEL 1', 43, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2021, NULL),
        ('Mitsubishi MODEL 2', 43, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2019, 2023),
        ('Mitsubishi MODEL 3', 43, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'BUS', 2021, NULL),
-       ('Nissan MODEL 1', 44, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2020, NULL),
-       ('Nissan MODEL 2', 44, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2018, 2023),
+       ('Skyline R-34 GTR', 44, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2020, NULL),
+       ('Silvia S15 Spec-R', 44, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2018, 2023),
        ('Nissan MODEL 3', 44, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2019, NULL),
        ('Nissan MODEL 4', 44, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2023, NULL),
        ('Oldsmobile MODEL 1', 45, FROM_UNIXTIME(RAND() * (UNIX_TIMESTAMP((SELECT TIMESTAMP(brands.created) FROM brands WHERE id = brand_id)) - UNIX_TIMESTAMP(NOW())) + UNIX_TIMESTAMP(NOW())), 'CAR', 2022, NULL),

@@ -2,15 +2,7 @@
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org">
 
-<head>
-    <meta charset="UTF-8">
-    <title>MobiLeLeLe</title>
-    <link rel="stylesheet" href="/css/reset-css.css"/>
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
-    <script src="/js/jquery-3.5.1.slim.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-</head>
+<head th:replace="~{fragments/head}"></head>
 
 <body>
 
@@ -28,9 +20,10 @@
             </div>
             <div class="card-body pb-1">
                 <h5 class="card-title">
+                    <span th:text="${offer.getYear()}"></span>
                     <span th:text="${offer.getModel().getBrand().getName()}"></span>
-                    <span th:text="${offer.getModel().getName()}"></span> -
-                    <span th:text="${offer.getYear()}"></span></h5>
+                    <span th:text="${offer.getModel().getName()}"></span>
+                    </h5>
             </div>
             <ul class="offer-details list-group list-group-flush">
                 <li class="list-group-item">

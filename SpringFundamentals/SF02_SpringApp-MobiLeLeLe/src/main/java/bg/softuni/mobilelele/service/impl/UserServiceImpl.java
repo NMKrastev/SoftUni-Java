@@ -71,16 +71,7 @@ public class UserServiceImpl implements UserService {
             return false;
         }
 
-        final UserEntity newUser = UserEntity
-                .builder()
-                .isActive(true)
-                .email(userDTO.getEmail())
-                .password(this.encoder.encode(userDTO.getPassword()))
-                .firstName(userDTO.getFirstName())
-                .lastName(userDTO.getLastName())
-                .created(LocalDateTime.now())
-                .role(this.roleService.getUserRole())
-                .build();
+        final UserEntity newUser = mapEntity(userDTO);
 
         final UserEntity savedUser = this.userRepository.saveAndFlush(newUser);
 
@@ -94,5 +85,19 @@ public class UserServiceImpl implements UserService {
         this.currentUser.setLoggedIn(true);
         this.currentUser.setFirstName(user.getFirstName());
         this.currentUser.setFullName(user.getFirstName() + " " + user.getLastName());
+    }
+
+    private UserEntity mapEntity(UserRegistrationDTO userDTO) {
+
+        return UserEntity
+                .builder()
+                .isActive(true)
+                .email(userDTO.getEmail())
+                .password(this.encoder.encode(userDTO.getPassword()))
+                .firstName(userDTO.getFirstName())
+                .lastName(userDTO.getLastName())
+                .created(LocalDateTime.now())
+                .role(this.roleService.getUserRole())
+                .build();
     }
 }
