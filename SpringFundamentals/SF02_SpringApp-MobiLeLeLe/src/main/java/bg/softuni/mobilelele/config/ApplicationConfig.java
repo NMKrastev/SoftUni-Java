@@ -1,4 +1,4 @@
-package bg.softuni.mobilelele.web;
+package bg.softuni.mobilelele.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

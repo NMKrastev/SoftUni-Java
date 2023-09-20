@@ -65,7 +65,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean registerUser(UserRegisterDTO userDTO) {
 
-        if (!userDTO.getPassword().equals(userDTO.getConfirmPassword())) {
+        if (this.userRepository.findByEmail(userDTO.getEmail()).isPresent()
+                || !userDTO.getPassword().equals(userDTO.getConfirmPassword())) {
             this.logoutUser();
             return false;
         }
