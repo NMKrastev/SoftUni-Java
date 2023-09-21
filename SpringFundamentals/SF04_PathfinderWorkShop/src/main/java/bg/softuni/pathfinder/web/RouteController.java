@@ -67,11 +67,11 @@ public class RouteController {
 
     @PostMapping("/add")
     public ModelAndView addRoute(ModelAndView modelAndView,
-                                 RouteRegisterDTO routeDTO,
+                                 @Valid RouteRegisterDTO routeDTO,
                                  BindingResult bindingResult,
                                  RedirectAttributes redirectAttributes) {
 
-        if (bindingResult.hasErrors()) {
+        if (bindingResult.hasErrors() || routeDTO.getCategories().isEmpty()) {
 
             redirectAttributes.addFlashAttribute("routeDTO", routeDTO);
 

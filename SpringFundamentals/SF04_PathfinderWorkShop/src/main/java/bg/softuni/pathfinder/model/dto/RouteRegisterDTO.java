@@ -7,11 +7,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.File;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
 @Setter
-@NoArgsConstructor
 public class RouteRegisterDTO {
 
     @NotEmpty
@@ -33,5 +33,9 @@ public class RouteRegisterDTO {
 
     @NotEmpty
     private Set<String> categories;
+
+    public RouteRegisterDTO() {
+        this.categories = new HashSet<>();
+    }
 }
 
