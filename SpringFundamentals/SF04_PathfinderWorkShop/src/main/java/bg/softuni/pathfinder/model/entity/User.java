@@ -21,13 +21,13 @@ public class User extends BaseEntity {
     @Column(nullable = false)
     private String password;
 
-    @Column(unique = true)
+    @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(name = "full_name")
+    @Column(name = "full_name", nullable = false)
     private String fullName;
 
-    @Column
+    @Column(nullable = false)
     private int age;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
