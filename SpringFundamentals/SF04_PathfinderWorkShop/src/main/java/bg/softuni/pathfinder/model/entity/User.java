@@ -2,8 +2,7 @@ package bg.softuni.pathfinder.model.entity;
 
 import bg.softuni.pathfinder.model.enums.LevelEnumType;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -11,6 +10,8 @@ import java.util.Set;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "users")
 public class User extends BaseEntity {
@@ -30,7 +31,7 @@ public class User extends BaseEntity {
     @Column(nullable = false)
     private int age;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private Set<Role> roles;
 
     @Enumerated(EnumType.STRING)

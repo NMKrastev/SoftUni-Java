@@ -19,7 +19,7 @@ INSERT INTO users (id, age, email, full_name, level, password, username)
 VALUES (3, 30, 'peter@test.bg', 'Peter Petrov', 'BEGINNER', 'ddce10e3313df95a9c8b2b21c1a051f6c6d6567c016dd08c2f551d2da72f3b5ab19f724aaaf91f11831bf8844d52cbe7', 'peter');
 
 INSERT INTO users (id, age, email, full_name, level, password, username)
-VALUES (4, 33, 'ivan@test.bg', 'Ivan Ivanov', 'BEGINNER', '26dd1ba9ae974a70136ea4463046371516661b0601ca0fb83a905876ca549b3473dd524d578e241b', 'ivan');
+VALUES (4, 33, 'ivan@test.bg', 'Ivan Ivanov', 'BEGINNER', 'becea1149d5427c92cab75c5aaeeb4c76802218f6395ae3c1ee29c10d0b14af832aff926019bca6f30f5290d4b84f767', 'ivan');
 -- user roles
 -- admin
 INSERT INTO users_roles (`user_id`, `roles_id`)

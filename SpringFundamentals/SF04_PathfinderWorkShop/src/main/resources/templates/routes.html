@@ -9,7 +9,9 @@
     <header th:replace="~{fragments/navbar}"></header>
 
     <section class="road" th:each="route : ${routes}">
+        <div th:if="${!route.getPictures().isEmpty()}">
         <img th:src="${route.getPictures()[0].getUrl().toString()}" alt="Title image">
+        </div>
         <div>
             <h2><span th:text="${route.getName()}"></span></h2>
             <p><span th:text="${route.getDescription()}"></span></p>

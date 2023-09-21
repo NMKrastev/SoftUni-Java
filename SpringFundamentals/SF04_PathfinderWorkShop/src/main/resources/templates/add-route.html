@@ -11,9 +11,10 @@
 <!-- Top Container -->
 <div class="row justify-content-center ">
     <form id="add-route-form" class="w-50 rounded text-white mt-5"
-          action="/"
-          method="/" enctype="multipart/form-data">
-
+          th:action="@{/routes/add}"
+          th:method="POST"
+          th:object="${routeDTO}"
+          enctype="multipart/form-data">
         <h3 class="border-left border-light pl-2">Add a new route</h3>
         <div>
             <div class="form-group">
@@ -21,6 +22,8 @@
             </div>
             <div class="form-group">
                 <input name="name"
+                       th:field="*{name}"
+                       th:errorclass="is-invalid"
                        required minlength="5" maxlength="20"
                        type="text"
                        id="inputName"
@@ -38,6 +41,8 @@
             </div>
             <div class="form-group">
                     <textarea name="description"
+                              th:field="*{description}"
+                              th:errorclass="is-invalid"
                               required minlength="5"
                               id="inputDescription"
                               class="form-control"
@@ -53,8 +58,10 @@
                 <label for="inputGpx" class="col-form-label ">GPX Coordinates</label>
             </div>
             <div class="form-group">
-                <input type="file" name="gpxCoordinates"
-                       required
+                <!--It should be type:file to get the upload file button-->
+                <input th:type="files"
+                       name="gpxCoordinates"
+                       th:errorclass="is-invalid"
                        id="inputGpx"
                        class="form-control-file"
                        aria-describedby="inputGpxError">
@@ -65,9 +72,15 @@
         <div>
             <div class="form-group">
                 <label for="level">Level</label>
-                <select id="level" class="custom-select">
+                <select id="level"
+                        class="custom-select"
+                        name="level"
+                        th:field="*{level}"
+                        th:errorclass="is-invalid">
                     <option value="" selected>Select level</option>
-                    <option value="1" text="ADVANCED">Select level</option>
+                    <option value="BEGINNER" th:text="BEGINNER">BEGINNER</option>
+                    <option value="INTERMEDIATE" th:text="INTERMEDIATE">INTERMEDIATE</option>
+                    <option value="ADVANCED" th:text="ADVANCED">ADVANCED</option>
                 </select>
             </div>
         </div>
@@ -75,7 +88,11 @@
 
             <div class="form-group">
                 <label for="videoUrl">Video Url (only last eleven characters from Youtube)</label>
-                <input id="videoUrl" type="text"
+                <input id="videoUrl"
+                       name="videoUrl"
+                       th:field="*{videoUrl}"
+                       th:errorclass="is-invalid"
+                       type="text"
                        class="form-control" placeholder="Video url">
             </div>
         </div>
@@ -83,8 +100,8 @@
         <div>
             <div class="form-group p-3">
                 <label class="p-2" for="categories">Categories:</label>
-                <input class="m-3" type="checkbox" name="categories" id="categories"
-                       value="1" text="Category">
+                <input class="m-3" type="checkbox" name="categories" id="categories" required
+                       th:value="PEDESTRIAN" th:text="PEDESTRIAN">
                 <br>
             </div>
         </div>

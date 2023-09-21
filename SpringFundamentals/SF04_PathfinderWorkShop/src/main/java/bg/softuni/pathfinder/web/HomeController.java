@@ -33,41 +33,9 @@ public class HomeController {
     }
 
     @GetMapping("/about")
-    public String about() {
+    public ModelAndView about(ModelAndView modelAndView) {
 
-        return "about";
-    }
-
-    @GetMapping("/user/register")
-    public String register() {
-
-        return "register";
-    }
-
-    @GetMapping("/routes/details/{id}")
-    public ModelAndView learMore(ModelAndView modelAndView, @PathVariable String id) {
-
-        final Long routeID = Long.valueOf(id);
-
-        final Route route = routeService.findById(Long.valueOf(id)).get();
-
-        String fullName = route.getAuthor().getFullName();
-
-        modelAndView.addObject("route", route);
-
-        modelAndView.setViewName("route-details");
-
-        return modelAndView;
-    }
-
-    @GetMapping("/routes")
-    public ModelAndView routes(ModelAndView modelAndView) {
-
-        final List<Route> allRoutes = this.routeService.findAllRoutes();
-
-        modelAndView.addObject("routes", allRoutes);
-
-        modelAndView.setViewName("routes");
+        modelAndView.setViewName("about");
 
         return modelAndView;
     }

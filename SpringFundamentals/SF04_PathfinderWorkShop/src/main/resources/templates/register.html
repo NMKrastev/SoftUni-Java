@@ -8,55 +8,56 @@
     <h1 class="border-bottom">Register</h1>
     <div class="d-flex justify-content-center ">
         <div class="row g-3">
-            <form
-                    action="/"
-                    method="">
+            <form   th:action="@{/user/register}"
+                    th:method="POST"
+                    th:object="${userRegistrationDTO}">
                 <div>
                     <div class="col-auto">
                         <label for="inputUsername" class="col-form-label ">Username</label>
                     </div>
                     <div class="col-auto">
-                        <input name="username"
-                               
+                        <input id="inputUsername" name="username"
+                               th:field="*{username}"
+                               th:errorclass="is-invalid"
                                required minlength="5" maxlength="20"
                                type="text"
-                               id="inputUsername"
                                class="form-control"
                                aria-describedby="usernameHelpInline">
                         <small id="usernameError"
-                               class="invalid-feedback bg-danger rounded">Username length must be more than 3 characters</small>
+                               class="invalid-feedback bg-danger rounded">Username length must be more than 3
+                            characters</small>
 
                         <small id="usernameUniqueError"
                                class=" bg-danger rounded">Username is already occupied</small>
-
                     </div>
                 </div>
-
                 <div>
                     <div class="col-auto">
                         <label for="inputFullName" class="col-form-label ">Full Name</label>
                     </div>
                     <div class="col-auto">
-                        <input name="fullname"
+                        <input id="inputFullName" name="fullName"
+                               th:field="*{fullName}"
+                               th:errorclass="is-invalid"
                                required minlength="5" maxlength="20"
                                type="text"
-                               id="inputFullName"
                                class="form-control"
                                aria-describedby="fullNameHelpInline">
                         <small id="fullNameError"
-                               class="invalid-feedback  form-text bg-danger rounded">Full name length must be more than 3 characters</small>
+                               class="invalid-feedback  form-text bg-danger rounded">Full name length must be more than
+                            3 characters</small>
                     </div>
                 </div>
-
                 <div>
                     <div class="col-auto">
                         <label for="inputEmail" class="col-form-label ">Email</label>
                     </div>
                     <div class="col-auto">
-                        <input name="email"
-								required
+                        <input id="inputEmail" name="email"
+                               th:field="*{email}"
+                               th:errorclass="is-invalid"
+                               required
                                type="email"
-                               id="inputEmail"
                                class="form-control"
                                aria-describedby="emailHelpInline">
                         <small id="emailError"
@@ -68,11 +69,12 @@
                         <label for="inputAge" class="col-form-label ">Age</label>
                     </div>
                     <div class="col-auto">
-                        <input name="age" required
+                        <input id="inputAge" name="age"
+                               th:field="*{age}"
+                               th:errorclass="is-invalid"
+                               required min="0" max="90"
                                type="number"
-                               id="inputAge"
                                class="form-control"
-                               min="0" max="90"
                                aria-describedby="ageHelpInline">
                         <small id="ageError"
                                class="invalid-feedback  form-text bg-danger rounded">Must be valid age</small>
@@ -83,10 +85,10 @@
                         <label for="inputPassword" class="col-form-label ">Password</label>
                     </div>
                     <div class="col-auto">
-                        <input name="password"
-                                required minlength="5" maxlength="20"
+                        <input id="inputPassword" name="password"
+                               th:field="*{password}"
+                               th:errorclass="is-invalid"
                                type="password"
-                               id="inputPassword"
                                class="form-control"
                                aria-describedby="passwordHelpInline">
                         <small id="passwordError"
@@ -95,16 +97,15 @@
                         </small>
                     </div>
                 </div>
-
                 <div>
                     <div class="col-auto">
                         <label for="inputConfirmPassword" class="col-form-label ">Confirm Password</label>
                     </div>
                     <div class="col-auto">
-                        <input name="confirmPassword"
-                                required minlength="5" maxlength="20"
+                        <input id="inputConfirmPassword" name="confirmPassword"
+                               th:field="*{confirmPassword}"
+                               th:errorclass="is-invalid"
                                type="password"
-                               id="inputConfirmPassword"
                                class="form-control"
                                aria-describedby="confirmPasswordHelpInline">
                         <small id="confirmPasswordError"
@@ -117,7 +118,6 @@
                 <div class="d-flex justify-content-center mt-4">
                     <button class="btn btn-primary btn-block w-50" type="submit">Register</button>
                 </div>
-
             </form>
         </div>
     </div>

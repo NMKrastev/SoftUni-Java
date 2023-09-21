@@ -10,28 +10,28 @@
 <body>
 <nav class="main-nav">
     <ul>
-        <li>
+        <li th:if="${@currentUser.isAnonymous()}">
             <a th:href="@{/}">Home</a>
         </li>
-        <li>
+        <li th:if="${@currentUser.isAnonymous()}">
             <a th:href="@{/user/login}">Login</a>
         </li>
-        <li>
+        <li th:if="${@currentUser.isAnonymous()}">
             <a th:href="@{/user/register}">Register</a>
         </li>
-        <li>
+        <li th:if="${@currentUser.isAnonymous()}">
             <a th:href="@{/about}">About</a>
         </li>
-        <li>
-            <a th:href="@{/add-route}">Add new route</a>
+        <li th:if="${!@currentUser.isAnonymous()}">
+            <a th:href="@{/routes/add}">Add new route</a>
         </li>
-        <li>
-            <a th:href="@{/profile}">Profile</a>
+        <li th:if="${!@currentUser.isAnonymous()}">
+            <a th:href="@{/user/profile}">Profile</a>
         </li>
-        <li>
+        <li th:if="${!@currentUser.isUserAdmin()}">
             <a th:href="@{/admin}">Admin</a>
         </li>
-        <li>
+        <li th:if="${!@currentUser.isAnonymous()}">
             <a th:href="@{/logout}">Logout</a>
         </li>
     </ul>

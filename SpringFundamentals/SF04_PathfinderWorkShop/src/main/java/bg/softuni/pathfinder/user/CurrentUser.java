@@ -1,4 +1,4 @@
-package bg.softuni.user;
+package bg.softuni.pathfinder.user;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,12 +17,19 @@ public class CurrentUser {
 
     private boolean loggedIn;
 
+    private boolean isAdmin;
+
     public void clear() {
         this.username = null;
         this.loggedIn = false;
+        this.isAdmin = false;
     }
 
     public boolean isAnonymous() {
         return !isLoggedIn();
+    }
+
+    public boolean isUserAdmin() {
+        return !isAdmin();
     }
 }
