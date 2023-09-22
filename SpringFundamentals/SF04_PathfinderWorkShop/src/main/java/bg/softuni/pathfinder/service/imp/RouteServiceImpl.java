@@ -71,17 +71,17 @@ public class RouteServiceImpl implements RouteService {
     @Override
     public boolean addNewRoute(RouteRegisterDTO routeDTO) {
 
+        if (routeDTO.getGpxCoordinates().isEmpty()) {
+            this.LOGGER.error("GPX Coordinates file is empty.");
+            return false;
+        }
+
         final byte[] fileBytes;
 
         try {
             fileBytes = routeDTO.getGpxCoordinates().getBytes();
         } catch (IOException e) {
             this.LOGGER.error("Error getting GPX Coordinates to Bytes: " + e.getMessage());
-            return false;
-        }
-
-        if (fileBytes.length == 0) {
-            this.LOGGER.error("GPX Coordinates file is empty.");
             return false;
         }
 
