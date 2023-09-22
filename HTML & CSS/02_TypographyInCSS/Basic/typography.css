@@ -9,12 +9,7 @@ button {
   font: inherit;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-size: 1em;
   margin-bottom: 0.5em;
   margin-top: 1em;
@@ -42,9 +37,7 @@ h6 {
   font-weight: bold;
 }
 
-p,
-ol,
-ul {
+p, * + ol, * + ul {
   padding-bottom: 1.5em;
 }
 
@@ -52,31 +45,26 @@ ul ul, ol ol, ul ol, ol ul {
     padding-bottom: 0;
 }
 
-ol,
-ul,
-blockquote {
+ol, ul, blockquote {
   padding-left: 1.5em;
 }
 
-ol,
-ul {
+ol, ul {
   list-style-position: inside;
 }
 
 blockquote {
-  border-left: 4px solid #eee;
+  border-left: 4px solid #CCC;
   margin-bottom: 1.5em;
   font-style: italic;
   color: #666;
 }
 
 blockquote p:first-child:before,
-blockquote p:nth-last-child(1):not(.author):after,
-blockquote:has(.author) p:nth-last-child(2):not(.author):after {
+blockquote:has(.author) p:nth-last-child(2):not(.author):after,
+blockquote p:nth-last-child(1):not(.author):after {
   display: inline-block;
   content: '"';
-  font-size: 1.2em;
-  color: #000;
 }
 
 blockquote p:last-child {
@@ -101,3 +89,51 @@ blockquote p.author::before {
 article > ul {
   background: red;
 } */
+
+img {
+  display: block;
+  max-width: 100%;
+  border: 2px solid #CCC;
+  padding: 0.1em;
+}
+
+img[class^="align"] {
+  margin-bottom: 0.5em;
+}
+
+img.align-left {
+  float: left;
+  margin-right: 0.5em;
+}
+
+img.align-right {
+  float: right;
+  margin-left: 0.5em;
+}
+
+hr {
+  border: 1px solid #666;
+  margin: 2em 0;
+}
+
+table {
+  width: 100%;
+  /* border-spacing: 10px; */
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #CCC;
+}
+
+th, td {
+  padding: 0.5em 0.7em;
+}
+
+table thead th {
+  background: #DDD;
+}
+
+table tbody tr:nth-child(even) td {
+  background: #EEE;
+}

@@ -1,0 +1,18 @@
+button {
+    border-radius: 5em;
+    text-align: center;
+    padding: 0.3em 0.7em;
+    margin: 0.3em;
+    cursor: pointer;
+    outline: none;
+}
+
+.fill {
+    background: gray;
+    color: white;
+}
+
+.hover:hover {
+    background-color: green;
+    color: white;
+}
