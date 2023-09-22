@@ -58,6 +58,12 @@ public class HomeController {
     @GetMapping("/bicycle")
     public ModelAndView bicycle(ModelAndView modelAndView) {
 
+        final String categoryName = "BICYCLE";
+
+        final List<Route> routes = this.routeService.findRouteByCategory(categoryName);
+
+        modelAndView.addObject("routes", routes);
+
         modelAndView.setViewName("bicycle");
 
         return modelAndView;
