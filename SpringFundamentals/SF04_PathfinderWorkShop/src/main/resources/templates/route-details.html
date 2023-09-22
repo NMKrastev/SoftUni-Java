@@ -51,12 +51,15 @@
             </div>
         </section>
         <section id="map"></section>
-        <section id="video">
-            <!--This should be changed to take the vide url for the specific route (th:src="${route.getVideoUrl()}").
-            This will be changed when video urls are inserted for each route!-->
-            <iframe id="frame" src="https://www.youtube.com/embed/ZUKPTZMbuh8?si=WZsXFx6sf9d31i9L">
-            </iframe>
-        </section>
+        <div th:if="${!route.getVideoUrl().isEmpty()}">
+            <section id="video">
+                <!--This should be changed to take the vide url for the specific route (th:src="${route.getVideoUrl()}").
+                This will be changed when video urls are inserted for each route!-->
+                <!--<iframe id="frame" src="https://www.youtube.com/embed/ZUKPTZMbuh8?si=WZsXFx6sf9d31i9L">-->
+                <iframe id="frame" th:src="${route.getVideoUrl()}">
+                </iframe>
+            </section>
+        </div>
         <section class="route-description text-center">
             <h4>Description:</h4>
             <p id="route-description"><span th:text="${route.getDescription()}"></span></p>

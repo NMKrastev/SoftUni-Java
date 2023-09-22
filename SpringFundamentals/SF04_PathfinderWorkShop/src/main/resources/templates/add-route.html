@@ -59,9 +59,10 @@
             </div>
             <div class="form-group">
                 <!--It should be type:file to get the upload file button-->
-                <input th:type="files"
+                <input th:type="file"
                        name="gpxCoordinates"
                        th:errorclass="is-invalid"
+                       required
                        id="inputGpx"
                        class="form-control-file"
                        aria-describedby="inputGpxError">
@@ -87,11 +88,13 @@
         <div>
 
             <div class="form-group">
-                <label for="videoUrl">Video Url (only last eleven characters from Youtube)</label>
+                <label for="videoUrl">Youtube Video Embedded URL</label>
                 <input id="videoUrl"
                        name="videoUrl"
+                       pattern="^(https?://)?(www\.)?youtube\.com/.*"
                        th:field="*{videoUrl}"
                        th:errorclass="is-invalid"
+                       required
                        type="text"
                        class="form-control" placeholder="Video url">
             </div>

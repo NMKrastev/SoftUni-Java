@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -60,14 +61,30 @@ public class RouteServiceImpl implements RouteService {
     @Override
     public boolean addNewRoute(RouteRegisterDTO routeDTO) {
 
-        final Optional<Route> optionalRoute = this.routeRepository.findByGpxCoordinates(routeDTO.getGpxCoordinates());
+        final byte[] fileBytes;
+
+        try {
+            fileBytes = routeDTO.getGpxCoordinates().getBytes();
+        } catch (IOException e) {
+            this.LOGGER.error("Error getting GPX Coordinates to Bytes: " + e.getMessage());
+            return false;
+        }
+
+        if (fileBytes.length == 0) {
+            this.LOGGER.error("GPX Coordinates file is empty.");
+            return false;
+        }
+
+        final String gpxCoordinates = new String(fileBytes);
+
+        final Optional<Route> optionalRoute = this.routeRepository.findByGpxCoordinates(gpxCoordinates);
 
         if (optionalRoute.isPresent()) {
             this.LOGGER.info("Route with the same GPX Coordinates already exists!");
             return false;
         }
 
-        Set<String> routeDTOCategories = routeDTO.getCategories();
+        final Set<String> routeDTOCategories = routeDTO.getCategories();
 
         final Set<Category> categories = new HashSet<>();
 
@@ -78,6 +95,7 @@ public class RouteServiceImpl implements RouteService {
 
         final Route newRoute = this.mapper.map(routeDTO, Route.class);
         newRoute.setAuthor(this.userService.findUser(this.currentUser.getUsername()));
+        newRoute.setGpxCoordinates(gpxCoordinates);
         newRoute.setCategories(categories);
 
         final Route saved = this.routeRepository.saveAndFlush(newRoute);
