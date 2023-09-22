@@ -153,13 +153,12 @@ img {
 .road {
     background: var(--primary);
     box-shadow: var(--shadow);
-    display: grid;
+    display: block;
     grid-gap: 30px;
     grid-template-columns: repeat(2, 1fr);
     padding: 3rem;
     grid-row: auto;
 }
-
 
 /* Portfolio */
 .gallery {

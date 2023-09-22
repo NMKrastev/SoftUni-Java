@@ -59,6 +59,16 @@ public class RouteServiceImpl implements RouteService {
     }
 
     @Override
+    public List<Route> findRouteByCategory(String categoryName) {
+
+        final Category categoryByName = this.categoryService.findCategoryByName(CategoryEnumType.valueOf(categoryName));
+
+        final Set<Category> categories = new HashSet<>(Set.of(categoryByName));
+
+        return this.routeRepository.findRoutesByCategoriesIn(categories);
+    }
+
+    @Override
     public boolean addNewRoute(RouteRegisterDTO routeDTO) {
 
         final byte[] fileBytes;
@@ -102,4 +112,5 @@ public class RouteServiceImpl implements RouteService {
 
         return true;
     }
+
 }

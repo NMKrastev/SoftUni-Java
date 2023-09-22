@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -42,6 +43,12 @@ public class HomeController {
 
     @GetMapping("/pedestrian")
     public ModelAndView pedestrian(ModelAndView modelAndView) {
+
+        final String categoryName = "PEDESTRIAN";
+
+        final List<Route> routes = this.routeService.findRouteByCategory(categoryName);
+
+        modelAndView.addObject("routes", routes);
 
         modelAndView.setViewName("pedestrian");
 

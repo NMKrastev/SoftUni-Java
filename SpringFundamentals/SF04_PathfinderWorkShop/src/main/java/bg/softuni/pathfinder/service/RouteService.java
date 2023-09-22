@@ -16,5 +16,8 @@ public interface RouteService {
 
     List<Route> findAllRoutes();
 
+    List<Route> findRouteByCategory(String categoryName);
+
     boolean addNewRoute(RouteRegisterDTO routeDTO);
+
 }
