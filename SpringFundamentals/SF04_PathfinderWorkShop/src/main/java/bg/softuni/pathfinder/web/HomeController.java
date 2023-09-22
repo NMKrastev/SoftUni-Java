@@ -39,4 +39,36 @@ public class HomeController {
 
         return modelAndView;
     }
+
+    @GetMapping("/pedestrian")
+    public ModelAndView pedestrian(ModelAndView modelAndView) {
+
+        modelAndView.setViewName("pedestrian");
+
+        return modelAndView;
+    }
+
+    @GetMapping("/bicycle")
+    public ModelAndView bicycle(ModelAndView modelAndView) {
+
+        modelAndView.setViewName("bicycle");
+
+        return modelAndView;
+    }
+
+    @GetMapping("/motorcycle")
+    public ModelAndView motorcycle(ModelAndView modelAndView) {
+
+        modelAndView.setViewName("motorcycle");
+
+        return modelAndView;
+    }
+
+    @GetMapping("/car")
+    public ModelAndView car(ModelAndView modelAndView) {
+
+        modelAndView.setViewName("car");
+
+        return modelAndView;
+    }
 }
