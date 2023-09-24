@@ -13,14 +13,17 @@ import lombok.Setter;
 public class UserRegistrationDTO {
 
     @NotEmpty
+    @NotBlank
     @Size(min = 5, max = 20)
     private String username;
 
     @NotEmpty
+    @NotBlank
     @Size(min = 5, max = 20)
     private String fullName;
 
     @NotEmpty
+    @NotBlank
     @Email
     private String email;
 
@@ -30,10 +33,12 @@ public class UserRegistrationDTO {
     private int age;
 
     @NotEmpty
+    @NotBlank
     @Size(min = 5, max = 20)
     private String password;
 
     @NotEmpty
+    @NotBlank
     @Size(min = 5, max = 20)
     private String confirmPassword;
 }
