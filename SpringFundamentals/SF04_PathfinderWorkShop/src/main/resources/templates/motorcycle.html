@@ -1,12 +1,12 @@
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="~{fragments/head}"></head>
+<th:block th:include="~{fragments/head}"/>
 
 <body>
 <div class="wrapper">
     <!-- Navigation -->
-    <header th:replace="~{fragments/navbar}"></header>
+    <th:block th:include="~{fragments/navbar}"/>
 
     <section class="road" th:each="route : ${routes}">
         <h2 th:text="${route.getName()}">Title</h2>
@@ -20,6 +20,6 @@
 <!-- Wrapper Ends -->
 </body>
 
-<footer class="footer bg-blur rounded" th:replace="~{fragments/footer}"></footer>
+<th:block th:include="~{fragments/footer}"/>
 
 </html>

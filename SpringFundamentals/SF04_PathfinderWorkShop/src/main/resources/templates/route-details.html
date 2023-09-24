@@ -1,12 +1,12 @@
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="~{fragments/head}"></head>
+<th:block th:include="~{fragments/head}"/>
 
 <body>
 <div class="wrapper">
 
-    <header th:replace="~{fragments/navbar}"></header>
+    <th:block th:include="~{fragments/navbar}"/>
 
     <input type="hidden" name="routeId" id="routeId">
     <div class="details-main">
@@ -130,7 +130,7 @@
 
 </div>
 
-<footer class="footer bg-blur rounded" th:replace="~{fragments/footer}"></footer>
+<th:block th:include="~{fragments/footer}"/>
 
 </body>
 </html>
