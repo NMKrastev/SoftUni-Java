@@ -8,13 +8,13 @@
     <!-- Navigation -->
     <header th:replace="~{fragments/navbar}"></header>
 
-    <section class="road">
-        <div>
-            <h2>Title</h2>
-            <p>Very long description</p>
-            <a href="/" class="btn">Learn More</a>
+    <section class="road" th:each="route : ${routes}">
+        <h2 th:text="${route.getName()}">Title</h2>
+        <p th:text="${route.getDescription()}">Very long description</p>
+        <a th:href="@{'/routes/details/{id}'(id = ${route.getId()})}" class="btn">Learn More</a>
+        <div th:if="${!route.getPictures().isEmpty()}">
+            <img class="rounded-circle w-75 ml-5" th:src="${route.getPictures()[0].getUrl()}" alt="Title image">
         </div>
-        <img class="rounded-circle w-75 ml-5" src="/images/pic1.jpg" alt="Title image">
     </section>
 </div>
 <!-- Wrapper Ends -->

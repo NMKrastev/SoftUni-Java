@@ -20,6 +20,9 @@ public class UserProfileController {
         this.currentUser = currentUser;
     }
 
+
+    // TODO: Maybe the userId should be taken as @PathVariable instead of using the currentUser
+    // FIXME: 24.9.2023 г. When Spring security knowledge is sufficient this will be fixed as mentioned above
     @GetMapping("/profile")
     public ModelAndView profile(ModelAndView modelAndView) {
 

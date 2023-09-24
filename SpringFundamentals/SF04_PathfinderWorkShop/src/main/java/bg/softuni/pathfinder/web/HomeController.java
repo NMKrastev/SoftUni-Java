@@ -14,6 +14,12 @@ import java.util.List;
 @Controller
 public class HomeController {
 
+    private static String categoryName;
+    private static final String CATEGORY_PEDESTRIAN = "PEDESTRIAN";
+    private static final String CATEGORY_BICYCLE = "BICYCLE";
+    private static final String CATEGORY_MOTORCYCLE = "MOTORCYCLE";
+    private static final String CATEGORY_CAR = "CAR";
+
     private final RouteService routeService;
 
     @Autowired
@@ -44,9 +50,7 @@ public class HomeController {
     @GetMapping("/pedestrian")
     public ModelAndView pedestrian(ModelAndView modelAndView) {
 
-        final String categoryName = "PEDESTRIAN";
-
-        final List<Route> routes = this.routeService.findRouteByCategory(categoryName);
+        final List<Route> routes = this.routeService.findRouteByCategory(CATEGORY_PEDESTRIAN);
 
         modelAndView.addObject("routes", routes);
 
@@ -58,9 +62,7 @@ public class HomeController {
     @GetMapping("/bicycle")
     public ModelAndView bicycle(ModelAndView modelAndView) {
 
-        final String categoryName = "BICYCLE";
-
-        final List<Route> routes = this.routeService.findRouteByCategory(categoryName);
+        final List<Route> routes = this.routeService.findRouteByCategory(CATEGORY_BICYCLE);
 
         modelAndView.addObject("routes", routes);
 
@@ -72,6 +74,10 @@ public class HomeController {
     @GetMapping("/motorcycle")
     public ModelAndView motorcycle(ModelAndView modelAndView) {
 
+        final List<Route> routes = this.routeService.findRouteByCategory(CATEGORY_MOTORCYCLE);
+
+        modelAndView.addObject("routes", routes);
+
         modelAndView.setViewName("motorcycle");
 
         return modelAndView;
@@ -79,6 +85,10 @@ public class HomeController {
 
     @GetMapping("/car")
     public ModelAndView car(ModelAndView modelAndView) {
+
+        final List<Route> routes = this.routeService.findRouteByCategory(CATEGORY_CAR);
+
+        modelAndView.addObject("routes", routes);
 
         modelAndView.setViewName("car");
 

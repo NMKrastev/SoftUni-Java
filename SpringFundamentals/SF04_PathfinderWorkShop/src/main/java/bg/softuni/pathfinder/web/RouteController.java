@@ -70,7 +70,7 @@ public class RouteController {
     public ModelAndView addRoute(ModelAndView modelAndView,
                                  @Valid RouteRegisterDTO routeDTO,
                                  BindingResult bindingResult,
-                                 RedirectAttributes redirectAttributes) throws IOException {
+                                 RedirectAttributes redirectAttributes) {
 
         if (bindingResult.hasErrors() || routeDTO.getCategories().isEmpty()) {
 
