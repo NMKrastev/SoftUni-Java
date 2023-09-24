@@ -1,12 +1,12 @@
 package bg.softuni.pathfinder.web;
 
+import bg.softuni.pathfinder.model.entity.Picture;
 import bg.softuni.pathfinder.model.entity.Route;
+import bg.softuni.pathfinder.service.PictureService;
 import bg.softuni.pathfinder.service.RouteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -21,18 +21,22 @@ public class HomeController {
     private static final String CATEGORY_CAR = "CAR";
 
     private final RouteService routeService;
+    private final PictureService pictureService;
 
     @Autowired
-    public HomeController(RouteService routeService) {
+    public HomeController(RouteService routeService, PictureService pictureService) {
         this.routeService = routeService;
+        this.pictureService = pictureService;
     }
 
     @GetMapping("/")
     public ModelAndView home(ModelAndView modelAndView) {
 
-        final Route route = routeService.getMostCommented();
+        final Route route = this.routeService.getMostCommented();
+        final List<Picture> pictures = this.pictureService.findAll();
 
         modelAndView.addObject("mostCommented", route);
+        modelAndView.addObject("pictures", pictures);
 
         modelAndView.setViewName("index");
 
