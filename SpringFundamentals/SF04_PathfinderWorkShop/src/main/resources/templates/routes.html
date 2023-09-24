@@ -10,7 +10,7 @@
 
     <section class="road" th:each="route : ${routes}">
         <div th:if="${!route.getPictures().isEmpty()}">
-        <img th:src="${route.getPictures()[0].getUrl().toString()}" alt="Title image">
+        <img class="pictures" th:src="${route.getPictures()[0].getUrl().toString()}" alt="Title image">
         </div>
         <div>
             <h2><span th:text="${route.getName()}"></span></h2>

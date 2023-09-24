@@ -86,7 +86,7 @@
     <!-- Info Section -->
     <section class="road">
         <!-- Most commented route first picture-->
-        <img th:src="${mostCommented.getPictures[0].getUrl()}" alt="">
+        <img th:class="pictures" th:src="${mostCommented.getPictures[0].getUrl()}" alt="">
         <div>
             <h2>The most commented route: <span th:text="${mostCommented.getName()}"></span></h2>
             <p>Read more about the most commented route and do not miss the

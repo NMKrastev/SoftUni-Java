@@ -19,5 +19,4 @@ public interface RouteService {
     List<Route> findRouteByCategory(String categoryName);
 
     boolean addNewRoute(RouteRegisterDTO routeDTO);
-
 }

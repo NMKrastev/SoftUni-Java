@@ -45,11 +45,11 @@ public class RouteController {
     }
 
     @GetMapping("/details/{id}")
-    public ModelAndView learMore(ModelAndView modelAndView, @PathVariable String id) {
+    public ModelAndView learMore(ModelAndView modelAndView, @PathVariable("id") String id) {
 
-        final Long routeID = Long.valueOf(id);
+        final Long routeId = Long.valueOf(id);
 
-        final Route route = routeService.findById(routeID).get();
+        final Route route = routeService.findById(routeId).get();
 
         modelAndView.addObject("route", route);
 

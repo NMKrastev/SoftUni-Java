@@ -46,6 +46,12 @@ img {
     max-width: 100%;
 }
 
+.pictures {
+    max-width: 600px;
+    float: right;
+    margin-left: 0.5em;
+}
+
 .wrapper {
     display: grid;
     grid-gap: 20px;
@@ -169,6 +175,7 @@ img {
 
 .gallery img {
     width: 100%;
+    height: fit-content;
     box-shadow: var(--shadow);
 }
 

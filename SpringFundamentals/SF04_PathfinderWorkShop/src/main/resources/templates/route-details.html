@@ -29,21 +29,37 @@
                     <p><img class="level-img" src="/images/difficulty-level.png" alt=""></p>
                 </span>
             </div>
-            <div>
-                <h4>Choose picture</h4>
-                <form action="/" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" id="id" name="routeId">
+            <div th:if="${!@currentUser.isAnonymous()}">
+                <h4>Enter picture details</h4>
+                <form th:action="@{'/routes/details/{id}'(id = ${route.getId()})}"
+                      th:method="POST"
+                      enctype="multipart/form-data">
+                    <input type="hidden" id="id" name="id"><!--<span th:text="${route.getId()}"></span>-->
                     <div class="form-group">
                         <label>
-                            <input type="text" name="title">
+                            <h6>Title:</h6>
+                            <input type="text"
+                                   name="title"
+                                   required minlength="3"
+                                   maxlength="50"
+                                   class="form-control">
                         </label>
                     </div>
-                    <div class="image-upload">
+                    <div class="form-group">
+                        <label>
+                            <h6>Picture URL:</h6>
+                            <input type="text"
+                                   name="pictureUrl"
+                                   required minlength="4"
+                                   class="form-control">
+                        </label>
+                    </div>
+                    <!--<div class="image-upload">
                         <label for="picture">
                             <img src="/images/add-img.png" alt=""/>
                         </label>
                         <input style="display: none" id="picture" type="file" name="picture"/>
-                    </div>
+                    </div>-->
                     <div class="form-group">
                         <button class="btn-primary rounded">Upload Picture</button>
                     </div>
