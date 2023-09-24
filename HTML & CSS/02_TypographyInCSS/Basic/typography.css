@@ -2,10 +2,7 @@ html {
   font: 16px/1.4 Georgia, "Times New Roman", Times, serif;
 }
 
-body,
-table,
-input,
-button {
+body, table, input, button {
   font: inherit;
 }
 
