@@ -26,7 +26,7 @@ public class UserProfileController {
     @GetMapping("/profile")
     public ModelAndView profile(ModelAndView modelAndView) {
 
-        final UserProfileDTO userProfileDTO = this.userService.findUserProfile(currentUser.getUsername());
+        final UserProfileDTO userProfileDTO = this.userService.findUserProfile(this.currentUser.getUsername());
 
         modelAndView.addObject("user", userProfileDTO);
 

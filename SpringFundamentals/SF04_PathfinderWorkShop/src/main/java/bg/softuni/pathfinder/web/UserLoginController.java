@@ -45,7 +45,6 @@ public class UserLoginController {
         if (bindingResult.hasErrors()) {
 
             redirectAttributes.addFlashAttribute("userLoginDTO", userLoginDTO);
-
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.userLoginDTO", bindingResult);
 
             modelAndView.setViewName("redirect:/user/login");
@@ -54,9 +53,13 @@ public class UserLoginController {
         final boolean isUserLoggedIn = this.userService.loginUser(userLoginDTO);
 
         if (isUserLoggedIn) {
+
             modelAndView.setViewName("redirect:/");
+
         } else {
+
             modelAndView.setViewName("login");
+
         }
 
         return modelAndView;

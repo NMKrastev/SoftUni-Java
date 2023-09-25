@@ -3,11 +3,9 @@ package bg.softuni.pathfinder.model.dto.routeDTO;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
 

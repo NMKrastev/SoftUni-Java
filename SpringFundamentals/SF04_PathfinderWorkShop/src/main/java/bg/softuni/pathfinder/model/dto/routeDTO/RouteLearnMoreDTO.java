@@ -12,13 +12,13 @@ import lombok.Setter;
 @AllArgsConstructor
 public class RouteLearnMoreDTO {
 
+    // TODO: 25.9.2023 г. Find a way to calculate the distance between to points
     //private double distance; //km
 
     private Long id;
 
     private String name;
 
-    //TODO: Think how to extract only the fullName of the author
     private String fullName;
 
     private LevelEnumType levelEnumType;

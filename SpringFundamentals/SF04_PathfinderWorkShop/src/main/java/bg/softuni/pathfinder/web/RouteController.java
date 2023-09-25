@@ -30,6 +30,7 @@ public class RouteController {
 
     @ModelAttribute("routeDTO")
     public void initRouteRegistration(Model model) {
+
         model.addAttribute("routeDTO", new RouteRegisterDTO());
     }
 
@@ -79,7 +80,6 @@ public class RouteController {
         if (bindingResult.hasErrors() || routeDTO.getCategories().isEmpty()) {
 
             redirectAttributes.addFlashAttribute("routeDTO", routeDTO);
-
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.routeDTO", bindingResult);
 
             modelAndView.setViewName("redirect:/routes/add");
@@ -90,12 +90,15 @@ public class RouteController {
         final boolean isRouteAdded = this.routeService.addNewRoute(routeDTO);
 
         if (isRouteAdded) {
+
             modelAndView.setViewName("redirect:/routes");
+
         } else {
+
             modelAndView.setViewName("add-route");
+
         }
 
         return modelAndView;
-
     }
 }

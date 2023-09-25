@@ -51,12 +51,16 @@ public class PictureServiceImpl implements PictureService {
                 this.pictureRepository.findByTitleAndAndUrl(pictureUploadDTO.getTitle(), pictureUploadDTO.getPictureUrl());
 
         if (optionalPicture.isPresent()) {
+
             this.LOGGER.error("Picture with title and URL already exists!");
+
             return false;
         }
 
         final Route route = this.routeService.findById(routeId).get();
+
         final User author = this.userService.findUser(this.currentUser.getUsername());
+
         final Picture picture = this.mapper.map(pictureUploadDTO, Picture.class);
 
         picture.setRoute(route);

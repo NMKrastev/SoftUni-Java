@@ -46,7 +46,9 @@ public class UserServiceImpl implements UserService {
         final Optional<User> optionalUser = this.userRepository.findByUsername(userLoginDTO.getUsername());
 
         if (optionalUser.isEmpty()) {
+
             this.LOGGER.info(String.format("Username [%s] not found.", userLoginDTO.getUsername()));
+
             return false;
         }
 
@@ -57,9 +59,13 @@ public class UserServiceImpl implements UserService {
         final boolean passMatches = this.encoder.matches(rawPassword, encodedPassword);
 
         if (passMatches) {
+
             this.login(optionalUser.get());
+
         } else {
+
             this.logoutUser();
+
         }
 
         return passMatches;
@@ -76,7 +82,9 @@ public class UserServiceImpl implements UserService {
         if (this.userRepository.findByUsername(userRegistrationDTO.getUsername()).isPresent()
                 || this.userRepository.findByEmail(userRegistrationDTO.getEmail()).isPresent()
                 || !userRegistrationDTO.getPassword().equals(userRegistrationDTO.getConfirmPassword())) {
+
             this.logoutUser();
+
             return false;
         }
 
@@ -120,9 +128,10 @@ public class UserServiceImpl implements UserService {
     private void login(User user) {
 
         this.currentUser.setLoggedIn(true);
-        this.currentUser.setUsername(user.getUsername());
-        this.currentUser.setAdmin(this.isUserAdmin(user));
 
+        this.currentUser.setUsername(user.getUsername());
+
+        this.currentUser.setAdmin(this.isUserAdmin(user));
     }
 
     private boolean isUserAdmin(User user) {
@@ -130,7 +139,9 @@ public class UserServiceImpl implements UserService {
         final Set<Role> roles = user.getRoles();
 
         if (!roles.isEmpty()) {
+
             for (Role role : roles) {
+
                 if (role.getName().equals(RoleEnumType.ADMIN)) {
                     return true;
                 }

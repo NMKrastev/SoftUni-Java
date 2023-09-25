@@ -1,7 +1,6 @@
 package bg.softuni.pathfinder.repository;
 
 import bg.softuni.pathfinder.model.dto.routeDTO.MostCommentedDTO;
-import bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.RouteDetailDTO;
 import bg.softuni.pathfinder.model.entity.Category;
 import bg.softuni.pathfinder.model.entity.Route;
@@ -36,7 +35,6 @@ public interface RouteRepository extends JpaRepository<Route, Long> {
     RouteDetailDTO getRouteDetails(Long id);
 
     //Query("SELECT r From Route AS r ORDER BY size(r.comments) DESC LIMIT 1")
-
     Optional<Route> findByGpxCoordinates(String gpxCoordinates);
 
 

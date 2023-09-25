@@ -110,16 +110,22 @@ public class RouteServiceImpl implements RouteService {
         // TODO: 24.9.2023 г. Could be transferred to the controller
         // TODO: 24.9.2023 г. Should make validation of the structure of the file
         if (routeDTO.getGpxCoordinates().isEmpty()) {
+
             this.LOGGER.error("GPX Coordinates file is empty.");
+
             return false;
         }
 
         final byte[] fileBytes;
 
         try {
+
             fileBytes = routeDTO.getGpxCoordinates().getBytes();
+
         } catch (IOException e) {
+
             this.LOGGER.error("Error getting GPX Coordinates to Bytes: " + e.getMessage());
+
             return false;
         }
 
@@ -128,7 +134,9 @@ public class RouteServiceImpl implements RouteService {
         final Optional<Route> optionalRoute = this.routeRepository.findByGpxCoordinates(gpxCoordinates);
 
         if (optionalRoute.isPresent()) {
+
             this.LOGGER.info("Route with the same GPX Coordinates already exists!");
+
             return false;
         }
 
@@ -142,11 +150,12 @@ public class RouteServiceImpl implements RouteService {
         }
 
         final Route newRoute = this.mapper.map(routeDTO, Route.class);
+
         newRoute.setAuthor(this.userService.findUser(this.currentUser.getUsername()));
         newRoute.setGpxCoordinates(gpxCoordinates);
         newRoute.setCategories(categories);
 
-        final Route saved = this.routeRepository.saveAndFlush(newRoute);
+        this.routeRepository.saveAndFlush(newRoute);
 
         return true;
     }

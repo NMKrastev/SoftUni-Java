@@ -25,6 +25,7 @@ public class UserRegistrationController {
 
     @ModelAttribute("userRegistrationDTO")
     public void initUserRegistrationModel(Model model) {
+
         model.addAttribute("userRegistrationDTO", new UserRegistrationDTO());
     }
 
@@ -45,7 +46,6 @@ public class UserRegistrationController {
         if (bindingResult.hasErrors()) {
 
             redirectAttributes.addFlashAttribute("userRegistrationDTO", userRegistrationDTO);
-
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.userRegistrationDTO", bindingResult);
 
             modelAndView.setViewName("redirect:/user/register");
@@ -54,8 +54,11 @@ public class UserRegistrationController {
         final boolean isUserRegistered = this.userService.registerUser(userRegistrationDTO);
 
         if (isUserRegistered) {
+
             modelAndView.setViewName("redirect:/");
+
         } else {
+
             modelAndView.setViewName("register");
         }
 

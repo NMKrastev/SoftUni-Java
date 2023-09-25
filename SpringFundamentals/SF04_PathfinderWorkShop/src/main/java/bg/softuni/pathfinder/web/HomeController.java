@@ -3,7 +3,6 @@ package bg.softuni.pathfinder.web;
 import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.MostCommentedDTO;
-import bg.softuni.pathfinder.model.entity.Route;
 import bg.softuni.pathfinder.service.PictureService;
 import bg.softuni.pathfinder.service.RouteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,6 @@ import java.util.List;
 @Controller
 public class HomeController {
 
-    private static String categoryName;
     private static final String CATEGORY_PEDESTRIAN = "PEDESTRIAN";
     private static final String CATEGORY_BICYCLE = "BICYCLE";
     private static final String CATEGORY_MOTORCYCLE = "MOTORCYCLE";
