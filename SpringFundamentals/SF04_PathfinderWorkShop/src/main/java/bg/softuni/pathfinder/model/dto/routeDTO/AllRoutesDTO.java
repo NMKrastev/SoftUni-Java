@@ -1,14 +1,15 @@
 package bg.softuni.pathfinder.model.dto.routeDTO;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO;
+import lombok.*;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class AllRoutesDTO {
 
     private Long id;
@@ -17,6 +18,9 @@ public class AllRoutesDTO {
 
     private String description;
 
-    private String pictureUrl;
+    private Set<PictureUrlDTO> picturesUrl;
 
+    public AllRoutesDTO() {
+        this.picturesUrl = new LinkedHashSet<>();
+    }
 }

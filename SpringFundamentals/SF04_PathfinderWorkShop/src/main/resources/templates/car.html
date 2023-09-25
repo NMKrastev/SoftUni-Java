@@ -1,25 +1,25 @@
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org">
 
-<th:block th:include="~{fragments/head}"/>
+<th:block th:insert="~{fragments/head}"/>
 
 <body>
 <div class="wrapper">
     <!-- Navigation -->
-    <th:block th:include="~{fragments/navbar}"/>
+    <th:block th:insert="~{fragments/navbar}"/>
 
     <section class="road" th:each="route : ${routes}">
         <h2 th:text="${route.getName()}">Title</h2>
         <p th:text="${route.getDescription()}">Very long description</p>
         <a th:href="@{'/routes/details/{id}'(id = ${route.getId()})}" class="btn">Learn More</a>
-        <div th:if="${!route.getPictures().isEmpty()}">
-            <img class="rounded-circle w-75 ml-5" th:src="${route.getPictures()[0].getUrl()}" alt="Title image">
+        <div th:if="${!route.getPicturesUrl().isEmpty()}">
+            <img class="rounded-circle w-75 ml-5" th:src="${route.getPicturesUrl()[0].getUrl()}" alt="Title image">
         </div>
     </section>
 </div>
 <!-- Wrapper Ends -->
 </body>
 
-<th:block th:include="~{fragments/footer}"/>
+<th:block th:insert="~{fragments/footer}"/>
 
 </html>

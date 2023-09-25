@@ -1,12 +1,12 @@
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org">
 
-<th:block th:include="~{fragments/head}"/>
+<th:block th:insert="~{fragments/head}"/>
 
 <body>
 <div class="wrapper">
     <!-- Navigation -->
-    <th:block th:include="~{fragments/navbar}"/>
+    <th:block th:insert="~{fragments/navbar}"/>
 
     <!-- Top Container -->
     <section class="top-container">
@@ -107,7 +107,7 @@
 </div>
 <!-- Wrapper Ends -->'
 
-<th:block th:include="~{fragments/footer}"/>
+<th:block th:insert="~{fragments/footer}"/>
 
 </body>
 

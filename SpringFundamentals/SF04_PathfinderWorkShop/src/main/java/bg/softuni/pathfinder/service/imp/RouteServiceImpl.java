@@ -1,10 +1,12 @@
 package bg.softuni.pathfinder.service.imp;
 
+import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.MostCommentedDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.RouteDetailDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.RouteRegisterDTO;
 import bg.softuni.pathfinder.model.entity.Category;
+import bg.softuni.pathfinder.model.entity.Picture;
 import bg.softuni.pathfinder.model.entity.Route;
 import bg.softuni.pathfinder.model.enums.CategoryEnumType;
 import bg.softuni.pathfinder.repository.RouteRepository;
@@ -19,10 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class RouteServiceImpl implements RouteService {
@@ -58,17 +57,51 @@ public class RouteServiceImpl implements RouteService {
 
     @Override
     public List<AllRoutesDTO> findAllRoutes() {
-        return this.routeRepository.findAllRoutes();
+
+        final List<Route> allRoutes = this.routeRepository.findAll();
+
+        final List<AllRoutesDTO> allRoutesDTOS = getRoutesDetails(allRoutes);;
+
+        return allRoutesDTOS;
     }
 
     @Override
-    public List<Route> findRouteByCategory(String categoryName) {
+    public List<AllRoutesDTO> findRouteByCategory(String categoryName) {
 
         final Category categoryByName = this.categoryService.findCategoryByName(CategoryEnumType.valueOf(categoryName));
 
         final Set<Category> categories = new HashSet<>(Set.of(categoryByName));
 
-        return this.routeRepository.findRoutesByCategoriesIn(categories);
+        final List<Route> routesByCategories = this.routeRepository.findRoutesByCategoriesIn(categories);
+
+        final List<AllRoutesDTO> routesByCategory = getRoutesDetails(routesByCategories);
+
+        return routesByCategory;
+    }
+
+    private List<AllRoutesDTO> getRoutesDetails(List<Route> routes) {
+
+        final List<AllRoutesDTO> allRoutesDTOS = new ArrayList<>();
+
+        for (Route route : routes) {
+
+            final Set<PictureUrlDTO> pictures = new LinkedHashSet<>();
+
+            for (Picture picture : route.getPictures()) {
+                pictures.add(new PictureUrlDTO(picture.getUrl()));
+            }
+
+            final AllRoutesDTO allRoutesDTO = AllRoutesDTO.builder()
+                    .id(route.getId())
+                    .name(route.getName())
+                    .description(route.getDescription())
+                    .picturesUrl(pictures)
+                    .build();
+
+            allRoutesDTOS.add(allRoutesDTO);
+        }
+
+        return allRoutesDTOS;
     }
 
     @Override

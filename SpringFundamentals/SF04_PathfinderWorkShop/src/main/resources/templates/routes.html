@@ -1,16 +1,16 @@
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org">
 
-<th:block th:include="~{fragments/head}"/>
+<th:block th:insert="~{fragments/head}"/>
 
 <body>
 <div class="wrapper">
     <!-- Navigation -->
-    <th:block th:include="~{fragments/navbar}"/>
+    <th:block th:insert="~{fragments/navbar}"/>
 
     <section class="road" th:each="route : ${routes}">
-        <div th:if="${route.getPictureUrl() != null}">
-        <img class="pictures" th:src="${route.getPictureUrl()}" alt="Title image">
+        <div th:if="${!route.getPicturesUrl().isEmpty()}">
+        <img class="pictures" th:src="${route.getPicturesUrl()[0].getUrl()}" alt="Title image">
         </div>
         <div>
             <h2><span th:text="${route.getName()}"></span></h2>
@@ -22,6 +22,6 @@
 <!-- Wrapper Ends -->
 </body>
 
-<th:block th:include="~{fragments/footer}"/>
+<th:block th:insert="~{fragments/footer}"/>
 
 </html>

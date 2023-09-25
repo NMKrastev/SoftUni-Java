@@ -1,6 +1,7 @@
 package bg.softuni.pathfinder.web;
 
 import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO;
+import bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.MostCommentedDTO;
 import bg.softuni.pathfinder.model.entity.Route;
 import bg.softuni.pathfinder.service.PictureService;
@@ -56,7 +57,7 @@ public class HomeController {
     @GetMapping("/pedestrian")
     public ModelAndView pedestrian(ModelAndView modelAndView) {
 
-        final List<Route> routes = this.routeService.findRouteByCategory(CATEGORY_PEDESTRIAN);
+        final List<AllRoutesDTO> routes = this.routeService.findRouteByCategory(CATEGORY_PEDESTRIAN);
 
         modelAndView.addObject("routes", routes);
 
@@ -68,7 +69,7 @@ public class HomeController {
     @GetMapping("/bicycle")
     public ModelAndView bicycle(ModelAndView modelAndView) {
 
-        final List<Route> routes = this.routeService.findRouteByCategory(CATEGORY_BICYCLE);
+        final List<AllRoutesDTO> routes = this.routeService.findRouteByCategory(CATEGORY_BICYCLE);
 
         modelAndView.addObject("routes", routes);
 
@@ -80,7 +81,7 @@ public class HomeController {
     @GetMapping("/motorcycle")
     public ModelAndView motorcycle(ModelAndView modelAndView) {
 
-        final List<Route> routes = this.routeService.findRouteByCategory(CATEGORY_MOTORCYCLE);
+        final List<AllRoutesDTO> routes = this.routeService.findRouteByCategory(CATEGORY_MOTORCYCLE);
 
         modelAndView.addObject("routes", routes);
 
@@ -92,7 +93,7 @@ public class HomeController {
     @GetMapping("/car")
     public ModelAndView car(ModelAndView modelAndView) {
 
-        final List<Route> routes = this.routeService.findRouteByCategory(CATEGORY_CAR);
+        final List<AllRoutesDTO> routes = this.routeService.findRouteByCategory(CATEGORY_CAR);
 
         modelAndView.addObject("routes", routes);
 

@@ -3,7 +3,6 @@ package bg.softuni.pathfinder.repository;
 import bg.softuni.pathfinder.model.dto.routeDTO.MostCommentedDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.RouteDetailDTO;
-import bg.softuni.pathfinder.model.dto.routeDTO.RouteLearnMoreDTO;
 import bg.softuni.pathfinder.model.entity.Category;
 import bg.softuni.pathfinder.model.entity.Route;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -21,25 +20,25 @@ public interface RouteRepository extends JpaRepository<Route, Long> {
             SELECT NEW bg.softuni.pathfinder.model.dto.routeDTO.MostCommentedDTO(r.id, r.name, p.url)
             FROM Route AS r
             JOIN Picture AS p ON p.route.id = r.id
-            ORDER BY size(r.comments) DESC LIMIT 1""")
+            ORDER BY size(r.comments) DESC LIMIT 1
+            """)
     MostCommentedDTO getMostCommentedRoute();
 
-    @Query("""
-            SELECT NEW bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO(r.id, r.name, r.description, p.url)
-            FROM Route AS r
-            JOIN Picture AS p ON r.id = p.route.id""")
-    List<AllRoutesDTO> findAllRoutes();
+
+    List<Route> findAll();
 
     @Query("""
             SELECT NEW bg.softuni.pathfinder.model.dto.routeDTO.RouteDetailDTO(r.id, u.fullName, r.description, r.videoUrl, r.level)
             FROM Route AS r
             JOIN User AS u ON r.author.id = u.id
-            WHERE r.id = ?1""")
+            WHERE r.id = ?1
+            """)
     RouteDetailDTO getRouteDetails(Long id);
 
     //Query("SELECT r From Route AS r ORDER BY size(r.comments) DESC LIMIT 1")
 
     Optional<Route> findByGpxCoordinates(String gpxCoordinates);
 
-    List<Route> findRoutesByCategoriesIn(Set<Category> category);
+
+    List<Route> findRoutesByCategoriesIn(Set<Category> categories);
 }
