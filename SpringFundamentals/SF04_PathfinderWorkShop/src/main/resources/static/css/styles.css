@@ -175,7 +175,8 @@ img {
 
 .gallery img {
     width: 100%;
-    height: fit-content;
+    /*height: fit-content*/
+    height: 150px;
     box-shadow: var(--shadow);
 }
 
