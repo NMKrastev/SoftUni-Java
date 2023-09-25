@@ -1,6 +1,7 @@
 package bg.softuni.pathfinder.service.imp;
 
-import bg.softuni.pathfinder.model.dto.PictureUploadDTO;
+import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUploadDTO;
+import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO;
 import bg.softuni.pathfinder.model.entity.Picture;
 import bg.softuni.pathfinder.model.entity.Route;
 import bg.softuni.pathfinder.model.entity.User;
@@ -38,8 +39,9 @@ public class PictureServiceImpl implements PictureService {
     }
 
     @Override
-    public List<Picture> findAll() {
-        return this.pictureRepository.findAll();
+    public List<PictureUrlDTO> findAllPictures() {
+
+        return this.pictureRepository.findAllPictures();
     }
 
     @Override
@@ -63,5 +65,11 @@ public class PictureServiceImpl implements PictureService {
         this.pictureRepository.saveAndFlush(picture);
 
         return true;
+    }
+
+    @Override
+    public List<PictureUrlDTO> findAllPicturesByRouteId(Long routeId) {
+
+        return this.pictureRepository.findAllPicturesByRouteId(routeId);
     }
 }

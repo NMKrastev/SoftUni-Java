@@ -1,20 +1,19 @@
 package bg.softuni.pathfinder.web;
 
-import bg.softuni.pathfinder.model.dto.RouteRegisterDTO;
-import bg.softuni.pathfinder.model.entity.Route;
+import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO;
+import bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO;
+import bg.softuni.pathfinder.model.dto.routeDTO.RouteDetailDTO;
+import bg.softuni.pathfinder.model.dto.routeDTO.RouteRegisterDTO;
+import bg.softuni.pathfinder.service.PictureService;
 import bg.softuni.pathfinder.service.RouteService;
-import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -22,9 +21,11 @@ import java.util.List;
 public class RouteController {
 
     private final RouteService routeService;
+    private final PictureService pictureService;
 
-    public RouteController(RouteService routeService) {
+    public RouteController(RouteService routeService, PictureService pictureService) {
         this.routeService = routeService;
+        this.pictureService = pictureService;
     }
 
     @ModelAttribute("routeDTO")
@@ -35,7 +36,7 @@ public class RouteController {
     @GetMapping()
     public ModelAndView routes(ModelAndView modelAndView) {
 
-        final List<Route> allRoutes = this.routeService.findAllRoutes();
+        final List<AllRoutesDTO> allRoutes = this.routeService.findAllRoutes();
 
         modelAndView.addObject("routes", allRoutes);
 
@@ -45,13 +46,16 @@ public class RouteController {
     }
 
     @GetMapping("/details/{id}")
-    public ModelAndView learMore(ModelAndView modelAndView, @PathVariable("id") String id) {
+    public ModelAndView routeDetails(ModelAndView modelAndView, @PathVariable("id") String id) {
 
         final Long routeId = Long.valueOf(id);
 
-        final Route route = routeService.findById(routeId).get();
+        final RouteDetailDTO route = this.routeService.getRouteDetails(routeId);
+
+        final List<PictureUrlDTO> pictures = this.pictureService.findAllPicturesByRouteId(routeId);
 
         modelAndView.addObject("route", route);
+        modelAndView.addObject("pictures", pictures);
 
         modelAndView.setViewName("route-details");
 

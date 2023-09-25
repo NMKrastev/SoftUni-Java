@@ -1,6 +1,6 @@
 package bg.softuni.pathfinder.web;
 
-import bg.softuni.pathfinder.model.dto.PictureUploadDTO;
+import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUploadDTO;
 import bg.softuni.pathfinder.service.PictureService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;

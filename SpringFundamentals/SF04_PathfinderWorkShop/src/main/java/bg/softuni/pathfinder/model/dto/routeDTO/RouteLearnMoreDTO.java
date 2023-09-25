@@ -1,6 +1,5 @@
-package bg.softuni.pathfinder.model.dto;
+package bg.softuni.pathfinder.model.dto.routeDTO;
 
-import bg.softuni.pathfinder.model.entity.User;
 import bg.softuni.pathfinder.model.enums.LevelEnumType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,12 +12,18 @@ import lombok.Setter;
 @AllArgsConstructor
 public class RouteLearnMoreDTO {
 
-    private double distance; //km
+    //private double distance; //km
+
+    private Long id;
+
+    private String name;
 
     //TODO: Think how to extract only the fullName of the author
-    private User author;
+    private String fullName;
 
-    private String levelEnumType;
+    private LevelEnumType levelEnumType;
 
     private String description;
+
+    private String pictureUrl;
 }

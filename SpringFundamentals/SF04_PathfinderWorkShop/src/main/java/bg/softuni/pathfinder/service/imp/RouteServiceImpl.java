@@ -1,8 +1,10 @@
 package bg.softuni.pathfinder.service.imp;
 
-import bg.softuni.pathfinder.model.dto.RouteRegisterDTO;
+import bg.softuni.pathfinder.model.dto.routeDTO.MostCommentedDTO;
+import bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO;
+import bg.softuni.pathfinder.model.dto.routeDTO.RouteDetailDTO;
+import bg.softuni.pathfinder.model.dto.routeDTO.RouteRegisterDTO;
 import bg.softuni.pathfinder.model.entity.Category;
-import bg.softuni.pathfinder.model.entity.Picture;
 import bg.softuni.pathfinder.model.entity.Route;
 import bg.softuni.pathfinder.model.enums.CategoryEnumType;
 import bg.softuni.pathfinder.repository.RouteRepository;
@@ -10,7 +12,6 @@ import bg.softuni.pathfinder.service.CategoryService;
 import bg.softuni.pathfinder.service.RouteService;
 import bg.softuni.pathfinder.service.UserService;
 import bg.softuni.pathfinder.user.CurrentUser;
-import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,32 +45,20 @@ public class RouteServiceImpl implements RouteService {
     }
 
     @Override
-    public Route getMostCommented() {
+    public MostCommentedDTO getMostCommented() {
 
-        return routeRepository.findFirstByOrderByCommentsDesc();
+        return routeRepository.getMostCommentedRoute();
     }
 
     @Override
-    public Optional<Route> findById(Long id) {
-/*
-        final Optional<Route> optionalRoute = this.routeRepository.findById(id);
+    public RouteDetailDTO getRouteDetails(Long id) {
 
-        Route route = null;
-
-        if (optionalRoute.isPresent()) {
-            route = optionalRoute.get();
-        }
-
-        StringBuilder gpxCoordinates = new StringBuilder(route.getGpxCoordinates());
-
-        int i = gpxCoordinates.indexOf("lat+\"", 0);*/
-
-        return routeRepository.findById(id);
+        return routeRepository.getRouteDetails(id);
     }
 
     @Override
-    public List<Route> findAllRoutes() {
-        return this.routeRepository.findAll();
+    public List<AllRoutesDTO> findAllRoutes() {
+        return this.routeRepository.findAllRoutes();
     }
 
     @Override
@@ -127,5 +116,11 @@ public class RouteServiceImpl implements RouteService {
         final Route saved = this.routeRepository.saveAndFlush(newRoute);
 
         return true;
+    }
+
+    @Override
+    public Optional<Route> findById(Long routeId) {
+
+        return this.routeRepository.findById(routeId);
     }
 }

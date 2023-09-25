@@ -1,4 +1,4 @@
-package bg.softuni.pathfinder.model.dto;
+package bg.softuni.pathfinder.model.dto.userDTO;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

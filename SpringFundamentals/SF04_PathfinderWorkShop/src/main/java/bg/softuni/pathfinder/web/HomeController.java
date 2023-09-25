@@ -1,6 +1,7 @@
 package bg.softuni.pathfinder.web;
 
-import bg.softuni.pathfinder.model.entity.Picture;
+import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO;
+import bg.softuni.pathfinder.model.dto.routeDTO.MostCommentedDTO;
 import bg.softuni.pathfinder.model.entity.Route;
 import bg.softuni.pathfinder.service.PictureService;
 import bg.softuni.pathfinder.service.RouteService;
@@ -32,10 +33,11 @@ public class HomeController {
     @GetMapping("/")
     public ModelAndView home(ModelAndView modelAndView) {
 
-        final Route route = this.routeService.getMostCommented();
-        final List<Picture> pictures = this.pictureService.findAll();
+        final MostCommentedDTO mostCommented = this.routeService.getMostCommented();
 
-        modelAndView.addObject("mostCommented", route);
+        final List<PictureUrlDTO> pictures = this.pictureService.findAllPictures();
+
+        modelAndView.addObject("mostCommented", mostCommented);
         modelAndView.addObject("pictures", pictures);
 
         modelAndView.setViewName("index");

@@ -1,8 +1,8 @@
 package bg.softuni.pathfinder.service.imp;
 
-import bg.softuni.pathfinder.model.dto.UserLoginDTO;
-import bg.softuni.pathfinder.model.dto.UserProfileDTO;
-import bg.softuni.pathfinder.model.dto.UserRegistrationDTO;
+import bg.softuni.pathfinder.model.dto.userDTO.UserLoginDTO;
+import bg.softuni.pathfinder.model.dto.userDTO.UserProfileDTO;
+import bg.softuni.pathfinder.model.dto.userDTO.UserRegistrationDTO;
 import bg.softuni.pathfinder.model.entity.Role;
 import bg.softuni.pathfinder.model.entity.User;
 import bg.softuni.pathfinder.model.enums.LevelEnumType;

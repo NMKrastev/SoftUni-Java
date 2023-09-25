@@ -1,6 +1,6 @@
 package bg.softuni.pathfinder.web;
 
-import bg.softuni.pathfinder.model.dto.UserProfileDTO;
+import bg.softuni.pathfinder.model.dto.userDTO.UserProfileDTO;
 import bg.softuni.pathfinder.service.UserService;
 import bg.softuni.pathfinder.user.CurrentUser;
 import org.springframework.stereotype.Controller;

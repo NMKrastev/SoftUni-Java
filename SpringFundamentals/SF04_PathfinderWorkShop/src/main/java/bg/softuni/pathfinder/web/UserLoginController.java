@@ -1,6 +1,6 @@
 package bg.softuni.pathfinder.web;
 
-import bg.softuni.pathfinder.model.dto.UserLoginDTO;
+import bg.softuni.pathfinder.model.dto.userDTO.UserLoginDTO;
 import bg.softuni.pathfinder.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;

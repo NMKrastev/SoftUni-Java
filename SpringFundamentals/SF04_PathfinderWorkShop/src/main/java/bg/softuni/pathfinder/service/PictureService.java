@@ -1,14 +1,16 @@
 package bg.softuni.pathfinder.service;
 
-import bg.softuni.pathfinder.model.dto.PictureUploadDTO;
+import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUploadDTO;
+import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO;
 import bg.softuni.pathfinder.model.entity.Picture;
-import jakarta.validation.Valid;
 
 import java.util.List;
 
 public interface PictureService {
 
-    List<Picture> findAll();
+    List<PictureUrlDTO> findAllPictures();
 
     boolean uploadPicture(PictureUploadDTO pictureUploadDTO, Long routeId);
+
+    List<PictureUrlDTO> findAllPicturesByRouteId(Long routeId);
 }
