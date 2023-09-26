@@ -30,7 +30,7 @@
                     </tr>
                     <div th:each="model : ${brand.getModels()}">
                         <tr>
-                            <th>No</th>
+                            <th><span th:text="${model.getId()}"></span></th>
                             <th><span th:text="${model.getName()}"></span></th>
                             <th><span th:text="${model.getCategory()}"></span></th>
                             <th><span th:text="${model.getStartYear()}"></span></th>

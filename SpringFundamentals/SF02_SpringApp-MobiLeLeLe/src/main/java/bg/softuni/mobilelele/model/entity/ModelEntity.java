@@ -46,7 +46,7 @@ public class ModelEntity extends BaseEntity {
     @OneToMany(mappedBy = "model")
     private List<OfferEntity> offer;
 
-    @Override
+/*    @Override
     public String toString() {
         return "ModelEntity{" +
                 "name='" + name + '\'' +
@@ -59,5 +59,5 @@ public class ModelEntity extends BaseEntity {
                 ", brand=" + (brand != null ? brand.getName() : null) +
                 ", offer=" + offer +
                 '}';
-    }
+    }*/
 }

@@ -23,8 +23,8 @@
             </div>
             <ul class="offer-details list-group list-group-flush">
                 <li class="list-group-item">
-                    <div class="card-text">• Mileage: <span th:text="${offer.getMileage()}"></span></div>
-                    <div class="card-text">• Price: <span th:text="${offer.getPrice().setScale(2)}"></span></div>
+                    <div class="card-text">• Mileage: <span th:text="${offer.getMileage()}"></span>km</div>
+                    <div class="card-text">• Price: <span th:text="${offer.getPrice().setScale(2)}"></span>$</div>
                     <div class="card-text">• Engine type: <span th:text="${offer.getEngine()}"></span></div>
                     <div class="card-text">• Transmission type: <span th:text="${offer.getTransmission()}"></span></div>
                     <div class="card-text">• Offer created: <span th:text="${offer.getCreated()}"></span></div>
@@ -33,9 +33,10 @@
                     </div>
                 </li>
             </ul>
-            <div class="card-body">
-                <a class="card-link" href="/">Update</a>
-                <a class="card-link" href="/">Delete</a>
+            <!--!@currentUser.isUserAdmin() || !@currentUser.isSeller-->
+            <div class="card-body" th:if="${!@currentUser.isAnonymous()}">
+                <a class="card-link" th:href="@{/offers/update/{id}(id=${offer.getId()})}">Update</a>
+                <a class="card-link" th:href="@{/offers/details/{id}(id=${offer.getId()})}">Delete</a>
             </div>
         </div>
         <div class="offer card col-sm-2 col-md-3  col-lg-4 m-1 p-0">

@@ -30,7 +30,7 @@ public class OfferEntity extends BaseEntity {
     private String imageUrl;
 
     @Column
-    private int mileage;
+    private double mileage;
 
     @Column
     private BigDecimal price;

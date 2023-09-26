@@ -22,7 +22,7 @@ public class UserRoleEntity extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private RoleEnum name;
 
-    @OneToMany(mappedBy = "role", cascade = CascadeType.MERGE)
+    @OneToMany(mappedBy = "role", fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private List<UserEntity> users;
 
     @Override

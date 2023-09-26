@@ -1,6 +1,8 @@
 package bg.softuni.mobilelele.web;
 
 import bg.softuni.mobilelele.model.dto.AddOfferDTO;
+import bg.softuni.mobilelele.model.dto.BrandDTO;
+import bg.softuni.mobilelele.model.dto.OfferUpdateDTO;
 import bg.softuni.mobilelele.model.entity.OfferEntity;
 import bg.softuni.mobilelele.service.CarBrandService;
 import bg.softuni.mobilelele.service.OfferService;
@@ -48,7 +50,9 @@ public class OfferController {
             model.addAttribute("addOfferDTO", new AddOfferDTO());
         }
 
-        model.addAttribute("brands", this.brandService.getAllBrands());
+        final List<BrandDTO> allBrands = this.brandService.getAllBrands();
+
+        model.addAttribute("brands", allBrands);
 
         return "offer-add";
     }
@@ -96,6 +100,70 @@ public class OfferController {
         modelAndView.addObject("offer", offer);
 
         modelAndView.setViewName("details");
+
+        return modelAndView;
+
+    }
+
+    /*@GetMapping("/add")
+    public String addOffer(Model model) {
+
+        //Alternative for @ModelAttribute
+        if (!model.containsAttribute("addOfferDTO")) {
+            model.addAttribute("addOfferDTO", new AddOfferDTO());
+        }
+
+        final List<BrandDTO> allBrands = this.brandService.getAllBrands();
+
+        model.addAttribute("brands", allBrands);
+
+        return "offer-add";
+    }*/
+
+    @GetMapping("/update/{id}")
+    public String update(Model model,
+                         @PathVariable Long id) {
+
+        final OfferUpdateDTO offerUpdateDTO = this.offerService.findOfferToUpdate(id);
+
+        final List<BrandDTO> allBrands = this.brandService.getAllBrands();
+
+        if (!model.containsAttribute("offerUpdateDTO")) {
+            model.addAttribute("offerUpdateDTO", new OfferUpdateDTO());
+        }
+
+        model.addAttribute("offerUpdate", offerUpdateDTO);
+
+        model.addAttribute("brands", allBrands);
+
+        return "/update";
+    }
+
+    @PostMapping("update/{id}")
+    public ModelAndView update(ModelAndView modelAndView,
+                               @Valid AddOfferDTO addOfferDTO,
+                               @PathVariable("id") Long offerId,
+                               BindingResult bindingResult,
+                               RedirectAttributes redirectAttributes) {
+
+        if (bindingResult.hasErrors()) {
+
+            redirectAttributes.addFlashAttribute("addOfferDTO", addOfferDTO);
+
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.addOfferDTO", bindingResult);
+
+            modelAndView.setViewName(String.format("redirect:/offers/update/%d", offerId));
+
+            return modelAndView;
+        }
+
+        final boolean success = this.offerService.updateOffer(addOfferDTO, offerId);
+
+        if (success) {
+            modelAndView.setViewName("redirect:/offers/all");
+        } else {
+            modelAndView.setViewName("update");
+        }
 
         return modelAndView;
 

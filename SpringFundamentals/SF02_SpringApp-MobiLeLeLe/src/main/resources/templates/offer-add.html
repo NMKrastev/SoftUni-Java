@@ -77,9 +77,9 @@
                         class="form-control">
                     <option value="">- Select transmission type -</option>
                     <option th:each="t : ${T(bg.softuni.mobilelele.model.enums.TransmissionEnum).values()}"
-                    th:text="${t}"
-                    th:value="${t}"
-                    th:selected="${t} == *{transmission}"> Transmission type
+                            th:text="${t}"
+                            th:value="${t}"
+                            th:selected="${t} == *{transmission}"> Transmission type
                     </option>
                 </select>
                 <p class="invalid-feedback errors alert alert-danger">
@@ -119,7 +119,6 @@
                 </p>
             </div>
         </div>
-
         <div class="form-group">
             <label class="text-white font-weight-bold" for="description">Description</label>
             <textarea id="description"

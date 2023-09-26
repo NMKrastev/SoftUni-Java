@@ -1,8 +1,10 @@
 package bg.softuni.mobilelele.user;
 
+import bg.softuni.mobilelele.service.UserService;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
@@ -38,5 +40,4 @@ public class CurrentUser {
     public boolean isUserAdmin() {
         return !isAdmin();
     }
-
 }
