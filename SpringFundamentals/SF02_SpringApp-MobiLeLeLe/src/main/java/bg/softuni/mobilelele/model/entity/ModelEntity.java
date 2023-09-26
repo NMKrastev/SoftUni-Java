@@ -40,7 +40,7 @@ public class ModelEntity extends BaseEntity {
     @Column
     private LocalDateTime modified;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private BrandEntity brand;
 
     @OneToMany(mappedBy = "model")

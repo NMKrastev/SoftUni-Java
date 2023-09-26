@@ -2,7 +2,6 @@ package bg.softuni.mobilelele.model.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -29,7 +28,7 @@ public class UserEntity extends BaseEntity {
     private String lastName;
 
     @Column(name = "is_active", columnDefinition = "TINYINT", nullable = false)
-    private boolean isActive;
+    private boolean active;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private UserRoleEntity role;
@@ -53,7 +52,7 @@ public class UserEntity extends BaseEntity {
                 ", password='" + password + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", isActive=" + isActive +
+                ", isActive=" + active +
                 ", role=" + role +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", created=" + created +

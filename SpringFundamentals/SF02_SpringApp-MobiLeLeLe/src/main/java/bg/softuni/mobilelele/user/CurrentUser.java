@@ -13,6 +13,8 @@ import org.springframework.web.context.annotation.SessionScope;
 @SessionScope
 public class CurrentUser {
 
+    private String email;
+
     private String firstName;
 
     private String fullName;
@@ -20,6 +22,7 @@ public class CurrentUser {
     private boolean loggedIn;
 
     public void clear() {
+        this.email = null;
         this.firstName = null;
         this.fullName = null;
         this.loggedIn = false;

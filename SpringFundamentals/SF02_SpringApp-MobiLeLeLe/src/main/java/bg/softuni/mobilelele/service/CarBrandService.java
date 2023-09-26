@@ -1,5 +1,6 @@
 package bg.softuni.mobilelele.service;
 
+import bg.softuni.mobilelele.model.dto.BrandDTO;
 import bg.softuni.mobilelele.model.entity.BrandEntity;
 
 import java.util.List;
@@ -10,5 +11,5 @@ public interface CarBrandService {
 
     void populate();
 
-    List<BrandEntity> getAllBrands();
+    List<BrandDTO> getAllBrands();
 }

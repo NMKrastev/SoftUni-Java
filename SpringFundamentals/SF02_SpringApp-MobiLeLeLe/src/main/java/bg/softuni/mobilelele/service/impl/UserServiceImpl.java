@@ -3,6 +3,7 @@ package bg.softuni.mobilelele.service.impl;
 import bg.softuni.mobilelele.model.dto.UserLoginDTO;
 import bg.softuni.mobilelele.model.dto.UserRegistrationDTO;
 import bg.softuni.mobilelele.model.entity.UserEntity;
+import bg.softuni.mobilelele.model.mapper.UserMapper;
 import bg.softuni.mobilelele.repository.UserRepository;
 import bg.softuni.mobilelele.service.RoleService;
 import bg.softuni.mobilelele.service.UserService;
@@ -23,13 +24,15 @@ public class UserServiceImpl implements UserService {
     private final RoleService roleService;
     private final CurrentUser currentUser;
     private final PasswordEncoder encoder;
+    private final UserMapper userMapper;
 
     public UserServiceImpl(UserRepository userRepository, RoleService roleService,
-                           CurrentUser currentUser, PasswordEncoder encoder) {
+                           CurrentUser currentUser, PasswordEncoder encoder, UserMapper userMapper) {
         this.userRepository = userRepository;
         this.roleService = roleService;
         this.currentUser = currentUser;
         this.encoder = encoder;
+        this.userMapper = userMapper;
     }
 
     @Override
@@ -71,7 +74,10 @@ public class UserServiceImpl implements UserService {
             return false;
         }
 
-        final UserEntity newUser = mapEntity(userDTO);
+        //final UserEntity newUser = mapEntity(userDTO);
+        //Using MapStruct for mapping entities
+        final UserEntity newUser = this.userMapper.userDtoToUserEntity(userDTO);
+        newUser.setPassword(this.encoder.encode(userDTO.getPassword()));
 
         final UserEntity savedUser = this.userRepository.saveAndFlush(newUser);
 
@@ -80,9 +86,15 @@ public class UserServiceImpl implements UserService {
         return true;
     }
 
+    @Override
+    public UserEntity findByEmail(String email) {
+        return this.userRepository.findByEmail(email).get();
+    }
+
     private void login(UserEntity user) {
 
         this.currentUser.setLoggedIn(true);
+        this.currentUser.setEmail(user.getEmail());
         this.currentUser.setFirstName(user.getFirstName());
         this.currentUser.setFullName(user.getFirstName() + " " + user.getLastName());
     }
@@ -91,7 +103,7 @@ public class UserServiceImpl implements UserService {
 
         return UserEntity
                 .builder()
-                .isActive(true)
+                .active(true)
                 .email(userDTO.getEmail())
                 .password(this.encoder.encode(userDTO.getPassword()))
                 .firstName(userDTO.getFirstName())

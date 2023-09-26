@@ -1,5 +1,6 @@
 package bg.softuni.mobilelele.web;
 
+import bg.softuni.mobilelele.model.dto.BrandDTO;
 import bg.softuni.mobilelele.model.entity.BrandEntity;
 import bg.softuni.mobilelele.service.CarBrandService;
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,7 @@ public class BrandController {
     @GetMapping("/brands/all")
     public ModelAndView showAllBrands(ModelAndView modelAndView) {
 
-        final List<BrandEntity> allBrands = this.brandService.getAllBrands();
+        final List<BrandDTO> allBrands = this.brandService.getAllBrands();
 
         modelAndView.addObject("allBrands", allBrands);
 

@@ -22,7 +22,8 @@
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{/brands/all}">All Brands</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item"
+                    th:if="${!@currentUser.isAnonymous()}">
                     <a class="nav-link" th:href="@{/offers/add}">Add Offer</a>
                 </li>
                 <li class="nav-item">

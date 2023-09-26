@@ -2,6 +2,7 @@ package bg.softuni.mobilelele.service;
 
 import bg.softuni.mobilelele.model.dto.UserLoginDTO;
 import bg.softuni.mobilelele.model.dto.UserRegistrationDTO;
+import bg.softuni.mobilelele.model.entity.UserEntity;
 
 public interface UserService {
 
@@ -11,4 +12,6 @@ public interface UserService {
     void logoutUser();
 
     boolean registerUser(UserRegistrationDTO userDTO);
+
+    UserEntity findByEmail(String email);
 }

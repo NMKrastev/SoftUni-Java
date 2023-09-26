@@ -48,10 +48,10 @@ public class OfferEntity extends BaseEntity {
     @Column
     private LocalDateTime modified;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private ModelEntity model;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private UserEntity seller;
 
     @Override

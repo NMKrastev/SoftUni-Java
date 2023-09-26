@@ -1,5 +1,6 @@
 package bg.softuni.mobilelele.service.impl;
 
+import bg.softuni.mobilelele.model.entity.ModelEntity;
 import bg.softuni.mobilelele.repository.CarModelRepository;
 import bg.softuni.mobilelele.service.CarModelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +37,10 @@ public class CarModelServiceImpl implements CarModelService {
 
         resourceDatabasePopulator.setSeparator(";;");
         resourceDatabasePopulator.execute(dataSource);
+    }
+
+    @Override
+    public ModelEntity findById(Long modelId) {
+        return this.carModelRepository.findById(modelId).get();
     }
 }
