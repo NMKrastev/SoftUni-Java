@@ -3,6 +3,8 @@ package bg.softuni.mobilelele.service.impl;
 import bg.softuni.mobilelele.model.dto.UserLoginDTO;
 import bg.softuni.mobilelele.model.dto.UserRegistrationDTO;
 import bg.softuni.mobilelele.model.entity.UserEntity;
+import bg.softuni.mobilelele.model.entity.UserRoleEntity;
+import bg.softuni.mobilelele.model.enums.RoleEnum;
 import bg.softuni.mobilelele.model.mapper.UserMapper;
 import bg.softuni.mobilelele.repository.UserRepository;
 import bg.softuni.mobilelele.service.RoleService;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -78,6 +81,8 @@ public class UserServiceImpl implements UserService {
         //Using MapStruct for mapping entities
         final UserEntity newUser = this.userMapper.userDtoToUserEntity(userDTO);
         newUser.setPassword(this.encoder.encode(userDTO.getPassword()));
+        newUser.setRole(this.roleService.getUserRole());
+        newUser.setCreated(LocalDateTime.now());
 
         final UserEntity savedUser = this.userRepository.saveAndFlush(newUser);
 
@@ -97,9 +102,18 @@ public class UserServiceImpl implements UserService {
         this.currentUser.setEmail(user.getEmail());
         this.currentUser.setFirstName(user.getFirstName());
         this.currentUser.setFullName(user.getFirstName() + " " + user.getLastName());
+        this.currentUser.setAdmin(this.isUserAdmin(user));
     }
 
-    private UserEntity mapEntity(UserRegistrationDTO userDTO) {
+    private boolean isUserAdmin(UserEntity user) {
+
+        return user
+                .getRole()
+                .getName()
+                .equals(RoleEnum.ADMIN);
+    }
+
+/*    private UserEntity mapEntity(UserRegistrationDTO userDTO) {
 
         return UserEntity
                 .builder()
@@ -111,5 +125,5 @@ public class UserServiceImpl implements UserService {
                 .created(LocalDateTime.now())
                 .role(this.roleService.getUserRole())
                 .build();
-    }
+    }*/
 }

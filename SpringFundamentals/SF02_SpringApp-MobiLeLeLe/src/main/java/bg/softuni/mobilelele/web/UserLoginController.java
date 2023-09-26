@@ -38,16 +38,6 @@ public class UserLoginController {
         return modelAndView;
     }
 
-    @GetMapping("/logout")
-    public ModelAndView logout(ModelAndView modelAndView) {
-
-        this.userService.logoutUser();
-
-        modelAndView.setViewName("redirect:/");
-
-        return modelAndView;
-    }
-
     @PostMapping("/login")
     public ModelAndView login(ModelAndView modelAndView,
                               @Valid UserLoginDTO userLoginDTO,
@@ -72,6 +62,16 @@ public class UserLoginController {
         } else {
             modelAndView.setViewName("auth-login");
         }
+
+        return modelAndView;
+    }
+
+    @GetMapping("/logout")
+    public ModelAndView logout(ModelAndView modelAndView) {
+
+        this.userService.logoutUser();
+
+        modelAndView.setViewName("redirect:/");
 
         return modelAndView;
     }

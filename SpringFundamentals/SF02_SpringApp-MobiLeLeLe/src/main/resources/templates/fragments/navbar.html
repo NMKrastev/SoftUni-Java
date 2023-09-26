@@ -29,7 +29,7 @@
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{/offers/all}">All Offers</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" th:if="${!@currentUser.isAnonymous() && !@currentUser.isUserAdmin()}">
                     <a class="nav-link dropdown-toggle" th:href="@{/}" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Admin

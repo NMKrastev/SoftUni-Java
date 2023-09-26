@@ -1,5 +1,7 @@
 package bg.softuni.mobilelele.model.dto;
 
+import bg.softuni.mobilelele.model.validation.UniqueUserEmail;
+import bg.softuni.mobilelele.model.validation.UserEmailExist;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -16,6 +18,7 @@ public class UserLoginDTO {
 
     @NotEmpty
     @Email
+    @UserEmailExist
     private String email;
 
     @NotEmpty

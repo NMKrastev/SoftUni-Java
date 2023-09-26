@@ -21,15 +21,22 @@ public class CurrentUser {
 
     private boolean loggedIn;
 
+    private boolean isAdmin;
+
     public void clear() {
         this.email = null;
         this.firstName = null;
         this.fullName = null;
         this.loggedIn = false;
+        this.isAdmin = false;
     }
 
     public boolean isAnonymous() {
         return !isLoggedIn();
+    }
+
+    public boolean isUserAdmin() {
+        return !isAdmin();
     }
 
 }

@@ -87,7 +87,6 @@ public class OfferController {
 
     //TODO: Create Offer details DTO to show all needed data.
     //TODO: Convert the date in the correct format!
-
     @GetMapping("/details/{id}")
     public ModelAndView details(ModelAndView modelAndView,
                                 @PathVariable Long id) {
