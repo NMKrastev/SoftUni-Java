@@ -36,7 +36,7 @@
             <!--!@currentUser.isUserAdmin() || !@currentUser.isSeller-->
             <div class="card-body" th:if="${!@currentUser.isAnonymous()}">
                 <a class="card-link" th:href="@{/offers/update/{id}(id=${offer.getId()})}">Update</a>
-                <a class="card-link" th:href="@{/offers/details/{id}(id=${offer.getId()})}">Delete</a>
+                <a class="card-link" th:href="@{/offers/delete/{id}(id=${offer.getId()})}">Delete</a>
             </div>
         </div>
         <div class="offer card col-sm-2 col-md-3  col-lg-4 m-1 p-0">

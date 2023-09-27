@@ -151,6 +151,20 @@ public class OfferController {
         }
 
         return modelAndView;
+    }
 
+    @GetMapping("/delete/{id}")
+    public ModelAndView delete(ModelAndView modelAndView,
+                               @PathVariable("id") Long id) {
+
+        boolean isDeleted = this.offerService.deleteOffer(id);
+
+        if (isDeleted) {
+            modelAndView.setViewName("redirect:/offers/all");
+        } else {
+            modelAndView.setViewName(String.format("redirect:/offers/delete/%d", id));
+        }
+
+        return modelAndView;
     }
 }

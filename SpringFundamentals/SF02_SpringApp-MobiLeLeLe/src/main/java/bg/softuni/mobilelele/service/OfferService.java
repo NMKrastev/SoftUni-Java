@@ -17,4 +17,6 @@ public interface OfferService {
     OfferUpdateDTO findOfferToUpdate(Long id);
 
     boolean updateOffer(OfferUpdateDTO offerUpdateDTO, Long offerId);
+
+    boolean deleteOffer(Long id);
 }

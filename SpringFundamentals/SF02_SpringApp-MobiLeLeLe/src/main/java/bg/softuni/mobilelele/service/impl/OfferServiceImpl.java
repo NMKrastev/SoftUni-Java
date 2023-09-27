@@ -11,6 +11,7 @@ import bg.softuni.mobilelele.service.CarModelService;
 import bg.softuni.mobilelele.service.OfferService;
 import bg.softuni.mobilelele.service.UserService;
 import bg.softuni.mobilelele.user.CurrentUser;
+import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -100,5 +101,15 @@ public class OfferServiceImpl implements OfferService {
         this.offerRepository.saveAndFlush(offerEntity);
 
         return true;
+    }
+
+    @Override
+    public boolean deleteOffer(Long id) {
+
+        this.offerRepository.deleteById(id);
+
+        Optional<OfferEntity> deletedOffer = this.offerRepository.findById(id);
+
+        return deletedOffer.isEmpty();
     }
 }
