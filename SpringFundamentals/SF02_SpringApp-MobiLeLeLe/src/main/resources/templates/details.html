@@ -27,16 +27,20 @@
                     <div class="card-text">• Price: <span th:text="${offer.getPrice().setScale(2)}"></span>$</div>
                     <div class="card-text">• Engine type: <span th:text="${offer.getEngine()}"></span></div>
                     <div class="card-text">• Transmission type: <span th:text="${offer.getTransmission()}"></span></div>
-                    <div class="card-text">• Offer created: <span th:text="${#temporals.format(offer.getCreated(), 'dd-MM-yyyy HH:mm')}"></span></div>
-                    <div class="card-text">• Offer modified: <span th:text="${#temporals.format(offer.getModified(), 'dd-MM-yyyy HH:mm')}"></span></div>
-                    <div class="card-text">• Seller: <span th:text="${offer.getSeller().getFirstName() + ' ' + offer.getSeller().getLastName()}"></span>
+                    <div class="card-text">• Offer created: <span
+                            th:text="${#temporals.format(offer.getCreated(), 'dd-MM-yyyy HH:mm')}"></span></div>
+                    <div class="card-text">• Offer modified: <span
+                            th:text="${#temporals.format(offer.getModified(), 'dd-MM-yyyy HH:mm')}"></span></div>
+                    <div class="card-text">• Seller: <span
+                            th:text="${offer.getSeller().getFirstName() + ' ' + offer.getSeller().getLastName()}"></span>
                     </div>
                 </li>
             </ul>
             <!--!@currentUser.isUserAdmin() || !@currentUser.isSeller-->
             <div class="card-body" th:if="${!@currentUser.isAnonymous()}">
                 <a class="card-link" th:href="@{/offers/update/{id}(id=${offer.getId()})}">Update</a>
-                <a class="card-link" th:href="@{/offers/delete/{id}(id=${offer.getId()})}">Delete</a>
+                <a class="card-link" th:if="${@currentUser.isAdmin()}" th:href="@{/offers/delete/{id}(id=${offer.getId()})}">Delete</a>
+
             </div>
         </div>
         <div class="offer card col-sm-2 col-md-3  col-lg-4 m-1 p-0">
