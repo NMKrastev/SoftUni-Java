@@ -11,6 +11,7 @@ import bg.softuni.mobilelele.service.CarModelService;
 import bg.softuni.mobilelele.service.OfferService;
 import bg.softuni.mobilelele.service.UserService;
 import bg.softuni.mobilelele.user.CurrentUser;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -22,7 +23,6 @@ public class OfferServiceImpl implements OfferService {
 
     private final OfferRepository offerRepository;
     private final UserService userService;
-
     private final CarModelService modelService;
     private final CurrentUser currentUser;
     private final OfferMapper offerMapper;
@@ -76,71 +76,29 @@ public class OfferServiceImpl implements OfferService {
         final ModelEntity modelEntity = this.modelService.findById(offerEntity.getModel().getId());
 
         offerUpdateDTO.setModel(modelEntity);
+        offerUpdateDTO.setModelId(modelEntity.getId());
 
         return offerUpdateDTO;
     }
 
     @Override
-    public boolean updateOffer(AddOfferDTO addOfferDTO, Long offerId) {
+    public boolean updateOffer(OfferUpdateDTO offerUpdateDTO, Long offerId) {
 
-        final OfferEntity offerEntity = this.offerRepository.findById(offerId).get();
+        OfferEntity offerEntity = this.offerRepository.findById(offerId).get();
 
-        final OfferEntity changedOffer = this.compareOfferDifferences(addOfferDTO, offerEntity);
+        final UserEntity seller = offerEntity.getSeller();
 
-        this.offerRepository.saveAndFlush(changedOffer);
+        final LocalDateTime created = offerEntity.getCreated();
+
+        offerEntity = this.offerMapper.updateOfferDtoToOfferEntity(offerUpdateDTO);
+
+        offerEntity.setSeller(seller);
+        offerEntity.setCreated(created);
+        offerEntity.setModel(this.modelService.findById(offerUpdateDTO.getModelId()));
+        offerEntity.setModified(LocalDateTime.now());
+
+        this.offerRepository.saveAndFlush(offerEntity);
 
         return true;
-
-    }
-
-    private OfferEntity compareOfferDifferences(AddOfferDTO addOfferDTO, OfferEntity offerEntity) {
-
-        boolean isModified = false;
-
-        if (!addOfferDTO.getModelId().equals(offerEntity.getModel().getId())) {
-            offerEntity.setModel(this.modelService.findById(addOfferDTO.getModelId()));
-            isModified = true;
-        }
-
-        if (!addOfferDTO.getPrice().equals(offerEntity.getPrice())) {
-            offerEntity.setPrice(addOfferDTO.getPrice());
-            isModified = true;
-        }
-
-        if (!addOfferDTO.getEngine().equals(offerEntity.getEngine())) {
-            offerEntity.setEngine(addOfferDTO.getEngine());
-            isModified = true;
-        }
-
-        if (!addOfferDTO.getTransmission().equals(offerEntity.getTransmission())) {
-            offerEntity.setTransmission(addOfferDTO.getTransmission());
-            isModified = true;
-        }
-
-        if (!addOfferDTO.getYear().equals(offerEntity.getYear())) {
-            offerEntity.setYear(addOfferDTO.getYear());
-            isModified = true;
-        }
-
-        if (!addOfferDTO.getMileage().equals(offerEntity.getMileage())) {
-            offerEntity.setMileage(addOfferDTO.getMileage());
-            isModified = true;
-        }
-
-        if (!addOfferDTO.getDescription().equals(offerEntity.getDescription())) {
-            offerEntity.setDescription(addOfferDTO.getDescription());
-            isModified = true;
-        }
-
-        if (!addOfferDTO.getImageUrl().equals(offerEntity.getImageUrl())) {
-            offerEntity.setImageUrl(addOfferDTO.getImageUrl());
-            isModified = true;
-        }
-
-        if (isModified) {
-            offerEntity.setModified(LocalDateTime.now());
-        }
-
-        return offerEntity;
     }
 }

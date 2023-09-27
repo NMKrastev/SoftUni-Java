@@ -16,5 +16,5 @@ public interface OfferService {
 
     OfferUpdateDTO findOfferToUpdate(Long id);
 
-    boolean updateOffer(AddOfferDTO addOfferDTO, Long offerId);
+    boolean updateOffer(OfferUpdateDTO offerUpdateDTO, Long offerId);
 }

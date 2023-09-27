@@ -105,32 +105,17 @@ public class OfferController {
 
     }
 
-    /*@GetMapping("/add")
-    public String addOffer(Model model) {
-
-        //Alternative for @ModelAttribute
-        if (!model.containsAttribute("addOfferDTO")) {
-            model.addAttribute("addOfferDTO", new AddOfferDTO());
-        }
-
-        final List<BrandDTO> allBrands = this.brandService.getAllBrands();
-
-        model.addAttribute("brands", allBrands);
-
-        return "offer-add";
-    }*/
-
     @GetMapping("/update/{id}")
     public String update(Model model,
                          @PathVariable Long id) {
 
+        /*if (!model.containsAttribute("offerUpdateDTO")) {
+            model.addAttribute("offerUpdateDTO", new OfferUpdateDTO());
+        }*/
+
         final OfferUpdateDTO offerUpdateDTO = this.offerService.findOfferToUpdate(id);
 
         final List<BrandDTO> allBrands = this.brandService.getAllBrands();
-
-        if (!model.containsAttribute("offerUpdateDTO")) {
-            model.addAttribute("offerUpdateDTO", new OfferUpdateDTO());
-        }
 
         model.addAttribute("offerUpdate", offerUpdateDTO);
 
@@ -139,25 +124,25 @@ public class OfferController {
         return "/update";
     }
 
-    @PostMapping("update/{id}")
+    @PostMapping("/update/{id}")
     public ModelAndView update(ModelAndView modelAndView,
-                               @Valid AddOfferDTO addOfferDTO,
                                @PathVariable("id") Long offerId,
+                               @Valid OfferUpdateDTO offerUpdateDTO,
                                BindingResult bindingResult,
                                RedirectAttributes redirectAttributes) {
 
         if (bindingResult.hasErrors()) {
 
-            redirectAttributes.addFlashAttribute("addOfferDTO", addOfferDTO);
+            redirectAttributes.addFlashAttribute("offerUpdateDTO", offerUpdateDTO);
 
-            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.addOfferDTO", bindingResult);
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.offerUpdateDTO", bindingResult);
 
             modelAndView.setViewName(String.format("redirect:/offers/update/%d", offerId));
 
             return modelAndView;
         }
 
-        final boolean success = this.offerService.updateOffer(addOfferDTO, offerId);
+        final boolean success = this.offerService.updateOffer(offerUpdateDTO, offerId);
 
         if (success) {
             modelAndView.setViewName("redirect:/offers/all");

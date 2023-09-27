@@ -11,4 +11,6 @@ public interface OfferMapper {
     OfferEntity addOfferDtoToOfferEntity(AddOfferDTO addOfferDTO);
 
     OfferUpdateDTO offerEntityToOfferDto(OfferEntity offerEntity);
+
+    OfferEntity updateOfferDtoToOfferEntity(OfferUpdateDTO offerUpdateDTO);
 }
