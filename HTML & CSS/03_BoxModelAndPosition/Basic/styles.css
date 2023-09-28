@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+}
+
+.container {
+    background: #666;
+    /* max-width: 50%; */
+    width: 50%;
+    /* overflow: hidden; */
+    margin: 1em 0 0 1em;
+    /* position: relative;
+    padding: 1em; */
+    position: fixed;
+    padding: 1em;
+    right: 0;
+    bottom: 0;
+}
+
+.box {
+    display: inline-block;
+    width: 25%;
+    border: 2px solid;
+    padding: 1em;
+    background: red;
+    margin: 0.5em;
+}
+
+.box:nth-child(2) {
+    background: green;
+    /* position: relative;
+    top: 40px;
+    left: 40px; */
+    position: absolute;
+    opacity: 0.5;
+    bottom: 0;
+    left: 0;
+}
+

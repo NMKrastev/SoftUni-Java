@@ -1,0 +1,75 @@
+/* * {
+    padding: 0;
+    margin: 0;
+} */
+
+body {
+  background: #eee;
+}
+
+p {
+  background: #666;
+}
+
+span {
+  background: #080;
+  padding: 2em;
+  margin: 2em;
+  display: inline-block;
+}
+
+a {
+  /* display: block; */
+  background: gray;
+  padding: 1em;
+}
+
+a:hover {
+  background: red;
+}
+
+.margin {
+  background: orange;
+  padding: 1em;
+}
+
+.border {
+  padding: 0.5em;
+  background: lightgreen;
+}
+
+.padding {
+  padding: 1em;
+  background: greenyellow;
+}
+
+.box {
+  /* border: 2px solid #333; */
+  line-height: 1;
+  padding: 1em;
+  /* margin: 1em; */
+  background: lightblue;
+  /* width: 100px;
+    height: 100px; */
+  /* overflow: scroll; */
+  /* overflow: hidden; */
+  /* overflow: visible; -default value*/
+}
+
+.box {
+  /* margin-top: 1em; */
+  margin: 1em 0 0 0; /* all directions (top, right, bottm, left) in that order; */
+  margin: 1em 0; /* 1st value is top and bottom, 2nd is right and left*/
+  
+  margin-block: 1em; /* top and bottom */
+  margin-block-start: 1em; /* top */
+  margin-inline-start: 1em; /* same as above BUT when you have text that starts from right to left it will be okay */
+
+  margin-block-end: 1em; /* bottom */
+  margin-inline: 1em /* right and left */;
+
+  padding: 1em 0 0 0; /* same as above */
+  padding: 1em, 0; /* same as above */
+  padding-block-start: 1em; /* same as above */
+  padding-block-end: 1em; /* same as above */
+}

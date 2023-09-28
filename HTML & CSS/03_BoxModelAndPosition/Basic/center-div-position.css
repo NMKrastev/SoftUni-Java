@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #eee;
+}
+
+.container {
+    background: #000;
+    color: white;
+    /* width: 30vw;
+    height: 20vh; */
+    padding: 2em;
+    position: absolute;
+    /* top: calc(50% - 10vh);
+    left: calc(50% - 15vw); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
