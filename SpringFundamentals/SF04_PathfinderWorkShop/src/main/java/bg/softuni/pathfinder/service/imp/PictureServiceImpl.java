@@ -44,8 +44,11 @@ public class PictureServiceImpl implements PictureService {
     @Override
     public List<PictureUrlDTO> findAllPictures() {
 
-        return this.pictureRepository
-                .findAllPictures();
+        final List<Picture> allPictures = this.pictureRepository
+                .findAll();
+
+        return this.pictureMapper.pictureToPictureUrlDTO(allPictures);
+
     }
 
     @Override
@@ -75,9 +78,4 @@ public class PictureServiceImpl implements PictureService {
         return true;
     }
 
-    @Override
-    public List<PictureUrlDTO> findAllPicturesByRouteId(Long routeId) {
-
-        return this.pictureRepository.findAllPicturesByRouteId(routeId);
-    }
 }

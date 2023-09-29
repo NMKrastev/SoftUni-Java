@@ -11,5 +11,4 @@ public interface PictureService {
 
     boolean uploadPicture(PictureUploadDTO pictureUploadDTO, Long routeId);
 
-    List<PictureUrlDTO> findAllPicturesByRouteId(Long routeId);
 }

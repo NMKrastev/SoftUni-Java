@@ -1,6 +1,5 @@
 package bg.softuni.pathfinder.web;
 
-import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.RouteDetailDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.RouteRegisterDTO;
@@ -24,6 +23,7 @@ public class RouteController {
     private final PictureService pictureService;
 
     public RouteController(RouteService routeService, PictureService pictureService) {
+
         this.routeService = routeService;
         this.pictureService = pictureService;
     }
@@ -53,10 +53,7 @@ public class RouteController {
 
         final RouteDetailDTO route = this.routeService.getRouteDetails(routeId);
 
-        final List<PictureUrlDTO> pictures = this.pictureService.findAllPicturesByRouteId(routeId);
-
         modelAndView.addObject("route", route);
-        modelAndView.addObject("pictures", pictures);
 
         modelAndView.setViewName("route-details");
 
@@ -80,6 +77,7 @@ public class RouteController {
         if (bindingResult.hasErrors() || routeDTO.getCategories().isEmpty()) {
 
             redirectAttributes.addFlashAttribute("routeDTO", routeDTO);
+
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.routeDTO", bindingResult);
 
             modelAndView.setViewName("redirect:/routes/add");

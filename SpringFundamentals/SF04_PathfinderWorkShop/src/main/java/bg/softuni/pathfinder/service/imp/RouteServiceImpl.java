@@ -52,7 +52,9 @@ public class RouteServiceImpl implements RouteService {
     @Override
     public RouteDetailDTO getRouteDetails(Long id) {
 
-        return routeRepository.getRouteDetails(id);
+        final Route route = this.routeRepository.findById(id).get();
+
+        return this.routeMapper.routeToRouteDetailDTO(route);
     }
 
     @Override
@@ -60,11 +62,7 @@ public class RouteServiceImpl implements RouteService {
 
         final List<Route> allRoutes = this.routeRepository.findAll();
 
-        List<AllRoutesDTO> allRoutesMapperDTOS = this.routeMapper.routeToRouteDTO(allRoutes);
-
-        //final List<AllRoutesDTO> allRoutesDTOS = getRoutesDetails(allRoutes);
-
-        return allRoutesMapperDTOS;
+        return this.routeMapper.routeToRouteDTO(allRoutes);
     }
 
     @Override
@@ -76,35 +74,8 @@ public class RouteServiceImpl implements RouteService {
 
         final List<Route> routesByCategories = this.routeRepository.findRoutesByCategoriesIn(categories);
 
-        final List<AllRoutesDTO> routesByCategory = this.routeMapper.routeToRouteDTO(routesByCategories);
-
-        return routesByCategory;
+        return this.routeMapper.routeToRouteDTO(routesByCategories);
     }
-
-/*    private List<AllRoutesDTO> getRoutesDetails(List<Route> routes) {
-
-        final List<AllRoutesDTO> allRoutesDTOS = new ArrayList<>();
-
-        for (Route route : routes) {
-
-            final Set<PictureUrlDTO> pictures = new LinkedHashSet<>();
-
-            for (Picture picture : route.getPictures()) {
-                pictures.add(new PictureUrlDTO(picture.getUrl()));
-            }
-
-            final AllRoutesDTO allRoutesDTO = AllRoutesDTO.builder()
-                    .id(route.getId())
-                    .name(route.getName())
-                    .description(route.getDescription())
-                    .picturesUrl(pictures)
-                    .build();
-
-            allRoutesDTOS.add(allRoutesDTO);
-        }
-
-        return allRoutesDTOS;
-    }*/
 
     @Override
     public boolean addNewRoute(RouteRegisterDTO routeDTO) {

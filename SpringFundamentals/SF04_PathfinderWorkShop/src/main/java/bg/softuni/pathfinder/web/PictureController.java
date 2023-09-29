@@ -37,6 +37,7 @@ public class PictureController {
         if (bindingResult.hasErrors()) {
 
             redirectAttributes.addFlashAttribute("pictureUploadDTO", pictureUploadDTO);
+
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.pictureUploadDTO", bindingResult);
 
             modelAndView.setViewName(String.format("redirect:/routes/details/%s", id));

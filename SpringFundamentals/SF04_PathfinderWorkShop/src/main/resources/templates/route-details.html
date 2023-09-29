@@ -69,7 +69,7 @@
         <section id="map"></section>
         <div th:if="${route.getVideoUrl() != null && !route.getVideoUrl().isEmpty()}">
             <section id="video">
-                <!--This should be changed to take the vide url for the specific route (th:src="${route.getVideoUrl()}").
+                <!--This should be changed to take the video url for the specific route (th:src="${route.getVideoUrl()}").
                 This will be changed when video urls are inserted for each route!-->
                 <!--<iframe id="frame" src="https://www.youtube.com/embed/ZUKPTZMbuh8?si=WZsXFx6sf9d31i9L">-->
                 <iframe id="frame" th:src="${route.getVideoUrl()}">
@@ -81,7 +81,7 @@
             <p id="route-description"><span th:text="${route.getDescription()}"></span></p>
         </section>
         <section class="gallery">
-            <div th:each="picture : ${pictures}">
+            <div th:each="picture : ${route.getPictures()}">
                 <img class="rounded" th:src="${picture.getUrl()}" height="100%" alt="">
             </div>
         </section>

@@ -25,6 +25,7 @@ public class HomeController {
 
     @Autowired
     public HomeController(RouteService routeService, PictureService pictureService) {
+
         this.routeService = routeService;
         this.pictureService = pictureService;
     }
@@ -37,6 +38,7 @@ public class HomeController {
         final List<PictureUrlDTO> pictures = this.pictureService.findAllPictures();
 
         modelAndView.addObject("mostCommented", mostCommented);
+
         modelAndView.addObject("pictures", pictures);
 
         modelAndView.setViewName("index");

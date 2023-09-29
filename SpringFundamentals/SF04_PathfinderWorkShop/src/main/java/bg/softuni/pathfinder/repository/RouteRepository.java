@@ -26,13 +26,13 @@ public interface RouteRepository extends JpaRepository<Route, Long> {
 
     List<Route> findAll();
 
-    @Query("""
+    /*@Query("""
             SELECT NEW bg.softuni.pathfinder.model.dto.routeDTO.RouteDetailDTO(r.id, u.fullName, r.description, r.videoUrl, r.level)
             FROM Route AS r
             JOIN User AS u ON r.author.id = u.id
             WHERE r.id = ?1
             """)
-    RouteDetailDTO getRouteDetails(Long id);
+    RouteDetailDTO getRouteDetails(Long id);*/
 
     //Query("SELECT r From Route AS r ORDER BY size(r.comments) DESC LIMIT 1")
     Optional<Route> findByGpxCoordinates(String gpxCoordinates);

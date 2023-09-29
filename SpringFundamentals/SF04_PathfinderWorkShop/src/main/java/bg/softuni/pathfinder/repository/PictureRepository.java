@@ -12,16 +12,8 @@ import java.util.Optional;
 @Repository
 public interface PictureRepository extends JpaRepository<Picture, Long> {
 
-    @Query("""
-            SELECT NEW bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO(p.url)
-            FROM Picture AS p""")
-    List<PictureUrlDTO> findAllPictures();
+    List<Picture> findAll();
 
     Optional<Picture> findByTitleAndAndUrl(String title, String pictureUrl);
 
-    @Query("""
-            SELECT NEW bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO(p.url)
-            FROM Picture AS p
-            WHERE p.route.id = ?1""")
-    List<PictureUrlDTO> findAllPicturesByRouteId(Long routeId);
 }
