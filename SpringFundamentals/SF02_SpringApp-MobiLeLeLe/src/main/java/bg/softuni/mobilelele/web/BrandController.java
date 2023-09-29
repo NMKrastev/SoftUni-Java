@@ -1,7 +1,6 @@
 package bg.softuni.mobilelele.web;
 
 import bg.softuni.mobilelele.model.dto.BrandDTO;
-import bg.softuni.mobilelele.model.entity.BrandEntity;
 import bg.softuni.mobilelele.service.CarBrandService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

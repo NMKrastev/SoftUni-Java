@@ -7,8 +7,6 @@ import bg.softuni.mobilelele.service.RoleService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 @Service
 public class RoleServiceImpl implements RoleService {
@@ -17,11 +15,6 @@ public class RoleServiceImpl implements RoleService {
 
     public RoleServiceImpl(RoleRepository roleRepository) {
         this.roleRepository = roleRepository;
-    }
-
-    public List<UserRoleEntity> findAllRoles() {
-
-        return this.roleRepository.findAll();
     }
 
     @Override

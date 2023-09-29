@@ -41,7 +41,8 @@ public class OfferServiceImpl implements OfferService {
     @Override
     public List<OfferEntity> findAllOffers() {
 
-        return this.offerRepository.findAll();
+        return this.offerRepository
+                .findAll();
     }
 
     @Override

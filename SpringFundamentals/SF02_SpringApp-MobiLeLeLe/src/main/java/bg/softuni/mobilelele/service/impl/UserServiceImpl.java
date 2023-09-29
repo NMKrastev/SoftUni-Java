@@ -3,7 +3,6 @@ package bg.softuni.mobilelele.service.impl;
 import bg.softuni.mobilelele.model.dto.UserLoginDTO;
 import bg.softuni.mobilelele.model.dto.UserRegistrationDTO;
 import bg.softuni.mobilelele.model.entity.UserEntity;
-import bg.softuni.mobilelele.model.entity.UserRoleEntity;
 import bg.softuni.mobilelele.model.enums.RoleEnum;
 import bg.softuni.mobilelele.model.mapper.UserMapper;
 import bg.softuni.mobilelele.repository.UserRepository;
@@ -17,7 +16,6 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
-import java.util.Set;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -77,7 +75,6 @@ public class UserServiceImpl implements UserService {
             return false;
         }
 
-        //final UserEntity newUser = mapEntity(userDTO);
         //Using MapStruct for mapping entities
         final UserEntity newUser = this.userMapper.userDtoToUserEntity(userDTO);
         newUser.setPassword(this.encoder.encode(userDTO.getPassword()));
@@ -93,7 +90,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserEntity findByEmail(String email) {
-        return this.userRepository.findByEmail(email).get();
+
+        return this.userRepository
+                .findByEmail(email)
+                .get();
     }
 
     private void login(UserEntity user) {
@@ -112,18 +112,4 @@ public class UserServiceImpl implements UserService {
                 .getName()
                 .equals(RoleEnum.ADMIN);
     }
-
-/*    private UserEntity mapEntity(UserRegistrationDTO userDTO) {
-
-        return UserEntity
-                .builder()
-                .active(true)
-                .email(userDTO.getEmail())
-                .password(this.encoder.encode(userDTO.getPassword()))
-                .firstName(userDTO.getFirstName())
-                .lastName(userDTO.getLastName())
-                .created(LocalDateTime.now())
-                .role(this.roleService.getUserRole())
-                .build();
-    }*/
 }
