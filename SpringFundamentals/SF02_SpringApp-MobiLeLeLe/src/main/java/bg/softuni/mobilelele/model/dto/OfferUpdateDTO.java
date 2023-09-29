@@ -21,7 +21,7 @@ public class OfferUpdateDTO {
 
     private ModelEntity model;
 
-    @NotNull(message = "Price cannot be null.")
+    @NotNull(message = "Price cannot be null or empty.")
     @Positive(message = "Price must be positive number.")
     private BigDecimal price;
 
@@ -31,12 +31,12 @@ public class OfferUpdateDTO {
     @NotNull
     private TransmissionEnum transmission;
 
-    @NotNull
+    @NotNull(message = "Year cannot be null or empty.")
     @Min(1900)
     @Max(2024)
     private Integer year;
 
-    @NotNull
+    @NotNull(message = "Mileage cannot be empty.")
     @Min(value = 0, message = "Mileage must be positive number.")
     private Double mileage;
 

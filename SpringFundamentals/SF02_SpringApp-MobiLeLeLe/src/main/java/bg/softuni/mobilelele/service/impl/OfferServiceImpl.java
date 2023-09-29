@@ -1,6 +1,7 @@
 package bg.softuni.mobilelele.service.impl;
 
 import bg.softuni.mobilelele.model.dto.AddOfferDTO;
+import bg.softuni.mobilelele.model.dto.OfferDetailsDTO;
 import bg.softuni.mobilelele.model.dto.OfferUpdateDTO;
 import bg.softuni.mobilelele.model.entity.ModelEntity;
 import bg.softuni.mobilelele.model.entity.OfferEntity;
@@ -11,8 +12,6 @@ import bg.softuni.mobilelele.service.CarModelService;
 import bg.softuni.mobilelele.service.OfferService;
 import bg.softuni.mobilelele.service.UserService;
 import bg.softuni.mobilelele.user.CurrentUser;
-import jakarta.transaction.Transactional;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -28,7 +27,9 @@ public class OfferServiceImpl implements OfferService {
     private final CurrentUser currentUser;
     private final OfferMapper offerMapper;
 
-    public OfferServiceImpl(OfferRepository offerRepository, UserService userService, CarModelService modelService, CurrentUser currentUser, OfferMapper offerMapper) {
+    public OfferServiceImpl(OfferRepository offerRepository, UserService userService,
+                            CarModelService modelService, CurrentUser currentUser,
+                            OfferMapper offerMapper) {
 
         this.offerRepository = offerRepository;
         this.userService = userService;
@@ -44,11 +45,11 @@ public class OfferServiceImpl implements OfferService {
     }
 
     @Override
-    public OfferEntity findOfferById(Long id) {
+    public OfferDetailsDTO findOfferById(Long id) {
 
-        Optional<OfferEntity> byId = this.offerRepository.findById(id);
+        final Optional<OfferEntity> byId = this.offerRepository.findById(id);
 
-        return byId.get();
+        return this.offerMapper.offerEntityToOfferDetailsDto(byId.get());
     }
 
     @Override
@@ -108,7 +109,7 @@ public class OfferServiceImpl implements OfferService {
 
         this.offerRepository.deleteById(id);
 
-        Optional<OfferEntity> deletedOffer = this.offerRepository.findById(id);
+        final Optional<OfferEntity> deletedOffer = this.offerRepository.findById(id);
 
         return deletedOffer.isEmpty();
     }

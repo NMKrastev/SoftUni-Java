@@ -32,7 +32,10 @@
                     <div class="card-text">• Offer modified: <span
                             th:text="${#temporals.format(offer.getModified(), 'dd-MM-yyyy HH:mm')}"></span></div>
                     <div class="card-text">• Seller: <span
-                            th:text="${offer.getSeller().getFirstName() + ' ' + offer.getSeller().getLastName()}"></span>
+                            th:text="${offer.getSeller().fullName}"></span>
+                    </div>
+                    <div class="card-text">• Description: <span
+                            th:text="${offer.getDescription()}"></span>
                     </div>
                 </li>
             </ul>

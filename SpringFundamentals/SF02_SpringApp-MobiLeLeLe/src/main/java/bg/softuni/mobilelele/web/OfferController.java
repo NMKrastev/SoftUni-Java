@@ -2,6 +2,7 @@ package bg.softuni.mobilelele.web;
 
 import bg.softuni.mobilelele.model.dto.AddOfferDTO;
 import bg.softuni.mobilelele.model.dto.BrandDTO;
+import bg.softuni.mobilelele.model.dto.OfferDetailsDTO;
 import bg.softuni.mobilelele.model.dto.OfferUpdateDTO;
 import bg.softuni.mobilelele.model.entity.OfferEntity;
 import bg.softuni.mobilelele.service.CarBrandService;
@@ -81,23 +82,15 @@ public class OfferController {
         return modelAndView;
     }
 
-    @GetMapping("/details")
-    public ModelAndView details(ModelAndView modelAndView) {
-
-        modelAndView.setViewName("details");
-
-        return modelAndView;
-    }
-
     //TODO: Create Offer details DTO to show all needed data.
     //TODO: Convert the date in the correct format!
     @GetMapping("/details/{id}")
     public ModelAndView details(ModelAndView modelAndView,
                                 @PathVariable Long id) {
 
-        OfferEntity offer = this.offerService.findOfferById(id);
+        final OfferDetailsDTO offerDetails = this.offerService.findOfferById(id);
 
-        modelAndView.addObject("offer", offer);
+        modelAndView.addObject("offer", offerDetails);
 
         modelAndView.setViewName("details");
 
