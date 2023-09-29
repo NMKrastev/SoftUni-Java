@@ -18,9 +18,9 @@ public class AllRoutesDTO {
 
     private String description;
 
-    private Set<PictureUrlDTO> picturesUrl;
+    private Set<PictureUrlDTO> pictures;
 
     public AllRoutesDTO() {
-        this.picturesUrl = new LinkedHashSet<>();
+        this.pictures = new LinkedHashSet<>();
     }
 }

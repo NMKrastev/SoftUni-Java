@@ -1,14 +1,12 @@
 package bg.softuni.pathfinder.service.imp;
 
 import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO;
-import bg.softuni.pathfinder.model.dto.routeDTO.MostCommentedDTO;
-import bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO;
-import bg.softuni.pathfinder.model.dto.routeDTO.RouteDetailDTO;
-import bg.softuni.pathfinder.model.dto.routeDTO.RouteRegisterDTO;
+import bg.softuni.pathfinder.model.dto.routeDTO.*;
 import bg.softuni.pathfinder.model.entity.Category;
 import bg.softuni.pathfinder.model.entity.Picture;
 import bg.softuni.pathfinder.model.entity.Route;
 import bg.softuni.pathfinder.model.enums.CategoryEnumType;
+import bg.softuni.pathfinder.model.mapper.RouteMapper;
 import bg.softuni.pathfinder.repository.RouteRepository;
 import bg.softuni.pathfinder.service.CategoryService;
 import bg.softuni.pathfinder.service.RouteService;
@@ -32,15 +30,17 @@ public class RouteServiceImpl implements RouteService {
     private final UserService userService;
     private final ModelMapper mapper;
     private final CurrentUser currentUser;
+    private final RouteMapper routeMapper;
 
     @Autowired
     public RouteServiceImpl(RouteRepository routeRepository, CategoryService categoryService,
-                            UserService userService, ModelMapper mapper, CurrentUser currentUser) {
+                            UserService userService, ModelMapper mapper, CurrentUser currentUser, RouteMapper routeMapper) {
         this.routeRepository = routeRepository;
         this.categoryService = categoryService;
         this.userService = userService;
         this.mapper = mapper;
         this.currentUser = currentUser;
+        this.routeMapper = routeMapper;
     }
 
     @Override
@@ -60,9 +60,11 @@ public class RouteServiceImpl implements RouteService {
 
         final List<Route> allRoutes = this.routeRepository.findAll();
 
-        final List<AllRoutesDTO> allRoutesDTOS = getRoutesDetails(allRoutes);;
+        List<AllRoutesDTO> allRoutesMapperDTOS = this.routeMapper.routeToRouteDTO(allRoutes);
 
-        return allRoutesDTOS;
+        //final List<AllRoutesDTO> allRoutesDTOS = getRoutesDetails(allRoutes);
+
+        return allRoutesMapperDTOS;
     }
 
     @Override
@@ -74,12 +76,12 @@ public class RouteServiceImpl implements RouteService {
 
         final List<Route> routesByCategories = this.routeRepository.findRoutesByCategoriesIn(categories);
 
-        final List<AllRoutesDTO> routesByCategory = getRoutesDetails(routesByCategories);
+        final List<AllRoutesDTO> routesByCategory = this.routeMapper.routeToRouteDTO(routesByCategories);
 
         return routesByCategory;
     }
 
-    private List<AllRoutesDTO> getRoutesDetails(List<Route> routes) {
+/*    private List<AllRoutesDTO> getRoutesDetails(List<Route> routes) {
 
         final List<AllRoutesDTO> allRoutesDTOS = new ArrayList<>();
 
@@ -102,7 +104,7 @@ public class RouteServiceImpl implements RouteService {
         }
 
         return allRoutesDTOS;
-    }
+    }*/
 
     @Override
     public boolean addNewRoute(RouteRegisterDTO routeDTO) {

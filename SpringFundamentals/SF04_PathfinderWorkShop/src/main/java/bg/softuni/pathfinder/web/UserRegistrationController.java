@@ -46,6 +46,7 @@ public class UserRegistrationController {
         if (bindingResult.hasErrors()) {
 
             redirectAttributes.addFlashAttribute("userRegistrationDTO", userRegistrationDTO);
+
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.userRegistrationDTO", bindingResult);
 
             modelAndView.setViewName("redirect:/user/register");

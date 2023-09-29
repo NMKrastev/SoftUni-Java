@@ -7,6 +7,7 @@ import bg.softuni.pathfinder.model.entity.Role;
 import bg.softuni.pathfinder.model.entity.User;
 import bg.softuni.pathfinder.model.enums.LevelEnumType;
 import bg.softuni.pathfinder.model.enums.RoleEnumType;
+import bg.softuni.pathfinder.model.mapper.UserMapper;
 import bg.softuni.pathfinder.repository.UserRepository;
 import bg.softuni.pathfinder.service.RoleService;
 import bg.softuni.pathfinder.service.UserService;
@@ -27,17 +28,19 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final RoleService roleService;
     private final CurrentUser currentUser;
+    private final UserMapper userMapper;
     private final ModelMapper mapper;
-    private final PasswordEncoder encoder;
+    private final PasswordEncoder passwordEncoder;
 
     public UserServiceImpl(UserRepository userRepository, RoleService roleService,
-                           CurrentUser currentUser, ModelMapper mapper,
-                           PasswordEncoder encoder) {
+                           CurrentUser currentUser, UserMapper userMapper,
+                           ModelMapper mapper, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.roleService = roleService;
         this.currentUser = currentUser;
+        this.userMapper = userMapper;
         this.mapper = mapper;
-        this.encoder = encoder;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -56,7 +59,7 @@ public class UserServiceImpl implements UserService {
 
         final String encodedPassword = optionalUser.get().getPassword();
 
-        final boolean passMatches = this.encoder.matches(rawPassword, encodedPassword);
+        final boolean passMatches = this.passwordEncoder.matches(rawPassword, encodedPassword);
 
         if (passMatches) {
 
@@ -88,9 +91,12 @@ public class UserServiceImpl implements UserService {
             return false;
         }
 
-        final User newUser = mapEntity(userRegistrationDTO);
+        final User user = this.userMapper.userToUserDTO(userRegistrationDTO);
 
-        final User savedUser = this.userRepository.saveAndFlush(newUser);
+        user.setRoles(Set.of(this.roleService.getUserRole()));
+        user.setLevel(LevelEnumType.BEGINNER);
+
+        final User savedUser = this.userRepository.saveAndFlush(user);
 
         this.login(savedUser);
 
@@ -109,20 +115,6 @@ public class UserServiceImpl implements UserService {
     public User findUser(String username) {
 
         return this.userRepository.findByUsername(username).get();
-    }
-
-    private User mapEntity(UserRegistrationDTO userRegistrationDTO) {
-
-        return User
-                .builder()
-                .username(userRegistrationDTO.getUsername())
-                .fullName(userRegistrationDTO.getFullName())
-                .email(userRegistrationDTO.getEmail())
-                .age(userRegistrationDTO.getAge())
-                .password(this.encoder.encode(userRegistrationDTO.getPassword()))
-                .level(LevelEnumType.BEGINNER)
-                .roles(Set.of(this.roleService.getUserRole()))
-                .build();
     }
 
     private void login(User user) {

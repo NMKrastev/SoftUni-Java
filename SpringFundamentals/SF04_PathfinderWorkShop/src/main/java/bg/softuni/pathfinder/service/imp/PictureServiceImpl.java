@@ -5,6 +5,7 @@ import bg.softuni.pathfinder.model.dto.pictureDTO.PictureUrlDTO;
 import bg.softuni.pathfinder.model.entity.Picture;
 import bg.softuni.pathfinder.model.entity.Route;
 import bg.softuni.pathfinder.model.entity.User;
+import bg.softuni.pathfinder.model.mapper.PictureMapper;
 import bg.softuni.pathfinder.repository.PictureRepository;
 import bg.softuni.pathfinder.service.PictureService;
 import bg.softuni.pathfinder.service.RouteService;
@@ -27,21 +28,24 @@ public class PictureServiceImpl implements PictureService {
     private final RouteService routeService;
     private final ModelMapper mapper;
     private final CurrentUser currentUser;
+    private final PictureMapper pictureMapper;
 
     public PictureServiceImpl(PictureRepository pictureRepository, UserService userService,
                               RouteService routeService, ModelMapper mapper,
-                              CurrentUser currentUser) {
+                              CurrentUser currentUser, PictureMapper pictureMapper) {
         this.pictureRepository = pictureRepository;
         this.userService = userService;
         this.routeService = routeService;
         this.mapper = mapper;
         this.currentUser = currentUser;
+        this.pictureMapper = pictureMapper;
     }
 
     @Override
     public List<PictureUrlDTO> findAllPictures() {
 
-        return this.pictureRepository.findAllPictures();
+        return this.pictureRepository
+                .findAllPictures();
     }
 
     @Override

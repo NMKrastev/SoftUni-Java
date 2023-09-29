@@ -1,9 +1,6 @@
 package bg.softuni.pathfinder.service;
 
-import bg.softuni.pathfinder.model.dto.routeDTO.MostCommentedDTO;
-import bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO;
-import bg.softuni.pathfinder.model.dto.routeDTO.RouteDetailDTO;
-import bg.softuni.pathfinder.model.dto.routeDTO.RouteRegisterDTO;
+import bg.softuni.pathfinder.model.dto.routeDTO.*;
 import bg.softuni.pathfinder.model.entity.Route;
 
 import java.util.List;
