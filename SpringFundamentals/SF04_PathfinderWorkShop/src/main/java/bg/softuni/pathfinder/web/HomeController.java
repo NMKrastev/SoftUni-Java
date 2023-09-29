@@ -12,13 +12,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
+import static bg.softuni.pathfinder.constants.Categories.*;
+
 @Controller
 public class HomeController {
-
-    private static final String CATEGORY_PEDESTRIAN = "PEDESTRIAN";
-    private static final String CATEGORY_BICYCLE = "BICYCLE";
-    private static final String CATEGORY_MOTORCYCLE = "MOTORCYCLE";
-    private static final String CATEGORY_CAR = "CAR";
 
     private final RouteService routeService;
     private final PictureService pictureService;

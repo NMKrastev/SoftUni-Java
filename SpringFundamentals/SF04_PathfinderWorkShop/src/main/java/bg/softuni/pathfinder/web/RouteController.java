@@ -3,7 +3,6 @@ package bg.softuni.pathfinder.web;
 import bg.softuni.pathfinder.model.dto.routeDTO.AllRoutesDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.RouteDetailDTO;
 import bg.softuni.pathfinder.model.dto.routeDTO.RouteRegisterDTO;
-import bg.softuni.pathfinder.service.PictureService;
 import bg.softuni.pathfinder.service.RouteService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -20,12 +19,10 @@ import java.util.List;
 public class RouteController {
 
     private final RouteService routeService;
-    private final PictureService pictureService;
 
-    public RouteController(RouteService routeService, PictureService pictureService) {
+    public RouteController(RouteService routeService) {
 
         this.routeService = routeService;
-        this.pictureService = pictureService;
     }
 
     @ModelAttribute("routeDTO")
