@@ -4,6 +4,8 @@ import bg.softuni.mobilelele.model.dto.BrandDTO;
 import bg.softuni.mobilelele.model.dto.ModelDTO;
 import bg.softuni.mobilelele.model.entity.BrandEntity;
 import bg.softuni.mobilelele.model.entity.ModelEntity;
+import bg.softuni.mobilelele.model.mapper.BrandMapper;
+import bg.softuni.mobilelele.model.mapper.ModelMapper;
 import bg.softuni.mobilelele.repository.CarBrandRepository;
 import bg.softuni.mobilelele.service.CarBrandService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +21,16 @@ import java.util.stream.Collectors;
 public class CarBrandServiceImpl implements CarBrandService {
 
     private final CarBrandRepository carBrandRepository;
-
-    @Autowired
+    private final BrandMapper brandMapper;
+    private final ModelMapper modelMapper;
     private final DataSource dataSource;
 
-    public CarBrandServiceImpl(CarBrandRepository carBrandRepository, DataSource dataSource, DataSource dataSource1) {
+    public CarBrandServiceImpl(CarBrandRepository carBrandRepository, BrandMapper brandMapper,
+                               ModelMapper modelMapper, DataSource dataSource) {
         this.carBrandRepository = carBrandRepository;
-        this.dataSource = dataSource1;
+        this.brandMapper = brandMapper;
+        this.modelMapper = modelMapper;
+        this.dataSource = dataSource;
     }
 
     @Override
@@ -54,24 +59,26 @@ public class CarBrandServiceImpl implements CarBrandService {
 
     private BrandDTO mapBrand(BrandEntity brandEntity) {
 
-        List<ModelDTO> modelsDTO = brandEntity
+        /*final List<ModelDTO> modelsDTO = brandEntity
                 .getModels()
                 .stream()
                 .map(this::mapModel)
                 .collect(Collectors.toList());
 
 
-        BrandDTO result = new BrandDTO().builder()
+        final BrandDTO result = new BrandDTO().builder()
                 .models(modelsDTO)
                 .name(brandEntity.getName())
-                .build();
+                .build();*/
 
-        return result;
+        return this.brandMapper.brandEntitytoBrandDto(brandEntity);
     }
 
-    private ModelDTO mapModel(ModelEntity modelEntity) {
+/*    private ModelDTO mapModel(ModelEntity modelEntity) {
 
-        return new ModelDTO()
+        return this.modelMapper.modelEntityToModelDto(modelEntity);
+
+        *//*return new ModelDTO()
                 .builder()
                 .id(modelEntity.getId())
                 .name(modelEntity.getName())
@@ -79,6 +86,6 @@ public class CarBrandServiceImpl implements CarBrandService {
                 .imageUrl(modelEntity.getImageUrl())
                 .startYear(modelEntity.getStartYear())
                 .endYear(modelEntity.getEndYear())
-                .build();
-    }
+                .build();*//*
+    }*/
 }

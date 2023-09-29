@@ -15,14 +15,4 @@ public class BrandDTO {
     private String name;
 
     private List<ModelDTO> models = new ArrayList<>();
-
-    public BrandDTO addModel(ModelDTO modelDTO) {
-        if (this.models == null) {
-            this.models = new ArrayList<>();
-        }
-
-        this.models.add(modelDTO);
-
-        return this;
-    }
 }
