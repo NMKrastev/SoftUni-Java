@@ -4,7 +4,6 @@ import bg.softuni.mobilelele.model.dto.AddOfferDTO;
 import bg.softuni.mobilelele.model.dto.BrandDTO;
 import bg.softuni.mobilelele.model.dto.OfferDetailsDTO;
 import bg.softuni.mobilelele.model.dto.OfferUpdateDTO;
-import bg.softuni.mobilelele.model.entity.OfferEntity;
 import bg.softuni.mobilelele.service.CarBrandService;
 import bg.softuni.mobilelele.service.OfferService;
 import jakarta.validation.Valid;
@@ -33,7 +32,7 @@ public class OfferController {
     @GetMapping("/all")
     public ModelAndView showOffers(ModelAndView modelAndView) {
 
-        final List<OfferEntity> allOffers = this.offerService.findAllOffers();
+        final List<OfferDetailsDTO> allOffers = this.offerService.findAllOffers();
 
         modelAndView.addObject("offers", allOffers);
 

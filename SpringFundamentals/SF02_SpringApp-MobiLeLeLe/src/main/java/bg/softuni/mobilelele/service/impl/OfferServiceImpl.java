@@ -39,10 +39,13 @@ public class OfferServiceImpl implements OfferService {
     }
 
     @Override
-    public List<OfferEntity> findAllOffers() {
+    public List<OfferDetailsDTO> findAllOffers() {
 
         return this.offerRepository
-                .findAll();
+                .findAll()
+                .stream()
+                .map(this.offerMapper::offerEntityToOfferDetailsDto)
+                .toList();
     }
 
     @Override
