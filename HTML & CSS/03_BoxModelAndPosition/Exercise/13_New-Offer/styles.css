@@ -1,0 +1,11 @@
+body {
+    margin: 15em;
+}
+
+.inner-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-45%, 65%);
+}

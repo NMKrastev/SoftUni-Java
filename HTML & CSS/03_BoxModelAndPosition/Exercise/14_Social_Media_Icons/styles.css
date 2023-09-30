@@ -1,0 +1,34 @@
+.main-nav li {
+    display: inline-block;
+}
+
+.main-nav a {
+    border: 1px solid #CCC;
+    border-radius: 50%;
+    padding: 0.6em;
+    background-color: #CCC;
+}
+
+.main-nav i {
+    color: #000;
+}
+
+.main-nav .fa-facebook:hover {
+    color: #4267B2;
+}
+
+.main-nav .fa-twitter:hover {
+    color: #00c7ff;
+}
+
+.main-nav .fa-google-plus:hover {
+    color: #DB4437;
+}
+
+.main-nav .fa-linkedin:hover {
+    color: #0072b1 ;
+}
+
+.main-nav .fa-instagram:hover {
+    color: #405DE6;
+}

@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.viewport:nth-child(1) {
+  background-image: linear-gradient(
+    to right,
+    rgb(48, 38, 133),
+    rgb(22, 204, 134)
+  );
+}
+
+.viewport:nth-child(2) {
+  background-image: linear-gradient(to right, rgb(218, 45, 103), darkorange);
+}
+
+.card {
+  text-align: center;
+  padding: 5%;
+}
+
+.card img {
+  width: 50%;
+  height: fit-content;
+}
+
+.thumbnail {
+  position: relative;
+}
+
+.icon {
+  font-size: 1em;
+  position: absolute;
+  color: white;
+  z-index: 1;
+  bottom: 1%;
+  right: 26%;
+  transform: translate(-50%, -50%);
+}
+.thumbnail:hover img {
+  opacity: 1;
+}
+.thumbnail:hover .icon {
+  display: block;
+}
+
+.fa-link, .fa-star {
+color: white;
+}

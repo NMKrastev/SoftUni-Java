@@ -1,0 +1,132 @@
+.site {
+    max-width: 85%;
+    margin: 1em auto;
+}
+
+.site-header {
+    padding: 2em 0;
+    position: relative;
+    border-bottom: 3px solid #000000 ;
+    margin: 2em 0;
+}
+
+.site-header p {
+    padding-left: 0.1em;
+}
+
+.site-title {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    line-height: 1;
+    overflow: visible;
+}
+
+.site-title a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 1;
+    transform: translateY(50%);
+    max-width: 100%;
+}
+
+.main-nav {
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    transform: translateY(-60%);
+}
+
+.site-main {
+    position: relative;
+    float: left;
+    max-width: 75%;
+    padding-bottom: 2em;
+}
+
+.site-main article {
+    margin-right: 2em;
+}
+
+article img {
+    outline: 3px solid #000;
+    border: 6px solid #fff;
+    box-shadow: 0 0 2em 5px rgb(000, 000, 000, 0.5);
+}
+
+.float-right-img img {
+    float: right;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5em 7em 0em 3em;
+}
+
+.float-left-img img {
+    float: left;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.5em;
+    margin-right: 2em;
+    /* border: 1px solid #000; */
+}
+
+blockquote {
+    display: block;
+    float: right;
+    max-width: 45%;
+    border-left: 4px solid #CCC;
+    margin-bottom: 1.5em;
+    margin-left: 1em;
+    padding: 1.5em;
+    font-style: italic;
+    color: #666;
+  }
+  
+  blockquote p:first-child:before,
+  blockquote:has(.author) p:nth-last-child(2):not(.author):after,
+  blockquote p:nth-last-child(1):not(.author):after {
+    display: inline-block;
+    content: '"';
+  }
+  
+  blockquote p:last-child {
+    padding-bottom: 0;
+  }
+  
+  blockquote p.author {
+    text-align: right;
+    color: #666;
+  }
+  
+  blockquote p.author::before {
+    display: inline-block;
+    content: "— ";
+    padding-right: 0.5em;
+  }
+
+.site-aside {
+    display: inline;
+    position: absolute;
+    float: right;
+    margin-right: 2em auto;
+    margin-left: 3.5em;
+}
+
+.aside-nav > ul > li {
+    margin-left: 0.5em;
+    list-style-type: square;
+}
+
+.aside-nav > ul > li > a {
+    text-decoration: none;
+}
+
+.site-footer {
+    border-top: 2px solid #000;
+    width: 100%;
+    padding-top: 0.5em;
+    clear: both;
+}

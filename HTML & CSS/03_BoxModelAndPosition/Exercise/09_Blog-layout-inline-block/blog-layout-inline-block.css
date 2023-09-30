@@ -1,0 +1,38 @@
+body {
+    font: Helvetica, sans-serif;
+    background-color: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+}
+
+.site-header, article {
+    width: 60%;
+    float: left;
+    display: inline;
+}
+
+.site {
+    margin: 2em;
+    line-height: 1.2;
+}
+
+p, footer, span {
+    font-family: "Arial", sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 75%;
+    padding: 0.1em;
+}
+
+aside {
+    padding: auto;
+    width: 40%;
+    float: right;
+    display: inline;
+    position: absolute;
+}
+
+.site-footer {
+    margin-top: 1em;
+}

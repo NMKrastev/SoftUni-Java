@@ -1,0 +1,14 @@
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body, input, textarea {
+    font: inherit;
+    background: rgb(238, 238, 238);
+}
+
+p, ul , ol {
+    padding: 1.2em;
+}

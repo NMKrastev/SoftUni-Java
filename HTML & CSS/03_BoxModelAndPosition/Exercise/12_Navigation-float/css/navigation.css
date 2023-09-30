@@ -1,0 +1,30 @@
+.main-nav {
+    max-width: 100%;
+}
+
+.main-nav ul {
+    padding: 0;
+}
+
+.main-nav li {
+    list-style: none outside;
+    position: relative;
+}
+
+.main-nav > ul > li {
+    display: inline-block;
+    margin: 0 0.1em;
+}
+
+.main-nav a {
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: rgb(0, 102, 0)
+}
+
+
+
+
+
+
