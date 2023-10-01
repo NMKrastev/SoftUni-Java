@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="~{fragments/head}"></head>
+
+<body class="body-main">
+
+<header th:replace="~{fragments/nav}"></header>
+
+<main role="main">
+    <div class="jumbotron" th:if="${@currentUser.isAnonymous()}">
+        <div class="container text-light ">
+            <h1 class="display-3">
+                <strong class="pl-3 font-weight-bold">Login</strong></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="container bg-blur rounded p-5 mt-5 w-75 ">
+
+                    <form  th:action="@{/users/login}"
+                           th:method="POST"
+                           th:object="${userLoginDTO}"
+                          class="text-center text-light">
+                        <h3 class="mt-5 text-center">
+                            <strong class="rounded  pl-3 text-danger">Enter valid
+                                username and
+                                password</strong>
+                        </h3>
+                        <div class="form-group row">
+                            <label for="username" class="col-sm-2 col-form-label">Username</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control"
+                                       id="username"
+                                       name="username"
+                                       th:errorclass="is-invalid"
+                                       aria-describedby="usernameHelpInline"
+                                       placeholder="Username">
+                                <small id="usernameHelpInline"
+                                       class="invalid-feedback bg-danger text-light rounded">
+                                     <span th:if="${#fields.hasErrors()}"
+                                           th:errorclass="error"
+                                           th:errors="*{username}"></span>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="password" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password"
+                                       class="form-control"
+                                       id="password"
+                                       name="password"
+                                       th:errorclass="is-invalid"
+                                       aria-describedby="passwordHelpInline"
+                                       placeholder="Password">
+                                <small id="passwordHelpInline"
+                                       class="invalid-feedback bg-danger text-light rounded">
+                                    <span th:if="${#fields.hasErrors()}"
+                                          th:errorclass="error"
+                                          th:errors="*{password}"></span>
+                                </small>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-danger w-50">Login</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="rounded" width="100%" src="/images/login.jpg" alt="Battle ship image">
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer th:replace="~{fragments/footer}"></footer>
+
+</body>
+</html>

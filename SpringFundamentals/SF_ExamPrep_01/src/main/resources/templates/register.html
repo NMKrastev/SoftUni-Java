@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="~{fragments/head}"></head>
+
+<body class="body-main">
+
+<header th:replace="~{fragments/nav}"></header>
+
+<main role="main">
+    <div class="jumbotron" th:if="${@currentUser.isAnonymous()}">
+        <div class="container text-light ">
+            <h1 class="display-3">
+                <div class=" pl-3 font-weight-bold text-center">
+                    Register
+                </div>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6 ">
+                <img class="rounded" width="100%" src="/images/register.jpg" alt="Battle ship image">
+            </div>
+
+            <div class="col-md-6">
+                <div class="container bg-blur rounded p-5 mt-5 w-75">
+                    <form th:action="@{/users/register}"
+                          th:method="POST"
+                          th:object="${userRegistrationDTO}"
+                          class=" text-center text-light">
+                        <div class="form-group row">
+                            <label for="username" class="col-sm-2 col-form-label">Username</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control"
+                                       id="username"
+                                       name="username"
+                                       th:field="*{username}"
+                                       th:errorclass="is-invalid"
+                                       aria-describedby="usernameHelpInline"
+                                       placeholder="Username">
+                                <small id="usernameHelpInline"
+                                       class="invalid-feedback bg-danger text-light rounded">
+                                    <span th:if="${#fields.hasErrors()}"
+                                          th:errorclass="error"
+                                          th:errors="*{username}"></span>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="fullName" class="col-sm-2 col-form-label">Full name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control"
+                                       id="fullName"
+                                       name="fullName"
+                                       th:field="*{fullName}"
+                                       th:errorclass="is-invalid"
+                                       aria-describedby="fullNameHelpInline"
+                                       placeholder="Full name">
+                                <small id="fullNameHelpInline"
+                                       class="invalid-feedback bg-danger text-light rounded">
+                                    <span th:if="${#fields.hasErrors()}"
+                                          th:errorclass="error"
+                                          th:errors="*{fullName}"></span>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text"
+                                       class="form-control"
+                                       id="email"
+                                       name="email"
+                                       th:field="*{email}"
+                                       th:errorclass="is-invalid"
+                                       aria-describedby="emailHelpInline"
+                                       placeholder="email@example.com">
+                                <small id="emailHelpInline"
+                                       class="invalid-feedback bg-danger text-light rounded">
+                                    <span th:if="${#fields.hasErrors()}"
+                                          th:errorclass="error"
+                                          th:errors="*{email}"></span>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="password" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password"
+                                       class="form-control"
+                                       id="password"
+                                       name="password"
+                                       th:field="*{password}"
+                                       th:errorclass="is-invalid"
+                                       aria-describedby="passwordHelpInline"
+                                       placeholder="Password">
+                                <small id="passwordHelpInline"
+                                       class="invalid-feedback bg-danger text-light rounded">
+                                    <span th:if="${#fields.hasErrors()}"
+                                          th:errorclass="error"
+                                          th:errors="*{password}"></span>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="confirmPassword" class="col-sm-2 col-form-label">Confirm Password</label>
+                            <div class="col-sm-10">
+                                <input type="password"
+                                       class="form-control"
+                                       id="confirmPassword"
+                                       name="confirmPassword"
+                                       th:field="*{confirmPassword}"
+                                       th:errorclass="is-invalid"
+                                       aria-describedby="confirmPasswordHelpInline"
+                                       placeholder="Confirm Password">
+                                <small id="confirmPasswordHelpInline"
+                                       class="invalid-feedback bg-danger text-light rounded">
+                                    <span th:if="${#fields.hasErrors()}"
+                                          th:errorclass="error"
+                                          th:errors="*{confirmPassword}"></span>
+                                </small>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-50">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer th:replace="~{fragments/footer}"></footer>
+
+</body>
+</html>

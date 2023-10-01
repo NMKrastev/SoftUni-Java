@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top rounded">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <div th:if="${@currentUser.isAnonymous()}">
+                        <a class="nav-link"  th:href="@{/}">Home</a>
+                    </div>
+                    <div th:if="${@currentUser.isLoggedIn()}">
+                        <a class="nav-link"  th:href="@{/home}">Home</a>
+                    </div>
+                </li>
+                <li class="nav-item" th:if="${!@currentUser.isLoggedIn()}">
+                    <a class="nav-link" th:href="@{/users/login}">Login</a>
+                </li>
+                <li class="nav-item" th:if="${!@currentUser.isLoggedIn()}">
+                    <a class="nav-link" th:href="@{/users/register}">Register</a>
+                </li>
+                <li class="nav-item" th:if="${!@currentUser.isAnonymous()}">
+                    <a class="nav-link" th:href="@{/ships/add}">Add Ship</a>
+                </li>
+                <li class="nav-item" th:if="${!@currentUser.isAnonymous()}">
+                    <a class="nav-link" th:href="@{/users/logout}">Logout</a>
+                </li>
+            </ul>
+            <img width="50px" src="/images/ufo.png" alt="Ufo image">
+        </div>
+    </nav>
+</header>
+
+</body>
+</html>
