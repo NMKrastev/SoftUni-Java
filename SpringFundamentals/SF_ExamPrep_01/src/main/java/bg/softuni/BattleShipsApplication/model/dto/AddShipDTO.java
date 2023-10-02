@@ -1,14 +1,11 @@
 package bg.softuni.BattleShipsApplication.model.dto;
 
-import bg.softuni.BattleShipsApplication.model.entity.Category;
 import bg.softuni.BattleShipsApplication.model.entity.enums.CategoryEnum;
 import bg.softuni.BattleShipsApplication.validation.FutureDate;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.time.LocalDate;
 
 @Getter
 @Setter

@@ -4,7 +4,6 @@ import bg.softuni.BattleShipsApplication.model.dto.AddShipDTO;
 import bg.softuni.BattleShipsApplication.model.dto.CategoryDTO;
 import bg.softuni.BattleShipsApplication.serevice.CategoryService;
 import bg.softuni.BattleShipsApplication.serevice.ShipService;
-import bg.softuni.BattleShipsApplication.user.CurrentUser;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,16 +20,16 @@ public class ShipController {
 
     private final ShipService shipService;
     private final CategoryService categoryService;
-    private final CurrentUser currentUser;
 
-    public ShipController(ShipService shipService, CategoryService categoryService, CurrentUser currentUser) {
+    public ShipController(ShipService shipService, CategoryService categoryService) {
+
         this.shipService = shipService;
         this.categoryService = categoryService;
-        this.currentUser = currentUser;
     }
 
     @ModelAttribute("addShipDTO")
     public void initShipAddModel(Model model) {
+
         model.addAttribute("addShipDTO", new AddShipDTO());
     }
 
@@ -66,8 +65,11 @@ public class ShipController {
         boolean isNewShipAdded = this.shipService.addNewShip(addShipDTO);
 
         if (isNewShipAdded) {
+
             modelAndView.setViewName("redirect:/home");
+
         } else {
+
             modelAndView.setViewName("ship-add");
         }
 

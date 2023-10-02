@@ -14,6 +14,7 @@ public class FieldMatchValidator implements ConstraintValidator<FieldMatch, Obje
 
     @Override
     public void initialize(FieldMatch constraintAnnotation) {
+
         this.first = constraintAnnotation.first();
         this.second = constraintAnnotation.second();
         this.message = constraintAnnotation.message();

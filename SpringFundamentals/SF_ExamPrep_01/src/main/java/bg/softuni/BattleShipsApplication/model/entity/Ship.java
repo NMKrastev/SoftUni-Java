@@ -43,6 +43,5 @@ public class Ship extends BaseEntity {
     public String toString() {
 
         return String.format("| %s | %d | %d ", this.name, this.health, this.power);
-
     }
 }

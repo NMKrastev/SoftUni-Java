@@ -20,11 +20,13 @@ public class UserLoginController {
     private final UserService userService;
 
     public UserLoginController(UserService userService) {
+
         this.userService = userService;
     }
 
     @ModelAttribute("userLoginDTO")
     public void initUserLoginModel(Model model) {
+
         model.addAttribute("userLoginDTO", new UserLoginDTO());
 
     }
@@ -58,8 +60,11 @@ public class UserLoginController {
         final boolean isUserLoggedIn = this.userService.loginUser(userLoginDTO);
 
         if (isUserLoggedIn) {
+
             modelAndView.setViewName("redirect:/");
+
         } else {
+
             modelAndView.setViewName("login");
         }
 

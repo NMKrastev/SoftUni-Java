@@ -1,7 +1,6 @@
 package bg.softuni.BattleShipsApplication.repository;
 
 import bg.softuni.BattleShipsApplication.model.entity.User;
-import jakarta.validation.ConstraintValidatorContext;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

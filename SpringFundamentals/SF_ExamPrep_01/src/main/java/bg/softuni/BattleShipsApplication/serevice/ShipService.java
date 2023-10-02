@@ -1,6 +1,7 @@
 package bg.softuni.BattleShipsApplication.serevice;
 
 import bg.softuni.BattleShipsApplication.model.dto.AddShipDTO;
+import bg.softuni.BattleShipsApplication.model.dto.ShipDTO;
 import bg.softuni.BattleShipsApplication.model.entity.Category;
 import bg.softuni.BattleShipsApplication.model.entity.Ship;
 import bg.softuni.BattleShipsApplication.model.entity.User;
@@ -34,9 +35,11 @@ public class ShipService {
 
     public boolean addNewShip(AddShipDTO addShipDTO) {
 
-        final User user = this.userService.findByUsername(this.currentUser.getUsername());
+        final User user = this.userService
+                .findByUsername(this.currentUser.getUsername());
 
-        final Category category = this.categoryRepository.findByName(addShipDTO.getCategory());
+        final Category category = this.categoryRepository
+                .findByName(addShipDTO.getCategory());
 
         final Ship ship = this.shipMapper.shipAddDtoToShip(addShipDTO);
 
@@ -46,30 +49,47 @@ public class ShipService {
         return true;
     }
 
-    public List<Ship> findAllUserShips() {
+    public List<ShipDTO> findAllUserShips() {
 
-        List<Ship> ships = this.shipRepository.findAllByUserId(this.currentUser.getId());
-
-        return ships;
+        return this.shipRepository
+                .findAllByUserId(this.currentUser.getId())
+                .stream()
+                .map(this.shipMapper::shipToShipDto)
+                .toList();
     }
 
-    public List<Ship> findAllEnemiesShips() {
+    public List<ShipDTO> findAllEnemiesShips() {
 
-        User user = this.userService.findByUsername(this.currentUser.getUsername());
+        final User user = this.userService
+                .findByUsername(this.currentUser.getUsername());
 
-        return this.shipRepository.findByUserNot(user);
+        return this.shipRepository
+                .findByUserNot(user)
+                .stream()
+                .map(this.shipMapper::shipToShipDto)
+                .toList();
     }
 
-    public List<Ship> findAllShips() {
+    public List<ShipDTO> findAllShips() {
 
-        return this.shipRepository.findAllByOrderByNameDescHealthDescPowerDesc();
+        return this.shipRepository
+                .findAllByOrderByNameDescHealthDescPowerDesc()
+                .stream()
+                .map(this.shipMapper::shipToShipDto)
+                .toList();
     }
 
-    public void battleShips(Long attackerId, Long defenderId) {
+    public boolean battleShips(String attackerName, String defenderName) {
 
-        final Ship attacker = this.shipRepository.findById(attackerId).get();
+        final Ship attacker = this.shipRepository
+                .findByName(attackerName);
 
-        final Ship defender = this.shipRepository.findById(defenderId).get();
+        final Ship defender = this.shipRepository
+                .findByName(defenderName);
+
+        if (attacker == null || defender == null) {
+            return false;
+        }
 
         long attackerPower = attacker.getPower();
 
@@ -81,5 +101,7 @@ public class ShipService {
             defender.setHealth(defenderHealth - attackerPower);
             this.shipRepository.save(defender);
         }
+
+        return true;
     }
 }

@@ -14,4 +14,6 @@ public interface ShipRepository extends JpaRepository<Ship, Long> {
     List<Ship> findByUserNot(User user);
 
     List<Ship> findAllByOrderByNameDescHealthDescPowerDesc();
+
+    Ship findByName(String attackerName);
 }

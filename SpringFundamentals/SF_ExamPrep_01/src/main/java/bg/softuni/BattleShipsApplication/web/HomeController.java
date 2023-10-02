@@ -1,6 +1,6 @@
 package bg.softuni.BattleShipsApplication.web;
 
-import bg.softuni.BattleShipsApplication.model.entity.Ship;
+import bg.softuni.BattleShipsApplication.model.dto.ShipDTO;
 import bg.softuni.BattleShipsApplication.serevice.ShipService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +14,7 @@ public class HomeController {
     private final ShipService shipService;
 
     public HomeController(ShipService shipService) {
+
         this.shipService = shipService;
     }
 
@@ -28,11 +29,11 @@ public class HomeController {
     @GetMapping("/home")
     public ModelAndView home(ModelAndView modelAndView) {
 
-        final List<Ship> userShips = this.shipService.findAllUserShips();
+        final List<ShipDTO> userShips = this.shipService.findAllUserShips();
 
-        final List<Ship> enemiesShips = this.shipService.findAllEnemiesShips();
+        final List<ShipDTO> enemiesShips = this.shipService.findAllEnemiesShips();
 
-        final List<Ship> allShips = this.shipService.findAllShips();
+        final List<ShipDTO> allShips = this.shipService.findAllShips();
 
         modelAndView.addObject("ships", userShips);
 
@@ -47,14 +48,13 @@ public class HomeController {
 
     @GetMapping("home/data")
     public ModelAndView getShips(ModelAndView modelAndView,
-                                 @RequestParam("attackerShip") Long attackerId,
-                                 @RequestParam("defenderShip") Long defenderId) {
+                                 @RequestParam("attackerShip") String attackerName,
+                                 @RequestParam("defenderShip") String defenderName) {
 
-        this.shipService.battleShips(attackerId, defenderId);
+        this.shipService.battleShips(attackerName, defenderName);
 
         modelAndView.setViewName("redirect:/home");
 
         return modelAndView;
     }
-
 }

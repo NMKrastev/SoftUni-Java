@@ -20,11 +20,13 @@ public class UserRegisterController {
     private final UserService userService;
 
     public UserRegisterController(UserService userService) {
+
         this.userService = userService;
     }
 
     @ModelAttribute("userRegistrationDTO")
     public void initUserRegistrationModel(Model model) {
+
         model.addAttribute("userRegistrationDTO", new UserRegistrationDTO());
         //return new UserRegistrationDTO();
     }
@@ -57,12 +59,14 @@ public class UserRegisterController {
         final boolean isUserRegistered = this.userService.registerUser(userRegistrationDTO);
 
         if (isUserRegistered) {
+
             modelAndView.setViewName("redirect:/");
+
         } else {
+
             modelAndView.setViewName("register");
         }
 
         return modelAndView;
     }
-
 }

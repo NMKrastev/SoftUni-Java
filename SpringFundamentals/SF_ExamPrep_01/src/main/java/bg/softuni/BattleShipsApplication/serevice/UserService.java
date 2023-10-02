@@ -2,7 +2,6 @@ package bg.softuni.BattleShipsApplication.serevice;
 
 import bg.softuni.BattleShipsApplication.model.dto.UserLoginDTO;
 import bg.softuni.BattleShipsApplication.model.dto.UserRegistrationDTO;
-import bg.softuni.BattleShipsApplication.model.entity.Ship;
 import bg.softuni.BattleShipsApplication.model.entity.User;
 import bg.softuni.BattleShipsApplication.model.mapper.UserMapper;
 import bg.softuni.BattleShipsApplication.user.CurrentUser;
@@ -10,7 +9,6 @@ import bg.softuni.BattleShipsApplication.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -23,6 +21,7 @@ public class UserService {
 
     public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder,
                        CurrentUser currentUser, UserMapper userMapper) {
+
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.currentUser = currentUser;
@@ -33,11 +32,14 @@ public class UserService {
 
         if (this.userRepository.findByEmail(userRegistrationDTO.getEmail()).isPresent()
                 || !userRegistrationDTO.getPassword().equals(userRegistrationDTO.getConfirmPassword())) {
+
             this.logoutUser();
+
             return false;
         }
 
-        final User user = this.userMapper.userRegistrationDtoToUser(userRegistrationDTO);
+        final User user = this.userMapper
+                .userRegistrationDtoToUser(userRegistrationDTO);
 
         final User saveUser = this.userRepository.save(user);
 
@@ -48,7 +50,8 @@ public class UserService {
 
     public boolean loginUser(UserLoginDTO userLoginDTO) {
 
-        final Optional<User> optionalUser = this.userRepository.findByUsername(userLoginDTO.getUsername());
+        final Optional<User> optionalUser = this.userRepository
+                .findByUsername(userLoginDTO.getUsername());
 
         if (optionalUser.isEmpty()) {
             return false;
@@ -57,7 +60,8 @@ public class UserService {
         final String rawPassword = userLoginDTO.getPassword();
         final String encodedPassword = optionalUser.get().getPassword();
 
-        final boolean success = this.passwordEncoder.matches(rawPassword, encodedPassword);
+        final boolean success = this.passwordEncoder
+                .matches(rawPassword, encodedPassword);
 
         if (success) {
             this.login(optionalUser.get());

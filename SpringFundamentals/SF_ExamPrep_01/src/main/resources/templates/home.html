@@ -24,7 +24,7 @@
                                 name="attackerShip">
                             <option selected>Select one of the ships that are owned by the current user</option>
                             <th:block th:each="ship : ${ships}">
-                            <option th:value="${ship.getId()}"
+                            <option th:value="${ship.getName()}"
                                     th:text="${ship.getName()}">One</option>>
                             </th:block>
                         </select>
@@ -48,7 +48,7 @@
                                 name="defenderShip">
                             <option selected>Select one of the ships that are owned by other users</option>
                             <th:block th:each="enemyShip : ${enemiesShips}">
-                                <option th:value="${enemyShip.getId()}"
+                                <option th:value="${enemyShip.getName()}"
                                         th:text="${enemyShip.getName()}">One</option>>
                             </th:block>
                         </select>
