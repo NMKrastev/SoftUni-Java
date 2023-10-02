@@ -22,9 +22,8 @@
                            th:object="${userLoginDTO}"
                           class="text-center text-light">
                         <h3 class="mt-5 text-center">
-                            <strong class="rounded  pl-3 text-danger">Enter valid
-                                username and
-                                password</strong>
+                            <strong class="rounded  pl-3 text-danger"
+                            th:if="${badCredentials}">Enter valid username and password</strong>
                         </h3>
                         <div class="form-group row">
                             <label for="username" class="col-sm-2 col-form-label">Username</label>

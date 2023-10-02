@@ -51,7 +51,7 @@ public class ShipController {
                                 BindingResult bindingResult,
                                 RedirectAttributes redirectAttributes) {
 
-        if (bindingResult.hasErrors()) {
+        if (bindingResult.hasErrors() || !this.shipService.addNewShip(addShipDTO)) {
 
             redirectAttributes.addFlashAttribute("addShipDTO", addShipDTO);
 
@@ -62,16 +62,20 @@ public class ShipController {
             return modelAndView;
         }
 
-        boolean isNewShipAdded = this.shipService.addNewShip(addShipDTO);
+//        boolean isNewShipAdded = this.shipService.addNewShip(addShipDTO);
 
-        if (isNewShipAdded) {
+        /*if (isNewShipAdded) {*/
 
             modelAndView.setViewName("redirect:/home");
 
-        } else {
+       /* } else {
+
+            redirectAttributes.addFlashAttribute("addShipDTO", addShipDTO);
+
+            redirectAttributes.addFlashAttribute("shipNameTaken", true);
 
             modelAndView.setViewName("ship-add");
-        }
+        }*/
 
         return modelAndView;
     }

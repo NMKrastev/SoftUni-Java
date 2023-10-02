@@ -14,13 +14,12 @@ import lombok.Setter;
 public class UserLoginDTO {
 
     @NotNull
-    @NotBlank(message = "")
+    @NotBlank
     @Size(min = 3, max = 10, message = "Username must be between 3 and 10 characters!")
-    @UsernameLoginExist
     private String username;
 
     @NotNull
-    @NotBlank(message = "")
+    @NotBlank
     @Size(min = 3, message = "Password length must be more than 3 characters long!")
     private String password;
 }

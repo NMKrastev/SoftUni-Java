@@ -61,11 +61,15 @@ public class UserLoginController {
 
         if (isUserLoggedIn) {
 
-            modelAndView.setViewName("redirect:/");
+            modelAndView.setViewName("redirect:/home");
 
         } else {
 
-            modelAndView.setViewName("login");
+            redirectAttributes.addFlashAttribute("userLoginDTO", userLoginDTO);
+
+            redirectAttributes.addFlashAttribute("badCredentials", true);
+
+            modelAndView.setViewName("redirect:/users/login");
         }
 
         return modelAndView;

@@ -35,6 +35,10 @@ public class ShipService {
 
     public boolean addNewShip(AddShipDTO addShipDTO) {
 
+        if (this.shipRepository.findByName(addShipDTO.getName()) != null) {
+            return false;
+        }
+
         final User user = this.userService
                 .findByUsername(this.currentUser.getUsername());
 
