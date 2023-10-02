@@ -46,6 +46,8 @@ public class ShipService {
         ship.setUser(user);
         ship.setCategory(category);
 
+        this.shipRepository.save(ship);
+
         return true;
     }
 

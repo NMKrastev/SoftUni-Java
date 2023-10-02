@@ -22,11 +22,11 @@ public class Ship extends BaseEntity {
     @Size(min = 2, max = 10)
     private String name;
 
-    @Column
+    @Column(nullable = false)
     @Positive
     private long health;
 
-    @Column
+    @Column(nullable = false)
     @Positive
     private long power;
 
