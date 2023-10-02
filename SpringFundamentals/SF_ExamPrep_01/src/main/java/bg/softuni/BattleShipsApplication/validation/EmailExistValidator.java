@@ -4,19 +4,19 @@ import bg.softuni.BattleShipsApplication.repository.UserRepository;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-public class UsernameExistValidator implements ConstraintValidator<UsernameExist, String> {
+public class EmailExistValidator implements ConstraintValidator<EmailExist, String> {
 
     private final UserRepository userRepository;
 
-    public UsernameExistValidator(UserRepository userRepository) {
+    public EmailExistValidator(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
     @Override
-    public boolean isValid(String username, ConstraintValidatorContext context) {
+    public boolean isValid(String email, ConstraintValidatorContext context) {
 
         return this.userRepository
-                .findByUsername(username)
-                .isPresent();
+                .findByEmail(email)
+                .isEmpty();
     }
 }

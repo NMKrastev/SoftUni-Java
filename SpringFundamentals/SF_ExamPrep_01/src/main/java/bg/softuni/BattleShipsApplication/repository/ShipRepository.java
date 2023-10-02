@@ -11,7 +11,7 @@ import java.util.List;
 public interface ShipRepository extends JpaRepository<Ship, Long> {
     List<Ship> findAllByUserId(Long id);
 
-    List<Ship> findByUserNot(User user);
+    List<Ship> findByUserNotOrderByName(User user);
 
     List<Ship> findAllByOrderByNameDescHealthDescPowerDesc();
 

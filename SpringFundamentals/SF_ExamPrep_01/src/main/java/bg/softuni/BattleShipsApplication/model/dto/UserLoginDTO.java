@@ -1,6 +1,6 @@
 package bg.softuni.BattleShipsApplication.model.dto;
 
-import bg.softuni.BattleShipsApplication.validation.UsernameExist;
+import bg.softuni.BattleShipsApplication.validation.UsernameLoginExist;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -16,7 +16,7 @@ public class UserLoginDTO {
     @NotNull
     @NotBlank(message = "")
     @Size(min = 3, max = 10, message = "Username must be between 3 and 10 characters!")
-    @UsernameExist
+    @UsernameLoginExist
     private String username;
 
     @NotNull

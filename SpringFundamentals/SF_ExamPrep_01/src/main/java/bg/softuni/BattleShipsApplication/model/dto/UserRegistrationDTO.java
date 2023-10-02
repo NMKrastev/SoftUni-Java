@@ -1,6 +1,9 @@
 package bg.softuni.BattleShipsApplication.model.dto;
 
+import bg.softuni.BattleShipsApplication.validation.EmailExist;
 import bg.softuni.BattleShipsApplication.validation.FieldMatch;
+import bg.softuni.BattleShipsApplication.validation.UsernameLoginExist;
+import bg.softuni.BattleShipsApplication.validation.UsernameRegistrationExist;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -17,6 +20,7 @@ public class UserRegistrationDTO {
     @NotNull
     @NotBlank(message = "Username must not be empty or have whitespace!")
     @Size(min = 3, max = 10, message = "Username must be between 3 and 10 characters!")
+    @UsernameRegistrationExist
     private String username;
 
     @NotNull
@@ -27,6 +31,7 @@ public class UserRegistrationDTO {
     @NotNull
     @NotBlank(message = "Email must not be empty or have whitespace!")
     @Size(min = 3, message = "Email must be at least 3 characters and should be valid!")
+    @EmailExist
     private String email;
 
     @NotNull

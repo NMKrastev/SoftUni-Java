@@ -66,7 +66,7 @@ public class ShipService {
                 .findByUsername(this.currentUser.getUsername());
 
         return this.shipRepository
-                .findByUserNot(user)
+                .findByUserNotOrderByName(user)
                 .stream()
                 .map(this.shipMapper::shipToShipDto)
                 .toList();

@@ -41,9 +41,7 @@ public class UserService {
         final User user = this.userMapper
                 .userRegistrationDtoToUser(userRegistrationDTO);
 
-        final User saveUser = this.userRepository.save(user);
-
-        this.login(saveUser);
+        this.userRepository.save(user);
 
         return true;
     }

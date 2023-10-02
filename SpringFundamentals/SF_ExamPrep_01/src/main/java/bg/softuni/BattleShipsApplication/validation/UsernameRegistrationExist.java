@@ -10,10 +10,10 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-@Constraint(validatedBy = UsernameExistValidator.class)
-public @interface UsernameExist {
+@Constraint(validatedBy = UsernameRegistrationExistValidator.class)
+public @interface UsernameRegistrationExist {
 
-    String message() default "Invalid username or password";
+    String message() default "Username already exist!";
 
     Class<?>[] groups() default {};
 

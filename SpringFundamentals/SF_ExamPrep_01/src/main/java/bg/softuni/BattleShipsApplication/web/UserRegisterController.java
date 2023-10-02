@@ -60,11 +60,11 @@ public class UserRegisterController {
 
         if (isUserRegistered) {
 
-            modelAndView.setViewName("redirect:/");
+            modelAndView.setViewName("redirect:/users/login");
 
         } else {
 
-            modelAndView.setViewName("register");
+            modelAndView.setViewName("redirect:/users/register");
         }
 
         return modelAndView;
