@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{fragments/head}"></head>
+
+<body>
+
+<header th:replace="~{fragments/header}"></header>
+
+<main>
+    <div class="container">
+        <h2 class="text-center text-dark bg-light rounded-circle mt-5">All employees</h2>
+        <hr style="width: 50%"/>
+        <div class='row mb-4 d-flex justify-content-around'>
+            
+                <div class="col-md-4 d-flex flex-column bg-text mb-3 rounded"
+                        th:each="employee : ${employees}">
+                    <h2>Full name: <th:block th:text="${employee.getFullName()}"></th:block></h2>
+                    <h4>Job title: <th:block th:text="${employee.getJobTitle()}"></th:block></h4>
+                    <h4>Birth Date: <th:block th:text="${#temporals.format(employee.getBirthDate(), 'dd-MMM-yyy')}"></th:block></h4>
+                    <h4><a class="btn-block" th:href="@{/employees/details/{id}(id=${employee.getId()})}">Detail info</a></h4>
+                </div>
+          
+        </div>
+    </div>
+</main>
+
+<footer th:replace="~{fragments/footer}"></footer>
+</body>
+</html>

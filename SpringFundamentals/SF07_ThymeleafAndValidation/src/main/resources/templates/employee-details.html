@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="~{fragments/head}"></head>
+<body>
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <main class="jumbotron text-center rounded col-md-12 align-self-center">
+                <div class="justify-content-center">
+                    <h1>Employee Details</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 bg-dark">
+                        <h2>Employee</h2>
+                        <h4>First Name: <th:block th:text="${employee.getFirstName()}"></th:block></h4>
+                        <h4>Last Name: <th:block th:text="${employee.getLastName()}"></th:block></h4>
+                        <h4>Education Level: <th:block th:text="${employee.getEducationLevel()}"></th:block></h4>
+                        <h4>Job title: <th:block th:text="${employee.getJobTitle()}"></th:block></h4>
+                        <h4>Birthdate: <th:block th:text="${#temporals.format(employee.getBirthDate(), 'dd-MMM-yyy')}"></th:block></h4>
+                        <h4>Salary: <th:block th:text="${employee.getSalary().setScale(0)}"></th:block>$</h4>
+                        <h4>Company: <th:block th:text="${employee.getCompany().getName()}"></th:block></h4>
+                        <div class="align-bottom">
+						<a class="btn btn-danger align-bottom"
+                           th:href="@{/employees/delete/{id}(id=${employee.getId()})}">Delete employee</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 bg-dark"><img src="/pic/employee.png" height="350px"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+</main>
+<footer th:replace="~{fragments/footer}"></footer>
+</body>
+</html>

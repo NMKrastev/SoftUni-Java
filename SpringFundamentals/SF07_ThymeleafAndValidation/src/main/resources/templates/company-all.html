@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{fragments/head}"></head>
+
+<body>
+
+<header th:replace="~{fragments/header}"></header>
+
+<main>
+    <div class="container">
+        <h2 class="text-center text-dark bg-light rounded-circle mt-5">All companies</h2>
+        <hr style="width: 50%"/>
+        <div class='row mb-4 d-flex justify-content-around'>
+          
+                <div class="col-md-4 d-flex flex-column bg-text mb-3 rounded-circle"
+                     th:each="company : ${companies}">
+                    <h2>Company: <th:block th:text="${company.getName()}"></th:block></h2>
+                    <h4>Town: <th:block th:text="${company.getTown()}"></th:block></h4>
+                    <h4>Description: <th:block th:text="${company.getDescription().substring(0, 5)}"></th:block> ...</h4>
+                    <h4><a class="btn-block" th:href="@{/companies/details/{name}(name=${company.getName()})}">Detail info</a></h4>
+                </div>
+          
+        </div>
+    </div>
+</main>
+
+<footer th:replace="~{fragments/footer}"></footer>
+
+</body>
+</html>
