@@ -16,3 +16,7 @@
   padding: 20px;
   font-size: 30px;
 }
+
+.flex-container #box2 {
+  align-self: center;
+}
