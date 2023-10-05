@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 2em;
+}
+
+.container {
+    /* height: 80vh; */ /* takes 80% of the browser/page height */
+    display: flex;
+    /* flex-direction: row; */ /* by deafult - | 1235           |*/
+    /* flex-direction: row-reverse; */ /* reverses the row - |          54321 |*/
+    /* flex-direction: column;  */
+    /* in column - | 1              |*/
+    /* in column - | 2              |*/
+    /* in column - | 3              |*/
+    /* in column - | 4              |*/
+    /* in column - | 5              |*/
+    /* justify-content: flex-start; */ /* default - items are on top - no spaces */;
+    /* justify-content: flex-end; */ /* default - items are on bottom of page - no spaces */;
+    /* justify-content: space-between; */ /* puts even space between items */
+    /* justify-content: space-around; */ /* even space between and after the last items 1 and 5 - padding is disregarded*/
+    /* justify-content: space-evenly; */ /* padding is included */
+    justify-content: center;
+    /* flex-direction: row; */ /* by deafult - | 1235           |*/
+    /* flex-direction: row; */ /* by deafult - | 1235           |*/
+    /* align-items: stretch; */ /* streching items */
+    /* align-items: flex-start; */ /* items are on top*/ 
+    /* align-items: flex-end; */ /* items are on the bottom*/ 
+    align-items: center; /* items are in the center*/
+    flex-wrap: wrap; /* wraps items to fit screen size */
+    gap: 1em; /* space between item - they are not stuck next to each other */
+    padding: 2em;
+    border: 4px solid red;
+    margin-bottom: 2em;
+}
+
+.item {
+    text-align: center;
+    flex-basis: 200px; /* base size for items - they shrink when changing screen size */
+    border: 2px solid blue;
+    font-size: 2em;
+    /* flex-grow: 1; * /* all items will equaly take place in the .container */
+    flex-grow: 1;/* in combination both flex-grow and flex-shring allow the items to grow or shrink depending in screen size */
+    flex-shrink: 1; /* in combination both flex-grow and flex-shring allow the items to grow or shrink depending in screen size */
+}
+
+.container.columns {
+    flex-wrap: nowrap;
+}
+
+.container.columns .item {
+    flex-basis: auto;
+}
+
+.container.container .item:nth-child(1) {
+    flex-grow: 1;
+}
+.container.container .item:nth-child(2) {
+    flex-grow: 2; /* second item is always x2 times bigger than first */
+}
+.container.container .item:nth-child(3) {
+    flex-grow: 3; /* third item is always x3 times bigger than first */
+}

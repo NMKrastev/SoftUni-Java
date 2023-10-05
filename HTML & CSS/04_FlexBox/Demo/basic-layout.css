@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.site {
+    border: 2px solid black;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    min-height: 100vh;
+    /* align-items: flex-start;
+    align-content: flex-start; */
+}
+
+.site > * {
+    /* flex-grow: 1; */
+    border: 2px solid red;
+    padding: 2em;
+}
+
+.site-header {
+    flex-basis: 100%;
+}
+
+.site-content {
+    flex-grow: 2;
+    /* margin-right: 2em; */ /* works in the context of flex-box */
+}
+
+.site-sidebar {
+    flex-grow: 1;
+}
+
+.site-footer {
+    margin-top: auto;
+    flex-basis: 100%;
+}
