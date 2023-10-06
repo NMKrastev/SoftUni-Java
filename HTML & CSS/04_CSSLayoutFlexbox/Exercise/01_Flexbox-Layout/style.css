@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: #EEE;
+    padding: 2em;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+header, main, aside, footer {
+    padding: 2em;
+    background-color: #fff;
+    color: #000;
+    border-radius: 0.4em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+}
+
+header, footer {
+    flex-basis: 100%;
+    min-height: 100px;
+}
+
+main {
+    flex: 8 1 40em;
+    min-height: 200px;
+}
+
+aside {
+    flex: 2 1 20em;
+}
