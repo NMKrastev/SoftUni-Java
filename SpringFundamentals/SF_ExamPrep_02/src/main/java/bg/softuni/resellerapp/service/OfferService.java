@@ -1,6 +1,7 @@
 package bg.softuni.resellerapp.service;
 
 import bg.softuni.resellerapp.model.dto.AddOfferDTO;
+import bg.softuni.resellerapp.model.dto.UsersOffersDTO;
 import bg.softuni.resellerapp.model.entity.Condition;
 import bg.softuni.resellerapp.model.entity.Offer;
 import bg.softuni.resellerapp.model.entity.User;
@@ -9,6 +10,7 @@ import bg.softuni.resellerapp.repository.OfferRepository;
 import bg.softuni.resellerapp.user.CurrentUser;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -23,6 +25,7 @@ public class OfferService {
     public OfferService(OfferRepository offerRepository, UserService userService,
                         ConditionService conditionService, CurrentUser currentUser,
                         OfferMapper offerMapper) {
+
         this.offerRepository = offerRepository;
         this.userService = userService;
         this.conditionService = conditionService;
@@ -42,9 +45,7 @@ public class OfferService {
         offer.setSeller(seller);
         offer.setCondition(condition);
 
-        final Offer savedOffer = this.offerRepository.save(offer);
-
-        //this.userService.saveOfferToUser(savedOffer);
+        this.offerRepository.save(offer);
 
         return true;
     }
@@ -56,18 +57,44 @@ public class OfferService {
                 .get();
     }
 
-    public List<Offer> findAllOtherUsersOffers() {
+    public List<UsersOffersDTO> findAllOtherUsersOffers() {
 
-        return this.offerRepository.findAllBySellerNotAndBuyerNull(this.userService.findByUsername(this.currentUser.getUsername()));
+        final User userNotIncluded = this.userService.findByUsername(this.currentUser.getUsername());
+
+        return this.offerRepository
+                .findAllBySellerNotAndBuyerNull(userNotIncluded)
+                .stream()
+                .map(this.offerMapper::offerToOfferDto)
+                .sorted(Comparator.comparing(
+                        UsersOffersDTO::getSeller, (usernameOne, usernameTwo)
+                                        -> usernameTwo.getUsername().compareTo(usernameOne.getUsername()))
+                        .reversed())
+                .toList();
     }
 
-    public List<Offer> findUserOffers() {
+    public List<UsersOffersDTO> findUserOffers() {
 
-        return this.offerRepository.findAllBySellerAndBuyerNull(this.userService.findByUsername(this.currentUser.getUsername()));
+        return this.offerRepository
+                .findAllBySellerAndBuyerNull(this.userService.findByUsername(this.currentUser.getUsername()))
+                .stream()
+                .map(this.offerMapper::offerToOfferDto)
+                .toList();
     }
 
-    public List<Offer> findUserBoughtItems() {
+    public List<UsersOffersDTO> findUserBoughtItems() {
 
-        return this.offerRepository.findAllByBuyerId(this.currentUser.getId());
+        return this.offerRepository
+                .findAllByBuyerId(this.currentUser.getId())
+                .stream()
+                .map(this.offerMapper::offerToOfferDto)
+                .toList();
+    }
+
+    public boolean deleteOffer(Long id) {
+
+        this.offerRepository.deleteById(id);
+
+        return this.offerRepository.findById(id).isEmpty();
+
     }
 }

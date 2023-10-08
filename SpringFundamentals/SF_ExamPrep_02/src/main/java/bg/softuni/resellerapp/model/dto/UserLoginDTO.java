@@ -1,6 +1,5 @@
 package bg.softuni.resellerapp.model.dto;
 
-import bg.softuni.resellerapp.validations.UsernameLoginExist;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;

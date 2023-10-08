@@ -25,7 +25,7 @@
                                 <td style="width: 5%" class="bg-info"><th:block th:text="${offer.getCondition().getName()}"></th:block></td>
                                 <td class="bg-primary" style="width: 15%"><th:block th:text="${offer.getPrice().setScale(2)}"></th:block> €</td>
                                 <td><th:block th:text="${offer.getDescription()}"></th:block></td>
-                                <td style="width: 15%"><a class="btn-danger btn" th:href="@{/delete/{id}(id=${offer.getId()})}">Remove</a>
+                                <td style="width: 15%"><a class="btn-danger btn" th:href="@{/offers/delete/{id}(id=${offer.getId()})}">Remove</a>
                                 </td>
                             </tr>
                         </table>

@@ -2,7 +2,6 @@ package bg.softuni.resellerapp.service;
 
 import bg.softuni.resellerapp.model.dto.UserLoginDTO;
 import bg.softuni.resellerapp.model.dto.UserRegistrationDTO;
-import bg.softuni.resellerapp.model.entity.Offer;
 import bg.softuni.resellerapp.model.entity.User;
 import bg.softuni.resellerapp.model.mapper.UserMapper;
 import bg.softuni.resellerapp.repository.UserRepository;
@@ -10,10 +9,7 @@ import bg.softuni.resellerapp.user.CurrentUser;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 @Service
 public class UserService {
@@ -25,6 +21,7 @@ public class UserService {
 
     public UserService(UserRepository userRepository, UserMapper userMapper,
                        CurrentUser currentUser, PasswordEncoder passwordEncoder) {
+
         this.userRepository = userRepository;
         this.userMapper = userMapper;
         this.currentUser = currentUser;
@@ -73,13 +70,6 @@ public class UserService {
         return success;
     }
 
-    public User findUserOffers() {
-
-        return this.userRepository
-                .findByUsername(this.currentUser.getUsername())
-                .get();
-    }
-
     public void logoutUser() {
 
         this.currentUser.clear();
@@ -98,17 +88,5 @@ public class UserService {
         this.currentUser.setLoggedIn(true);
         this.currentUser.setEmail(user.getEmail());
         this.currentUser.setUsername(user.getUsername());
-    }
-
-    public void saveOfferToUser(Offer savedOffer) {
-
-        final User user = this.userRepository.findByUsername(this.currentUser.getUsername()).get();
-
-        user.getOffers().add(savedOffer);
-    }
-
-    public List<User> findAllOtherUsersOffers() {
-
-        return this.userRepository.findUserByIdNot(this.currentUser.getId());
     }
 }

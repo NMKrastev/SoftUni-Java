@@ -5,22 +5,19 @@ import bg.softuni.resellerapp.model.entity.User;
 import bg.softuni.resellerapp.repository.OfferRepository;
 import bg.softuni.resellerapp.repository.UserRepository;
 import bg.softuni.resellerapp.user.CurrentUser;
-import jakarta.transaction.Transactional;
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserBuyService {
 
-    private final UserService userService;
     private final UserRepository userRepository;
     private final OfferService offerService;
     private final OfferRepository offerRepository;
     private final CurrentUser currentUser;
 
-    public UserBuyService(UserService userService, UserRepository userRepository,
-                          OfferService offerService, OfferRepository offerRepository, CurrentUser currentUser) {
-        this.userService = userService;
+    public UserBuyService(UserRepository userRepository, OfferService offerService,
+                          OfferRepository offerRepository, CurrentUser currentUser) {
+
         this.userRepository = userRepository;
         this.offerService = offerService;
         this.offerRepository = offerRepository;

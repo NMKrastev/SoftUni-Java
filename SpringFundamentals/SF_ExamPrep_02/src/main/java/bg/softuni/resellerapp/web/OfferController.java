@@ -1,7 +1,6 @@
 package bg.softuni.resellerapp.web;
 
 import bg.softuni.resellerapp.model.dto.AddOfferDTO;
-import bg.softuni.resellerapp.service.ConditionService;
 import bg.softuni.resellerapp.service.OfferService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -21,6 +20,7 @@ public class OfferController {
     private final OfferService offerService;
 
     public OfferController(OfferService offerService) {
+
         this.offerService = offerService;
     }
 
@@ -56,7 +56,14 @@ public class OfferController {
 
         boolean isOfferAdded = this.offerService.addOffer(addOfferDTO);
 
-        modelAndView.setViewName("redirect:/home");
+        if (isOfferAdded) {
+            modelAndView.setViewName("redirect:/home");
+        } else {
+
+            redirectAttributes.addFlashAttribute("addOfferDTO", addOfferDTO);
+
+            modelAndView.setViewName("redirect:/offers/add");
+        }
 
         return modelAndView;
     }
