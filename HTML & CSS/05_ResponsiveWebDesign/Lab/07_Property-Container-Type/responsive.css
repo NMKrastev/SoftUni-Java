@@ -1,0 +1,10 @@
+.card h2 {
+  font-size: 1em;
+}
+
+@media all {
+
+  .post {
+    container-type: inline-size;
+  }
+}

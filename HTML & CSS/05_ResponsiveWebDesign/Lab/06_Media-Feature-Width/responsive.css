@@ -1,0 +1,24 @@
+body {
+  display: flex;
+}
+
+@media (width: 360px) {
+
+  body {
+    color: red;
+  }
+}
+
+@media (min-width: 35rem) {
+
+  article {
+    background: yellow;
+  }
+}
+
+@media (max-width: 50rem) {
+
+  article {
+    border: 2px solid blue; 
+  }
+}
