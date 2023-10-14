@@ -1,0 +1,260 @@
+.site {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 75%;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1em;
+}
+
+.site-spider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-spider .site-title {
+    padding-bottom: 0;
+    font-size: 30px;
+    color: purple;
+}
+
+.site-spider > span {
+    font-size: 10px
+}
+
+.site-header .site-nav {
+  display: flex;
+  font-size: 16px;
+}
+
+.site-nav ul {
+  display: flex;
+  padding-left: 0;
+}
+
+.site-nav ul li {
+  list-style: none;
+  margin: 1em;
+}
+
+.site-nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.site-main {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 2em;
+  padding-bottom: 2em;
+}
+
+.site-main .need-a-website {
+    display: flex;
+    margin: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.need-a-website div:first-child {
+    margin-right: 2em;
+}
+
+.need-content {
+    flex: 1 1 40%;
+    margin: 0 2em;
+}
+
+.need-content .your-project {
+    display: flex;
+}
+
+.need-content a {
+    border: 1px solid black;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    text-decoration: none;
+    color: black;
+}
+
+.image {
+    flex: 1 1 40%;
+    margin: 0 2em;
+}
+
+.image img {
+    display: block;
+    max-width: 100%;
+}
+
+.site-main .our-team,
+.site-main .testimonials {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-title,
+.testimonial-title {
+    text-align: center;
+    position: relative;
+}
+
+.team-title h4,
+.testimonial-title h4 {
+    font-weight: 700;
+}
+
+.team-title::after,
+.testimonial-title::after {
+    content: '';
+    width: 60%;
+    height: 2px;
+    background: #000; /* Change to the desired color */
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    padding: 1px;
+    border-radius: 0.5em;
+}
+
+.team,
+.posts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1em;
+}
+
+.team .person,
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 30%;
+    padding: 0.5em;
+}
+
+.team .person .circle-img,
+.testimonials .post .circle-img {
+    width: 4em;
+    height: 4em;
+    border: 1px solid #CCC;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex; 
+    align-items: center; 
+    justify-content: center
+}
+
+.person .circle-img img,
+.post .circle-img img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.person .name,
+.post .name {
+    font-weight: 700;
+    margin-top: 1em;
+}
+
+.person .about,
+.post {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.site-main .stripe {
+    background: purple;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.site-main .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter .newsletter-title {
+    color: #fff;
+    margin-bottom: 2em;
+    position: relative;
+    text-align: center;
+}
+
+.newsletter-title h4:after {
+    content: '';
+    width: 30%;
+    height: 2px;
+    background: #000; /* Change to the desired color */
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    padding: 1px;
+    border-radius: 0.5em;
+}
+
+.newsletter form {
+    margin-bottom: 2em;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-footer {
+    border-top: 7px solid #eee;
+    padding-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.site-footer > div {
+    flex: 1 1 20%;
+    margin: 0 3em;
+}
+
+.site-footer > div > nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+.site-footer > div > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+.site-footer > div > nav > ul > li,
+.site-footer > div > ul > li {
+    list-style: none;
+}
+.site-footer > div > nav > ul > li > a,
+.site-footer > div > ul > li > a {
+    text-decoration: none;
+    color: #000;
+}
+
+.site-footer > div > nav > ul > li {
+    flex: 1 1 50%;
+}

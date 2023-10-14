@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1800px) {
+    html {
+        font-size: 21px;
+    }   
+}
+
+@media (max-width: 1300px) {
+    html {
+        font-size: 18px;
+    }   
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 16px;
+    }   
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }   
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 12px;
+    }   
+}
+
+body,
+input,
+textarea {
+  font: inherit;
+  background: rgb(238, 238, 238);
+}
+
+.site {
+  max-width: 85%;
+  margin: 2em auto;
+}
+
+.site-header {
+  border-bottom: 2px solid black;
+  padding: 2em auto;
+  margin: 2em auto;
+}
+
+.site-header .site-title > p {
+  margin-bottom: 1em;
+}
+
+.site-header .site-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.site-main {
+  position: relative;
+  float: left;
+  padding-bottom: 2em;
+}
+
+.site article {
+  margin-right: 2em;
+}
+
+article img {
+  outline: 3px solid #000;
+  border: 6px solid #fff;
+  box-shadow: 0 0 2em 5px rgb(000, 000, 000, 0.5);
+}
+
+.float-right-img img {
+  float: right;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5em 7em 0.5em 3em;
+}
+
+.float-left-img img {
+  float: left;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1.5em;
+  margin-right: 2em;
+}
+
+blockquote {
+  display: block;
+  float: right;
+  max-width: 45%;
+  border-left: 4px solid #ccc;
+  margin-bottom: 1.5em;
+  margin-left: 1em;
+  padding: 1.5em;
+  font-style: italic;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  blockquote {
+    float: none;
+    max-width: 100%;
+  }
+}
+
+blockquote p:first-child:before,
+blockquote:has(.author) p:nth-last-child(2):not(.author):after,
+blockquote p:nth-last-child(1):not(.author):after {
+  display: inline-block;
+  content: '"';
+}
+
+blockquote p:last-child {
+  padding-bottom: 0;
+}
+
+blockquote p.author {
+  text-align: right;
+  color: #666;
+}
+
+blockquote p.author::before {
+  display: inline-block;
+  content: "— ";
+  padding-right: 0.5em;
+}
+
+.site-footer {
+  border-top: 2px solid #000;
+  width: 100%;
+  padding-top: 0.5em;
+  clear: both;
+}
