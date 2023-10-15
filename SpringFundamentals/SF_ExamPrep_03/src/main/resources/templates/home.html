@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head"></head>
+<body>
+<header th:replace="fragments/commons::nav"></header>
+<main>
+
+    <th:block th:if="${@currentUser.isLoggedIn()}">
+    <div class="container-fluid bg-blur rounded mt-1 mb-4 d-flex justify-content-center" id="big-div">
+
+        <div class="col-5">
+            <h3 class=" bg-gray text-dark  mb-0 mt-2">Assigned to me</h3>
+            <h6 class=" bg-gray text-dark  mb-0 mt-0">Username: <th:block th:text="${@currentUser.getUsername()}">{username}</th:block></h6>
+            <div class="bg-dark rounded m-auto" style="height: 67vh; overflow: auto">
+                <ul class="list-group list-group-horizontal text-dark"
+                    th:each="userTask : ${userTasks}">
+                    <li class="list-group-item bg-warning">
+                        <table >
+                            <tr>
+                                <td scope="row" style="width: 5%"><img class="mr-2 " src="/img/pin.png" alt="Pin" width="35px" height="35px"></td>
+
+                                <td style="width: 15%"><th:block th:text="${userTask.priority.name}"></th:block></td>
+                                <td style="width: 40%"><th:block th:text="${#temporals.format(userTask.dueDate, 'yyyy-MM-dd')}"></th:block></td>
+                                <td><a th:href="@{/tasks/delete/{taskId}(taskId = ${userTask.getId()})}"><img src="/img/done-remove-button.png" height="35px"></a></td>
+                                <td><a th:href="@{/tasks/return/{taskId}(taskId = ${userTask.getId()})}"><img src="/img/return.png" height="35px"></a></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="list-group-item list-group-item-warning text-dark">
+                        <a><th:block th:text="${userTask.description}"></th:block></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <h3 class="mySticky bg-gray text-dark  mb-0 mt-2">All Available Tasks</h3>
+            <h6 class="mySticky bg-gray text-dark  mb-0 mt-0"><th:block th:text="${allAvailableTasks.size()}"></th:block> Tasks</h6>
+            <div class="bg-dark rounded m-auto" style="height: 67vh; overflow: auto">
+                    <ul class="list-group list-group-horizontal text-dark"
+                        th:each="task : ${allAvailableTasks}">
+                        <li class="list-group-item bg-warning">
+                            <table >
+                                <tr>
+                                    <td style="width: 5%"><img class="mr-2 " src="/img/pin.png" alt="Pin" width="35px" height="35px"></td>
+                                    <td style="width: 15%"><a><th:block th:text="${task.priority.name}"></th:block></a></td>
+                                    <td><a>Due Date: <th:block th:text="${#temporals.format(task.dueDate, 'yyyy-MM-dd')}"></th:block></a></td>
+                                    <td><a class="ml-3" th:href="@{/tasks/assign/{taskId}(taskId = ${task.getId()})}"><img src="/img/assign-to-me-button.png" height="35px"></a></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li class="list-group-item list-group-item-warning text-dark">
+                            <a><th:block th:text="${task.description}"></th:block></a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    </th:block>
+</main>
+<footer th:replace="fragments/commons::footer"></footer>
+</body>
+</html>
