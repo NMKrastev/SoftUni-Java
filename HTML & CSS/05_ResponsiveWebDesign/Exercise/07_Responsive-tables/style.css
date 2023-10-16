@@ -1,38 +1,40 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 3em;
+  margin: 3em;
 }
 
-table, th, td {
-    border: 1px solid black;
-    padding-left: 0.2em;
-    padding-right: 1.5em;
+table,
+th,
+td {
+  border: 1px solid black;
+  padding-left: 0.2em;
+  padding-right: 1.5em;
 }
 
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 th {
-    background-color: #CCC;
+  background-color: #ccc;
 }
 
-@media(max-width: 480px) {
-    table {
-      display: flex; 
-    }
-    table tr {
-      display: contents;
-      border:solid red
-    }
-    table td {
-      display: block;
-    }
-    table tr td + td {
-      order: 1;
-    }
+@media (max-width: 480px) {
+  table {
+    display: flex;
   }
+  table tr {
+    display: contents;
+    border: solid red;
+  }
+  table td {
+    display: block;
+  }
+  table tr td + td {
+    order: 1;
+  }
+}
