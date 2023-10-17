@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    /* border: 2px solid green; */
+    min-height: 100vh;;
+}
+
+body > * {
+    /* border: 2px solid #333; */
+}
+
+.container {
+    max-width: 80em;
+    margin: 0 auto;
+    /* border: 2px solid blue; */
+    padding: 1em 0;
+}
+
+.section-top-bar {
+    background: darkred;
+    color: white;
+}
+
+.section-top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.section-header,
+.section-banner {
+    background: #000;
+    color: white;
+}
+
+.section-footer {
+    background: darkred;
+    text-align: center;
+}

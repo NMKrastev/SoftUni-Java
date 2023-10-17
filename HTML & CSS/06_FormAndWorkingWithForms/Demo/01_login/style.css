@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Verdana, sans-serif;
+}
+
+body {
+    padding: 2em;
+
+}
+
+.login {
+    display: block;
+    padding: 2em;
+    border: 2px solid #000;
+}
+
+.login .field {
+    border: 2px solid blue;
+    padding: 1em;
+}
+
+.login .field label,
+.login .field input,
+.login .field span {
+    display: block;
+    width: 100%;
+}
+
+.login .field label {
+    font-weight: bold;
+}
+
+.login .field input {
+    border: 2px solid #999;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+}
+
+.login .field input:invalid {
+    border-color: #C00;
+}
+
+.login .field .helper {
+    font-style: italic;
+}
+
+.login .field .helper.error {
+    color: #C00;
+}

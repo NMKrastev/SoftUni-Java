@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em;
+    border: 2px solid green;
+    min-height: 100vh;;
+}
+
+.site {
+    border: 2px solid blue;
+    max-width: 80em;
+    margin: 0 auto;
+}
+
+.site > * {
+    border: 2px solid #333;
+}
