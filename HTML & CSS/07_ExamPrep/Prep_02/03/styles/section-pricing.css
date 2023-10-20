@@ -1,0 +1,135 @@
+.section-pricing {
+    display: flex;
+    background: #F5F5F5;
+    justify-content: center;
+}
+
+.section-pricing .container {
+    display: flex;
+    background: #fff;
+    width: 94%;
+}
+
+.section-pricing .container .pricing-info {
+    flex: 1 1 30%;
+    margin: 5em 3em;
+}
+
+.section-pricing .container .pricing-info h2 {
+    font-size: 45px;
+    margin-bottom: 1.5em;
+}
+
+.section-pricing .container .pricing-info p {
+    font-size: 20px;
+    color: #A9A9A9;
+}
+
+.section-pricing .container .pricing-free {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FF7C4C;
+    margin: 5em 2em;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.3);
+}
+
+.section-pricing .container .pricing-free p:first-child {
+    font-size: 26px;
+    font-weight: 600;
+    padding: 1em 0;
+}
+
+.section-pricing .container .pricing-free p:nth-child(2) {
+    font-size: 90px;
+    font-weight: 200;
+    padding-bottom: 0.3em;
+}
+
+.section-pricing .container .pricing-free p:nth-child(3),
+.section-pricing .container .pricing-free p:nth-child(4),
+.section-pricing .container .pricing-free p:nth-child(5) {
+    font-size: 20px;
+    padding-bottom: 1em;
+}
+
+.section-pricing .container .pricing-free p:nth-child(3) span,
+.section-pricing .container .pricing-free p:nth-child(4) span,
+.section-pricing .container .pricing-free p:nth-child(5) span {
+    font-weight: 600;
+}
+
+.section-pricing .container .pricing-free p:nth-child(6) {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 3em;
+}
+
+.section-pricing .container .pricing-free a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 1em 2em;
+    background: #000;
+    color: #fff;
+    border-radius: 0.5em;
+    margin-bottom: 3em;
+}
+
+.section-pricing .container .pricing-paid {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    margin: 5em 2em;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.3);
+}
+
+.section-pricing .container .pricing-paid p:first-child {
+    font-size: 26px;
+    font-weight: 600;
+    padding: 1em 0;
+}
+
+.section-pricing .container .pricing-paid p:nth-child(2) {
+    font-size: 90px;
+    font-weight: 200;
+    padding-bottom: 0.3em;
+}
+
+.section-pricing .container .pricing-paid p:nth-child(3),
+.section-pricing .container .pricing-paid p:nth-child(4),
+.section-pricing .container .pricing-paid p:nth-child(5) {
+    font-size: 20px;
+    padding-bottom: 1em;
+}
+
+.section-pricing .container .pricing-paid p:nth-child(3) span,
+.section-pricing .container .pricing-paid p:nth-child(4) span,
+.section-pricing .container .pricing-paid p:nth-child(5) span {
+    font-weight: 600;
+}
+
+.section-pricing .container .pricing-paid p:nth-child(6) {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 3em;
+}
+
+.section-pricing .container .pricing-paid a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 1em 2em;
+    background: #fff;
+    color: #000;
+    border-radius: 0.5em;
+    margin-bottom: 3em;
+}

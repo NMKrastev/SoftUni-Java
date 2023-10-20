@@ -1,0 +1,55 @@
+header {
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+header h2 span {
+  color: #327DC4;
+}
+
+.artcile-section {
+  display: flex;
+  gap: 1.5em;
+}
+
+.artcile-section article,
+.artcile-section article .media {
+  display: block;
+  overflow: hidden;
+  border-radius: 2em;
+}
+
+.article-content {
+  padding: 1.5em;
+}
+
+.article-content p {
+  margin: 1em 0 0.5em 0;
+}
+
+.artcile-section article {
+  flex: 1 1 30%;
+  background-color: #819DAF;
+}
+
+.article-content a {
+  color: #fff;
+  display: inline-block;
+  background-color: #327DC4;
+  border: 1px solid #2772C2;
+  outline: 1px solid #fff;
+  padding: 0.3em 1.3em;
+  border-radius: 2em;
+  text-decoration: none;
+}
+

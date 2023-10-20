@@ -1,0 +1,10 @@
+.section-site-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 4em;
+    background: #D9D9D9;
+}
+
+.section-site-footer i {
+    font-size: 25px;
+}

@@ -1,0 +1,51 @@
+.section-features .container {
+    background: #D9D9D9;
+    padding: 4em 4em;
+}
+
+.section-features .container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.section-features .container ul .item {
+    display: flex;
+    gap: 3em;
+}
+
+.section-features .container ul .item .media {
+    flex: 1 1 35%;
+}
+
+.section-features .container ul .item .features-content {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.section-features .container ul .item .features-content h3 {
+    font-size: 19px;
+    color: #675959;
+}
+
+.section-features .container ul .item .features-content h2 {
+    font-size: 40px;
+}
+
+.section-features .container ul .item .features-content .content {
+    color: #6D6973;
+    font-size: 21px;
+}
+
+.section-features .container ul .item .features-content .content a {
+    text-decoration: none;
+    color: #000;
+    
+}
+
+.section-features .container ul .item .features-content .author {
+    color: #82828A;
+    font-size: 20px;
+}

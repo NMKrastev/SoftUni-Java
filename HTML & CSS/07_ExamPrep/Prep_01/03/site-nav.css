@@ -1,0 +1,24 @@
+.section-header > div > .site-nav {
+    position: absolute;
+    top: 0;
+}
+
+.section-header > div > .site-nav ul {
+    display: flex;
+    padding: 0;
+}
+
+.section-header > div > .site-nav li {
+    list-style: none;
+    margin-left: 4em;
+}
+
+.section-header > div > .site-nav li:first-child {
+    margin-left: 0;
+}
+
+.section-header > div > .site-nav a {
+    color: white;
+    text-decoration: none;
+}
+

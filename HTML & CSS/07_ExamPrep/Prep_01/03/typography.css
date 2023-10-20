@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+html {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+body,
+table,
+input,
+option,
+select {
+  font: inherit;
+}
+
+p, ul, li {
+    padding: 1em;
+}

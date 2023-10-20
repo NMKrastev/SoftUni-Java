@@ -1,0 +1,129 @@
+/* Programs info */
+
+.section-content > div {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.section-content > div .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 2em 0;
+}
+
+.section-content > div .welcome > p {
+    flex: 1 1 100%;
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+}
+
+.section-content > div .welcome > p > span {
+    position: absolute;
+    top: 90%;
+    left: 37%;
+    content: '';
+    width: 30%;
+    height: 3px;
+    background: rgb(158, 26, 26); /* Change to the desired color */
+    border-radius: 1em;
+}
+
+.section-content > div .programs-info {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    gap: 20em;
+    margin: 0 6.5em;
+}
+
+.section-content > div .programs-info i {
+    font-size: 50px;
+} 
+
+.section-content > div .programs-info li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 0 1 30%;
+}
+
+.section-content > div .programs-info p {
+    color: rgb(158, 26, 26);
+    font-weight: 600;
+}
+
+/* Coaches */
+
+.section-content > div .coaches {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 2em 0;
+    background: #dfdfdf;
+}
+
+.section-content > div .coaches > p {
+    flex: 1 1 100%;
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+}
+
+.section-content > div .coaches > p > span {
+    position: absolute;
+    top: 90%;
+    left: 37%;
+    content: '';
+    width: 30%;
+    height: 3px;
+    background: rgb(158, 26, 26); /* Change to the desired color */
+    border-radius: 1em;
+}
+
+.section-content > div .coaches-info {
+    display: flex;
+    list-style: none;
+    align-items: flex-start;
+    text-align: center;
+    gap: 20em;
+    margin: 0 10em;
+}
+
+.section-content > div .coaches-info i {
+    font-size: 50px;
+} 
+
+.section-content > div .coaches-info li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1 1 350px;
+}
+
+.section-content > div .coaches-info li img {
+    border-radius: 0.3em;
+}
+
+.section-content > div .coaches-info li p:nth-child(2) {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.section-content > div .coaches-info p:nth-child(3) {
+    color: rgb(158, 26, 26);
+    font-weight: 600;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 0;
+}
+
+.section-content > div .coaches-info li span {
+    color: #999;
+}

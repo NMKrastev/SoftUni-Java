@@ -1,0 +1,19 @@
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-image: url(../images/background.jpg);
+    
+    background-position: center -20em;
+}
+
+.section-site-header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3em 5em 2em 4em;
+    background: #D9D9D9;
+}

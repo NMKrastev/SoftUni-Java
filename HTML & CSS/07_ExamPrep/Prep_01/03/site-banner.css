@@ -1,0 +1,33 @@
+.section-header > div {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.section-header > div:before,
+.section-header > div:after {
+    display: block;
+    content: '';
+}
+
+.section-header > div:before {
+    padding-top: 56.25%;
+}
+
+.section-header > div > img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.section-header > div > nav,
+.section-header > div .site-header {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    right: 0;
+    padding: 1em 2em;
+    z-index: 50;
+    text-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.4);
+}

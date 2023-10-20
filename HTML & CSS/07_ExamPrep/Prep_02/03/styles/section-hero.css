@@ -1,0 +1,33 @@
+.section-site-hero-banner .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 2em;
+    padding: 25em 60em 23em 22em;
+    height: 35em;
+}
+
+.section-site-hero-banner .container h1 {
+    font-size: 65px;
+    padding-right: 3em;
+    margin-bottom: 1.5em;
+}
+
+.section-site-hero-banner .container > p {
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4em;
+}
+
+.section-site-hero-banner .container a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 1.2em 2em;
+    font-weight: 400;
+    color: #fff;
+    background: #000;
+    border-radius: 0.3em;
+}

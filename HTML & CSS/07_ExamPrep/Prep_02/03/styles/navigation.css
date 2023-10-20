@@ -1,0 +1,24 @@
+.navigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.navigation li {
+    padding-right: 4em;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.section-site-header p a {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    background: #fff;
+    border-radius: 0.3em;
+    border: 1px solid #000;
+}
