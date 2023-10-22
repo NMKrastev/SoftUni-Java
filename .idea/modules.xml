@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Basics/FirstStepsInCoding/FirstStepsInCoding.iml" filepath="$PROJECT_DIR$/Basics/FirstStepsInCoding/FirstStepsInCoding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExam2829May2022/PBExam2829May2022.iml" filepath="$PROJECT_DIR$/Basics/PBExam2829May2022/PBExam2829May2022.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises0203May2019/PBExamExercises0203May2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises0203May2019/PBExamExercises0203May2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises0607April2019/PBExamExercises0607April2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises0607April2019/PBExamExercises0607April2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises0607July2019/PBExamExercises0607July2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises0607July2019/PBExamExercises0607July2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises0910March2019/PBExamExercises0910March2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises0910March2019/PBExamExercises0910March2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises1516June2019/PBExamExercises1516June2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises1516June2019/PBExamExercises1516June2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises1819July2020/PBExamExercises1819July2020.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises1819July2020/PBExamExercises1819July2020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises2021April2019/PBExamExercises2021April2019.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises2021April2019/PBExamExercises2021April2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamExercises2829March2020/PBExamExercises2829March2020.iml" filepath="$PROJECT_DIR$/Basics/PBExamExercises2829March2020/PBExamExercises2829March2020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/PBExamPreparations/PBExamPreparations.iml" filepath="$PROJECT_DIR$/Basics/PBExamPreparations/PBExamPreparations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF-FinalExamPreparation/PF-FinalExamPreparation.iml" filepath="$PROJECT_DIR$/Fundamentals/PF-FinalExamPreparation/PF-FinalExamPreparation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF-MidExamPreparation/PF-MidExamPreparation.iml" filepath="$PROJECT_DIR$/Fundamentals/PF-MidExamPreparation/PF-MidExamPreparation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF01-BasicSyntaxConditionalStatementsAndLoops/PF01-BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/Fundamentals/PF01-BasicSyntaxConditionalStatementsAndLoops/PF01-BasicSyntaxConditionalStatementsAndLoops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF02-Exercise_BasicSyntaxConditionalStatementsAndLoops/PF02-Exercise_BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/Fundamentals/PF02-Exercise_BasicSyntaxConditionalStatementsAndLoops/PF02-Exercise_BasicSyntaxConditionalStatementsAndLoops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops/PF03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops.iml" filepath="$PROJECT_DIR$/Fundamentals/PF03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops/PF03-MoreExercise_BasicSyntaxConditionalStatementsAndLoops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF04-DataTypesAndVariables/PF04-DataTypesAndVariables.iml" filepath="$PROJECT_DIR$/Fundamentals/PF04-DataTypesAndVariables/PF04-DataTypesAndVariables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF05-Exercise_DataTypesАndVariables/PF05-Exercise_DataTypesАndVariables.iml" filepath="$PROJECT_DIR$/Fundamentals/PF05-Exercise_DataTypesАndVariables/PF05-Exercise_DataTypesАndVariables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF06-MoreExercise_DataTypesAndVariables/PF06-MoreExercise_DataTypesAndVariables.iml" filepath="$PROJECT_DIR$/Fundamentals/PF06-MoreExercise_DataTypesAndVariables/PF06-MoreExercise_DataTypesAndVariables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF07-Arrays/PF07-Arrays.iml" filepath="$PROJECT_DIR$/Fundamentals/PF07-Arrays/PF07-Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF08-Exercise_Arrays/PF08-Exercise_Arrays.iml" filepath="$PROJECT_DIR$/Fundamentals/PF08-Exercise_Arrays/PF08-Exercise_Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF09-MoreExercise_Arrays/PF09-MoreExercise_Arrays.iml" filepath="$PROJECT_DIR$/Fundamentals/PF09-MoreExercise_Arrays/PF09-MoreExercise_Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF10-Methods/PF10-Methods.iml" filepath="$PROJECT_DIR$/Fundamentals/PF10-Methods/PF10-Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF11-Exercise_Methods/PF11-Exercise_Methods.iml" filepath="$PROJECT_DIR$/Fundamentals/PF11-Exercise_Methods/PF11-Exercise_Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF12-MoreExercise_Methods/PF12-MoreExercise_Methods.iml" filepath="$PROJECT_DIR$/Fundamentals/PF12-MoreExercise_Methods/PF12-MoreExercise_Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF13-List/PF13-List.iml" filepath="$PROJECT_DIR$/Fundamentals/PF13-List/PF13-List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF14-Exercise_List/PF14-Exercise_List.iml" filepath="$PROJECT_DIR$/Fundamentals/PF14-Exercise_List/PF14-Exercise_List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF15-MoreExercise_List/PF15-MoreExercise_List.iml" filepath="$PROJECT_DIR$/Fundamentals/PF15-MoreExercise_List/PF15-MoreExercise_List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF16-MidExam/PF16-MidExam.iml" filepath="$PROJECT_DIR$/Fundamentals/PF16-MidExam/PF16-MidExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF17-ObjectsAndClasses/PF17-ObjectsAndClasses.iml" filepath="$PROJECT_DIR$/Fundamentals/PF17-ObjectsAndClasses/PF17-ObjectsAndClasses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF18-Exercise_ObjectsAndClasses/PF18-Exercise_ObjectsAndClasses.iml" filepath="$PROJECT_DIR$/Fundamentals/PF18-Exercise_ObjectsAndClasses/PF18-Exercise_ObjectsAndClasses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF19-MoreExercise_ObjectsAndClasses/PF19-MoreExercise_ObjectsAndClasses.iml" filepath="$PROJECT_DIR$/Fundamentals/PF19-MoreExercise_ObjectsAndClasses/PF19-MoreExercise_ObjectsAndClasses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF20-AssociativeArrays/PF20-AssociativeArrays.iml" filepath="$PROJECT_DIR$/Fundamentals/PF20-AssociativeArrays/PF20-AssociativeArrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF21-Exercise_AssociativeArrays/PF21-Exercise_AssociativeArrays.iml" filepath="$PROJECT_DIR$/Fundamentals/PF21-Exercise_AssociativeArrays/PF21-Exercise_AssociativeArrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF22-MoreExercise_AssociativeArrays/PF22-MoreExercise_AssociativeArrays.iml" filepath="$PROJECT_DIR$/Fundamentals/PF22-MoreExercise_AssociativeArrays/PF22-MoreExercise_AssociativeArrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF23-TextProcessing/PF23-TextProcessing.iml" filepath="$PROJECT_DIR$/Fundamentals/PF23-TextProcessing/PF23-TextProcessing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF24-Exercise_TextProcessing/PF24-Exercise_TextProcessing.iml" filepath="$PROJECT_DIR$/Fundamentals/PF24-Exercise_TextProcessing/PF24-Exercise_TextProcessing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF25-MoreExercise_TextProcessing/PF25-MoreExercise_TextProcessing.iml" filepath="$PROJECT_DIR$/Fundamentals/PF25-MoreExercise_TextProcessing/PF25-MoreExercise_TextProcessing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF26-RegularExpressions/PF26-RegularExpressions.iml" filepath="$PROJECT_DIR$/Fundamentals/PF26-RegularExpressions/PF26-RegularExpressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF27-Exercise_RegularExpressions/PF27-Exercise_RegularExpressions.iml" filepath="$PROJECT_DIR$/Fundamentals/PF27-Exercise_RegularExpressions/PF27-Exercise_RegularExpressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF28-MoreExercise_RegularExpressions/PF28-MoreExercise_RegularExpressions.iml" filepath="$PROJECT_DIR$/Fundamentals/PF28-MoreExercise_RegularExpressions/PF28-MoreExercise_RegularExpressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/PF30_FinalExam/PF30_FinalExam.iml" filepath="$PROJECT_DIR$/Fundamentals/PF30_FinalExam/PF30_FinalExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SoftUni-Java.iml" filepath="$PROJECT_DIR$/.idea/SoftUni-Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekFiveExercises/WeekFiveExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekFiveExercises/WeekFiveExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekFourExercises/WeekFourExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekFourExercises/WeekFourExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekFourLab/WeekFourLab.iml" filepath="$PROJECT_DIR$/Basics/WeekFourLab/WeekFourLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekOneExercises/WeekOneExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekOneExercises/WeekOneExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekSixExercises/WeekSixExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekSixExercises/WeekSixExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekSixLab/WeekSixLab.iml" filepath="$PROJECT_DIR$/Basics/WeekSixLab/WeekSixLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekSixMoreExercises/WeekSixMoreExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekSixMoreExercises/WeekSixMoreExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekThreeExercises/WeekThreeExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekThreeExercises/WeekThreeExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekThreeLab/WeekThreeLab.iml" filepath="$PROJECT_DIR$/Basics/WeekThreeLab/WeekThreeLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekTwoExercises/WeekTwoExercises.iml" filepath="$PROJECT_DIR$/Basics/WeekTwoExercises/WeekTwoExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/WeekTwoLab/WeekTwoLab.iml" filepath="$PROJECT_DIR$/Basics/WeekTwoLab/WeekTwoLab.iml" />
+    </modules>
+  </component>
+</project>
