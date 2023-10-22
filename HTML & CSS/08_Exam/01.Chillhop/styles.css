@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+html {
+    font: 16px/1.5 'Helvetica', sans-serif;
+}
+
+body {
+    padding: 5em 0;
+    margin: 0 auto;
+}
+
+.container {
+    border: 4px solid #000;
+    border-radius: 1em;
+    max-width: 58%;
+    margin: 0 auto;
+    background: #1881B6;
+}
+
+.container article {
+    display: flex;
+    padding: 2em;
+    gap: 3em;
+}
+
+article .article-content {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+article .article-content h1 {
+    font-size: 42px;
+    font-weight: 400;
+    color: #fff;
+}
+
+article .article-content .journal {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+article .article-content .content {
+    text-indent: 4em;
+    padding-right: 2.5em;
+}
+
+article .article-content .button {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 8em 0 0;
+}
+
+article .article-content .button .contact {
+    border: 1px solid #000;
+    background: #B6416D;
+    border-radius: 0.3em;
+    padding: 0.3em 1em;
+}
+
+article .article-content .button .contact a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+article .article-content .button .learn-more {
+    border: 1px solid #000;
+    border-radius: 0.3em;
+    padding: 0.3em 1em;
+}
+
+article .article-content .button .learn-more a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+article .media {
+    flex: 1 1 35%;
+    margin: 0 auto;
+}
+
+

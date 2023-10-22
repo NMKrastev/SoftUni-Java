@@ -1,0 +1,23 @@
+.section-site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 6em;
+}
+
+.section-site-header .container .logo {
+    width: 100px;
+}
+
+.section-site-header .container .navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 3em;
+}
+
+.section-site-header .container .navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+}

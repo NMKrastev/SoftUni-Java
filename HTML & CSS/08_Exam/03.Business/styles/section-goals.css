@@ -1,0 +1,35 @@
+.section-site-goals {
+    background: #fff;
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+
+.section-site-goals .container {
+    display: flex;
+    gap: 5em;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.section-site-goals .container .article-title {
+    font-family: 'PT Serif', serif;
+    font-size: 3em;
+    font-weight: normal;
+    padding-bottom: 0.5em;
+}
+
+.section-site-goals .container .article-content {
+    font-size: 1.13em;
+    line-height: 1.8;
+    color: #37282B;
+    padding-bottom: 4em;
+}
+
+.section-site-goals .container .button a {
+    text-decoration: none;
+    color: #B0825C;
+    border: 3px solid #B0825C;
+    font-size: 1.13em;
+    font-weight: 700;
+    padding: 0.7em 1.5em;
+}

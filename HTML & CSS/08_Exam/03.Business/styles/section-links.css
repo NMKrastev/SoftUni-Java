@@ -1,0 +1,41 @@
+.section-site-links {
+    background: #171720;
+    padding: 3em 0 5em 0;
+}
+
+.section-site-links .container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.section-site-links .container section:first-child {
+    margin-right: 4em;
+}
+
+.section-site-links .container section:last-child {
+    margin-left: 8em;
+    margin-right: 12em;
+}
+
+.section-site-links .container section .title {
+    font-family: 'PT Serif', serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #F0FFFF;
+    padding-bottom: 1.2em;
+}
+
+.section-site-links .container section ul li {
+    list-style: none;
+    margin-bottom: 1.5em;
+}
+
+
+
+.section-site-links .container section ul li a {
+    color: #B3A6A8;
+    text-decoration: none;
+    text-transform: uppercase;
+}

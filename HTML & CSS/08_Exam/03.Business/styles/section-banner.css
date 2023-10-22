@@ -1,0 +1,24 @@
+.section-site-hero-banner {
+    margin: 2em 0 0 18em;
+}
+
+.section-site-hero-banner .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.section-site-hero-banner .container h1 {
+    font-family: 'PT Serif', serif;
+    font-size: 4em;
+    line-height: 1.2;
+    font-weight: 400;
+    padding-bottom: 0.5em;
+    color: #fff;
+}
+
+.section-site-hero-banner .container p {
+    font-size: 1.55em;
+    padding-bottom: 10em;
+    color: #fff;
+}

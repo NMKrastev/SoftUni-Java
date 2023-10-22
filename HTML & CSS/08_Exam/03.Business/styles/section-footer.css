@@ -1,0 +1,14 @@
+.section-site-footer {
+    background: #171720;
+    border-top: 1px solid #3A3A41;
+}
+
+.section-site-footer .container {
+    max-width: 82%;
+    margin: 0 auto;
+    padding: 1.5em 0;
+}
+
+.section-site-footer .container p {
+    color: #B3A6A8;
+}
