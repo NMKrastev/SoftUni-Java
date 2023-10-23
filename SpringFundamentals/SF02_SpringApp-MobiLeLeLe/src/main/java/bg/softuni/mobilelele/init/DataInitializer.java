@@ -1,4 +1,4 @@
-package bg.softuni.mobilelele;
+package bg.softuni.mobilelele.init;
 
 import bg.softuni.mobilelele.service.CarBrandService;
 import bg.softuni.mobilelele.service.CarModelService;
