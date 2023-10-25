@@ -2,10 +2,7 @@ package bg.softuni.sa02_springsecurity.model.entity;
 
 import bg.softuni.sa02_springsecurity.model.enums.RoleEnum;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
@@ -13,6 +10,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "roles")
 public class UserRole extends BaseEntity {
