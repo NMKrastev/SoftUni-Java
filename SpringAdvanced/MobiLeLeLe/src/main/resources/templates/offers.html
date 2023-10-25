@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/head}"></head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">
+    Navbar
+</div>
+
+<div class="container-fluid">
+    <h2 class="text-center text-white mt-5">All Offers</h2>
+    <div class="offers row mx-auto d-flex flex-row justify-content-center">
+        <div class="offer card col-sm-6 col-md-3 col-lg-2 m-1 p-0"
+             th:each="offer : ${offers}">
+            <div class="card-img-top-wrapper">
+                <img class="card-img-top" th:src="${offer.getImageUrl()}" alt="Car image">
+            </div>
+            <div class="card-body pb-1">
+                <h5 class="card-title">
+                    <span th:text="${offer.getYear()}"></span>
+                    <span th:text="${offer.getModel().getBrand().getName()}"></span>
+                    <span th:text="${offer.getModel().getName()}"></span>
+                    </h5>
+            </div>
+            <ul class="offer-details list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="card-text">• Mileage: <span th:text="${offer.getMileage()}"></span>km</div>
+                    <div class="card-text">• Price: <span th:text="${offer.getPrice().setScale(2)}"></span>$</div>
+                    <div class="card-text">• Engine type: <span th:text="${offer.getEngine()}"></span></div>
+                    <div class="card-text">• Transmission type: <span th:text="${offer.getTransmission()}"></span></div>
+                </li>
+            </ul>
+            <div class="card-body">
+                <a class="card-link"
+                   th:href="@{/offers/details/{id}(id=${offer.getId()})}">
+                    Details
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <footer></footer>
+</div>
+
+</body>
+</html>
