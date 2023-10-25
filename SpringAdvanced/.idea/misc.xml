@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/SA01_WebAPIAndRESTControllers" />
+    <file type="web" url="file://$PROJECT_DIR$/SA02_SpringSecurity" />
     <file type="web" url="file://$PROJECT_DIR$/WebAPIAndRESTControllers" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="18" project-jdk-type="JavaSDK">
