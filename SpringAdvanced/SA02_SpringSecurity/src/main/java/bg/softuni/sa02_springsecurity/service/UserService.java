@@ -1,10 +1,16 @@
 package bg.softuni.sa02_springsecurity.service;
 
+import bg.softuni.sa02_springsecurity.model.dto.UserRegistrationDTO;
 import bg.softuni.sa02_springsecurity.model.entity.User;
 import bg.softuni.sa02_springsecurity.model.entity.UserRole;
 import bg.softuni.sa02_springsecurity.model.enums.RoleEnum;
 import bg.softuni.sa02_springsecurity.repository.UserRepository;
 import bg.softuni.sa02_springsecurity.repository.UserRoleRepository;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -16,14 +22,17 @@ public class UserService {
     private final UserRepository userRepository;
     private final UserRoleRepository userRoleRepository;
     private final PasswordEncoder passwordEncoder;
+    private final UserDetailsService userDetailsService;
 
-    public UserService(UserRepository userRepository, UserRoleRepository userRoleRepository, PasswordEncoder passwordEncoder) {
+    public UserService(UserRepository userRepository, UserRoleRepository userRoleRepository,
+                       PasswordEncoder passwordEncoder, UserDetailsService userDetailsService) {
         this.userRepository = userRepository;
         this.userRoleRepository = userRoleRepository;
         this.passwordEncoder = passwordEncoder;
+        this.userDetailsService = userDetailsService;
     }
 
-    public void init () {
+    public void init() {
 
         if (this.userRepository.count() == 0 && this.userRoleRepository.count() == 0) {
 
@@ -79,5 +88,34 @@ public class UserService {
                 .build();
 
         this.userRepository.save(user);
+    }
+
+    public void registerAndLogin(UserRegistrationDTO userRegistrationDTO) {
+
+        User newUser =
+                new User()
+                        .builder()
+                        .email(userRegistrationDTO.getEmail())
+                        .firstName(userRegistrationDTO.getFirstName())
+                        .lastName(userRegistrationDTO.getLastName())
+                        .password(this.passwordEncoder.encode(userRegistrationDTO.getPassword()))
+                        .build();
+
+        this.userRepository.save(newUser);
+
+        UserDetails userDetails =
+                this.userDetailsService.loadUserByUsername(newUser.getEmail());
+
+        Authentication auth =
+                new UsernamePasswordAuthenticationToken(
+                        userDetails,
+                        userDetails.getPassword(),
+                        userDetails.getAuthorities()
+                );
+
+        SecurityContextHolder.
+                getContext().
+                setAuthentication(auth);
+
     }
 }

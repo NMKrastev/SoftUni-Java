@@ -55,8 +55,8 @@ public class SecurityConfiguration {
                             .usernameParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_USERNAME_KEY)
                             // the name of the password form field
                             .passwordParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_PASSWORD_KEY)
-                            .// where to go in case that the login is successful
-                            defaultSuccessUrl("/", true)
+                            // where to go in case that the login is successful
+                            .defaultSuccessUrl("/", true)
                             // where to go in case that the login failed
                             .failureForwardUrl("/users/login-error");
                 })
