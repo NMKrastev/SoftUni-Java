@@ -32,7 +32,7 @@ public class SecurityConfiguration {
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                         // Allow anyone to see the home page, the registration page and the login form
                         .requestMatchers("/", "/users/login", "/users/register", "/users/login-error").permitAll()
-                        .requestMatchers("/offers/all").permitAll()
+                        .requestMatchers("/offers/all", "offers/details/{id}").permitAll()
                         .requestMatchers("/brands").hasRole(RoleEnum.ADMIN.name())
                         // all other requests are authenticated.
                         .anyRequest()
@@ -57,7 +57,8 @@ public class SecurityConfiguration {
                             // where to go when logged out?
                             .logoutSuccessUrl("/")
                             // invalidate the HTTP session
-                            .invalidateHttpSession(true);
+                            .invalidateHttpSession(true)
+                            .deleteCookies("JSESSIONID");
                 }
         ).rememberMe(
                 rememberMe -> {
@@ -71,7 +72,7 @@ public class SecurityConfiguration {
 
     @Bean
     public UserDetailsService userDetailsService(UserRepository userRepository) {
-        // This service translates the mobilele users and roles
+        // This service translates the mobilelele users and roles
         // to representation which spring security understands.
         return new MobileleleUserDetailsService(userRepository);
     }
