@@ -20,7 +20,7 @@ public class MobileleleUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        return userRepository
+        return this.userRepository
                 .findByEmail(email)
                 .map(MobileleleUserDetailsService::map)
                 .orElseThrow(() -> new UsernameNotFoundException("User " + email + " not found!"));
@@ -35,8 +35,6 @@ public class MobileleleUserDetailsService implements UserDetailsService {
     }
 
     private static GrantedAuthority map(UserRoleEntity userRoleEntity) {
-        return new SimpleGrantedAuthority(
-                "ROLE_" + userRoleEntity.getName().name()
-        );
+        return new SimpleGrantedAuthority("ROLE_" + userRoleEntity.getName().name());
     }
 }

@@ -17,12 +17,12 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @RequestMapping("/users")
 public class UserLoginController {
 
-    private final UserService userService;
+   /* private final UserService userService;
 
     public UserLoginController(UserServiceImpl userService) {
 
         this.userService = userService;
-    }
+    }*/
 
 /*    @ModelAttribute("userLoginDTO")
     public void initUserLoginModel(Model model) {
