@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JS Front-End.iml" filepath="$PROJECT_DIR$/.idea/JS Front-End.iml" />
       <module fileurl="file://$PROJECT_DIR$/JS01_JSSyntaxFundamentals-Lab.iml" filepath="$PROJECT_DIR$/JS01_JSSyntaxFundamentals-Lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JS02_JSSyntaxFundamentals-Exercise.iml" filepath="$PROJECT_DIR$/JS02_JSSyntaxFundamentals-Exercise.iml" />
     </modules>
   </component>
 </project>
