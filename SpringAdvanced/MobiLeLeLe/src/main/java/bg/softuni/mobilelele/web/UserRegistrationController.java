@@ -58,7 +58,7 @@ public class UserRegistrationController {
         final boolean isUserRegistered = this.userService.registerUser(userRegistrationDTO);
 
         if (isUserRegistered) {
-            modelAndView.setViewName("redirect:/");
+            modelAndView.setViewName("redirect:/users/login");
         } else {
             modelAndView.setViewName("auth-register");
         }

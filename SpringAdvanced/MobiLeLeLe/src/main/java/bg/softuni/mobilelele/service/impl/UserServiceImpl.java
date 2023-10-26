@@ -17,8 +17,6 @@ import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
-
-    private final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
     private final UserRepository userRepository;
     private final RoleService roleService;
     private final PasswordEncoder encoder;
@@ -32,80 +30,22 @@ public class UserServiceImpl implements UserService {
         this.userMapper = userMapper;
     }
 
-/*    @Override
-    public boolean loginUser(UserLoginDTO userLoginDTO) {
-
-        final Optional<UserEntity> userOpt = this.userRepository.findByEmail(userLoginDTO.getEmail());
-
-        if (userOpt.isEmpty()) {
-            this.LOGGER.info(String.format("User with email [%s] not found.", userLoginDTO.getEmail()));
-            return false;
-        }
-
-        final String rawPassword = userLoginDTO.getPassword();
-        final String encodedPassword = userOpt.get().getPassword();
-
-        final boolean success = this.encoder.matches(rawPassword, encodedPassword);
-
-        if (success) {
-            this.login(userOpt.get());
-        } else {
-            this.logoutUser();
-        }
-
-        return success;
-    }*/
-
-/*    @Override
-    public void logoutUser() {
-
-        this.currentUser.clear();
-    }*/
-
     @Override
     public boolean registerUser(UserRegistrationDTO userDTO) {
 
         if (this.userRepository.findByEmail(userDTO.getEmail()).isPresent()
                 || !userDTO.getPassword().equals(userDTO.getConfirmPassword())) {
-            //this.logoutUser();
             return false;
         }
 
         //Using MapStruct for mapping entities
         final UserEntity newUser = this.userMapper.userDtoToUserEntity(userDTO);
-        newUser.setPassword(this.encoder.encode(userDTO.getPassword()));
         newUser.setRole(this.roleService.getUserRole());
         newUser.setCreated(LocalDateTime.now());
 
         final UserEntity savedUser = this.userRepository.saveAndFlush(newUser);
 
-        //this.login(savedUser);
-
         return true;
     }
 
-/*    @Override
-    public UserEntity findByEmail(String email) {
-
-        return this.userRepository
-                .findByEmail(email)
-                .get();
-    }*/
-
-/*    private void login(UserEntity user) {
-
-        this.currentUser.setLoggedIn(true);
-        this.currentUser.setEmail(user.getEmail());
-        this.currentUser.setFirstName(user.getFirstName());
-        this.currentUser.setFullName(user.getFirstName() + " " + user.getLastName());
-        this.currentUser.setAdmin(this.isUserAdmin(user));
-    }*/
-
-/*    private boolean isUserAdmin(UserEntity user) {
-
-        return user
-                .getRole()
-                .getName()
-                .equals(RoleEnum.ADMIN);
-    }*/
 }
