@@ -11,6 +11,8 @@ import bg.softuni.mobilelele.repository.OfferRepository;
 import bg.softuni.mobilelele.service.CarModelService;
 import bg.softuni.mobilelele.service.OfferService;
 import bg.softuni.mobilelele.service.UserService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -45,11 +47,10 @@ public class OfferServiceImpl implements OfferService {
     }
 
     @Override
-    public OfferDetailsDTO findOfferById(Long id) {
+    public Optional<OfferDetailsDTO> findOfferById(Long id) {
 
-        final Optional<OfferEntity> byId = this.offerRepository.findById(id);
-
-        return this.offerMapper.offerEntityToOfferDetailsDto(byId.get());
+        return this.offerRepository.findById(id)
+                .map(this.offerMapper::offerEntityToOfferDetailsDto);
     }
 
     @Override
@@ -109,5 +110,12 @@ public class OfferServiceImpl implements OfferService {
         final Optional<OfferEntity> deletedOffer = this.offerRepository.findById(id);
 
         return deletedOffer.isEmpty();
+    }
+
+    @Override
+    public Page<OfferDetailsDTO> getAllOffers(Pageable pageable) {
+        return this.offerRepository
+                .findAll(pageable)
+                .map(this.offerMapper::offerEntityToOfferDetailsDto);
     }
 }

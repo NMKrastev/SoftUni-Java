@@ -7,13 +7,14 @@ import bg.softuni.mobilelele.model.dto.OfferUpdateDTO;
 import bg.softuni.mobilelele.service.CarBrandService;
 import bg.softuni.mobilelele.service.OfferService;
 import jakarta.validation.Valid;
+import org.hibernate.ObjectNotFoundException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -33,9 +34,12 @@ public class OfferController {
     }
 
     @GetMapping("/all")
-    public ModelAndView showOffers(ModelAndView modelAndView) {
+    public ModelAndView showOffers(ModelAndView modelAndView,
+                                   @PageableDefault(size = 3, sort = "id") Pageable pageable) {
 
-        final List<OfferDetailsDTO> allOffers = this.offerService.findAllOffers();
+        //final List<OfferDetailsDTO> allOffers = this.offerService.findAllOffers();
+
+        final Page<OfferDetailsDTO> allOffers = this.offerService.getAllOffers(pageable);
 
         modelAndView.addObject("offers", allOffers);
 
@@ -44,7 +48,6 @@ public class OfferController {
         return modelAndView;
     }
 
-    // TODO: 26.9.2023 г. Find a way to do it with ModelAndView
     @GetMapping("/add")
     public String addOffer(Model model) {
 
@@ -89,7 +92,9 @@ public class OfferController {
     public ModelAndView details(ModelAndView modelAndView,
                                 @PathVariable Long id) {
 
-        final OfferDetailsDTO offerDetails = this.offerService.findOfferById(id);
+        final OfferDetailsDTO offerDetails = this.offerService
+                .findOfferById(id)
+                .orElseThrow(() -> new ObjectNotFoundException("Offer with id: " + id + " not found!", id));
 
         modelAndView.addObject("offer", offerDetails);
 
@@ -147,7 +152,7 @@ public class OfferController {
         return modelAndView;
     }
 
-    @GetMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ModelAndView delete(ModelAndView modelAndView,
                                @PathVariable("id") Long id) {
 
