@@ -35,7 +35,7 @@ public class OfferController {
 
     @GetMapping("/all")
     public ModelAndView showOffers(ModelAndView modelAndView,
-                                   @PageableDefault(size = 3, sort = "id") Pageable pageable) {
+                                   @PageableDefault(size = 5, sort = "id") Pageable pageable) {
 
         //final List<OfferDetailsDTO> allOffers = this.offerService.findAllOffers();
 
