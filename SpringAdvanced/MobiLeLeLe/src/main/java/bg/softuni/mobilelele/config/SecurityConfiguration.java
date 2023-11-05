@@ -34,6 +34,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/", "/users/login", "/users/register", "/users/login-error").permitAll()
                         .requestMatchers("/offers/all", "offers/details/{id}").permitAll()
                         .requestMatchers("/error").permitAll()
+                        .requestMatchers("/offers/update/{id}").hasRole(RoleEnum.USER.name())
                         .requestMatchers("/brands").hasRole(RoleEnum.ADMIN.name())
                         // all other requests are authenticated.
                         .anyRequest()

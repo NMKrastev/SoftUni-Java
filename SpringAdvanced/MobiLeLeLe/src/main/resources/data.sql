@@ -16,6 +16,7 @@ VALUES ('admin@test.bg', '96d92cbb4363df247d8ef2c0b387ae60f892bae884ece6441e6d3c
 INSERT INTO users_user_roles(user_id, role_id)
 VALUES (1, 1),
        (1, 2),
+       (1, 3),
        (2, 2),
        (3, 3);
 
