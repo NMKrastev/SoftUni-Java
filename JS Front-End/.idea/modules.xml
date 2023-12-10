@@ -13,7 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/JS08_ObjectsAndClasses-Exercise.iml" filepath="$PROJECT_DIR$/JS08_ObjectsAndClasses-Exercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/JS09_DOMIntroduction-Lab.iml" filepath="$PROJECT_DIR$/JS09_DOMIntroduction-Lab.iml" />
       <module fileurl="file://$PROJECT_DIR$/JS10_DOMIntroduction-Exercise.iml" filepath="$PROJECT_DIR$/JS10_DOMIntroduction-Exercise.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JS11_DOMManipulationAndEvents.iml" filepath="$PROJECT_DIR$/JS11_DOMManipulationAndEvents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JS11_DOMManipulationAndEvents-Lab.iml" filepath="$PROJECT_DIR$/JS11_DOMManipulationAndEvents-Lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JS12_DOMManipulationAndEvents-Exercise.iml" filepath="$PROJECT_DIR$/JS12_DOMManipulationAndEvents-Exercise.iml" />
     </modules>
   </component>
 </project>
