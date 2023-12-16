@@ -18,6 +18,9 @@
       <module fileurl="file://$PROJECT_DIR$/JS13_HTTPAndREST.iml" filepath="$PROJECT_DIR$/JS13_HTTPAndREST.iml" />
       <module fileurl="file://$PROJECT_DIR$/JS14_AsynchronousProgramming.iml" filepath="$PROJECT_DIR$/JS14_AsynchronousProgramming.iml" />
       <module fileurl="file://$PROJECT_DIR$/JS15_HTTPAndAJAX-Exercise.iml" filepath="$PROJECT_DIR$/JS15_HTTPAndAJAX-Exercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JS16_ExamPrep.iml" filepath="$PROJECT_DIR$/JS16_ExamPrep.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JS17_VacationSchedule.iml" filepath="$PROJECT_DIR$/JS17_VacationSchedule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JS18_MyExam.iml" filepath="$PROJECT_DIR$/JS18_MyExam.iml" />
     </modules>
   </component>
 </project>
