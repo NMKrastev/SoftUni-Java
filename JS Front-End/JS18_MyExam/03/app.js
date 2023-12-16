@@ -8,13 +8,11 @@ const foodElement = document.getElementById("food");
 const timeElement = document.getElementById("time");
 const caloriesElement = document.getElementById("calories");
 
-const confirmedVacations = document.getElementById("confirmed-vacantions");
 const list = document.getElementById('list');
 
 const addButton = document.getElementById("add-meal");
 const editButton = document.getElementById("edit-meal");
 const loadButton = document.getElementById("load-meals");
-const clearBtn = document.querySelector(".clear-btn");
 
 function attachEvents() {
     loadButton.addEventListener('click', loadBoardEventHandler);

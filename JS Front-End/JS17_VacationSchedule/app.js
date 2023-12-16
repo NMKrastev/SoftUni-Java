@@ -1,8 +1,8 @@
-const BASE_URL = 'http://localhost:3030/jsonstore/tasks';
+const baseURL = 'http://localhost:3030/jsonstore/tasks';
 
 const endpoints = {
-    update: (id) => `${BASE_URL}/${id}`,
-    delete: (id) => `${BASE_URL}/${id}`,
+    update: (id) => `${baseURL}/${id}`,
+    delete: (id) => `${baseURL}/${id}`,
 }
 const nameElement = document.getElementById("name");
 const dateElement = document.getElementById("from-date");
@@ -20,7 +20,7 @@ function attachEvents() {
 }
 
 function getIdByName(task) {
-    return fetch(BASE_URL)
+    return fetch(baseURL)
         .then(res => res.json())
         .then(res => Object.entries(res).find(e => e[1].name === task)[1]._id)
 }
@@ -28,7 +28,7 @@ function getIdByName(task) {
 async function loadBoardEventHandler() {
     clearAllSections();
     try {
-        const res = await fetch(BASE_URL);
+        const res = await fetch(baseURL);
         const allTasks = await res.json();
         Object.values(allTasks)
             .forEach((task) => {
@@ -64,7 +64,7 @@ function createTaskEventHandler(ev) {
         })
     };
 
-    fetch(BASE_URL, headers)
+    fetch(baseURL, headers)
         .then(loadBoardEventHandler)
         .catch(console.error);
 
