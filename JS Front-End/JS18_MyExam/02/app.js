@@ -26,10 +26,6 @@ function solve() {
         let amount = amountInput.value;
         let date = dateInput.value;
 
-        console.log(expense);
-        console.log(amount);
-        console.log(date);
-
         const previewListUl = document.getElementById('preview-list');
         const li = document.createElement('li');
         li.classList.add('expense-item');
